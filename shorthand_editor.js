@@ -45,7 +45,7 @@ console.log(storage.getItem("new_page"));
 //}
 pageList.size = storage.length;
 
-fileNameInput.value = storage.key(0); 
+//fileNameInput.value = storage.key(0); 
 
 const event = new Event("input", {
   bubbles: true,
