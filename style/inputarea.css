@@ -1,0 +1,15 @@
+.inputarea {
+  position: absolute;
+  top: 0;
+  left: 25rem;
+  width: 30rem;
+  height: 65rem;
+  overflow: auto;
+}
+
+.inputarea > * {
+  height: 90%;
+  width: 90%;
+  resize: none;
+  margin: 1rem;
+}

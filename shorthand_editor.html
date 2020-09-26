@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Shorthand editor</title>
+<link rel="stylesheet" href="style/sidebar.css">
+<link rel="stylesheet" href="style/viewer.css">
+<link rel="stylesheet" href="style/inputarea.css">
+</head>
+<body>
+
+<div class="sidebar">
+<input id="page_name">
+<button id="save_button">Save</button>
+<br>
+<button id="download_button_svg">Download as SVG</button>
+<button id="download_button_png">Download as PNG</button>
+<br>
+<label>Animation</label><br>
+<input id="animation_switch" type="radio" name="animation" value="animationOn" onclick="updateSVG(true)">ON
+<input id="animation_switch_off" type="radio" name="animation" value="animationOff" checked="checked" onclick="updateSVG(false)">OFF
+<br>
+<label>Mirror</label><br>
+<input id="mirror_switch" type="radio" name="mirror" value="mirrorOn" onclick="setMirrorMode(true)">ON
+<input type="radio" name="mirror" value="mirrorOff" checked="checked" onclick="setMirrorMode(false)">OFF
+<form>
+<select size="1" id="savedPageList" onChange="openSavedPage()" style="width:100%">
+</select>
+</form>
+<div id="objects"></div>
+</div>
+
+<div class="inputarea">
+<textarea id="input" autofocus="autofocus"></textarea>
+</div>
+
+<div id="svg_viewer" class="viewer"></div>
+
+</body>
+
+<script type="text/javascript" src="char.js"></script>
+<script type="text/javascript" src="interpreter.js"></script>
+<script type="text/javascript" src="shorthand_editor.js"></script>
+</html>
+
