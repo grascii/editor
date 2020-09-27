@@ -273,6 +273,12 @@ WasedaA.prototype.setPaths = function() {
   }
 
   switch (this.getNextHeadType()) {
+    case "E":
+    case "NEL":
+      this.dp = p(3.99995, 0);
+      this.paths = ["m 0 0 c 1.4551 0.7737 4.4424 1.65126 3.99995 0"];
+      break;
+
     case "WL":
       this.dp = p(4, 0);
       this.paths = ["m 0 0 c 1.0195 0.5421 2.8872 0.3191 4 0"];
@@ -4639,6 +4645,11 @@ WasedaChar.dict["の"] = WasedaNo;
 
 WasedaNo.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
+    case "E":
+    case "NEL":
+      this.dp = p(16, 0);
+      this.paths = ["m 0 0 c 2.881 0.6652 17.5774 3.555 16 0"];
+      break;
 
     default:
       this.dp = p(16, 0);
@@ -5431,9 +5442,20 @@ WasedaHi.prototype.setPaths = function() {
       this.dp = p(4.92477, 5.45748);
       this.paths = ["m 0 0 c 0 3.7202 1.08867 5.6669 4.42754 5.6669 c 0.649137 0 0.63491 -0.581588 0.63491 -0.796088 c 0 -0.493789 -0.790957 -0.595672 -1.09393 -0.263239 c -0.28726 0.315189 0.325161 0.644908 0.956251 0.849908"];
       return;
+
+    case "NEL16":
+    case "NEL16CL1":
+    case "NEL16CL8":
+      this.dp = p(5.48531, 4.76323);
+      this.paths = ["m 0 0 c 0 3.7202 1.0885 5.667 4.4275 5.667 c 0.3901 0 0.730452 -0.101222 0.905224 -0.436174 c 0.400375 -0.767321 -0.06285 -0.978685 -0.437432 -1.07334 c -0.372691 -0.09418 -1.03549 0.377026 -0.890322 0.732968 c 0.187033 0.458591 1.07783 0.144176 1.48034 -0.127224"];
+      return;
   }
 
   switch (this.getNextHeadType()) {
+    case "E":
+      this.dp = p(5.45112, 4.90528);
+      this.paths = ["m 0 0 c 0 3.7201 1.18678 5.5886 4.52557 5.5886 c 0.5132 0 0.742235 -0.09266 0.88951 -0.379396 c 0.151419 -0.294803 0.074323 -0.810136 -0.21567 -0.970575 c -0.319428 -0.176723 -1.04426 0.01365 -1.03193 0.366745 c 0.01743 0.4992 0.748749 0.299907 1.28364 0.299907"];
+      break;
 
     default:
       this.dp = p(3.3474, 5.6955);
@@ -5474,6 +5496,13 @@ WasedaHu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ふ"] = WasedaHu;
 
 WasedaHu.prototype.setPaths = function() {
+  switch (this.getNextName()) {
+    case "WasedaWa":
+      this.dp = p(0.92649, 4.62699);
+      this.paths = ["m 0 0 c 0 1.867 0.307 3.31 0.765 4.3381 c 0.493 1.0114 1.382 1.4475 2.722 1.4475 c 0.628 0 1.34865 -0.166261 1.32745 -0.660206 c -0.0512 -1.19284 -2.61931 -0.871696 -3.88796 -0.498401"];
+      return;
+  }
+
   switch (this.getNextHeadType()) {
     case "EL":
       this.dp = p(0.349, 3.1511);
@@ -5521,6 +5550,13 @@ WasedaChar.dict["ほ"] = WasedaHo;
 
 WasedaHo.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
+    case "E":
+    case "SEL":
+    case "EL":
+    case "SE":
+      this.dp = p(8, 11.1564);
+      this.paths = ["m 0 0 c 0 10.815 5.0359 16.2904 8 11.1564"];
+      break;
 
     default:
       this.dp = p(8, 13.8564);
