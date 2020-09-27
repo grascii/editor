@@ -5735,3 +5735,648 @@ SvsdKoh.prototype.setPaths = function() {
       break;
   }
 };
+
+SvsdSai = function() { SvsdChar.call(this, "SvsdSai", "さい", "NEL5P", "NEL", "P", "black", false, p(0.0, 2.0)); };
+SvsdSai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["さい"] = SvsdSai;
+
+SvsdSai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(5.4184, -4.08087);
+      this.paths = ["m 0 0 c 1.59137 0.954753 3.42881 -1.15288 4.33013 -2.5", "m 5.4184 -4.18088 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(5.4184, -4.08087);
+      this.paths = ["m 0 0 c 1.59137 0.954753 3.42881 -1.15288 4.33013 -2.5"];
+      break;
+  }
+};
+
+SvsdShii = function() { SvsdChar.call(this, "SvsdShii", "しい", "SWL5P", "SWL", "P", "black", false, p(2.6, -3.2)); };
+SvsdShii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["しい"] = SvsdShii;
+SvsdChar.dict["しー"] = SvsdShii;
+
+SvsdShii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-1.90191, 6.33045);
+      this.paths = ["m 0 0 c -1.11689 0.391995 -3.19039 2.15145 -2.5 4.33013", "m -1.90191 6.23045 v 0.099999"];
+      break;
+
+    default:
+      this.dp = p(-1.90191, 6.33045);
+      this.paths = ["m 0 0 c -1.11689 0.391995 -3.19039 2.15145 -2.5 4.33013"];
+      break;
+  }
+};
+
+SvsdSuh = function() { SvsdChar.call(this, "SvsdSuh", "すー", "SEL5P", "SEL", "P", "black", false, p(0.0, -1.3)); };
+SvsdSuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["すー"] = SvsdSuh;
+SvsdChar.dict["すう"] = SvsdSuh;
+
+SvsdSuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.15072, 2.19607);
+      this.paths = ["m 0 0 c 0.40822 1.26111 1.10359 3.1903 4.20152 2.53215", "m 6.15072 2.09607 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.15072, 2.19607);
+      this.paths = ["m 0 0 c 0.40822 1.26111 1.10359 3.1903 4.20152 2.53215"];
+      break;
+  }
+};
+
+SvsdSeh = function() { SvsdChar.call(this, "SvsdSeh", "せー", "SL5P", "SL", "P", "black", false, p(0.7, -3.3)); };
+SvsdSeh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["せー"] = SvsdSeh;
+SvsdChar.dict["せい"] = SvsdSeh;
+SvsdChar.dict["せえ"] = SvsdSeh;
+
+SvsdSeh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(1.36029, 6.56607);
+      this.paths = ["m 0 0 c -0.526006 1.45593 -1.3705 3.54409 0 5", "m 1.36029 6.46607 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(1.36029, 6.56607);
+      this.paths = ["m 0 0 c -0.526006 1.45593 -1.3705 3.54409 0 5"];
+      break;
+  }
+};
+
+SvsdSoh = function() { SvsdChar.call(this, "SvsdSoh", "そー", "EL5P", "EL", "P", "black", false, p(0.0, 0.1)); };
+SvsdSoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["そー"] = SvsdSoh;
+SvsdChar.dict["そう"] = SvsdSoh;
+
+SvsdSoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.5239, -1.19137);
+      this.paths = ["m 0 0 c 1.26737 1.679 3.71345 1.0347 5 0", "m 6.5239 -1.29137 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.5239, -1.19137);
+      this.paths = ["m 0 0 c 1.26737 1.679 3.71345 1.0347 5 0"];
+      break;
+  }
+};
+
+SvsdTai = function() { SvsdChar.call(this, "SvsdTai", "たい", "NE5P", "NE", "P", "black", false, p(0.0, -0.0)); };
+SvsdTai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["たい"] = SvsdTai;
+
+SvsdTai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.05829, -3.39775);
+      this.paths = ["m 0 0 l 4.33013 -2.5", "m 6.05829 -3.49775 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.05829, -3.39775);
+      this.paths = ["m 0 0 l 4.33013 -2.5"];
+      break;
+  }
+};
+
+SvsdChii = function() { SvsdChar.call(this, "SvsdChii", "ちい", "SW5P", "SW", "P", "black", false, p(3.5, -3.1)); };
+SvsdChii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ちー"] = SvsdChii;
+SvsdChar.dict["ちい"] = SvsdChii;
+
+SvsdChii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-3.50247, 6.16645);
+      this.paths = ["m 0 0 l -2.5 4.33012", "m -3.50247 6.06645 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-3.50247, 6.16645);
+      this.paths = ["m 0 0 l -2.5 4.33012"];
+      break;
+  }
+};
+
+SvsdTsuh = function() { SvsdChar.call(this, "SvsdTsuh", "つー", "S5P", "S", "P", "black", false, p(0.0, -1.8)); };
+SvsdTsuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["つー"] = SvsdTsuh;
+SvsdChar.dict["つう"] = SvsdTsuh;
+
+SvsdTsuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.06001, 3.59875);
+      this.paths = ["m 0 0 l 4.33013 2.5", "m 6.06001 3.49875 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.06001, 3.59875);
+      this.paths = ["m 0 0 l 4.33013 2.5"];
+      break;
+  }
+};
+
+SvsdToh = function() { SvsdChar.call(this, "SvsdToh", "とー", "E5P", "E", "P", "black", false, p(0.0, -0.1)); };
+SvsdToh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["とー"] = SvsdToh;
+SvsdChar.dict["とう"] = SvsdToh;
+SvsdChar.dict["とお"] = SvsdToh;
+
+SvsdToh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(7, 0.1);
+      this.paths = ["m 0 0 h 5", "m 7 0 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(7, 0.1);
+      this.paths = ["m 0 0 h 5"];
+      break;
+  }
+};
+
+SvsdTeh = function() { SvsdChar.call(this, "SvsdTeh", "てー", "S5P", "S", "P", "black", false, p(0.0, -3.5)); };
+SvsdTeh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["てー"] = SvsdTeh;
+SvsdChar.dict["てい"] = SvsdTeh;
+SvsdChar.dict["てえ"] = SvsdTeh;
+
+SvsdTeh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(0, 7.1);
+      this.paths = ["m 0 0 v 5", "m 0 7 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(0, 7.1);
+      this.paths = ["m 0 0 v 5"];
+      break;
+  }
+};
+
+SvsdNai = function() { SvsdChar.call(this, "SvsdNai", "ない", "NER10P", "NER", "P", "black", false, p(0.0, 2.5)); };
+SvsdNai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ない"] = SvsdNai;
+
+SvsdNai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(10.628, -4.54252);
+      this.paths = ["m 0 0 c 0.338036 -1.74353 4.2163 -5.71161 8.66025 -5", "m 10.628 -4.64252 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(10.628, -4.54252);
+      this.paths = ["m 0 0 c 0.338036 -1.74353 4.2163 -5.71161 8.66025 -5"];
+      break;
+  }
+};
+
+SvsdNii = function() { SvsdChar.call(this, "SvsdNii", "にい", "SWR10P", "SWR", "P", "black", false, p(6.9, -4.7)); };
+SvsdNii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["にい"] = SvsdNii;
+SvsdChar.dict["にー"] = SvsdNii;
+
+SvsdNii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-6.89396, 9.40316);
+      this.paths = ["m 0 0 c 0.722009 2.68537 -0.707116 7.21951 -5 8.66025", "m -6.89396 9.30316 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-6.89396, 9.40316);
+      this.paths = ["m 0 0 c 0.722009 2.68537 -0.707116 7.21951 -5 8.66025"];
+      break;
+  }
+};
+
+SvsdNuh = function() { SvsdChar.call(this, "SvsdNuh", "ぬー", "SER10P", "SER", "P", "black", false, p(0.0, -3.5)); };
+SvsdNuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぬー"] = SvsdNuh;
+SvsdChar.dict["ぬう"] = SvsdNuh;
+
+SvsdNuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(9.15718, 7.03542);
+      this.paths = ["m 0 0 c 2.5641 -0.0716 7.28949 -0.0932 8.66025 5", "m 9.15718 6.93542 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(9.15718, 7.03542);
+      this.paths = ["m 0 0 c 2.5641 -0.0716 7.28949 -0.0932 8.66025 5"];
+      break;
+  }
+};
+
+SvsdNeh = function() { SvsdChar.call(this, "SvsdNeh", "ねー", "SR10P", "SR", "P", "black", false, p(1.5, -5.7)); };
+SvsdNeh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ねー"] = SvsdNeh;
+SvsdChar.dict["ねい"] = SvsdNeh;
+SvsdChar.dict["ねえ"] = SvsdNeh;
+
+SvsdNeh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-1.51903, 11.4057);
+      this.paths = ["m 0 0 c 3.06633 2.75966 2.35567 7.77508 0 10", "m -1.51903 11.3057 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-1.51903, 11.4057);
+      this.paths = ["m 0 0 c 3.06633 2.75966 2.35567 7.77508 0 10"];
+      break;
+  }
+};
+
+SvsdNoh = function() { SvsdChar.call(this, "SvsdNoh", "のー", "ER10P", "ER", "P", "black", false, p(0.0, 0.1)); };
+SvsdNoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["のー"] = SvsdNoh;
+SvsdChar.dict["のう"] = SvsdNoh;
+
+SvsdNoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(11.3451, 1.57978);
+      this.paths = ["m 0 0 c 2.61216 -1.76308 7.32951 -2.88933 10 0", "m 11.3451 1.47978 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(11.3451, 1.57978);
+      this.paths = ["m 0 0 c 2.61216 -1.76308 7.32951 -2.88933 10 0"];
+      break;
+  }
+};
+
+SvsdHai = function() { SvsdChar.call(this, "SvsdHai", "はい", "NEL20P", "NEL", "P", "black", false, p(0.0, 5.8)); };
+SvsdHai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["はい"] = SvsdHai;
+
+SvsdHai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(18.6091, -11.4351);
+      this.paths = ["m 0 0 c 7.56775 0 13.3707 -5.36129 17.3205 -10", "m 18.6091 -11.5351 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(18.6091, -11.4351);
+      this.paths = ["m 0 0 c 7.56775 0 13.3707 -5.36129 17.3205 -10"];
+      break;
+  }
+};
+
+SvsdHii = function() { SvsdChar.call(this, "SvsdHii", "ひい", "SWL20P", "SWL", "P", "black", false, p(10.2, -9.7)); };
+SvsdHii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ひい"] = SvsdHii;
+SvsdChar.dict["ひー"] = SvsdHii;
+
+SvsdHii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-9.40564, 19.3264);
+      this.paths = ["m 0 0 c -4.58414 4.24962 -11.55 12.3153 -10 17.3205", "m -9.40564 19.2264 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-9.40564, 19.3264);
+      this.paths = ["m 0 0 c -4.58414 4.24962 -11.55 12.3153 -10 17.3205"];
+      break;
+  }
+};
+
+SvsdHuh = function() { SvsdChar.call(this, "SvsdHuh", "ふー", "SEL20P", "SEL", "P", "black", false, p(0.0, -5.1)); };
+SvsdHuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ふー"] = SvsdHuh;
+SvsdChar.dict["ふう"] = SvsdHuh;
+
+SvsdHuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(19.2818, 9.71556);
+      this.paths = ["m 0 0 c 0.556334 7.36507 11.3581 11.1114 17.3205 10", "m 19.2818 9.61556 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(19.2818, 9.71556);
+      this.paths = ["m 0 0 c 0.556334 7.36507 11.3581 11.1114 17.3205 10"];
+      break;
+  }
+};
+
+SvsdHeh = function() { SvsdChar.call(this, "SvsdHeh", "へー", "UWL5P", "SWL", "SEL", "black", false, p(2.8, -2.6)); };
+SvsdHeh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["へー"] = SvsdHeh;
+SvsdChar.dict["へい"] = SvsdHeh;
+SvsdChar.dict["へえ"] = SvsdHeh;
+
+SvsdHeh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(1.90386, 4.50053);
+      this.paths = ["m 0 0 c -1.54618 0.81314 -3.06762 1.9439 -2.80689 3.38677 c 0.19187 1.06179 1.19064 2.09764 2.80717 1.61177", "m 1.90386 4.40053 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(1.90386, 4.50053);
+      this.paths = ["m 0 0 c -1.54618 0.81314 -3.06762 1.9439 -2.80689 3.38677 c 0.19187 1.06179 1.19064 2.09764 2.80717 1.61177", "m 1.90386 4.40053 v 0.1"];
+      break;
+  }
+};
+
+SvsdHoh = function() { SvsdChar.call(this, "SvsdHoh", "ほー", "EL20P", "EL", "P", "black", false, p(0.0, -0.9)); };
+SvsdHoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ほー"] = SvsdHoh;
+SvsdChar.dict["ほう"] = SvsdHoh;
+
+SvsdHoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(21.8329, -0.698502);
+      this.paths = ["m 0 0 c 5.15578 3.98468 13.0748 2.97834 20 0", "m 21.8329 -0.798502 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(21.8329, -0.698502);
+      this.paths = ["m 0 0 c 5.15578 3.98468 13.0748 2.97834 20 0", "m 21.8329 -0.798502 v 0.1"];
+      break;
+  }
+};
+
+SvsdMai = function() { SvsdChar.call(this, "SvsdMai", "まい", "NER20P", "NER", "P", "black", false, p(0.0, 5.0)); };
+SvsdMai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["まい"] = SvsdMai;
+
+SvsdMai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(19.3224, -9.96921);
+      this.paths = ["m 0 0 c 4.56521 -6.44915 10.8638 -9.78096 17.3205 -10", "m 19.3224 -10.0692 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(19.3224, -9.96921);
+      this.paths = ["m 0 0 c 4.56521 -6.44915 10.8638 -9.78096 17.3205 -10"];
+      break;
+  }
+};
+
+SvsdMii = function() { SvsdChar.call(this, "SvsdMii", "みい", "SWR20P", "SWR", "P", "black", false, p(11.7, -9.2)); };
+SvsdMii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["みい"] = SvsdMii;
+SvsdChar.dict["みー"] = SvsdMii;
+
+SvsdMii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-11.7288, 18.428);
+      this.paths = ["m 0 0 c 1.75914 4.78201 -3.60044 13.4217 -9.99999 17.3206", "m -11.7288 18.328 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-11.7288, 18.428);
+      this.paths = ["m 0 0 c 1.75914 4.78201 -3.60044 13.4217 -9.99999 17.3206"];
+      break;
+  }
+};
+
+SvsdMuh = function() { SvsdChar.call(this, "SvsdMuh", "むー", "SER20P", "SER", "P", "black", false, p(0.0, -6.0)); };
+SvsdMuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["むー"] = SvsdMuh;
+SvsdChar.dict["むう"] = SvsdMuh;
+
+SvsdMuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(17.5037, 12.0905);
+      this.paths = ["m 0 0 c 6.05327 -0.272634 16.7009 3.22004 17.3205 10", "m 17.5037 11.9905 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(17.5037, 12.0905);
+      this.paths = ["m 0 0 c 6.05327 -0.272634 16.7009 3.22004 17.3205 10"];
+      break;
+  }
+};
+
+SvsdMeh = function() { SvsdChar.call(this, "SvsdMeh", "めー", "UER5P", "SER", "SWR", "black", false, p(1.7, -3.0)); };
+SvsdMeh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["めー"] = SvsdMeh;
+SvsdChar.dict["めい"] = SvsdMeh;
+SvsdChar.dict["めえ"] = SvsdMeh;
+
+SvsdMeh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-1.73901, 6.09635);
+      this.paths = ["m 0 0 c 1.96459 0.169174 2.87771 0.486323 3.07622 1.62962 c 0.260213 1.49864 -1.92679 2.77673 -3.07622 3.37039", "m -1.73901 5.99635 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-1.73901, 6.09635);
+      this.paths = ["m 0 0 c 1.96459 0.169174 2.87771 0.486323 3.07622 1.62962 c 0.260213 1.49864 -1.92679 2.77673 -3.07622 3.37039"];
+      break;
+  }
+};
+
+SvsdMoh = function() { SvsdChar.call(this, "SvsdMoh", "もー", "ER20P", "ER", "P", "black", false, p(0.0, 0.5)); };
+SvsdMoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["もー"] = SvsdMoh;
+SvsdChar.dict["もう"] = SvsdMoh;
+
+SvsdMoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(21.27, 1.64176);
+      this.paths = ["m 0 0 c 6.69402 -2.71754 16.4988 -4.16702 20 0", "m 21.27 1.54176 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(21.27, 1.64176);
+      this.paths = ["m 0 0 c 6.69402 -2.71754 16.4988 -4.16702 20 0", "m 21.27 1.54176 v 0.1"];
+      break;
+  }
+};
+
+SvsdYai = function() { SvsdChar.call(this, "SvsdYai", "やい", "NE20P", "NE", "P", "black", false, p(0.0, 5.5)); };
+SvsdYai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["やい"] = SvsdYai;
+
+SvsdYai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(19.0502, -10.8987);
+      this.paths = ["m 0 0 l 17.3205 -10", "m 19.0502 -10.9987 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(19.0502, -10.8987);
+      this.paths = ["m 0 0 l 17.3205 -10"];
+      break;
+  }
+};
+
+SvsdYuh = function() { SvsdChar.call(this, "SvsdYuh", "ゆー", "SW20P", "SW", "P", "black", false, p(0.0, -5.5)); };
+SvsdYuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ゆー"] = SvsdYuh;
+SvsdChar.dict["ゆう"] = SvsdYuh;
+
+SvsdYuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(19.0494, 11.0982);
+      this.paths = ["m 0 0 l 17.3205 10", "m 19.0494 10.9982 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(19.0494, 11.0982);
+      this.paths = ["m 0 0 l 17.3205 10", "m 19.0494 10.9982 v 0.1"];
+      break;
+  }
+};
+
+SvsdYoh = function() { SvsdChar.call(this, "SvsdYoh", "よー", "E20P", "E", "P", "black", false, p(0.0, -0.1)); };
+SvsdYoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["よー"] = SvsdYoh;
+SvsdChar.dict["よう"] = SvsdYoh;
+
+SvsdYoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(22.0016, 0.1);
+      this.paths = ["m 0 0 h 20", "m 22.0016 0 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(22.0016, 0.1);
+      this.paths = ["m 0 0 h 20"];
+      break;
+  }
+};
+
+SvsdRai = function() { SvsdChar.call(this, "SvsdRai", "らい", "NER5P", "NER", "P", "black", false, p(0.0, 1.3)); };
+SvsdRai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["らい"] = SvsdRai;
+
+SvsdRai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.30917, -2.14437);
+      this.paths = ["m 0 0 c 0.541772 -0.951162 1.94507 -2.71942 4.33013 -2.5", "m 6.30917 -2.24437 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.30917, -2.14437);
+      this.paths = ["m 0 0 c 0.541772 -0.951162 1.94507 -2.71942 4.33013 -2.5"];
+      break;
+  }
+};
+
+SvsdRii = function() { SvsdChar.call(this, "SvsdRii", "りい", "SWR5P", "SWR", "P", "black", false, p(4.4, -2.6)); };
+SvsdRii.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["りい"] = SvsdRii;
+SvsdChar.dict["りー"] = SvsdRii;
+
+SvsdRii.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-4.37926, 5.10856);
+      this.paths = ["m 0 0 c 1.23682 1.79842 -0.379269 3.56029 -2.5 4.33013", "m -4.37926 5.00856 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-4.37926, 5.10856);
+      this.paths = ["m 0 0 c 1.23682 1.79842 -0.379269 3.56029 -2.5 4.33013"];
+      break;
+  }
+};
+
+SvsdRuh = function() { SvsdChar.call(this, "SvsdRuh", "るー", "SER5P", "SER", "P", "black", false, p(0.0, -2.3)); };
+SvsdRuh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["るー"] = SvsdRuh;
+SvsdChar.dict["るう"] = SvsdRuh;
+
+SvsdRuh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(4.0541, 4.58411);
+      this.paths = ["m 0 0 c 1.48073 0.077667 4.60895 0.194056 4.33013 2.5", "m 4.0541 4.48411 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(4.0541, 4.58411);
+      this.paths = ["m 0 0 c 1.48073 0.077667 4.60895 0.194056 4.33013 2.5"];
+      break;
+  }
+};
+
+SvsdReh = function() { SvsdChar.call(this, "SvsdReh", "れー", "SR5P", "SR", "P", "black", false, p(1.3, -3.3)); };
+SvsdReh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["れー"] = SvsdReh;
+SvsdChar.dict["れい"] = SvsdReh;
+SvsdChar.dict["れえ"] = SvsdReh;
+
+SvsdReh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(-1.27182, 6.63792);
+      this.paths = ["m 0 0 c 1.1321 2.05387 1.03538 3.75447 0 5", "m -1.27182 6.53792 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(-1.27182, 6.63792);
+      this.paths = ["m 0 0 c 1.1321 2.05387 1.03538 3.75447 0 5"];
+      break;
+  }
+};
+
+SvsdRoh = function() { SvsdChar.call(this, "SvsdRoh", "ろー", "ER5P", "ER", "P", "black", false, p(0.0, -0.3)); };
+SvsdRoh.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ろー"] = SvsdRoh;
+SvsdChar.dict["ろう"] = SvsdRoh;
+
+SvsdRoh.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(6.51253, 1.40927);
+      this.paths = ["m 0 0 c 1.72594 -0.816378 3.59517 -1.20627 5 0", "m 6.51253 1.30927 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(6.51253, 1.40927);
+      this.paths = ["m 0 0 c 1.72594 -0.816378 3.59517 -1.20627 5 0"];
+      break;
+  }
+};
+
+SvsdWai = function() { SvsdChar.call(this, "SvsdWai", "わい", "USL5P", "SEL", "NEL", "black", false, p(0.0, -0.6)); };
+SvsdWai.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["わい"] = SvsdWai;
+
+SvsdWai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "":
+      this.dp = p(5.95346, -1.65387);
+      this.paths = ["m 0 0 c 0.019224 1.2306 0.514416 2.96936 1.65244 2.87958 c 1.10088 -0.086848 2.53023 -1.40929 3.34756 -2.87958", "m 5.95346 -1.75387 v 0.1"];
+      break;
+
+    default:
+      this.dp = p(5.95346, -1.65387);
+      this.paths = ["m 0 0 c 0.019224 1.2306 0.514416 2.96936 1.65244 2.87958 c 1.10088 -0.086848 2.53023 -1.40929 3.34756 -2.87958"];
+      break;
+  }
+};
