@@ -1020,7 +1020,7 @@ ShugiinDan.prototype.setPaths = function() {
   }
 };
 
-ShugiinNa = function() { ShugiinChar.call(this, "ShugiinNa", "な", "EL7", "EL", "EL", "black"); };
+ShugiinNa = function() { ShugiinChar.call(this, "ShugiinNa", "な", "EL7", "EL", "EL", "black", false, p(0.0, -0.5)); };
 ShugiinNa.prototype = Object.create(ShugiinChar.prototype);
 ShugiinChar.dict["な"] = ShugiinNa;
 
@@ -6377,6 +6377,174 @@ SvsdWai.prototype.setPaths = function() {
     default:
       this.dp = p(5.95346, -1.65387);
       this.paths = ["m 0 0 c 0.019224 1.2306 0.514416 2.96936 1.65244 2.87958 c 1.10088 -0.086848 2.53023 -1.40929 3.34756 -2.87958"];
+      break;
+  }
+};
+
+NakaneAu = function() { NakaneChar.call(this, "NakaneAu", "あう", "USWL2NEL7", "USWL", "NEL", "black", false, p(0.3, -0.5)); };
+NakaneAu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["あう"] = NakaneAu;
+NakaneChar.dict["あー"] = NakaneAu;
+
+NakaneAu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(6.58957, -1.10485);
+      this.paths = ["m 0 0 c -0.741809 1.68441 0.65145 1.9963 1.48508 1.83762 c 0.712182 -0.13556 4.0281 -1.07811 5.10449 -2.94247"];
+      break;
+  }
+};
+
+NakaneIu = function() { NakaneChar.call(this, "NakaneIu", "いう", "UWR2NER7", "NWR", "NER", "black", false, p(1.8, 2.1)); };
+NakaneIu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["いう"] = NakaneIu;
+
+NakaneIu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(3.43755, -4.3115);
+      this.paths = ["m 0 0 c -0.853191 0.08687 -2.16962 -0.202753 -1.7479 -1.45659 c 0.629021 -1.87019 5.18545 -2.85491 5.18545 -2.85491"];
+      break;
+  }
+};
+
+NakaneUu = function() { NakaneChar.call(this, "NakaneUu", "うう", "USWL2NEL17", "SWL", "NEL", "black", false, p(0.7, 1.2)); };
+NakaneUu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["うう"] = NakaneUu;
+NakaneChar.dict["うー"] = NakaneUu;
+
+NakaneUu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(14.1062, -5.72733);
+      this.paths = ["m 0 0 c -1.1319 0.962885 -1.2127 3.3291 1.69699 3.28791 c 4.95642 -0.0702 11.4258 -5.90117 12.4092 -9.01524"];
+      break;
+  }
+};
+
+NakaneUu.prototype.setPathsExtra = function() {
+    this.pathsExtra = ["m 7,-1.3 v0.1"];
+};
+
+NakaneEu = function() { NakaneChar.call(this, "NakaneEu", "えう", "USWR2NER17", "NWR", "NER", "black", false, p(3.3, 5.9)); };
+NakaneEu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["えう"] = NakaneEu;
+
+NakaneEu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(9.56751, -11.8769);
+      this.paths = ["m 0 0 c -1.75549 0.24455 -3.2927 -0.78207 -3.29914 -1.9135 c -0.0309 -5.42434 12.8666 -9.96341 12.8666 -9.96341"];
+      break;
+  }
+};
+
+NakaneOu = function() { NakaneChar.call(this, "NakaneOu", "おう", "USWL2NEL17", "SWL", "NEL", "black", false, p(0.8, 0.8)); };
+NakaneOu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["おう"] = NakaneOu;
+NakaneChar.dict["おお"] = NakaneOu;
+NakaneChar.dict["おー"] = NakaneOu;
+
+NakaneOu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(14.397, -4.95792);
+      this.paths = ["m 0 0 c -0.65208 0.86619 -1.34452 2.85524 -0.0954 3.24172 c 3.88002 1.20044 12.7082 -5.27813 14.4924 -8.19964"];
+      break;
+  }
+};
+
+NakaneKiu = function() { NakaneChar.call(this, "NakaneKiu", "きう", "UNER2SW7", "NER", "SW", "black", false, p(1.3, -2.9)); };
+NakaneKiu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["きう"] = NakaneKiu;
+NakaneChar.dict["きゅう"] = NakaneKiu;
+NakaneChar.dict["きゅー"] = NakaneKiu;
+
+NakaneKiu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(-1.26971, 6.17468);
+      this.paths = ["m 0 0 c 0.443003 -0.26107 1.3397 -0.40766 1.7387 -0.11202 c 0.340628 0.25235 0.246253 0.866 -0.146897 1.48956 c -1.03845 1.64703 -2.86151 4.79714 -2.86151 4.79714"];
+      break;
+  }
+};
+
+NakaneKiu.prototype.setPathsExtra = function() {
+  switch (this.getNextHeadType()) {
+    case "SW":
+      this.pathsExtra = ["m -0.6486585771480455 6.595151606978889 -1.2421008457039093 -0.8409432139577758"];
+      break;
+
+    default:
+      break;
+  }
+};
+
+NakaneKau = function() { NakaneChar.call(this, "NakaneKau", "かう", "UWL2E7", "WL", "E", "black", false, p(0.9, -0.9)); };
+NakaneKau.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["かう"] = NakaneKau;
+NakaneChar.dict["かー"] = NakaneKau;
+NakaneChar.dict["きゃー"] = NakaneKau;
+
+NakaneKau.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(6.10436, 1.83625);
+      this.paths = ["m 0 0 c -0.491414 0.26561 -0.975884 0.94494 -0.896512 1.31048 c 0.07937 0.36554 0.546729 0.47617 1.11984 0.47617 l 5.88103 0.0496"];
+      break;
+  }
+};
+
+NakaneKuu = function() { NakaneChar.call(this, "NakaneKuu", "くう", "UNR2S7", "NER", "S", "black", true, p(0.0, -2.1)); };
+NakaneKuu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["くう"] = NakaneKuu;
+NakaneChar.dict["くー"] = NakaneKuu;
+
+NakaneKuu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(2.5029, 5.69501);
+      this.paths = ["m 0 0 c 0.398976 -0.7837 1.24545 -1.4609 1.68851 -1.40965 c 0.745407 0.0862 0.814387 1.0267 0.814387 1.51847 v 5.58619"];
+      break;
+  }
+};
+
+NakaneKeu = function() { NakaneChar.call(this, "NakaneKeu", "けう", "UNER2SW17", "NER", "SW", "black", false, p(5.9, -7.1)); };
+NakaneKeu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["けう"] = NakaneKeu;
+NakaneChar.dict["きょう"] = NakaneKeu;
+NakaneChar.dict["きょー"] = NakaneKeu;
+
+NakaneKeu.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(-5.88606, 14.6219);
+      this.paths = ["m 0 0 c 0 0 1.54306 -0.79654 2.03197 -0.31609 c 0.55438 0.54479 -0.22577 1.71589 -0.22577 1.71589 l -7.69226 13.2221"];
+      break;
+  }
+};
+
+NakaneKou = function() { NakaneChar.call(this, "NakaneKou", "こう", "UWL2E17", "WL", "E", "black", false, p(0.9, -1.6)); };
+NakaneKou.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["こう"] = NakaneKou;
+NakaneChar.dict["こー"] = NakaneKou;
+NakaneChar.dict["こお"] = NakaneKou;
+
+NakaneKou.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(15.8308, 3.15909);
+      this.paths = ["m 0 0 c -0.25598 0.45506 -1.11754 1.63969 -0.88666 2.48992 c 0.19879 0.73211 1.80087 0.69432 1.81346 0.66917 h 14.904"];
       break;
   }
 };
