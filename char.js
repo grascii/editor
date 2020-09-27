@@ -836,6 +836,7 @@ ShugiinGan.prototype.setPaths = function() {
   this.paths = ["m 0 0l 7 0"];
 
   switch (this.getNextName()) {
+    case "ShugiinO":
     case "ShugiinWo":
       this.dp = p(7 - 0, -3);
       return;
@@ -1013,6 +1014,7 @@ ShugiinDan.prototype.setPaths = function() {
       this.dp = p(0 + 3.5, 7 - 1);
       return;
 
+    case "ShugiinO":
     case "ShugiinWo":
       this.dp = p(0 + 2.5, 7 - 1);
       return;
@@ -1035,6 +1037,11 @@ ShugiinNa.prototype.setPaths = function() {
     case "NE":
       this.dp = p(7, 0);
       this.paths = ["m 0 0 c 1.78641 1.18957 7.74202 1.28521 7 0"];
+      break;
+
+    case "NEL":
+      this.dp = p(7, 0);
+      this.paths = ["m 0 0 c 1.78641 1.18957 6.61364 1.44193 7 0"];
       break;
 
     default:
@@ -1106,6 +1113,7 @@ ShugiinBan.prototype.setPaths = function() {
       this.dp = p(4.53396, 5.32792 - 3);
       return;
 
+    case "ShugiinO":
     case "ShugiinWo":
       this.dp = p(4.53396 + 1, 5.32792 - 3);
       return;
@@ -1263,6 +1271,11 @@ ShugiinWa.prototype.setPaths = function() {
       this.dp = p(0.3234, 2.55847);
       this.paths = ["m 0 0 c -0.939676 0 -2.00377 1.31535 -1.71961 2.19124 c 0.249345 0.768581 1.43474 1.05742 2.04301 0.367225"];
       return;
+
+    case "NEL3":
+      this.dp = p(1.32824, 2.90299);
+      this.paths = ["m 0 0 c 0 0 -1.18529 2.12349 -0.646301 3.02336 c 0.33883 0.56569 1.36627 0.476693 1.97454 -0.120372"];
+      return;
   }
 
   switch (this.getPrevTailType()) {
@@ -1281,6 +1294,7 @@ ShugiinWa.prototype.setPaths = function() {
           return;
       }
     case "EL":
+    case "NEL":
       this.dp = p(0.3234, 2.55847);
       this.paths = ["m 0 0c -0.79061 0.681958 -2.19013 1.778974 -1.65114 2.678842c 0.33883 0.56569 1.36627 0.476693 1.97454 -0.120372"];
       return;
@@ -4001,12 +4015,18 @@ NakaneNon.prototype.setPaths = function() {
   }
 };
 
+ShugiinO = function() { ShugiinChar.call(this, "ShugiinO", "を", "SW3", "SW", "SW", "black", false, p(2.1, -1.1)); };
+ShugiinO.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["お"] = ShugiinO;
 
-ShugiinWo = function() { ShugiinChar.call(this, "ShugiinWo", "を", "SW3", "SW", "SW", "black", false, p(2.1, -1.1)); };
-ShugiinWo.prototype = Object.create(ShugiinChar.prototype);
-ShugiinChar.dict["を"] = ShugiinWo;
+ShugiinO.prototype.setPaths = function() {
+  switch (this.getPrevModel()) {
+    case "NEL3":
+      this.dp = p(-0.776457, 2.89778);
+      this.paths = ["m 0 0 l -0.776457 2.89778"];
+      return;
+  }
 
-ShugiinWo.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
@@ -4015,6 +4035,11 @@ ShugiinWo.prototype.setPaths = function() {
       break;
   }
 };
+
+ShugiinWo = function() { ShugiinChar.call(this, "ShugiinWo", "を", "SW3", "SW", "SW", "black", false, p(2.1, -1.1)); };
+ShugiinWo.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["を"] = ShugiinWo;
+ShugiinWo.prototype.setPaths = ShugiinO.prototype.setPaths;
 
 ShugiinNoJoshi = function() { ShugiinChar.call(this, "ShugiinNoJoshi", "の", "NE3F", "NE", "NEF", "black", false, p(0.0, 1.1)); };
 ShugiinNoJoshi.prototype = Object.create(ShugiinChar.prototype);
@@ -4030,11 +4055,11 @@ ShugiinNoJoshi.prototype.setPaths = function() {
   }
 };
 
-ShugiinMoJoshi = function() { ShugiinChar.call(this, "ShugiinMoJoshi", "も", "UNER3", "NER", "SWR", "black", false, p(0.0, 0.4)); };
-ShugiinMoJoshi.prototype = Object.create(ShugiinChar.prototype);
-ShugiinChar.dict["〜も"] = ShugiinMoJoshi;
+ShugiinMo = function() { ShugiinChar.call(this, "ShugiinMo", "も", "UNER3", "NER", "SWR", "black", false, p(0.0, 0.4)); };
+ShugiinMo.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["も"] = ShugiinMo;
 
-ShugiinMoJoshi.prototype.setPaths = function() {
+ShugiinMo.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
@@ -4475,20 +4500,6 @@ ShugiinNakan.prototype.setPaths = function() {
     default:
       this.dp = p(5.43482 + 1.41, 0.658512 - 1.41);
       this.paths = ["m 0 0 c -0.68464 -0.273613 -1.45428 -0.23755 -1.58987 0.127459 c -0.129451 0.348515 0.519157 0.903823 0.629973 0.96733 c 1.77327 1.01626 4.19461 1.06648 6.39472 -0.436277"];
-      break;
-  }
-};
-
-ShugiinNaga = function() { ShugiinChar.call(this, "ShugiinNaga", "なが", "UWL3NEL7", "UWL", "NEL", "black", false, p(0.8, 0.9)); };
-ShugiinNaga.prototype = Object.create(ShugiinChar.prototype);
-ShugiinChar.dict["なが"] = ShugiinNaga;
-
-ShugiinNaga.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
-
-    default:
-      this.dp = p(4.96363 + 1.41, -3.11451);
-      this.paths = ["m 0 0 c -0.288046 0 -0.820691 0.261478 -0.836487 0.605286 c -0.01587 0.345474 0.256245 0.682728 0.781231 0.682728 c 2.07634 0 4.83725 -1.16203 5.01888 -4.40253"];
       break;
   }
 };
@@ -4982,11 +4993,18 @@ ShugiinChar.dict["さｒ"] = ShugiinSar;
 ShugiinChar.dict["ざｒ"] = ShugiinSar;
 
 ShugiinSar.prototype.setPaths = function() {
+  this.paths = ["m 0 0 c 2.83221 4.16396 3.99058 11.519 0 17"];
+
+  switch (this.getNextName()) {
+    case "ShugiinNomo":
+      this.dp = p(0 + 1, 17 + 1.41);
+      return;
+  }
+
   switch (this.getNextHeadType()) {
 
     default:
       this.dp = p(0 - 1.41, 17 + 1.41);
-      this.paths = ["m 0 0 c 2.83221 4.16396 3.99058 11.519 0 17"];
       break;
   }
 };
@@ -5029,6 +5047,13 @@ ShugiinNaru.prototype = Object.create(ShugiinChar.prototype);
 ShugiinChar.dict["なる"] = ShugiinNaru;
 
 ShugiinNaru.prototype.setPaths = function() {
+  this.paths = ["m 0 0 c 2.22518 1.89138 5.80144 3.26999 8.65419 1.85154 c 2.67376 -1.32947 0.511931 -3.22497 -1.65845 -1.60724"];
+  switch (this.getNextName()) {
+    case "ShugiinNo":
+      this.dp = p(6.99574 + 0.8, 0.2443 + 3.5);
+      return;
+  }
+
   switch (this.getNextHeadType()) {
 
     default:
@@ -5112,11 +5137,12 @@ ShugiinChar.dict["さかｒ"] = ShugiinSakar;
 ShugiinChar.dict["ざかｒ"] = ShugiinSakar;
 
 ShugiinSakar.prototype.setPaths = function() {
+  this.paths = ["m 0 0 c -0.30944 -0.487973 -0.14596 -1.61095 0.18774 -1.78436 c 0.33369 -0.173411 0.79422 0.15884 1.04531 0.38468 c 4.0449 4.22905 3.21006 13.1067 0.32927 16.2432"];
+
   switch (this.getNextHeadType()) {
 
     default:
       this.dp = p(1.56232 - 1.41, 14.8435 + 1.41);
-      this.paths = ["m 0 0 c -0.30944 -0.487973 -0.14596 -1.61095 0.18774 -1.78436 c 0.33369 -0.173411 0.79422 0.15884 1.04531 0.38468 c 4.0449 4.22905 3.21006 13.1067 0.32927 16.2432"];
       break;
   }
 };
@@ -5160,11 +5186,17 @@ ShugiinChar.dict["ながｒ"] = ShugiinNagar;
 ShugiinChar.dict["ながら"] = ShugiinNagar;
 
 ShugiinNagar.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  this.paths = ["m 0 0 c -0.523293 0.20932 -1.09054 0.92025 -0.920988 1.47434 c 0.115139 0.37626 0.590393 0.45457 1.07858 0.47974 c 4.86827 0.25094 12.5864 -3.51756 13.7416 -8.8564"];
 
+  switch (this.getNextName()) {
+    case "ShugiinWa":
+      this.dp = p(13.8992 + 3, -6.90232 - 1);
+      return;
+  }
+
+  switch (this.getNextHeadType()) {
     default:
       this.dp = p(13.8992 + 0.333599, -6.90232 - 2.00187);
-      this.paths = ["m 0 0 c -0.523293 0.20932 -1.09054 0.92025 -0.920988 1.47434 c 0.115139 0.37626 0.590393 0.45457 1.07858 0.47974 c 4.86827 0.25094 12.5864 -3.51756 13.7416 -8.8564"];
       break;
   }
 };
@@ -6581,6 +6613,44 @@ NakaneKou.prototype.setPaths = function() {
     default:
       this.dp = p(15.8308, 3.15909);
       this.paths = ["m 0 0 c -0.25598 0.45506 -1.11754 1.63969 -0.88666 2.48992 c 0.19879 0.73211 1.80087 0.69432 1.81346 0.66917 h 14.904"];
+      break;
+  }
+};
+
+ShugiinNo = function() { ShugiinChar.call(this, "ShugiinNo", "の", "NEL3", "NEL", "NEL", "black", false, p(0.0, 1.1)); };
+ShugiinNo.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["の"] = ShugiinNo;
+
+ShugiinNo.prototype.setPaths = function() {
+  switch (this.getNextName()) {
+    case "ShugiinWa":
+    case "ShugiinWo":
+    case "ShugiinO":
+      this.dp = p(2.14115, -2.1029);
+      this.paths = ["m 0 0 c 1.18078 -0.215658 1.75387 -1.32912 2.14115 -2.1029"];
+      return;
+  }
+
+
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(2.14115, -2.1029);
+      this.paths = ["m 0 0 c 1.26691 -0.0434 2.14115 -1.01348 2.14115 -2.1029"];
+      break;
+  }
+};
+
+ShugiinNomo = function() { ShugiinChar.call(this, "ShugiinNomo", "のも", "NEL3UNEL3", "NEL", "SWL", "black", false, p(0.0, 1.5)); };
+ShugiinNomo.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["のも"] = ShugiinNomo;
+
+ShugiinNomo.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(2.11263, -2.12648);
+      this.paths = ["m 0 0 c 0.90158 0.26154 2.92745 -0.47857 3.6335 -1.59748 c 0.38247 -0.60612 0.60701 -1.90303 -0.0661 -2.1491 c -0.68168 -0.24919 -1.45477 1.6201 -1.45477 1.6201"];
       break;
   }
 };
