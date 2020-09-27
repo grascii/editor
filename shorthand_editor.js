@@ -35,17 +35,17 @@ save_button.addEventListener("click", savePage);
 const pageList = document.getElementById("savedPageList");
 const storage = localStorage;
 console.log(storage.getItem("new_page"));
-//input.value = storage.getItem(storage.key(0));
-////input.value = storage.getItem(storage.getItem("new_page")); //|| storage.getItem(storage.key(0));
-//for (var i = 0; i < storage.length; i++) {
-//  const opt = document.createElement("option");
-//  opt.text = storage.key(i);
-//  opt.value = storage.key(i);
-//  pageList.add(opt);
-//}
+input.value = storage.getItem(storage.key(0));
+//input.value = storage.getItem(storage.getItem("new_page")); //|| storage.getItem(storage.key(0));
+for (var i = 0; i < storage.length; i++) {
+  const opt = document.createElement("option");
+  opt.text = storage.key(i);
+  opt.value = storage.key(i);
+  pageList.add(opt);
+}
 pageList.size = storage.length;
 
-//fileNameInput.value = storage.key(0); 
+fileNameInput.value = storage.key(0); 
 
 const event = new Event("input", {
   bubbles: true,
@@ -202,6 +202,13 @@ function parseInputText(text) {
             case "takusari": 
               if (TakusariChar.dict[tok]) {
                 chars.push(new TakusariChar.dict[tok]());
+              } else {
+                chars.push(new CharText("\u25A1"));
+              }
+              break;
+            case "gregg":
+              if (GreggChar.dict[tok]) {
+                chars.push(new GreggChar.dict[tok]());
               } else {
                 chars.push(new CharText("\u25A1"));
               }
