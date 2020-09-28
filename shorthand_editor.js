@@ -8,11 +8,13 @@ svg.setAttribute("viewBox", "0 0 210 297");
 svg.setAttribute("width", "210mm");
 svg.setAttribute("height", "297mm");
 svg.setAttribute("data-text", "");
+svg.setAttribute("transform", "scale(1, 1) translate(0)");
+svg.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1");
 const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
-g.setAttribute("id", "page");
-g.setAttribute("transform", "scale(1, 1) translate(0)");
-g.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1");
-svg.appendChild(g);
+//g.setAttribute("id", "page");
+//g.setAttribute("transform", "scale(1, 1) translate(0)");
+//g.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1");
+//svg.appendChild(g);
 viewer.appendChild(svg);
 const styleAnimation = document.createElement("style");
 styleAnimation.setAttribute("id", "style_animation");
@@ -62,8 +64,9 @@ const divObjects = document.getElementById("objects");
 //}).join("<br>");
 
 function setMirrorMode(mirrored) {
-  const g = document.getElementById("page");
-  g.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
+  //const g = document.getElementById("page");
+  //g.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
+  svg.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
 }
 
 function downloadSVG() {
@@ -299,7 +302,9 @@ function _parseInputText(text) {
 }
 
 function setAnimation(speed) {
-  const paths = page.querySelectorAll("path");
+  //const paths = page.querySelectorAll("path");
+  const svg = document.getElementById("svg_root");
+  const paths = svg.querySelectorAll("path");
 
   if ((speed === undefined) || (speed <= 0)) {
     speed = 0.03;
@@ -321,24 +326,23 @@ function setAnimation(speed) {
   });
 
   const style_new = document.createElementNS("http://www.w3.org/2000/svg", "style");
-  const style_old = document.getElementById("style_animation");
+  //const style_old = document.getElementById("style_animation");
   style_new.setAttribute("id", "style_animation");
   style_new.textContent = style;
 
-  const svg = document.getElementById("svg_root");
-  svg.replaceChild(style_new, style_old);
+  svg.appendChild(style_new);
+  //svg.replaceChild(style_new, style_old);
 }
 
 function updateSVG(toAnimate) {
-  const page = document.getElementById("page");
   const text = input.value;
   const chars = parseInputText(text);
-  const svg = document.getElementById("svg_root");
 
   svg.setAttribute("data-text", encodeURIComponent(text));
 
-  page.textContent = "";
-  page.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}));
+  svg.textContent = "";
+  //svg.appendChild(styleAnimation);
+  svg.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}));
   if (toAnimate) {
     setAnimation();
   } else {
