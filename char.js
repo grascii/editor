@@ -7846,3 +7846,153 @@ CharSmallCircle.prototype.setPaths = function() {
   }
 };
 
+SvsdGa = function() { SvsdChar.call(this, "SvsdGa", "が", "NEL10", "NEL", "NEL", "black", false, p(0.0, 2.3)); };
+SvsdGa.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["が"] = SvsdGa;
+SvsdGa.prototype.setPaths = SvsdKa.prototype.setPaths;
+SvsdGa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 4.8752 -1.39443 l 0.599564 0.98706"]; };
+
+SvsdGi = function() { SvsdChar.call(this, "SvsdGi", "ぎ", "SWL10", "SWL", "SWL", "black", false, p(5.1, -4.3)); };
+SvsdGi.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぎ"] = SvsdGi;
+SvsdGi.prototype.setPaths = SvsdKi.prototype.setPaths;
+SvsdGi.prototype.setPathsExtra = function() { this.pathsExtra = ["m -4.13682 2.87398 l 1.16572 0.94399"]; };
+
+SvsdGu = function() { SvsdChar.call(this, "SvsdGu", "ぐ", "SEL10", "SEL", "SEL", "black", false, p(0.0, -2.6)); };
+SvsdGu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぐ"] = SvsdGu;
+SvsdGu.prototype.setPaths = SvsdKu.prototype.setPaths;
+SvsdGu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 3.49698 3.77787 l -1.06066 1.06066"]; };
+
+SvsdGe = function() { SvsdChar.call(this, "SvsdGe", "げ", "SL10", "SL", "SL", "black", false, p(2.1, -5.0)); };
+SvsdGe.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["げ"] = SvsdGe;
+SvsdGe.prototype.setPaths = SvsdKe.prototype.setPaths;
+SvsdGe.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.09972 4.40898 l 1.14907 0.96418"]; };
+
+SvsdGo = function() { SvsdChar.call(this, "SvsdGo", "ご", "EL10", "EL", "EL", "black", false, p(0.0, -0.5)); };
+SvsdGo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ご"] = SvsdGo;
+SvsdGo.prototype.setPaths = SvsdKo.prototype.setPaths;
+SvsdGo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 4.15325 1.16892 l 1.06066 1.06066"]; };
+
+SvsdZa = function() { SvsdChar.call(this, "SvsdZa", "ざ", "NEL5", "NEL", "NEL", "black", false, p(0.0, 1.1)); };
+SvsdZa.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ざ"] = SvsdZa;
+SvsdZa.prototype.setPaths = SvsdSa.prototype.setPaths;
+SvsdZa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.04372 -1.08109 l 1.06066 1.06066"]; };
+
+SvsdJi = function() { SvsdChar.call(this, "SvsdJi", "じ", "SWR5", "SWR", "SWR", "black", false, p(2.6, -2.2)); };
+SvsdJi.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["じ"] = SvsdJi;
+SvsdJi.prototype.setPaths = SvsdShi.prototype.setPaths;
+SvsdJi.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.39211 1.13786 l 1.06066 1.06066"]; };
+
+SvsdZu = function() { SvsdChar.call(this, "SvsdZu", "ず", "SEL5", "SEL", "SEL", "black", false, p(0.0, -1.4)); };
+SvsdZu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ず"] = SvsdZu;
+SvsdZu.prototype.setPaths = SvsdSu.prototype.setPaths;
+SvsdZu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 1.97011 1.67192 l -0.902722 1.19795"]; };
+
+SvsdZe = function() { SvsdChar.call(this, "SvsdZe", "ぜ", "SL5", "SL", "SL", "black", false, p(1.4, -2.5)); };
+SvsdZe.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぜ"] = SvsdZe;
+SvsdZe.prototype.setPaths = SvsdSe.prototype.setPaths;
+SvsdZe.prototype.setPathsExtra = function() { this.pathsExtra = ["m -1.40471 2.23215 l 1.29904 0.75"]; };
+
+SvsdZo = function() { SvsdChar.call(this, "SvsdZo", "ぞ", "EL5", "EL", "EL", "black", false, p(0.0, -0.8)); };
+SvsdZo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぞ"] = SvsdZo;
+SvsdZo.prototype.setPaths = SvsdSo.prototype.setPaths;
+SvsdZo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.64596 0.37604 l 0.75 1.29904"]; };
+
+SvsdDa = function() { SvsdChar.call(this, "SvsdDa", "だ", "NE5", "NE", "NE", "black", false, p(0.0, 1.2)); };
+SvsdDa.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["だ"] = SvsdDa;
+SvsdDa.prototype.setPaths = SvsdTa.prototype.setPaths;
+SvsdDa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 1.71053 -1.8911 l 0.75 1.29904"]; };
+
+SvsdDi = function() { SvsdChar.call(this, "SvsdDi", "ぢ", "SW5", "SW", "SW", "black", false, p(2.5, -2.2)); };
+SvsdDi.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぢ"] = SvsdDi;
+SvsdDi.prototype.setPaths = SvsdChi.prototype.setPaths; 
+SvsdDi.prototype.setPathsExtra = function() { this.pathsExtra = ["m -1.91596 1.66735 l 1.29904 0.75"]; };
+
+SvsdDu = function() { SvsdChar.call(this, "SvsdDu", "づ", "SE5", "SE", "SE", "black", false, p(0.0, -1.2)); };
+SvsdDu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["づ"] = SvsdDu;
+SvsdDu.prototype.setPaths = SvsdTsu.prototype.setPaths;
+SvsdDu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.60497 0.75888 l -0.75 1.29904"]; };
+
+SvsdDe = function() { SvsdChar.call(this, "SvsdDe", "で", "S5", "S", "S", "black", false, p(0.6, -2.5)); };
+SvsdDe.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["で"] = SvsdDe;
+SvsdDe.prototype.setPaths = SvsdTe.prototype.setPaths;
+SvsdDe.prototype.setPathsExtra = function() { this.pathsExtra = ["m -0.62853 2.20516 l 1.22873 0.86037"]; };
+
+SvsdDo = function() { SvsdChar.call(this, "SvsdDo", "ど", "E5", "E", "E", "black", false, p(0.0, 0.0)); };
+SvsdDo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ど"] = SvsdDo;
+SvsdDo.prototype.setPaths = SvsdTo.prototype.setPaths;
+SvsdDo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.02082 -0.54013 l 1.06066 1.06066"]; };
+
+SvsdBa = function() { SvsdChar.call(this, "SvsdBa", "ば", "NEL20", "NEL", "NEL", "black", false, p(0.0, 5.0)); };
+SvsdBa.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ば"] = SvsdBa;
+SvsdBa.prototype.setPaths = SvsdHa.prototype.setPaths;
+SvsdBa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 8.91412 -3.36897 l 0.860365 1.22873"]; };
+
+SvsdBi = function() { SvsdChar.call(this, "SvsdBi", "び", "SWL20", "SWL", "SWL", "black", false, p(10.2, -8.7)); };
+SvsdBi.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["び"] = SvsdBi;
+SvsdBi.prototype.setPaths =  SvsdHi.prototype.setPaths;
+SvsdBi.prototype.setPathsExtra = function() { this.pathsExtra = ["m -7.7257 7.69639 l 0.75 1.29904"]; };
+
+SvsdBu = function() { SvsdChar.call(this, "SvsdBu", "ぶ", "SEL20", "SEL", "SEL", "black", false, p(0.0, -5.1)); };
+SvsdBu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぶ"] = SvsdBu;
+SvsdBu.prototype.setPaths = SvsdHu.prototype.setPaths;
+SvsdBu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 6.63739 7.27088 l -0.75 1.29904"]; };
+
+SvsdBe = function() { SvsdChar.call(this, "SvsdBe", "べ", "UWL5", "SWL", "SEL", "black", false, p(3.4, -2.6)); };
+SvsdBe.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["べ"] = SvsdBe;
+SvsdBe.prototype.setPaths = SvsdHe.prototype.setPaths;
+SvsdBe.prototype.setPathsExtra = function() { this.pathsExtra = ["m -3.35943 2.33373 l 1.29904 0.75"]; };
+
+SvsdBo = function() { SvsdChar.call(this, "SvsdBo", "ぼ", "EL20", "EL", "EL", "black", false, p(0.0, -0.6)); };
+SvsdBo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぼ"] = SvsdBo;
+SvsdBo.prototype.setPaths = SvsdHo.prototype.setPaths; 
+SvsdBo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 9.33952 1.9409 l 0.96419 1.14907"]; };
+
+SvsdPa = function() { SvsdChar.call(this, "SvsdPa", "ぱ", "NEL20", "NEL", "NEL", "black", false, p(0.0, 4.7)); };
+SvsdPa.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぱ"] = SvsdPa;
+SvsdPa.prototype.setPaths = SvsdHa.prototype.setPaths;
+SvsdPa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.06935 -0.90993 v 1.5"]; };
+
+SvsdPi = function() { SvsdChar.call(this, "SvsdPi", "ぴ", "SWL20", "SWL", "SWL", "black", false, p(10.2, -8.7)); };
+SvsdPi.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぴ"] = SvsdPi;
+SvsdPi.prototype.setPaths = SvsdHi.prototype.setPaths; 
+SvsdPi.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.08899 0.99665 l 0.860365 1.22873"]; };
+
+SvsdPu = function() { SvsdChar.call(this, "SvsdPu", "ぷ", "SEL20", "SEL", "SEL", "black", false, p(0.2, -5.1)); };
+SvsdPu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぷ"] = SvsdPu;
+SvsdPu.prototype.setPaths = SvsdHu.prototype.setPaths;
+SvsdPu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 1.06167 1.71053 l -1.29904 0.75"]; };
+
+SvsdPe = function() { SvsdChar.call(this, "SvsdPe", "ぺ", "WL5", "SWL", "SEL", "black", false, p(2.8, -2.6)); };
+SvsdPe.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぺ"] = SvsdPe;
+SvsdPe.prototype.setPaths = SvsdHe.prototype.setPaths; 
+SvsdPe.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.11771 0.5074 l 1.06066 1.06066"]; };
+
+SvsdPo = function() { SvsdChar.call(this, "SvsdPo", "ぽ", "EL20", "EL", "EL", "black", false, p(0.0, -1.3)); };
+SvsdPo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぽ"] = SvsdPo;
+SvsdPo.prototype.setPaths = SvsdHo.prototype.setPaths;
+SvsdPo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 1.86819 0.42815 l -0.75 1.29904"]; };
+
