@@ -4178,7 +4178,7 @@ ShugiinNoJoshi.prototype.setPaths = function() {
   switch (this.getPrevModel()) {
     case "SW3":
       this.dp = p(3.5141, -1.9134);
-      this.paths = ["m 0 0 l 1.73205 -1", "m 3.4641 -2 l 0.05 0.0866"];
+      this.paths = ["m 0 0 l 1.73205 -1"];
       return;
   }
 
@@ -4186,7 +4186,7 @@ ShugiinNoJoshi.prototype.setPaths = function() {
 
     default:
       this.dp = p(2.89913, -2.75772);
-      this.paths = ["m 0 0 l 1.41421 -1.41421", "m 2.82843 -2.82843 l 0.0707 0.07071"];
+      this.paths = ["m 0 0 l 1.41421 -1.41421"];
       break;
   }
 };
