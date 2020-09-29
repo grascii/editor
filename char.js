@@ -8307,3 +8307,87 @@ NakaneTou.prototype.setPaths = function() {
   }
 };
 
+
+GreggTen = function() { GreggChar.call(this, "GreggTen", "tn", "NER9", "NER", "NER", "black", false, p(0.0, 2.7)); };
+GreggTen.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["tn"] = GreggTen;
+
+GreggTen.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(7.39164, -5.32084);
+      this.paths = ["m 0 0 c 0 -2.6277 4.99909 -5.32084 7.39164 -5.32084"];
+      break;
+  }
+};
+
+GreggTm = function() { GreggChar.call(this, "GreggTm", "tm", "NER17", "NER", "NER", "black", false, p(0.2, 4.3)); };
+GreggTm.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["tm"] = GreggTm;
+
+GreggTm.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(14.7224, -8.5);
+      this.paths = ["m 0 0 c -2.04411 -3.54051 11.6218 -9.24816 14.7224 -8.5"];
+      break;
+  }
+};
+
+GreggNt = function() { GreggChar.call(this, "GreggNt", "nt", "NEL10", "NEL", "NEL", "black", false, p(0.0, 2.9)); };
+GreggNt.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["nt"] = GreggNt;
+
+GreggNt.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(8.19152, -5.73577);
+      this.paths = ["m 0 0 c 3.13717 0 6.54403 -2.88223 8.19152 -5.73577"];
+      break;
+  }
+};
+
+GreggMt = function() { GreggChar.call(this, "GreggMt", "mt", "NEL15", "NEL", "NEL", "black", false, p(0.0, 4.2)); };
+GreggMt.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["mt"] = GreggMt;
+
+GreggMt.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(12.2873, -8.60365);
+      this.paths = ["m 0 0 c 4.2672 1.14339 12.2873 -5.77168 12.2873 -8.60365"];
+      break;
+  }
+};
+
+GreggDf = function() { GreggChar.call(this, "GreggDf", "df", "UNER10", "NER", "SWR", "black", false, p(0.4, 3.0)); };
+GreggDf.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["df"] = GreggDf;
+
+GreggDf.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(6.28905, 0.75469);
+      this.paths = ["m 0 0 c -2.44631 -1.41238 7.57213 -9.02184 10.4194 -6.16259 c 1.89499 1.90292 -1.73645 5.66827 -4.13039 6.91728"];
+      break;
+  }
+};
+
+GreggJnt = function() { GreggChar.call(this, "GreggJnt", "jnt", "USWL9", "SWL", "NEL", "black", false, p(4.1, -4.0)); };
+GreggJnt.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["jnt"] = GreggJnt;
+
+GreggJnt.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(5.48515, 1.41858);
+      this.paths = ["m 0 0 c -4.84052 2.79467 -4.86817 6.02382 -2.69529 7.61302 c 2.76078 2.01917 9.10396 -2.7478 8.18044 -6.19444"];
+      break;
+  }
+};
