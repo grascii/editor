@@ -7832,3 +7832,17 @@ ShugiinAruiwa.prototype.setPaths = function() {
       break;
   }
 };
+
+CharSmallCircle = function() { Char.call(this, "CharSmallCircle", "小円", "C1", "C", "C", "black", false, p(1.2, 0.0)); };
+CharSmallCircle.prototype = Object.create(Char.prototype);
+Char.dict["。"] = CharSmallCircle;
+CharSmallCircle.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+
+    default:
+      this.dp = p(0, 0);
+      this.paths = ["m 0 0 c -1e-06 0.34137 -0.276739 0.61811 -0.618112 0.61811 c -0.341373 0 -0.618111 -0.27674 -0.618112 -0.61811 c 1e-06 -0.34137 0.276739 -0.61811 0.618112 -0.61811 c 0.341373 0 0.618111 0.27674 0.618112 0.61811"];
+      break;
+  }
+};
+
