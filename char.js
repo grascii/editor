@@ -8970,12 +8970,12 @@ NakaneNuu.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(12.1659, 1.03888);
-  this.paths = ["m 0 0 c -3.3457 1.54959 -0.05215 3.08737 1.06623 3.19867 c 1.20826 0.12025 7.03908 0.42588 11.0997 -2.15979"];
+  this.dp = p(15.3088, 1.30726);
+  this.paths = ["m 0 0 c -2.66945 1.16498 -1.79435 2.97213 -0.0084 3.57213 c 5.03403 1.69123 11.3577 0.14303 15.3172 -2.26487"];
 };
 
 NakaneNuu.prototype.setPathsExtra = function() {
-  this.pathsExtra  = ["m 4.5946 0.73765 v 0.1"];
+  this.pathsExtra  = ["m5.7815142,1.0540401  v 0.1"];
 };
 
 NakaneNeu = function() { NakaneChar.call(this, "NakaneNeu", "ねう", "HEL17", "SWL", "HEL", "black", true, p(1.5, -1.6)); };
