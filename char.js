@@ -8870,3 +8870,124 @@ ShugiinIi.prototype.setPaths = function() {
       break;
   }
 };
+
+NakaneNau = function() { NakaneChar.call(this, "NakaneNau", "なう", "HEL7", "SWL", "EL", "black", false, p(1.9, -1.5)); };
+NakaneNau.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["なう"] = NakaneNau;
+NakaneChar.dict["なあ"] = NakaneNau;
+NakaneChar.dict["なー"] = NakaneNau;
+NakaneChar.dict["にゃー"] = NakaneNau;
+
+NakaneNau.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(5.52111, 1.25797);
+  this.paths = ["m 0 0 c -1.14435 -0.13871 -2.74587 1.62051 -1.29292 2.481 c 1.98555 1.1759 5.7632 -0.27349 6.81403 -1.22303"];
+};
+
+NakaneNiu = function() { NakaneChar.call(this, "NakaneNiu", "にう", "HEL7", "SWL", "EL", "black", true, p(1.9, -1.5)); };
+NakaneNiu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["にう"] = NakaneNiu;
+NakaneChar.dict["にゅう"] = NakaneNiu;
+NakaneChar.dict["にゅー"] = NakaneNiu;
+NakaneNiu.prototype.setPaths = NakaneNau.prototype.setPaths;
+
+NakaneNuu = function() { NakaneChar.call(this, "NakaneNuu", "ぬう", "HEL17", "SWL", "HEL", "black", false, p(1.5, -1.6)); };
+NakaneNuu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["ぬう"] = NakaneNuu;
+NakaneChar.dict["ぬー"] = NakaneNuu;
+
+NakaneNuu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(12.1659, 1.03888);
+  this.paths = ["m 0 0 c -3.3457 1.54959 -0.05215 3.08737 1.06623 3.19867 c 1.20826 0.12025 7.03908 0.42588 11.0997 -2.15979"];
+};
+
+NakaneNuu.prototype.setPathsExtra = function() {
+  this.pathsExtra  = ["m 4.5946 0.73765 v 0.1"];
+};
+
+NakaneNeu = function() { NakaneChar.call(this, "NakaneNeu", "ねう", "HEL17", "SWL", "HEL", "black", true, p(1.5, -1.6)); };
+NakaneNeu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["ねう"] = NakaneNeu;
+NakaneChar.dict["にょう"] = NakaneNeu;
+NakaneChar.dict["にょー"] = NakaneNeu;
+NakaneNeu.prototype.setPaths = NakaneNuu.prototype.setPaths;
+
+NakaneNou = function() { NakaneChar.call(this, "NakaneNou", "のう", "HEL17", "SWL", "HEL", "black", false, p(1.5, -1.6)); };
+NakaneNou.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["のう"] = NakaneNou;
+NakaneChar.dict["のお"] = NakaneNou;
+NakaneChar.dict["のー"] = NakaneNou;
+NakaneNou.prototype.setPaths = NakaneNuu.prototype.setPaths;
