@@ -8991,3 +8991,233 @@ NakaneChar.dict["のう"] = NakaneNou;
 NakaneChar.dict["のお"] = NakaneNou;
 NakaneChar.dict["のー"] = NakaneNou;
 NakaneNou.prototype.setPaths = NakaneNuu.prototype.setPaths;
+
+SvsdAku = function() { SvsdChar.call(this, "SvsdAku", "あく", "NE10CL4", "NE", "CL", "black", false, p(0.0, 3.8)); };
+SvsdAku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["あく"] = SvsdAku;
+
+SvsdAku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(5.44838, -3.13523);
+  this.paths = ["m 0 0 l 7.98774 -4.54366 c 0.848967 -0.482917 1.24621 -1.7047 0.41486 -2.67464 c -0.354328 -0.413398 -1.19087 -0.341461 -1.63323 -0.02402 c -1.16839 0.838454 -1.32099 4.10709 -1.32099 4.10709"];
+};
+
+SvsdIku = function() { SvsdChar.call(this, "SvsdIku", "いく", "SW10CR4", "SW", "CR", "black", false, p(6.5, -4.1)); };
+SvsdIku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["いく"] = SvsdIku;
+
+SvsdIku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(-2.7447, 4.74768);
+  this.paths = ["m 0 0 l -4.37395 7.56591 c -0.713947 1.23496 -0.967199 1.08174 -1.51729 0.882444 c -0.748382 -0.271131 -1.15159 -1.5222 -0.816264 -2.2441 c 0.592879 -1.27636 3.17579 -1.50494 3.96281 -1.45657"];
+};
+
+SvsdUku = function() { SvsdChar.call(this, "SvsdUku", "うく", "SE10CL4", "SE", "CL", "black", false, p(0.0, -2.6)); };
+SvsdUku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["うく"] = SvsdUku;
+
+SvsdUku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(5.65852, 3.30026);
+  this.paths = ["m 0 0 l 8.80787 5.13708 c 0.48895 0.285174 1.34425 0.07787 1.65082 -0.397961 c 0.37594 -0.583489 0.17165 -1.64043 -0.39234 -2.04503 c -1.20509 -0.864501 -2.68672 -0.785417 -4.40783 0.60617"];
+};
+
+SvsdEki = function() { SvsdChar.call(this, "SvsdEki", "えき", "S10CR4", "S", "CR", "black", false, p(2.8, -4.9)); };
+SvsdEki.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["えき"] = SvsdEki;
+
+SvsdEki.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 5.32736);
+  this.paths = ["m 0 0 v 8.35761 c 0 1.02644 0.004 1.27522 -0.47419 1.43953 c -0.88331 0.303805 -2.29615 -0.906813 -2.32845 -1.55923 c -0.0665 -1.3427 1.69235 -2.61306 2.80264 -2.91056"];
+};
+
+SvsdOku = function() { SvsdChar.call(this, "SvsdOku", "おく", "E10CL4", "E", "CL", "black", false, p(0.0, 1.3)); };
+SvsdOku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["おく"] = SvsdOku;
+
+SvsdOku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTail();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHead();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(5.73856, 0);
+  this.paths = ["m 0 0 h 9.36118 c 0.29823 0 0.7635 -0.293335 0.84579 -0.636433 c 0.17167 -0.715717 -0.25461 -1.81103 -0.97013 -1.98352 c -1.4163 -0.341414 -2.96057 1.68861 -3.49828 2.61995"];
+};
