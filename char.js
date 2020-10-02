@@ -335,6 +335,7 @@ WasedaChar.dict["か"] = WasedaKa;
 WasedaKa.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
     case "E": 
+    case "SER":
       this.dp = p(7.5076, 0.2);
       this.paths = ["m 0 0 l 8.00001 0 l -0.4024 0.2"];
       break;
@@ -9847,7 +9848,7 @@ WasedaRa.prototype.setPaths = function() {
   //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHeadType();
+  const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9877,7 +9878,12 @@ WasedaRa.prototype.setPaths = function() {
 
   //switch (_model) {}
 
-  //switch (_head) {}
+  switch (_head) {
+    case "S":
+      this.dp = p(4, 6.9282);
+      this.paths = ["m 0 0 c 2.858 2.0012 6.72302 6.9282 4 6.9282"];
+      return;
+  }
 
   this.dp = p(4, 6.9282);
   this.paths = ["m 0 0 c 2.26387 1.5852 5.22323 4.8095 4 6.9282"];
