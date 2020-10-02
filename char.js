@@ -321,6 +321,7 @@ WasedaI.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
     case "E":
     case "NEL":
+    case "SER":
       this.dp = p(4, 0);
       this.paths = ["m 0 0 c 1.41 -0.8141 4.60079 -1.88614 4 0"];
       break;
@@ -537,6 +538,7 @@ WasedaMa.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
     case "SE":
     case "E":
+    case "SER":
       this.dp = p(8, 0);
       this.paths = ["m 0 0 c 3.1159 -1.322 9.4622 -2.088 8 0"];
       break;
@@ -596,17 +598,60 @@ WasedaO.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["お"] = WasedaO;
 
 WasedaO.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  switch (tail_ + "_" + _head) {
+    case "_SEL":
+      this.dp = p(-3.06418, 2.57115);
+      this.paths = ["m 0 0 c 0 0 -2.33408 2.37552 -3.06418 2.57115"];
+      return;
+  }
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_head) {
     case "SW":
       this.dp = p(-1.1181, 3.3258);
       this.paths = ["m 0 0l -1.3681 3.7588l 0.25 -0.433"];
-      break;
+      return;
 
-    default:
-      this.dp = p(-1.3681, 3.7587);
-      this.paths = ["m 0 0l -1.3681 3.7587"];
-      break;
+    case "SEL":
+      this.dp = p(-1.84232, 3.60228);
+      this.paths = ["m 0 0 c -0.715507 1.96595 -1.08857 3.40031 -1.84232 3.60228"];
+      return;
   }
+
+  this.dp = p(-1.3681, 3.7587);
+  this.paths = ["m 0 0l -1.3681 3.7587"];
 };
 
 WasedaLtsu = function() { WasedaChar.call(this, "WasedaLtsu", "っ", "P/X", "P/X", "P/X", "black"); };
@@ -3816,6 +3861,11 @@ WasedaKu.prototype.setPaths = function() {
       this.paths = ["m 0 0 c 2.498 -0.131 5.004 -0.1745 7.499 0 c 0.255 0.0133 0.429 -0.2262 0.504 -0.4864 c 0.971 -3.1761 -5.329 -2.3279 -2.573 -0.096 c 0.519 0.4198 1.238 0.3785 1.87 0.5716"];
       break;
 
+    case "ER16":
+      this.dp = p(8.71234, -0.77994);
+      this.paths = ["m 0 0 c 2.6652 -0.1864 5.3383 -0.2329 7.9999 0 c 1.0614 0.0928 1.1317 -2.241 -1.1419 -2.241 c -1.0213 0 -2.10023 0.692562 -1.851 1.4317 c 0.394649 1.17041 2.40504 0.502658 3.70534 0.02936"];
+      break;
+
     case "ER8":
       this.dp = p(8.70691, -0.921319);
       this.paths = ["m 0 0 c 2.6653 -0.1864 5.3383 -0.23291 7.9999 0 c 1.0615 0.09289 1.1318 -2.241 -1.1418 -2.241 c -1.0213 0 -1.9973 0.6793 -1.8511 1.4317 c 0.2131 1.0964 2.09277 0.537313 3.69991 -0.112019"];
@@ -3824,6 +3874,11 @@ WasedaKu.prototype.setPaths = function() {
     case "UWL4":
       this.dp = p(3.23545, -0.0699);
       this.paths = ["m 0 0 c 2.1327 -0.074 4.2691 -0.112 6.4001 0 c 0.8966 0.031 0.5759 -1.4556 0.07654 -1.77228 c -1.03059 -0.65357 -2.71257 1.00977 -3.24119 1.70238"];
+      break;
+
+    case "SER8":
+      this.dp = p(4.875, -0.089);
+      this.paths = ["m 0 0 c 2.5 -0.087 5.001 -0.131 7.499 0 c 0.273 0.01 0.504 -0.207 0.504 -0.486 c 0.0209 -1.19995 -1.10388 -1.67276 -1.98725 -1.97802 c -1.33818 -0.46243 -3.66892 -0.45869 -4.21812 0.49849 c -0.49073 0.85527 2.7376 1.64745 3.07737 1.87653"];
       break;
   }
 };
@@ -3859,6 +3914,12 @@ WasedaKe.prototype.setPaths = function() {
     case "EL8":
       this.dp = p(15.3539, -0.133);
       this.paths = ["m 0 0 c 4.9963 -0.262 10.0033 -0.262 15 0 c 0.2576 0.014 0.4425 -0.225 0.4949 -0.495 c 0.120228 -1.36625 -2.03115 -1.1534 -1.30929 -0.22083 c 0.208395 0.26923 0.845094 0.47783 1.16829 0.58283"];
+      break;
+
+    case "SER8":
+      this.dp = p(15, 0);
+      this.paths = ["m 0 0 c 5.001 -0.1747 10.009 -0.3491 15 0 c 0.261 0.0091 0.50586 -0.244212 0.512 -0.4775 c 0.007 -0.277346 -0.30542 -0.547201 -0.578 -0.5989 c -0.30817 -0.05845 -0.82295 0.07888 -0.856 0.3908 c -0.0403 0.380858 0.588 0.4524 0.922 0.6856"];
+      break;
   }
 };
 
@@ -4343,6 +4404,11 @@ WasedaShi.prototype.setPaths = function() {
     case "SE4":
       this.dp = p(5.53659, -4.07069);
       this.paths = ["m 0 0 c 2.0364 -1.1288 5.7357 -2.6844 5.7357 -4.986 c 0 -1.0553 -1.6709 -0.490506 -1.22223 -0.05835 c 0.429694 0.413884 0.715952 0.666501 1.02312 0.973662"];
+      return;
+
+    case "SER16":
+      this.dp = p(5.63289, -4.38072);
+      this.paths = ["m 0 0 c 2.02871 -1.1246 5.71446 -2.6746 5.71446 -4.9675 c 0 -0.265858 -0.08892 -0.431175 -0.263762 -0.506244 c -0.337411 -0.144868 -0.944374 0.01417 -1.05888 0.30377 c -0.167123 0.422698 0.337271 0.267451 1.24107 0.789257"];
       return;
   }
 
@@ -5671,26 +5737,30 @@ WasedaHi.prototype.setPaths = function() {
       return;
   }
 
-  switch (this.getNextModel()) {
+  switch (this.getNextModel().replace(/[CO].*/, "")) {
     case "EL16":
-    case "EL16CL1":
-    case "EL16CL8":
       this.dp = p(5.0592, 5.35871);
       this.paths = ["m 0 0 c 0 3.7202 1.0887 5.667 4.4275 5.667 c 0.598501 0 0.776526 -0.511535 0.776526 -0.725935 c 0 -0.3932 -0.790948 -0.849394 -1.26847 -0.192815 c -0.267796 0.368214 0.461641 0.457555 1.12364 0.610455"];
       return;
 
     case "EL8":
-    case "EL8CL1":
-    case "EL8CL4":
       this.dp = p(4.92477, 5.45748);
       this.paths = ["m 0 0 c 0 3.7202 1.08867 5.6669 4.42754 5.6669 c 0.649137 0 0.63491 -0.581588 0.63491 -0.796088 c 0 -0.493789 -0.790957 -0.595672 -1.09393 -0.263239 c -0.28726 0.315189 0.325161 0.644908 0.956251 0.849908"];
       return;
 
     case "NEL16":
-    case "NEL16CL1":
-    case "NEL16CL8":
       this.dp = p(5.48531, 4.76323);
       this.paths = ["m 0 0 c 0 3.7202 1.0885 5.667 4.4275 5.667 c 0.3901 0 0.730452 -0.101222 0.905224 -0.436174 c 0.400375 -0.767321 -0.06285 -0.978685 -0.437432 -1.07334 c -0.372691 -0.09418 -1.03549 0.377026 -0.890322 0.732968 c 0.187033 0.458591 1.07783 0.144176 1.48034 -0.127224"];
+      return;
+
+    case "SER8":
+      this.dp = p(4.427, 5.6669);
+      this.paths = ["m 0 0 c 0 3.7202 1.088 5.6669 4.427 5.6669 c 0.391 0 0.54152 -0.216225 0.494 -0.4291 c -0.0999 -0.447338 -1.09407 -0.771781 -1.323 -0.3747 c -0.19224 0.333453 0.443 0.5335 0.829 0.8038"];
+      return;
+
+    case "SER16":
+      this.dp = p(4.4275, 5.667);
+      this.paths = ["m 0 0 c 0 3.72 1.0886 5.667 4.4275 5.667 c 0.3904 0 0.551354 -0.21885 0.4935 -0.429 c -0.127703 -0.46387 -1.22989 -0.69776 -1.4205 -0.256 c -0.152214 0.35277 0.4988 0.458 0.927 0.685"];
       return;
   }
 
@@ -5712,6 +5782,12 @@ WasedaHa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["は"] = WasedaHa;
 
 WasedaHa.prototype.setPaths = function() {
+  switch (this.getNextModel().replace(/[CO].*/, "")) {
+    case "SER8":
+      this.dp = p(4.1871, 5.98);
+      this.paths = ["m 0 0 c 0 3.2145 1.5177 4.1106 4.1871 5.98"];
+      return;
+  }
 
   switch (this.getNextHeadType()) {
     case "E":
@@ -5750,6 +5826,11 @@ WasedaHu.prototype.setPaths = function() {
     case "EL":
       this.dp = p(0.349, 3.1511);
       this.paths = ["m 0 0 c 0 1.867 0.354 3.3083 0.687 4.3331 c 0.367 1.0094 0.996 1.4914 1.979 1.4914 c 0.46 0 0.855 -0.0783 0.855 -0.4361 c 0 -0.3631 -0.654 -0.8706 -1.387 -1.2934 c -0.724 -0.4355 -1.547 -0.8066 -1.785 -0.9439"];
+      break;
+
+    case "SER":
+      this.dp = p(0.072595, 3.44336);
+      this.paths = ["m 0 0 c -0.11586 1.657 0.04527 3.59 0.25878 4.938 c 0.198361 0.933 0.917832 2.51173 1.8085 2.19043 c 0.637534 -0.22998 0.522335 -1.35924 -0.004552 -2.03324 c -0.327236 -0.435 -1.26594 -1.18183 -1.99013 -1.65183"];
       break;
 
     default:
@@ -5797,6 +5878,13 @@ WasedaHo.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ほ"] = WasedaHo;
 
 WasedaHo.prototype.setPaths = function() {
+  switch (this.getNextModel().replace(/[CO].*/, "")) {
+    case "SER8":
+      this.dp = p(8, 13.856);
+      this.paths = ["m 0 0 c 0 6.4086 2.7214 10.1602 8 13.856"];
+      return;
+  }
+
   switch (this.getNextHeadType()) {
     case "E":
     case "SEL":
@@ -7359,6 +7447,11 @@ WasedaMu.prototype.setPaths = function() {
       this.dp = p(7.53954, -0.396807);
       this.paths = ["m 0 0 c 2.0216 -0.8168 3.6823 -1.2533 5.0266 -1.2533 c 1.0821 0 2.7696 0.3619 2.7696 1.599 c 0 0.747465 -1.1467 0.679876 -1.74122 0.549583 c -0.625573 -0.137098 -1.52139 -0.658821 -1.42238 -1.29154 c 0.07504 -0.479542 0.843281 -0.802665 1.32552 -0.602761 c 0.455811 0.18895 1.17068 0.522374 1.58141 0.602213"];
       return;
+
+    case "SER8":
+      this.dp = p(7.78283, -0.018803);
+      this.paths = ["m 0 0 c 2.0357 -0.7814 3.6823 -1.2533 5.0266 -1.2533 c 1.0822 0 2.7973 0.3135 2.7973 1.5506 c 0 1.0442 -1.14874 1.11866 -1.84713 1.02667 c -0.702563 -0.09254 -1.80655 -0.827439 -1.52733 -1.47874 c 0.438173 -1.02209 1.73029 -0.986527 3.33339 0.135973"];
+      return;
   }
 
   switch (this.getNextHeadType()) {
@@ -7437,6 +7530,10 @@ WasedaMo.prototype.setPaths = function() {
   }
 
   switch (this.getNextHeadType()) {
+    case "SER":
+      this.dp = p(16, 0);
+      this.paths = ["m 0 0 c 5.0166 -1.8259 17.94 -3.3601 16 0"];
+      break;
 
     default:
       this.dp = p(16, 0);
@@ -8921,10 +9018,10 @@ NakaneChar.dict["にゃー"] = NakaneNau;
 NakaneNau.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -8975,10 +9072,10 @@ NakaneChar.dict["ぬー"] = NakaneNuu;
 NakaneNuu.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9039,10 +9136,10 @@ SvsdChar.dict["あく"] = SvsdAku;
 SvsdAku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9085,10 +9182,10 @@ SvsdChar.dict["いく"] = SvsdIku;
 SvsdIku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9131,10 +9228,10 @@ SvsdChar.dict["うく"] = SvsdUku;
 SvsdUku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9177,10 +9274,10 @@ SvsdChar.dict["えき"] = SvsdEki;
 SvsdEki.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9223,10 +9320,10 @@ SvsdChar.dict["おく"] = SvsdOku;
 SvsdOku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9269,10 +9366,10 @@ SvsdChar.dict["かく"] = SvsdKaku;
 SvsdKaku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9315,10 +9412,10 @@ SvsdChar.dict["きく"] = SvsdKiku;
 SvsdKiku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9361,10 +9458,10 @@ SvsdChar.dict["くく"] = SvsdKuku;
 SvsdKuku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9407,10 +9504,10 @@ SvsdChar.dict["けき"] = SvsdKeki;
 SvsdKeki.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9453,10 +9550,10 @@ SvsdChar.dict["こく"] = SvsdKoku;
 SvsdKoku.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9503,10 +9600,10 @@ NakaneChar.dict["ひゃー"] = NakaneHau;
 NakaneHau.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9551,10 +9648,10 @@ NakaneChar.dict["ひゅー"] = NakaneHiu;
 NakaneHiu.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9598,10 +9695,10 @@ NakaneChar.dict["ふー"] = NakaneHuu;
 NakaneHuu.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9647,10 +9744,10 @@ NakaneChar.dict["ひょー"] = NakaneHeu;
 NakaneHeu.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9696,10 +9793,10 @@ NakaneChar.dict["ほー"] = NakaneHou;
 NakaneHou.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTail();
+  //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHead();
+  //const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -9733,4 +9830,254 @@ NakaneHou.prototype.setPaths = function() {
 
   this.dp = p(0.8154, 15.4926);
   this.paths = ["m 0 0 c 0.32272 -1.20443 1.02515 -1.77925 1.82823 -1.63096 c 1.18931 0.21961 1.49351 2.02594 1.66633 3.22293 c 0.67429 4.67038 0.10724 11.1142 -2.67916 13.9006"];
+};
+
+WasedaRa = function() { WasedaChar.call(this, "WasedaRa", "ら", "SER8", "SER", "SER", "black", false, p(0.0, -3.5)); };
+WasedaRa.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ら"] = WasedaRa;
+
+WasedaRa.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(4, 6.9282);
+  this.paths = ["m 0 0 c 2.26387 1.5852 5.22323 4.8095 4 6.9282"];
+};
+
+WasedaRi = function() { WasedaChar.call(this, "WasedaRi", "り", "SER8CR1", "SER", "CR", "black", false, p(0.0, -3.2)); };
+WasedaRi.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["り"] = WasedaRi;
+
+WasedaRi.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(4.26922, 5.11406);
+  this.paths = ["m 0 0 c 1.8914 1.3243 4.3722 3.7473 4.3371 5.7555 c 0 1.0663 -1.49407 0.757566 -0.9294 0.1639 c 0.278193 -0.292477 0.569933 -0.569251 0.861524 -0.805337"];
+};
+
+WasedaRu = function() { WasedaChar.call(this, "WasedaRu", "る", "SER8CR4", "SER", "CR", "black", false, p(0.0, -3.0)); };
+WasedaRu.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["る"] = WasedaRu;
+
+WasedaRu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "SE":
+      this.dp = p(4.38361, 2.86696);
+      this.paths = ["m 0 0 c 3.33417 0 5.735 3.9833 4.5184 5.5797 c -0.9554 1.2536 -2.1538 0.6153 -1.8184 -0.5999 c 0.2473 -0.8959 1.28011 -1.66464 1.68361 -2.11284"];
+      return;
+  }
+
+  //switch (_name) {}
+
+  switch (_model.replace(/[CO].*/, "")) {
+    case "ER8":
+      this.dp = p(3.58729, 3.76872);
+      this.paths = ["m 0 0 c 1.907 1.2863 5.34852 4.55248 3.70052 6.37486 c -0.466277 0.515614 -2.23494 0.354268 -1.89954 -0.860932 c 0.2473 -0.8959 1.2716 -1.44804 1.7863 -1.7452"];
+      return;
+  }
+
+  //switch (_head) {}
+
+  this.dp = p(3.53446, 3.51231);
+  this.paths = ["m 0 0 c 1.907 1.2863 5.31743 4.52484 3.70052 6.37486 c -0.409997 0.469106 -2.06292 0.501706 -1.72752 -0.713494 c 0.2473 -0.8959 1.15796 -1.70086 1.56146 -2.14906"];
+};
+
+WasedaRe = function() { WasedaChar.call(this, "WasedaRe", "れ", "SER16CR1", "SER", "CR", "black", false, p(0.0, -6.2)); };
+WasedaRe.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["れ"] = WasedaRe;
+
+WasedaRe.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_head) {
+    case "E":
+      this.dp = p(9.05159, 11.0727);
+      this.paths = ["m 0 0 c 3.8463 2.045 9.1956 8.082 9.0724 11.612 c 0 1.029 -1.3469 0.231 -1.3609 -0.169 c -0.0156 -0.447 0.832787 -0.37028 1.34009 -0.37028"];
+      return;
+
+    case "SEL":
+      this.dp = p(8.6473, 12.255);
+      this.paths = ["m 0 0 c 3.8464 2.045 8.9918 8.239 8.8686 11.769 c 0 0.539 -0.732392 0.92012 -1.0492 0.656 c -0.344879 -0.28753 0.04836 -1.2702 0.497 -1.252 c 0.376846 0.0153 0.3309 0.603 0.3309 1.082"];
+      return;
+  }
+
+  this.dp = p(8.8464, 11.1265);
+  this.paths = ["m 0 0 c 3.8244 2.1199 8.9636 8.2683 8.9017 11.813 c 0 1.0327 -1.46044 0.722022 -0.9006 0.1588 c 0.274919 -0.27658 0.558253 -0.56182 0.8453 -0.8453"];
+};
+
+WasedaRo = function() { WasedaChar.call(this, "WasedaRo", "ろ", "SER16", "SER", "SER", "black", false, p(0.0, -6.9)); };
+WasedaRo.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ろ"] = WasedaRo;
+
+WasedaRo.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(8, 13.8564);
+  this.paths = ["m 0 0 c 4.6323 2.6745 11.0125 11.3286 8 13.8564"];
 };
