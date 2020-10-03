@@ -11384,3 +11384,142 @@ SvsdMoku.prototype.setPaths = function() {
   this.dp = p(14.9819, -2.95971);
   this.paths = ["m 0 0 c 1.74531 -1.00766 13.4456 -4.56417 18.6607 -2.17839 c 0.72477 0.33156 1.46938 1.20095 1.33154 1.98595 c -0.11423 0.65056 -0.94184 1.24541 -1.59821 1.17146 c -1.72612 -0.1945 -2.97428 -3.18047 -3.41207 -3.93873"];
 };
+
+SvsdYaku = function() { SvsdChar.call(this, "SvsdYaku", "やく", "NE20CL4", "NE", "CL", "black", false, p(0.0, 6.1)); };
+SvsdYaku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["やく"] = SvsdYaku;
+
+SvsdYaku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(13.7218, -8.11575);
+  this.paths = ["m 0 0 l 15.6889 -9.04497 c 1.57301 -0.90688 1.28281 -1.6241 0.912214 -2.39318 c -0.290377 -0.60261 -1.32836 -0.93626 -1.91199 -0.60941 c -1.17759 0.65948 -1.28337 2.75222 -0.967299 3.93181"];
+};
+
+SvsdYuku = function() { SvsdChar.call(this, "SvsdYuku", "ゆく", "SE20CL4", "SE", "CL", "black", false, p(0.0, -4.8)); };
+SvsdYuku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ゆく"] = SvsdYuku;
+
+SvsdYuku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(13.1709, 7.60424);
+  this.paths = ["m 0 0 l 16.3203 9.44107 c 0.48996 0.28343 1.34425 0.0779 1.65082 -0.39797 c 0.37594 -0.58348 0.17165 -1.64043 -0.39234 -2.04503 c -1.20509 -0.8645 -2.68672 -0.78541 -4.40783 0.60617"];
+};
+
+
+SvsdYoku = function() { SvsdChar.call(this, "SvsdYoku", "よく", "E20CL4", "E", "CL", "black", false, p(0.0, 1.3)); };
+SvsdYoku.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["よく"] = SvsdYoku;
+
+SvsdYoku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(15.4923, 0);
+  this.paths = ["m 0 0 h 19.115 c 0.29823 0 0.7635 -0.29333 0.84579 -0.63643 c 0.17167 -0.71572 -0.25461 -1.81103 -0.97013 -1.98352 c -1.4163 -0.34141 -2.96057 1.68862 -3.49828 2.61995"];
+};
