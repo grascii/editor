@@ -7035,6 +7035,10 @@ GreggChar.dict["k"] = GreggK;
 
 GreggK.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
+    case "C":
+      this.dp = p(7, 0);
+      this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
+      return;
 
     default:
       this.dp = p(7, 0);
@@ -7048,13 +7052,51 @@ GreggG.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["g"] = GreggG;
 
 GreggG.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
 
-    default:
+  switch (name_ + "_" + _name) {
+  }
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_head) {
+    case "C":
       this.dp = p(14.8883, -0.300773);
       this.paths = ["m 0 0 c 3.86615 -2.10782 16.7769 -4.49967 14.8883 -0.300773"];
-      break;
+      return;
   }
+
+  this.dp = p(14.8883, -0.300773);
+  this.paths = ["m 0 0 c 3.86615 -2.10782 16.7769 -4.49967 14.8883 -0.300773"];
 };
 
 GreggR = function() { GreggChar.call(this, "GreggR", "r", "EL7", "EL", "EL", "black", false, p(0.0, -0.6)); };
@@ -7367,23 +7409,78 @@ GreggA.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["a"] = GreggA;
 
 GreggA.prototype.setPaths = function() {
-  switch (this.getNextName()) {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  switch (name_ + "_" + _name) {
+    case "GreggG_GreggT":
+      this.dp = p(-0.866314, -1.97876);
+      this.paths = ["m 0 0 c -0.593377 1.31925 -2.55261 1.25789 -3.01323 0.357408 c -0.481641 -0.94158 0.946265 -1.64297 2.14692 -2.33617"];
+      return;
+  }
+
+  //switch (name_ + "_" + _model) {}
+
+  switch (name_ + "_" + _head) {
+    case "GreggK_E":
+      this.dp = p(-2.86436, 0.17299);
+      this.paths = ["m 0 0 c -0.642393 2.24316 -3.19525 2.60409 -4.26711 2.03439 c -1.07186 -0.5697 -0.01844 -1.48059 1.40275 -1.8614"];
+      return;
+
+    case "GreggG_E":
+      this.dp = p(-2.86436, 0.17299);
+      this.paths = ["m 0 0 c -0.784766 1.74476 -3.19525 2.60409 -4.26711 2.03439 c -1.07186 -0.5697 -0.01844 -1.48059 1.40275 -1.8614"];
+      return;
+  }
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  switch (tail_ + "_" + _name) {
+  }
+
+  //switch (tail_ + "_" + _model) {}
+
+  switch (tail_ + "_" + _head) {
+    case "E_NE":
+      this.dp = p(0, 0);
+      this.paths = ["m 0 0 c 0.61007 0.05428 1.18882 0.454549 1.21785 0.97343 c 0.05834 1.04273 -1.18163 2.05838 -2.21388 2.21699 c -0.520387 0.079963 -1.31698 -0.211121 -1.40015 -0.731006 c -0.180801 -1.1302 1.19552 -1.76622 2.39617 -2.45942"];
+      return;
+
+  }
+
+  //switch (tail_) {}
+
+  switch (_name) {
     case "GreggL":
       this.dp = p(-1.41515, -0.44769 + 3.6);
       this.paths = ["m 0 3.6 c 0.88291 -0.67806 1.62989 -1.36444 1.61416 -2.57541 c -0.0116 -0.89357 -1.19773 -1.41391 -2.50938 -0.9436 c -1.33502 0.47869 -2.33738 2.23562 -0.51993 3.07132"];
-      break;
+      return;
 
     case "GreggM":
     case "GreggN":
       this.dp = p(-2.86436, 0.17299);
       this.paths = ["m 0 0 c 0.665331 1.77947 -3.19525 2.60409 -4.26711 2.03439 c -1.07186 -0.5697 -0.01844 -1.48059 1.40275 -1.8614"];
-      break;
-
-    default:
-      this.dp = p(0, 0);
-      this.paths = ["m 0 0 c -1.2047 -0.10718 -2.8967 0.74715 -3.06293 1.94513 c -0.0975 0.70262 0.711768 1.51973 1.41794 1.58685 c 1.25154 0.11895 2.94049 -1.03272 2.99782 -2.28859 c 0.02793 -0.61184 -0.74276 -1.18911 -1.35283 -1.24339"];
-      break;
+      return;
   }
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 0);
+  this.paths = ["m 0 0 c -1.2047 -0.10718 -2.8967 0.74715 -3.06293 1.94513 c -0.0975 0.70262 0.711768 1.51973 1.41794 1.58685 c 1.25154 0.11895 2.94049 -1.03272 2.99782 -2.28859 c 0.02793 -0.61184 -0.74276 -1.18911 -1.35283 -1.24339"];
 };
 
 GreggE = function() { GreggChar.call(this, "GreggE", "e", "C1", "C", "C", "black", false, p(1.0, -0.6)); };
@@ -7391,22 +7488,75 @@ GreggE.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["e"] = GreggE;
 
 GreggE.prototype.setPaths = function() {
-  switch (this.getNextName()) {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  switch (name_ + "_" + _name) {
+    case "GreggK_GreggT":
+      this.dp = p(-0.238854, -0.68917);
+      this.paths = ["m 0 0 c -0.119513 0.446028 -0.435092 0.641221 -0.775489 0.670005 c -0.266594 0.02254 -0.671697 -0.148182 -0.686841 -0.415299 c -0.02916 -0.514257 0.905842 -0.76049 1.22348 -0.943876"];
+      return;
+
+    case "GreggG_GreggT":
+      this.dp = p(0.145538, -1.07201);
+      this.paths = ["m 0 0 c -0.219853 0.488797 -0.435092 0.641221 -0.775489 0.670005 c -0.266594 0.02254 -0.667321 -0.148467 -0.686841 -0.415299 c -0.0507 -0.693003 1.29023 -1.14333 1.60787 -1.32672"];
+      return;
+  }
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  switch (tail_ + "_" + _head) {
+    case "E_NE":
+      this.dp = p(-0.672988, 0);
+      this.paths = ["m 0 0 c 0.20509 0.01825 0.4638 0.21232 0.4548 0.41801 c -0.01927 0.42221 -0.419636 0.634283 -0.757109 0.703411 c -0.338844 0.069409 -0.881053 -0.018089 -0.976651 -0.350495 c -0.090341 -0.314126 0.217432 -0.546602 0.605972 -0.770926"];
+      return;
+  }
+
+  //switch (tail_) {}
+
+  switch (_name) {
     case "GreggK":
       this.dp = p(-1.03437, 0.45655);
       this.paths = ["m 0 0 c 0.21019 0.36406 -0.0477 0.95534 -0.743096 1.28304 c -0.414734 0.19545 -1.16244 0.4689 -1.24418 0.0568 c -0.06026 -0.30378 0.568195 -0.6635 0.952903 -0.88329"];
-      break;
+      return;
 
     case "GreggL":
       this.dp = p(-0.3934, -0.9523);
       this.paths = ["m 0 0 c 0.63894 -0.0982 1.05516 -0.6312 0.83595 -1.05873 c -0.22995 -0.44849 -1.08496 -0.27871 -1.22935 0.10643"];
-      break;
-
-    default:
-      this.dp = p(0, 0);
-      this.paths = ["m 0 0 c -0.405 -0.036 -0.97382 0.25118 -1.02971 0.65392 c -0.0328 0.23621 0.23929 0.51091 0.47668 0.53348 c 0.42076 0.0399 0.98856 -0.34718 1.00783 -0.76939 c 0.009 -0.20569 -0.24971 -0.39976 -0.4548 -0.41801"];
-      break;
+      return;
   }
+
+  //switch (_model) {}
+
+  switch (_head) {
+    case "C":
+      this.dp = p(-2.86436, 0.17299);
+      this.paths = ["m 0 0 c -0.784766 1.74476 -3.19525 2.60409 -4.26711 2.03439 c -1.07186 -0.5697 -0.01844 -1.48059 1.40275 -1.8614"];
+      return;
+  }
+
+  this.dp = p(0, 0);
+  this.paths = ["m 0 0 c -0.405 -0.036 -0.97382 0.25118 -1.02971 0.65392 c -0.0328 0.23621 0.23929 0.51091 0.47668 0.53348 c 0.42076 0.0399 0.98856 -0.34718 1.00783 -0.76939 c 0.009 -0.20569 -0.24971 -0.39976 -0.4548 -0.41801"];
 };
 
 GreggO = function() { GreggChar.call(this, "GreggO", "o", "USW2.5", "SWL", "NEL", "black", false, p(0.8, -0.8)); };
