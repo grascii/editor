@@ -13243,3 +13243,146 @@ NakaneMuu.prototype.setPaths = function() {
 NakaneMuu.prototype.setPathsExtra= function() {
   this.pathsExtra = [, "m 5.70251 -5.6324 v 0.1"];
 };
+
+NakaneYau = function() { NakaneChar.call(this, "NakaneYau", "やう", "HSWL7", "HSWL", "SWL", "black", false, p(5.5, -0.2)); };
+NakaneYau.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["やう"] = NakaneYau;
+NakaneChar.dict["やあ"] = NakaneYau;
+NakaneChar.dict["やー"] = NakaneYau;
+
+NakaneYau.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(-5.45367, 2.24904);
+  this.paths = ["m 0 0 c 0.360783 -0.6249 0.236724 -1.25112 -0.164817 -1.61276 c -0.457324 -0.41188 -1.285 -0.24743 -1.84637 0.005 c -1.57179 0.70638 -2.6199 2.43205 -3.44249 3.8568"];
+};
+
+NakaneYuu = function() { NakaneChar.call(this, "NakaneYuu", "ゆう", "HNER7", "HNER", "NER", "black", false, p(2.5, 2.2)); };
+NakaneYuu.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["ゆう"] = NakaneYuu;
+NakaneChar.dict["ゆー"] = NakaneYuu;
+
+NakaneYuu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(3.33759, -4.62816);
+  this.paths = ["m 0 0 c -0.68562 0.39584 -1.44825 0.36127 -1.97398 -0.0346 c -0.446871 -0.33648 -0.709182 -1.08894 -0.49195 -1.60443 c 0.845037 -2.00524 4.30528 -2.7364 5.80352 -2.98913"];
+};
+
+NakaneYou = function() { NakaneChar.call(this, "NakaneYou", "よう", "HNER17", "HNER", "NER", "black", false, p(4.0, 5.9)); };
+NakaneYou.prototype = Object.create(NakaneChar.prototype);
+NakaneChar.dict["よう"] = NakaneYou;
+NakaneChar.dict["よー"] = NakaneYou;
+NakaneChar.dict["よお"] = NakaneYou;
+
+NakaneYou.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(8.91419, -11.7216);
+  this.paths = ["m 0 0 c -1.55213 0 -2.96159 -0.0217 -3.7415 -1.05669 c -0.39762 -0.52768 -0.301 -1.39813 0.008 -1.98216 c 2.39131 -4.52018 8.49076 -7.56885 12.6477 -8.68271"];
+};
