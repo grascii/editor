@@ -13407,3 +13407,58 @@ NakaneYou.prototype.setPaths = function() {
   this.dp = p(8.91419, -11.7216);
   this.paths = ["m 0 0 c -1.55213 0 -2.96159 -0.0217 -3.7415 -1.05669 c -0.39762 -0.52768 -0.301 -1.39813 0.008 -1.98216 c 2.39131 -4.52018 8.49076 -7.56885 12.6477 -8.68271"];
 };
+
+ShugiinIinKanji = function() { ShugiinChar.call(this, "ShugiinIinKanji", "委員|医院", "P", "P", "P", "black", false, p(0.0, 0.0)); };
+ShugiinIinKanji.prototype = Object.create(ShugiinChar.prototype);
+ShugiinChar.dict["委員"] = ShugiinIinKanji;
+ShugiinChar.dict["医院"] = ShugiinIinKanji;
+
+ShugiinIinKanji.prototype.setPaths = function() {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  switch (name_ + "_" + _name) {
+    case "CharDottedCircle_CharDottedLine":
+      this.dp = p(-7.8, 6.6);
+      return;
+
+    case "CharDottedCircle_ShugiinKa":
+      this.dp = p(-6.8, 6.6);
+      return;
+  }
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 0.1);
+  this.paths = ["m0,0v0.1"];
+};
