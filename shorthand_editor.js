@@ -47,6 +47,12 @@ function loadPageList() {
   titles.sort();
 
   pageList.innerText = "";
+
+  const opt = document.createElement("option");
+  opt.text = "new_page";
+  opt.value = "new_page";
+  pageList.add(opt);
+
   titles.forEach(function(title) {
     const opt = document.createElement("option");
     opt.text = title;
@@ -58,6 +64,8 @@ function loadPageList() {
 function savePages() {
   const text = inputTextArea.value;
   const title = pageNameInput.value;
+
+  if (title == "new_page") return;
 
   if (text == "") {
     delete pages[title];
@@ -73,12 +81,17 @@ function savePages() {
 
 function openPage() {
   const title = pageList.value;
-  if (title) {
+
+  if (title == "new_page") {
+    pageNameInput.value = "";
+    inputTextArea.value = "";
+  } else if (title) {
     pageNameInput.value = title;
     inputTextArea.value = pages[title];
     storage.setItem("lastPage", pageList.value);
-    updateSVG();
   }
+
+  updateSVG();
 }
 
 function resume() {
