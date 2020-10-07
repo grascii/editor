@@ -137,9 +137,12 @@ function downloadPNG() {
 
   img.onload = function() {
     const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
     canvas.width = svg.width.baseVal.value;
     canvas.height = svg.height.baseVal.value;
-    canvas.getContext("2d").drawImage(img, 0, 0);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.drawImage(img, 0, 0);
 
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
