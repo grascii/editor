@@ -81,7 +81,8 @@ Char.prototype.createElement   = function(pos) {
   const style = "stroke-width:" + this.thickness + ";" + "stroke:" + this.color + ";";
   const transform = "translate(" + pos.x + " " + pos.y+ ")";
   const title = document.createElementNS("http://www.w3.org/2000/svg", "title");
-  title.textContent = this.name;
+  const me = this;
+  title.textContent = me.name;
 
   g.appendChild(title);
   g.setAttribute("style", style);
@@ -95,6 +96,11 @@ Char.prototype.createElement   = function(pos) {
   this.paths.forEach(function(d) {
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", d);
+    path.setAttribute("data-char", me.name);
+    path.setAttribute("data-head", me.headType);
+    path.setAttribute("data-tail", me.tailType);
+    path.setAttribute("data-kana", me.kana);
+    path.setAttribute("data-key", "");
     g.appendChild(path);
   });
   this.updatePenPos(pos);
@@ -1963,37 +1969,69 @@ NakaneLtsu.prototype = Object.create(NakaneChar.prototype);
 NakaneChar.dict["っ"] = NakaneLtsu;
 
 NakaneLtsu.prototype.setPaths = function() {
-  switch (this.getPrevModel() + "_" + this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  switch (model_ + "_" + _head) {
     case "SER17_SW":
       this.dp = p(0, -3.5);
       return;
-
   }
 
-  switch (this.getPrevTailType() + "_" + this.getNextModel()) {
+  //switch (model_) {}
+
+  switch (tail_ + "_" + _name) {
+    case "E_NakaneKou":
+      this.dp = p(-0.8, -1.4);
+      return;
+  }
+
+  switch (tail_ + "_" + _model) {
     case "SEL_CR1SW17":
     case "SEL_SW17":
       this.dp = p(-1, -2);
       return;
   }
 
-  switch (this.getPrevTailType() + "_" + this.getNextHeadType()) {
+  switch (tail_ + "_" + _head) {
     case "E_E":
       this.dp = p(-2, 2);
-      break;
+      return;
 
     case "SR_SR":
       this.dp = p(0, -3);
-      break;
+      return;
 
     case "SER_SER":
       this.dp = p(-3, -1.8);
-      break;
-
-    default:
-      this.dp = p(5, 0);
-      break;
+      return;
   }
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+  
+  this.dp = p(5, 0);
 };
 
 NakaneHa = function() { NakaneChar.call(this, "NakaneHa", "は", "SR7", "SR", "SR", "black", false, p(0.0, -3.5)); };
@@ -5166,13 +5204,50 @@ NakaneMan.prototype = Object.create(NakaneChar.prototype);
 NakaneChar.dict["まん"] = NakaneMan;
 
 NakaneMan.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
 
-    default:
-      this.dp = p(6.23474, 0.50537);
-      this.paths = ["m 0 0 c 0.677358 -0.004 0.795881 0.99996 0.36706 1.35399 c -0.340538 0.28114 -0.948956 0.01 -0.998638 -0.50967 c -0.05025 -0.52507 0.49364 -0.7751 0.631578 -0.84432 c 2.02257 -1.01503 5.26759 -0.66963 6.23474 0.50537"];
-      break;
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  switch (name_) {
+    case "NakaneShi":
+    case "NakaneShiu":
+    case "NakaneShin":
+      this.dp = p(6.41101, 0.47825);
+      this.paths = ["m 0 0 c 0.690568 0.14957 0.759364 -1.1664 0.09713 -1.34333 c -0.400031 -0.10688 -0.8793 0.57109 -0.774024 0.97155 c 0.07798 0.29664 0.715222 0.41388 0.85316 0.34466 c 2.02257 -1.01503 5.26759 -0.66963 6.23474 0.50537"];
+      return;
   }
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  this.dp = p(6.23474, 0.50537);
+  this.paths = ["m 0 0 c 0.677358 -0.004 0.795881 0.99996 0.36706 1.35399 c -0.340538 0.28114 -0.948956 0.01 -0.998638 -0.50967 c -0.05025 -0.52507 0.49364 -0.7751 0.631578 -0.84432 c 2.02257 -1.01503 5.26759 -0.66963 6.23474 0.50537"];
 };
 
 NakaneMin = function() { NakaneChar.call(this, "NakaneMin", "まん", "CR1ER7", "C", "ER", "black", true, p(0.6, -0.4)); };
@@ -7030,13 +7105,65 @@ NakaneIu.prototype = Object.create(NakaneChar.prototype);
 NakaneChar.dict["いう"] = NakaneIu;
 
 NakaneIu.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
 
-    default:
-      this.dp = p(3.43755, -4.3115);
-      this.paths = ["m 0 0 c -0.853191 0.08687 -2.16962 -0.202753 -1.7479 -1.45659 c 0.629021 -1.87019 5.18545 -2.85491 5.18545 -2.85491"];
-      break;
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "SW":
+      this.dp = p(6.4268, -4.62556);
+      this.paths = ["m 0 0 c 0.639178 -1.10709 1.63905 -2.38784 2.79881 -3.20383 c 1.06229 -0.747407 2.48903 -1.42173 3.62799 -1.42173"];
+      return;
+
+    case "SER":
+      this.dp = p(5.78165, -5.56505);
+      this.paths = ["m 0 0 c -0.286898 -1.07072 -0.465803 -1.84091 -0.021869 -2.57592 c 1.12501 -1.86264 4.30528 -2.7364 5.80352 -2.98913"];
+      return;
+
+    case "SE":
+      this.dp = p(3.90218, -5.52637);
+      this.paths = ["m 0 0 c -0.685619 -0.395842 -0.883659 -0.536943 -1.40939 -0.932813 c -0.446871 -0.33648 -0.709182 -1.08894 -0.49195 -1.60443 c 0.845037 -2.00524 4.30528 -2.7364 5.80352 -2.98913"];
+      return;
+
+    case "E":
+      this.dp = p(3.43082, -4.51958);
+      this.paths = ["m 0 0 c -0.851411 0.091063 -2.16542 -0.212538 -1.7445 -1.52689 c 0.627625 -1.96045 5.17532 -2.99269 5.17532 -2.99269"];
+      return;
   }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(3.33759, -4.62816);
+  this.paths = ["m 0 0 c -0.68562 0.39584 -1.44825 0.36127 -1.97398 -0.0346 c -0.446871 -0.33648 -0.709182 -1.08894 -0.49195 -1.60443 c 0.845037 -2.00524 4.30528 -2.7364 5.80352 -2.98913"];
 };
 
 NakaneUu = function() { NakaneChar.call(this, "NakaneUu", "うう", "USWL2NEL17", "SWL", "NEL", "black", false, p(0.7, 1.2)); };
@@ -9128,13 +9255,50 @@ NakaneChar.dict["ちゃー"] = NakaneTau;
 NakaneChar.dict["ちゃあ"] = NakaneTau;
 
 NakaneTau.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
 
-    default:
-      this.dp = p(6.45556, 1.55943);
-      this.paths = ["m 0 0 c -1.61343 -2.09969 0.279789 -2.00573 0.926933 -1.63213 l 5.52862 3.19156"];
-      break;
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "SW":
+      this.dp = p(7.52615, 2.12022);
+      this.paths = ["m 0 0 c 0.763942 -1.32319 1.35039 -1.44494 1.99753 -1.07134 l 5.52862 3.19156"];
+      return;
   }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(6.45556, 1.55943);
+  this.paths = ["m 0 0 c -1.61343 -2.09969 0.279789 -2.00573 0.926933 -1.63213 l 5.52862 3.19156"];
 };
 
 NakaneChiu = function() { NakaneChar.call(this, "NakaneChiu", "ちう", "UNR2S7", "NER", "S", "black", false, p(0.0, -2.2)); };
@@ -9159,13 +9323,50 @@ NakaneChar.dict["つー"] = NakaneTsuu;
 NakaneChar.dict["つう"] = NakaneTsuu;
 
 NakaneTsuu.prototype.setPaths = function() {
-  switch (this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
 
-    default:
-      this.dp = p(14.801, -5.56544);
-      this.paths = ["m 0 0 c -0.7807 1.55675 -0.329385 3.17154 1.61164 2.0507 l 13.1893 -7.61614"];
-      break;
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "SW":
+      this.dp = p(14.8009, -5.56544);
+      this.paths = ["m 0 0 c -2.16624 -0.580442 -3.16627 4.80923 1.61164 2.0507 l 13.1893 -7.61614"];
+      return;
   }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+  
+  this.dp = p(14.801, -5.56544);
+  this.paths = ["m 0 0 c -0.7807 1.55675 -0.329385 3.17154 1.61164 2.0507 l 13.1893 -7.61614"];
 };
 
 NakaneTeu = function() { NakaneChar.call(this, "NakaneTeu", "てう", "UNR2S17", "NER", "S", "black", false, p(0.0, -7.2)); };
@@ -13687,48 +13888,49 @@ NakaneYuu = function() { NakaneChar.call(this, "NakaneYuu", "ゆう", "HNER7", "
 NakaneYuu.prototype = Object.create(NakaneChar.prototype);
 NakaneChar.dict["ゆう"] = NakaneYuu;
 NakaneChar.dict["ゆー"] = NakaneYuu;
+NakaneYuu.prototype.setPaths = NakaneIu.prototype.setPaths; 
 
-NakaneYuu.prototype.setPaths = function() {
-  //const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTailType();
-  //const _name = this.getNextName();
-  //const _model = this.getNextModel();
-  //const _head = this.getNextHeadType();
-
-  //switch (name_ + "_" + _name) {}
-
-  //switch (name_ + "_" + _model) {}
-
-  //switch (name_ + "_" + _head) {}
-
-  //switch (name_) {}
-
-  //switch (model_ + "_" + _name) {}
-
-  //switch (model_ + "_" + _model) {}
-
-  //switch (model_ + "_" + _head) {}
-
-  //switch (model_) {}
-
-  //switch (tail_ + "_" + _name) {}
-
-  //switch (tail_ + "_" + _model) {}
-
-  //switch (tail_ + "_" + _head) {}
-
-  //switch (tail_) {}
-
-  //switch (_name) {}
-
-  //switch (_model) {}
-
-  //switch (_head) {}
-
-  this.dp = p(3.33759, -4.62816);
-  this.paths = ["m 0 0 c -0.68562 0.39584 -1.44825 0.36127 -1.97398 -0.0346 c -0.446871 -0.33648 -0.709182 -1.08894 -0.49195 -1.60443 c 0.845037 -2.00524 4.30528 -2.7364 5.80352 -2.98913"];
-};
+//NakaneYuu.prototype.setPaths = function() {
+//  //const name_ = this.getPrevName();
+//  //const model_ = this.getPrevModel();
+//  //const tail_ = this.getPrevTailType();
+//  //const _name = this.getNextName();
+//  //const _model = this.getNextModel();
+//  //const _head = this.getNextHeadType();
+//
+//  //switch (name_ + "_" + _name) {}
+//
+//  //switch (name_ + "_" + _model) {}
+//
+//  //switch (name_ + "_" + _head) {}
+//
+//  //switch (name_) {}
+//
+//  //switch (model_ + "_" + _name) {}
+//
+//  //switch (model_ + "_" + _model) {}
+//
+//  //switch (model_ + "_" + _head) {}
+//
+//  //switch (model_) {}
+//
+//  //switch (tail_ + "_" + _name) {}
+//
+//  //switch (tail_ + "_" + _model) {}
+//
+//  //switch (tail_ + "_" + _head) {}
+//
+//  //switch (tail_) {}
+//
+//  //switch (_name) {}
+//
+//  //switch (_model) {}
+//
+//  //switch (_head) {}
+//
+//  this.dp = p(3.33759, -4.62816);
+//  this.paths = ["m 0 0 c -0.68562 0.39584 -1.44825 0.36127 -1.97398 -0.0346 c -0.446871 -0.33648 -0.709182 -1.08894 -0.49195 -1.60443 c 0.845037 -2.00524 4.30528 -2.7364 5.80352 -2.98913"];
+//};
 
 NakaneYou = function() { NakaneChar.call(this, "NakaneYou", "よう", "HNER17", "HNER", "NER", "black", false, p(4.0, 5.9)); };
 NakaneYou.prototype = Object.create(NakaneChar.prototype);
@@ -13739,7 +13941,7 @@ NakaneChar.dict["よお"] = NakaneYou;
 NakaneYou.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTailType();
+  const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
   //const _head = this.getNextHeadType();
@@ -13766,7 +13968,13 @@ NakaneYou.prototype.setPaths = function() {
 
   //switch (tail_ + "_" + _head) {}
 
-  //switch (tail_) {}
+  switch (tail_) {
+    case "SE":
+    case "SER":
+      this.dp = p(12.3247, -11.588);
+      this.paths = ["m 0 0 c -0.585942 -1.01488 -0.728548 -2.01929 -0.323034 -2.9053 c 2.12817 -4.64987 8.49076 -7.56885 12.6477 -8.68271"];
+      return;
+  }
 
   //switch (_name) {}
 
