@@ -9,7 +9,7 @@ svg.setAttribute("width", "210mm");
 svg.setAttribute("height", "297mm");
 svg.setAttribute("data-text", "");
 svg.setAttribute("transform", "scale(1, 1) translate(0)");
-svg.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1");
+svg.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;background-color:white;");
 const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
 viewer.appendChild(svg);
 const styleAnimation = document.createElement("style");
