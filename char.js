@@ -958,12 +958,48 @@ ShugiinChar.dict["かん"] = ShugiinKan;
 
 ShugiinKan.prototype.setPaths = function() {
   this.paths = ["m 0 0l 7 0"];
+  this.dp = p(7 + 2, 0);
 
-  switch (this.getNextHeadType()) {
-    default:
-      this.dp = p(7 + 2, 0);
-      break;
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  switch (_name) {
+    case "ShugiinIn":
+      this.dp = p(7 + 2, 1);
+      return;
   }
+
+  //switch (_model) {}
+
+  //switch (_head) {}
 };
 
 ShugiinGan = function() { ShugiinChar.call(this, "ShugiinGan", "がん", "E7F", "E", "EF", "black", false, p(0, 0)); };
@@ -1092,15 +1128,52 @@ ShugiinChar.dict["さん"] = ShugiinSan;
 
 ShugiinSan.prototype.setPaths = function() {
   this.paths = ["m 0 0c 1.865545 2.3380102 1.380297 4.8547172 -0.357092 6.9689422"];
+  this.dp = p(-0.357092, 6.9689422 + 2);
 
-  switch (this.getNextHeadType()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  switch (_name) {
+    case "ShugiinIn":
+      this.dp = p(-0.357092 + 2, 6.9689422);
+      return;
+
+  }
+
+  //switch (_model) {}
+
+  switch (_head) {
     case "NER":
       this.dp = p(-0.357092 + 2, 6.9689422);
-      break;
-
-    default:
-      this.dp = p(-0.357092, 6.9689422 + 2);
-      break;
+      return;
   }
 };
 
@@ -1177,14 +1250,40 @@ ShugiinChar.dict["だん"] = ShugiinDan;
 
 ShugiinDan.prototype.setPaths = function() {
   this.paths = ["m 0,0 0,7.0"];
+  this.dp = p(0 + 1.5, 7 - 2);
 
-  //switch (this.getNextModel()) {
-  //  case "UWR3ER7":
-  //    this.dp = p(1, 7.4);
-  //    return;
-  //}
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
 
-  switch (this.getNextName()) {
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  switch (_name) {
     case "ShugiinWa":
       this.dp = p(0 + 3.5, 7 - 1);
       return;
@@ -1197,14 +1296,15 @@ ShugiinDan.prototype.setPaths = function() {
     case "ShugiinWo":
       this.dp = p(0 + 2, 7 - 1);
       return;
+
+    case "ShugiinIn":
+      this.dp = p(0 + 1.5, 7 - 1);
+      return;
   }
 
+  //switch (_model) {}
 
-  switch (this.getNextHeadType()) {
-    default:
-      this.dp = p(0 + 1.5, 7 - 2);
-      break;
-  }
+  //switch (_head) {}
 };
 
 ShugiinNa = function() { ShugiinChar.call(this, "ShugiinNa", "な", "EL7", "EL", "EL", "black", false, p(0.0, -0.5)); };
@@ -1345,12 +1445,50 @@ ShugiinChar.dict["まん"] = ShugiinMan;
 
 ShugiinMan.prototype.setPaths = function() {
   this.paths = ["m 0 0c 1.661847 -2.001066 5.296682 -2.489993 7 0"];
+  this.dp = p(7 + 1.41, 0 + 1.41);
 
-  switch (this.getNextHeadType()) {
-    default:
-      this.dp = p(7 + 1.41, 0 + 1.41);
-      break;
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  switch (_name) {
+    case "ShugiinIn":
+      this.dp = p(7 + 1.1, 0 + 1.1);
+      return;
   }
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+
 };
 
 ShugiinYa = function() { ShugiinChar.call(this, "ShugiinYa", "や", "NER7", "NER", "NER", "black", false, p(0.0, 2.4)); };
@@ -10883,6 +11021,16 @@ ShugiinIn.prototype.setPaths = function() {
     case "ShugiinMa":
       this.dp = p(1.81119, -2.67983);
       this.paths = ["m 0 0 c 0.125681 0.183726 0.025345 0.400143 -0.113327 0.500038 c -0.183831 0.132426 -0.561153 0.127657 -0.676331 -0.067443 c -0.170061 -0.288067 -0.033385 -0.502268 0.39525 -0.922446 l 0.791384 -0.77577"];
+      return;
+
+    case "ShugiinYa":
+      this.dp = p(2.51819, -2.45682);
+      this.paths = ["m 0 0 c 0.373056 0.0484 0.455228 0.27031 0.458372 0.49522 c 0.0032 0.23005 -0.227138 0.48426 -0.454503 0.51945 c -0.168016 0.026 -0.393871 -0.0997 -0.436199 -0.26435 c -0.07186 -0.27957 0.236936 -0.56579 0.43233 -0.75032 l 1.10399 -1.04261"];
+      return;
+
+    case "ShugiinRa":
+      this.dp = p(2.18792, -3.37797);
+      this.paths = ["m 0 0 c -0.014182 0.357419 -0.241804 0.499413 -0.47001 0.497811 c -0.193422 -0.00136 -0.377326 -0.234645 -0.392408 -0.427483 c -0.037349 -0.477525 0.795324 -1.19678 0.795324 -1.19678 l 0.840807 -0.837305", "m 2.18792 -3.37797 v 0"];
       return;
   }
 
