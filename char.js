@@ -15967,3 +15967,54 @@ WasedaNaiHitei.prototype.setPaths = function() {
 
   //switch (_head) {}
 };
+
+WasedaNakuHitei = function() { WasedaChar.call(this, "WasedaNakuHitei", "なくｘ", "XS3", "XS", "S", "black", false, p(0.0, -1.5)); };
+WasedaNakuHitei.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["なくｘ"] = WasedaNakuHitei;
+
+WasedaNakuHitei.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "E":
+      this.dp = p(0 - 1, 3 - 1.5);
+      this.paths = ["m-1,-1.5v3"];
+      return;
+  }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 3);
+  this.paths = ["m 0 0 v 3"];
+};
