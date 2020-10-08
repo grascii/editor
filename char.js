@@ -14927,7 +14927,7 @@ WasedaChar.dict["と"] = WasedaTo;
 WasedaTo.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tail_ = this.getPrevTailType();
+  const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
   //const _head = this.getNextHeadType();
@@ -14954,7 +14954,14 @@ WasedaTo.prototype.setPaths = function() {
 
   //switch (tail_ + "_" + _head) {}
 
-  //switch (tail_) {}
+  switch (tail_) {
+    case "E":
+    case "ECL":
+      this.headType = this.tailType = "SW";
+      this.dp = p(-6.76188, 14.5009);
+      this.paths = ["m 0 0 l -6.76188 14.5009"];
+      return;
+  }
 
   //switch (_name) {}
 
