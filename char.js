@@ -14698,3 +14698,22 @@ SvsdHotsu.prototype.setPaths = function() {
   this.dp = p(14.8901, 2.06092);
   this.paths = ["m 0 0 c 4.81103 3.71824 12.928 3.58775 18.3006 0.68931 c 0.48354 -0.26087 1.22622 -1.00778 0.85261 -1.41062 c -0.49153 -0.52998 -1.36948 0.52869 -1.93491 0.979 c -0.75645 0.60244 -1.60851 1.38776 -2.32814 1.80323"];
 };
+
+WasedaKai = function() { WasedaChar.call(this, "WasedaKai", "かい", "E4", "E", "E", "black"); };
+WasedaKai.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["かい"] = WasedaKai;
+
+WasedaKai.prototype.setPaths = function() {
+  switch (this.getNextHeadType()) {
+    case "E": 
+    case "SER":
+      this.dp = p(3.5076, 0.2);
+      this.paths = ["m 0 0 l 4 0 l -0.4024 0.2"];
+      break;
+
+    default:
+      this.dp = p(4, 0);
+      this.paths = ["m 0 0 l 4 0"];
+      break;
+  }
+};
