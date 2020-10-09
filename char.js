@@ -16338,7 +16338,7 @@ WasedaTsuP.prototype.setPaths = function() {
   //const tail_ = this.getPrevTailType();
   const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHeadType();
+  const _head = this.getNextHeadType();
 
   switch (name_ + "_" + _name) {
     case "WasedaNoJoshi_WasedaMa":
@@ -16348,7 +16348,11 @@ WasedaTsuP.prototype.setPaths = function() {
 
   //switch (name_ + "_" + _model) {}
 
-  //switch (name_ + "_" + _head) {}
+  switch (name_ + "_" + _head) {
+    case "WasedaNoJoshi_S":
+      this.dp = p(2, 1.2);
+      return;
+  }
 
   //switch (name_) {}
 
