@@ -16908,3 +16908,54 @@ WasedaTer.prototype.setPaths = function() {
   this.dp = p(5.52004, -4.60012);
   this.paths = ["m 0 0 c 2.13049 -1.58006 4.01619 -3.22646 5.97267 -5.0117 c 0.3253 -0.3253 0.407186 -0.04102 0.46407 0.1072 c 0.157612 0.410691 -0.326208 1.17013 -0.75698 1.081 c -0.258809 -0.05355 -0.260337 -0.447519 -0.159717 -0.776619"];
 };
+
+WasedaWagakuni = function() { WasedaChar.call(this, "WasedaWagakuni", "わが国", "UWL4EL8CL1", "SWL", "EL", "black", false, p(1.8, -2.2)); };
+WasedaWagakuni.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["わが国"] = WasedaWagakuni;
+
+WasedaWagakuni.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  switch (_model.replace(/(\D+\d+).*/, "$1")) {
+    case "EL8":
+      this.dp = p(8.45891, 3.28972);
+      this.paths = ["m 0 0 c -0.975 0.3745 -1.93925 1.18359 -1.833 2.1089 c 0.131345 1.1438 1.68672 1.68576 2.79777 2.02542 c 2.189 0.6692 7.72796 0.443685 7.72796 -1.47642 c 0 -0.4888 -0.165727 -0.752748 -0.475372 -0.8549 c -0.287317 -0.094786 -0.769478 0.077947 -0.826525 0.375069 c -0.096893 0.504651 0.394685 0.783189 1.06808 1.11165"];
+      return;
+  }
+
+  //switch (_head) {}
+
+  this.dp = p(8.45891, 3.28972);
+  this.paths = ["m 0 0 c -0.975 0.3745 -1.93925 1.18359 -1.833 2.1089 c 0.131345 1.1438 1.68672 1.68576 2.79777 2.02542 c 2.189 0.6692 7.72796 0.443685 7.72796 -1.47642 c 0 -0.4888 -0.335 -0.7721 -0.644 -0.8549 c -0.307 -0.0881 -0.569 0.0282 -0.417 0.3028 c 0.233 0.4034 0.533183 0.82181 0.827183 1.18391"];
+};
