@@ -15984,7 +15984,7 @@ WasedaNakuHitei.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["なくｘ"] = WasedaNakuHitei;
 
 WasedaNakuHitei.prototype.setPaths = function() {
-  //const name_ = this.getPrevName();
+  const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
   const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
@@ -15997,7 +15997,12 @@ WasedaNakuHitei.prototype.setPaths = function() {
 
   //switch (name_ + "_" + _head) {}
 
-  //switch (name_) {}
+  switch (name_) {
+    case "WasedaWa":
+      this.dp = p(-0.8, 3 - 1.3);
+  this.paths = ["m-0.8,-1.3v3"];
+      return;
+  }
 
   //switch (model_ + "_" + _name) {}
 
