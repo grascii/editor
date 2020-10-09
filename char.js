@@ -17448,3 +17448,52 @@ WasedaNakaP.prototype.setPaths = function() {
 
   this.dp = p(0, 0);
 };
+
+WasedaLtsuP = function() { WasedaChar.call(this, "WasedaLtsuP", "っ", "P/X", "P/X", "P/X", "black"); };
+WasedaLtsuP.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["っ"] = WasedaLtsuP;
+
+WasedaLtsuP.prototype.setPaths = function() {
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  switch (name_ + "_" + _name) { }
+
+  //switch (name_ + "_" + _model) {}
+
+  switch (name_ + "_" + _head) {
+    case "WasedaKetsu_SW":
+      this.dp = p(-1, -3.3);
+      return;
+  }
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 0);
+};
