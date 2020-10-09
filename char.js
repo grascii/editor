@@ -17497,3 +17497,49 @@ WasedaLtsuP.prototype.setPaths = function() {
 
   this.dp = p(0, 0);
 };
+
+WasedaXter = function() { WasedaChar.call(this, "WasedaXter", "てｒ", "SW4CR1S1F", "SW", "SF", "black", false, p(2.2, -3.4)); };
+WasedaXter.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["〜てｒ"] = WasedaXter;
+
+WasedaXter.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(-1.3681, 6.7587);
+  this.paths = ["m 0 0 l -1.3681 3.7587 c -0.122467 0.336465 -0.559886 0.222285 -0.71422 0.04051 c -0.272069 -0.320444 -0.144722 -1.20264 0.274697 -1.23081 c 0.422001 -0.028346 0.439523 0.770494 0.439523 1.1903 v 1"];
+};
