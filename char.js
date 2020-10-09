@@ -16115,8 +16115,8 @@ WasedaTaxe.prototype.setPaths = function() {
 
   switch (_head) {
     case "SW":
-      this.dp = p(-1.75473, 6.81524);
-      this.paths = ["m 0 0 l -2.73616 7.5176", "m -2.39414 6.5779 l 0.639409 0.23734"];
+      this.dp = p(-1.94534, 7.07768);
+      this.paths = ["m 0 0 l -2.73616 7.5176", "m -2.39414 6.5779 c 0.318527 0.0853 0.549559 0.22296 0.448806 0.49978"];
       return;
   }
 
