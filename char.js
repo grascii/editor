@@ -4274,10 +4274,15 @@ WasedaNi.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["に"] = WasedaNi;
 
 WasedaNi.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextModel().replace(/(\D+\d+).*/, "$1")) {
     case "NEL8":
       this.dp = p(7.9375, -2e-06);
       this.paths = ["m 0 0 c 2.198 0.6302 7.9375 1.913 7.9375 0 c 0 -0.4872 -0.249561 -0.723292 -0.559841 -0.747084 c -0.373313 -0.02862 -0.949046 0.441014 -0.802738 0.785652 c 0.177557 0.418246 1.00498 0.159589 1.36258 -0.03857"];
+      return;
+
+    case "ER4":
+      this.dp = p(7.86178, 0.40521);
+      this.paths = ["m 0 0 c 2.189 0.6692 7.97 1.9201 7.97 0 c 0 -0.556572 -0.818181 -0.394055 -1.16516 -0.132416 c -0.225183 0.169801 -0.391466 0.576847 -0.186635 0.787268 c 0.296999 0.305104 0.519605 0.168357 1.24357 -0.249642"];
       return;
 
     case "ER16":
