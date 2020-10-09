@@ -17341,3 +17341,51 @@ WasedaHur.prototype.setPaths = function() {
   this.dp = p(2.50256, 3.1499);
   this.paths = ["m 0 0 c -0.07043 2.58414 0.53302 5.79481 3.4745 5.8548 c 0.49614 0.01012 1.24982 -0.228218 1.3021 -0.7217 c 0.105953 -1.00018 -1.35034 -1.7699 -2.27404 -1.9832"];
 };
+
+
+WasedaNan = function() { WasedaChar.call(this, "WasedaNan", "なん", "EL8F", "EL", "ELF", "black", false, p(0.0, 0.1)); };
+WasedaNan.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["なん"] = WasedaNan;
+WasedaChar.dict["何"] = WasedaNan;
+
+WasedaNan.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(9.26562, -1.10113);
+  this.paths = ["m 0 0 c 2.62139 0.8517 6.64345 1.35655 8 0", "m 9.26562 -1.10113 v 0"];
+};
