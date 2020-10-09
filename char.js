@@ -16007,6 +16007,11 @@ WasedaNakuHitei.prototype.setPaths = function() {
       this.dp = p(-0.8, 3 - 1.3);
   this.paths = ["m-0.8,-1.3v3"];
       return;
+
+    case "WasedaE":
+      this.dp = p(-0.8, 3 - 1.8);
+  this.paths = ["m-0.8,-1.8v3"];
+      return;
   }
 
   //switch (model_ + "_" + _name) {}
