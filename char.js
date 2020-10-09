@@ -17197,3 +17197,101 @@ WasedaSha.prototype.setPaths = function() {
   this.dp = p(0, 8);
   this.paths = ["m 0 0 c 1.50458 2.2306 1.94404 6.4812 0 8"];
 };
+
+WasedaKetsu = function() { WasedaChar.call(this, "WasedaKetsu", "けつ", "SE8", "SE", "SE", "black", false, p(0.0, -3.3)); };
+WasedaKetsu.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["けつ"] = WasedaKetsu;
+
+WasedaKetsu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(4.58861, 6.55322);
+  this.paths = ["m 0 0 l 4.58861 6.55322"];
+};
+
+WasedaHoku = function() { WasedaChar.call(this, "WasedaHoku", "ほく", "BSEL16", "BSEL", "SEL", "black", false, p(0.0, -5.9)); };
+WasedaHoku.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ほく"] = WasedaHoku;
+
+WasedaHoku.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_head) {
+    case "E":
+    case "EL":
+      this.dp = p(9.06067, 10.0957);
+      this.paths = ["m 0 0 c 0.590457 0 1.06066 -0.567771 1.06066 -1.06066 c 0 10.815 5.03594 16.2903 8.00001 11.1564"];
+      return;
+  }
+
+  this.dp = p(9.06066, 12.7957);
+  this.paths = ["m 0 0 c 0.590457 0 1.06066 -0.567771 1.06066 -1.06066 c 0 7.6983 1.3202 13.8564 8 13.8564"];
+};
