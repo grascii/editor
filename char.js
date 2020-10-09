@@ -16811,3 +16811,49 @@ WasedaRouP.prototype.setPaths = function() {
 
   this.dp = p(0, 0);
 };
+
+WasedaGimonhu = function() { WasedaChar.call(this, "WasedaGimonhu", "？", "ER4SW16CL1SW2F", "ER", "SWF", "black", false, p(2.1, -6.6)); };
+WasedaGimonhu.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["？"] = WasedaGimonhu;
+
+WasedaGimonhu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(-2.06188, 14.1924);
+  this.paths = ["m 0 0 c 2.14052 -1.14857 5.21408 -1.67903 4.56489 0.971632 c -0.726788 2.96752 -2.59634 6.85911 -3.54381 9.79562 c -0.247255 0.76633 -0.916437 2.09919 -0.172129 2.34985 c 0.769432 0.25912 1.78939 -1.58033 1.32778 -2.04194 c -0.649458 -0.649457 -3.71379 2.59938 -4.23862 3.11727"];
+};
