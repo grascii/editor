@@ -4333,7 +4333,7 @@ WasedaNe.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ね"] = WasedaNe;
 
 WasedaNe.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextModel().replace(/(\D+\d+).*/, "$1")) {
     case "ER4":
       this.dp = p(15.8002, 0.183);
       this.paths = ["m 0 0 c 2.87 0.558 15.821 2.735 15.821 0 c 0 -0.355 -0.457412 -0.40155 -0.7194 -0.351 c -0.420711 0.0812 -1.08607 0.58742 -0.8626 0.953 c 0.281024 0.45973 0.9627 -0.073 1.5612 -0.419"];
@@ -8219,7 +8219,7 @@ WasedaMe.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["め"] = WasedaMe;
 
 WasedaMe.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextModel().replace(/(\D+\d+).*/, "$1")) {
     case "NEL8":
       this.dp = p(15.4183, -1.578);
       this.paths = ["m 0 0 c 3.62581 -1.109 15.7619 -2.95 15.8262 -1.107 c 0.0156 0.297 -0.343033 0.62722 -0.653104 0.68374 c -0.302834 0.0552 -0.807321 -0.093 -0.832432 -0.39981 c -0.03578 -0.43713 0.728936 -0.56193 1.07764 -0.75493"];
@@ -16947,7 +16947,7 @@ WasedaWagakuni.prototype.setPaths = function() {
 
   //switch (_name) {}
 
-  switch (_model.replace(/(\D+\d+).*/, "$1")) {
+  switch (_model.replace(/([A-Z]+\d+).*/, "$1")) {
     case "EL8":
       this.dp = p(8.45891, 3.28972);
       this.paths = ["m 0 0 c -0.975 0.3745 -1.93925 1.18359 -1.833 2.1089 c 0.131345 1.1438 1.68672 1.68576 2.79777 2.02542 c 2.189 0.6692 7.72796 0.443685 7.72796 -1.47642 c 0 -0.4888 -0.165727 -0.752748 -0.475372 -0.8549 c -0.287317 -0.094786 -0.769478 0.077947 -0.826525 0.375069 c -0.096893 0.504651 0.394685 0.783189 1.06808 1.11165"];
