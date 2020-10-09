@@ -1086,10 +1086,9 @@ WasedaKi.prototype.setPaths = function() {
       break;
   }
 
-  switch (this.getNextModel()) {
+  switch (this.getNextModel().replace(/[CO].*/, "")) {
     case "EL8":
-    case "EL8CL1":
-    case "EL8CL4":
+    case "EL8NWL4":
       this.dp = p(7.8538, -0.1336);
       this.paths = ["m 0 0 c 2.4983 -0.131 5.0044 -0.1745 7.5 0 c 0.2576 0.0135 0.4426 -0.2257 0.495 -0.495 c 0.241 -1.1339 -1.6417 -0.7453 -1.0399 -0.0769 c 0.229 0.2456 1.2199 0.5365 0.8987 0.4383"];
       break;
