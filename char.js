@@ -406,7 +406,7 @@ WasedaGa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["が"] = WasedaGa;
 WasedaGa.prototype.setPaths = WasedaKa.prototype.setPaths; 
 WasedaGa.prototype.setPathsExtra = function() {
-  this.pathsExtra = ["m 4.5,1 0,0"];
+  this.pathsExtra = ["m 4.5,1v0.1"];
 };
 
 
@@ -15560,7 +15560,6 @@ WasedaIruP.prototype.setPaths = function() {
   //switch (_head) {}
 
   this.dp = p(3, 0.1);
-  this.paths = ["m 3 0 v0"];
 };
 
 WasedaKyoh = function() { WasedaChar.call(this, "WasedaKyoh", "きょー", "SW4NE1SW3", "SW", "SW", "black", false, p(1.4, -3.1)); };
@@ -17067,7 +17066,7 @@ WasedaShin.prototype.setPaths = function() {
   //switch (_head) {}
 
   this.dp = p(8.50046, -6.66964);
-  this.paths = ["m 0 0 c 2.02885 -1.1246 5.8001 -2.5739 5.8001 -4.8669 c 0 -0.3853 -0.1734 -0.6318 -0.42922 -0.6363 c -0.42275 -0.0148 -1.00026 0.6628 -0.76372 1.0135 c 0.2436 0.3479 0.83805 -0.0702 1.22478 -0.3512 c 0.58759 -0.4114 0.7648 -0.6094 1.3403 -1.0124", "m 8.50046 -6.66964 v 0"];
+  this.paths = ["m 0 0 c 2.02885 -1.1246 5.8001 -2.5739 5.8001 -4.8669 c 0 -0.3853 -0.1734 -0.6318 -0.42922 -0.6363 c -0.42275 -0.0148 -1.00026 0.6628 -0.76372 1.0135 c 0.2436 0.3479 0.83805 -0.0702 1.22478 -0.3512 c 0.58759 -0.4114 0.7648 -0.6094 1.3403 -1.0124"];
 };
 
 WasedaShite = function() { WasedaChar.call(this, "WasedaShite", "して", "SE3", "SE", "SE", "black", false, p(0.0, -1.0)); };
