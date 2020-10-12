@@ -17934,3 +17934,49 @@ SvsdRotsu.prototype.setPaths = function() {
   this.dp = p(1.81903, -0.64604);
   this.paths = ["m 0 0 c 1.57424 -0.74463 3.2677 -1.13444 4.61923 -0.28187 c 0.27712 0.15999 0.38361 0.35148 0.29156 0.53131 c -0.12455 0.24335 -0.54342 0.13985 -0.81394 0.10043 c -0.82001 -0.11949 -1.78543 -0.71163 -2.27782 -0.99591"];
 };
+
+SvsdWatsu = function() { SvsdChar.call(this, "SvsdWatsu", "わつ", "UNL5OL4", "SEL", "OL", "black", false, p(0.0, -1.3)); };
+SvsdWatsu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["わつ"] = SvsdWatsu;
+
+SvsdWatsu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+
+  this.dp = p(2.95593, 2.39463);
+  this.paths = ["m 0 0 c 0.0193 1.23 0.514414 2.9679 1.6525 2.879 c 1.1009 -0.086 1.99765 -0.95863 2.63032 -1.81585 c 0.292705 -0.39659 0.877446 -1.17553 0.444122 -1.41046 c -0.427049 -0.23152 -0.731225 0.78795 -0.925996 1.1253 c -0.327678 0.56755 -0.529934 1.07091 -0.845018 1.61664"];
+};
