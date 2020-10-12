@@ -15664,18 +15664,22 @@ WasedaKataP.prototype.setPaths = function() {
   //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _head = this.getNextHeadType();
+  const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
   //switch (name_ + "_" + _model) {}
 
-  //switch (name_ + "_" + _head) {}
+  switch (name_ + "_" + _head) {
+    case "WasedaNoJoshi_":
+      this.dp = p(4.6, -1.1);
+      this.paths = ["m4.6,-1.1v0.1"];
+      return;
+  }
 
   switch (name_) {
     case "WasedaNoJoshi":
       this.dp = p(4.6, -1.1);
-      this.paths = ["m4.6,-1.1v0.1"];
       return;
   }
 
@@ -15701,7 +15705,7 @@ WasedaKataP.prototype.setPaths = function() {
 
   //switch (_head) {}
   this.dp = p(1.414, -1.314);
-  this.paths = ["m 0 0", "m 1.414 -1.414 v 0.1"];
+  //this.paths = ["m 0 0", "m 1.414 -1.414 v 0.1"];
 };
 
 SvsdMatsu = function() { SvsdChar.call(this, "SvsdMatsu", "まつ", "SER20OR4", "SER", "OR", "black", false, p(0.0, 5.0)); };
@@ -17396,7 +17400,7 @@ WasedaNan.prototype.setPaths = function() {
   //switch (_head) {}
 
   this.dp = p(9.26562, -1.10113);
-  this.paths = ["m 0 0 c 2.62139 0.8517 6.64345 1.35655 8 0", "m 9.26562 -1.10113 v 0"];
+  this.paths = ["m 0 0 c 2.62139 0.8517 6.64345 1.35655 8 0"];
 };
 
 WasedaNakaP = function() { WasedaChar.call(this, "WasedaNakaP", "なかｐ", "P/X", "P/X", "P/X", "black"); };
@@ -17548,9 +17552,9 @@ WasedaXter.prototype.setPaths = function() {
   this.paths = ["m 0 0 l -1.3681 3.7587 c -0.122467 0.336465 -0.559886 0.222285 -0.71422 0.04051 c -0.272069 -0.320444 -0.144722 -1.20264 0.274697 -1.23081 c 0.422001 -0.028346 0.439523 0.770494 0.439523 1.1903 v 1"];
 };
 
-CharSeparator = function() { Char.call(this, "CharSeparator", "", "", "", "", "black"); };
+CharSeparator = function() { Char.call(this, "CharSeparator", "", "-", "-", "-", "black"); };
 CharSeparator.prototype = Object.create(Char.prototype);
-CharSeparator.prototype.setPaths = function() {};
+CharSeparator.prototype.setPaths = function() { this.paths = [""]; };
 CharSeparator.prototype.updatePenPos = function(pos) {};
 Char.dict["/"] = CharSeparator;
 Char.dict["／"] = CharSeparator;
