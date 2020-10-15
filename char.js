@@ -18374,4 +18374,4 @@ SvsdGen = function() { SvsdChar.call(this, "SvsdGen", "げん", "SL10CL1", "SL",
 SvsdGen.prototype = Object.create(SvsdChar.prototype);
 SvsdChar.dict["げん"] = SvsdGen;
 SvsdGen.prototype.setPaths = SvsdKen.prototype.setPaths;
-SvsdGen.prototype.setPathsExtra = function() { this.pathsExtra = []; };
+SvsdGen.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.09972 4.40898 l 1.14907 0.96418"]; };
