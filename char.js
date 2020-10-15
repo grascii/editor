@@ -8518,6 +8518,12 @@ SvsdKya.prototype.setPaths = function() {
   }
 };
 
+SvsdGya = function() { SvsdChar.call(this, "SvsdGya", "ぎゃ", "HNEL10", "HNEL", "NEL", "black", false, p(1.0, 0.5)); };
+SvsdGya.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぎゃ"] = SvsdGya;
+SvsdGya.prototype.setPaths = SvsdKya.prototype.setPaths;
+SvsdGya.prototype.setPathsExtra = function() { this.pathsExtra = ["m 3.81629 -0.01509 l 0.599564 0.98706"]; };
+
 SvsdKyu = function() { SvsdChar.call(this, "SvsdKyu", "きゅ", "HSEL10", "HSEL", "SEL", "black", false, p(1.3, -2.6)); };
 SvsdKyu.prototype = Object.create(SvsdChar.prototype);
 SvsdChar.dict["きゅ"] = SvsdKyu;
