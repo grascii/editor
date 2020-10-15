@@ -5106,6 +5106,11 @@ WasedaShi.prototype.setPaths = function() {
       this.dp = p(5.59802, -4.81796);
       this.paths = ["m 0 0 c 2.3283 0 5.72379 -3.35499 5.72379 -5.65649 c 0 -1.0555 -1.44882 -0.050717 -1.45066 0.432524 c -0.00183 0.48324 0.650396 0.42195 1.32489 0.406005"];
       return;
+
+    case "SEL_SW":
+      this.dp = p(4.4094, -1.86702);
+      this.paths = ["m 0 0 c 2.3283 0 5.8218 -1.95426 5.8218 -4.8855 c 0 -1.0555 -0.54513 -0.185427 -0.693725 0.30917 c -0.190747 0.634901 -0.570144 2.30124 -0.718675 2.70931"];
+      return;
   }
 
   switch (tail_) {
@@ -5131,6 +5136,11 @@ WasedaShi.prototype.setPaths = function() {
     case "EL8":
       this.dp = p(5.64632, -4.43216);
       this.paths = ["m 0 0 c 2.0287 -1.125 5.714 -2.674 5.714 -4.967 c 0 -0.783 -1.09944 -0.73983 -1.288 -0.338 c -0.21246 0.45274 0.52932 0.67484 1.22032 0.87284"];
+      return;
+
+    case "EL16":
+      this.dp = p(5.64078, -4.35178);
+      this.paths = ["m 0 0 c 2.0364 -1.1288 5.7358 -2.6844 5.7358 -4.986 c 0 -0.603618 -1.0754 -0.710859 -1.27104 -0.32019 c -0.226056 0.451418 0.184781 0.725617 1.17602 0.95441"];
       return;
 
     case "SW4":
@@ -6755,6 +6765,11 @@ WasedaHo.prototype.setPaths = function() {
     case "SE":
       this.dp = p(8, 11.1564);
       this.paths = ["m 0 0 c 0 10.815 5.0359 16.2904 8 11.1564"];
+      break;
+
+    case "NEL":
+      this.dp = p(8, 13.8564);
+      this.paths = ["m 0 0 c 0 7.6983 4.64325 13.8564 8 13.8564"];
       break;
 
     default:
@@ -11262,6 +11277,11 @@ WasedaRe.prototype.setPaths = function() {
     case "EL4":
       this.dp = p(8.8464, 11.1265);
       this.paths = ["m 0 0 c 3.8244 2.1199 8.9636 8.2683 8.9017 11.813 c 0 1.0327 -0.759845 0.429188 -0.9006 0.1588 c -0.183997 -0.353455 -0.331962 -1.47127 0.8453 -0.8453"];
+      return;
+
+    case "ER8":
+      this.dp = p(8.8464, 11.1265);
+      this.paths = ["m 0 0 c 3.8244 2.1199 8.9636 8.2683 8.9017 11.813 c 0 1.0327 -0.957802 0.515937 -1.11044 0.173789 c -0.18489 -0.41443 0.78744 -0.752128 1.05514 -0.860289"];
       return;
 
     case "EL16":
@@ -18375,3 +18395,59 @@ SvsdGen.prototype = Object.create(SvsdChar.prototype);
 SvsdChar.dict["げん"] = SvsdGen;
 SvsdGen.prototype.setPaths = SvsdKen.prototype.setPaths;
 SvsdGen.prototype.setPathsExtra = function() { this.pathsExtra = ["m -2.09972 4.40898 l 1.14907 0.96418"]; };
+
+SvsdLtsu = function() { SvsdChar.call(this, "SvsdLtsu", "っ", "P/X", "P/X", "P/X", "black"); };
+SvsdLtsu.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["っ"] = SvsdLtsu;
+
+SvsdLtsu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  const model_ = this.getPrevModel();
+  const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  switch (model_ + "_" + _head) {
+  }
+
+  //switch (model_) {}
+
+  switch (tail_ + "_" + _name) {
+  }
+
+  switch (tail_ + "_" + _model) {
+  }
+
+  switch (tail_ + "_" + _head) {
+    case "NEL_E":
+      this.dp = p(-2, 1);
+      return;
+
+    case "EL_SWL":
+      this.dp = p(-1, -0.5);
+      return;
+  }
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_head) {}
+  
+  this.dp = p(5, 0);
+};
