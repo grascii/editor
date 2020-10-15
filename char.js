@@ -18240,3 +18240,9 @@ SvsdEnd.prototype.setPaths = function() {
   this.dp = p(-6.26474, 10.5994);
   this.paths = ["m 0 0 l -4.75585 6.98818", "m -4.36761 2.32939 l 3.78526 2.91174", "m -5.7443 8.64502 c -4.21534 -0.65575 -3.08971 -4.74181 -1.9049 -6.76151 c 1.97567 -3.36783 8.79985 -5.64943 11.3914 -2.72889 c 1.85191 2.08702 -1.04732 5.76824 -2.90456 7.85052 c -1.76614 1.98014 -4.91891 4.09225 -7.10236 3.59425"];
 };
+
+SvsdGyo = function() { SvsdChar.call(this, "SvsdGyo", "ぎょ", "HEL10", "HEL", "EL", "black", false, p(0.8, -1.2)); };
+SvsdGyo.prototype = Object.create(SvsdChar.prototype);
+SvsdChar.dict["ぎょ"] = SvsdGyo;
+SvsdGyo.prototype.setPaths = SvsdKyo.prototype.setPaths;
+SvsdGyo.prototype.setPathsExtra = function() { this.pathsExtra = ["m 3.29445 1.882 l 1.06066 1.06066"]; };
