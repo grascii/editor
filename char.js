@@ -874,7 +874,13 @@ NakaneGa.prototype.setPathsExtra = NakaneKa.prototype.setPathsExtra;
 
 
 
-SvsdChar = function(name, kana, model, headType, tailType, color) { Char.apply(this, arguments); };
+SvsdChar = function(name, kana, model, headType, tailType, color) {
+  Char.apply(this, arguments);
+  this.posKoto   = pp(2, 45);
+  this.posNode   = p(2, 0);
+  this.posWakede = p(0, -2);
+  this.posMono   = pp(2, 135);
+};
 SvsdChar.prototype = Object.create(Char.prototype);
 SvsdChar.dict = {};
 
