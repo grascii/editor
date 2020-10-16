@@ -4368,7 +4368,12 @@ WasedaWa.prototype.setPaths = function() {
       return;
   }
 
-  switch (model_ + "_" + _head) { }
+  switch (model_ + "_" + _head) {
+    case "EL8CL1_EL":
+      this.dp = p(1.69545, 2.69701);
+      this.paths = ["m 0 0 c -0.69084 0.90515 -1.28108 2.22721 -0.596457 2.96901 c 0.521773 0.565352 1.69893 0.755071 2.29191 -0.272004"];
+      return;
+  }
 
   switch (model_) {
     case "EL8CL1":
