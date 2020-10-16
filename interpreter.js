@@ -17,10 +17,10 @@ Lexer.prototype.error = function() {
   console.error("Invalid character");
 };
 
-Lexer.prototype.shorthand = function() {
+Lexer.prototype.command = function() {
   var result = this.currentChar;
   this.advance();
-  while ((this.currentChar !== null) && /[a-z]+/.test(this.currentChar)) {
+  while ((this.currentChar !== null) && /[a-z{}_\d.-]+/.test(this.currentChar)) {
     result += this.currentChar;
     this.advance();
   }
@@ -62,7 +62,7 @@ Lexer.prototype.atomicSequence = function() {
 Lexer.prototype.getNextToken = function() {
   if (this.currentChar !== null) {
     if (this.currentChar == "\\") {
-      return {type: "SHORTHAND", value: this.shorthand()};
+      return {type: "COMMAND", value: this.command()};
     }
 
     if (this.currentChar == "(") {
@@ -104,9 +104,9 @@ Parser.prototype.eat = function(tokenType) {
   }
 }
 
-Parser.prototype.shorthand = function() {
+Parser.prototype.command = function() {
   const token = this.currentToken;
-  this.eat("SHORTHAND");
+  this.eat("COMMAND");
   return token.value;
 }
 
@@ -132,7 +132,7 @@ Parser.prototype.factor = function() {
 
 Parser.prototype.string = function() {
   const factors = [];
-  while ((this.currentToken !== null) && (this.currentToken.type != "SHORTHAND") && (this.currentToken.type != "EOF")) {
+  while ((this.currentToken !== null) && (this.currentToken.type != "COMMAND") && (this.currentToken.type != "EOF")) {
     factors.push(this.factor());
   }
   return factors;
@@ -141,11 +141,11 @@ Parser.prototype.string = function() {
 Parser.prototype.page = function() {
   var token = this.currentToken;
   const result = [];
-  if (token.type != "SHORTHAND") {
+  if (token.type != "COMMAND") {
     result.push(this.string()); 
   }
-  while (this.currentToken !== null && this.currentToken.type == "SHORTHAND") {
-    result.push(this.shorthand()); 
+  while (this.currentToken !== null && this.currentToken.type == "COMMAND") {
+    result.push(this.command()); 
     result.push(this.string()); 
   }
   return result;

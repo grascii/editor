@@ -22,7 +22,9 @@ input.addEventListener("input", function() { updateSVG(false); });
 const fileNameInput = document.getElementById("page_name");
 
 const downloadButtonSVG = document.getElementById("download_button_svg");
-downloadButtonSVG.addEventListener("click", downloadSVG);
+downloadButtonSVG.addEventListener("click", 
+  function() { downloadSVG(fileNameInput.value + ".svg"); }
+);
 
 const downloadButtonPNG = document.getElementById("download_button_png");
 downloadButtonPNG.addEventListener("click", downloadPNG);
@@ -84,7 +86,7 @@ function openPage() {
 
   if (title == "new_page") {
     pageNameInput.value = "";
-    inputTextArea.value = "";
+    inputTextArea.value = "\\none";
   } else if (title) {
     pageNameInput.value = title;
     inputTextArea.value = pages[title];
@@ -116,14 +118,14 @@ function setMirrorMode(mirrored) {
   svg.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
 }
 
-function downloadSVG() {
+function downloadSVG(fileName) {
   const svg = document.getElementById('svg_root');
   const svgStr = new XMLSerializer().serializeToString(svg);
   const blob = new Blob([svgStr], {type: "data:image/svg+xml;charset=utf-8"});
   const url = window.URL.createObjectURL(blob);
   const a = document.createElement("a");
   a.href = url;
-  a.download = "download.svg";
+  a.download = fileName || "download.svg";
   a.click();
   window.setTimeout(function() {
     window.URL.revokeObjectURL(url);
@@ -237,7 +239,30 @@ function parseInputText(text) {
         }
       }
     } else {
-      shorthand = items[i].substring(1);
+      items[i] = items[i].substring(1);
+      switch (items[i]) {
+        case "waseda":
+        case "svsd":
+        case "nakane":
+        case "shugiin":
+        case "gregg":
+        case "takusari":
+        case "none":
+          shorthand = items[i];
+          break;
+            
+        default:
+          const match = items[i].match(/^([hv])space{(-?\d+(?:\.\d+)?)}/);
+          if (match) {
+            if (match[1] == "h") {
+              chars.push(new CharRight(parseFloat(match[2])));
+            } else if (match[1] == "v") {
+              chars.push(new CharUp(parseFloat(match[2])));
+            }
+          }
+
+          break;
+      }
     }
   }
   return chars;
@@ -256,7 +281,7 @@ function setAnimation(speed) {
   var style = "@keyframes shorthand_draw{100%{stroke-dashoffset:0;}}";
 
   paths.forEach(function(path, i) {
-    const margin = 0.5;
+    const margin = speed;
     const dash = (path.getTotalLength());
     const duration_ms = (dash / speed);
     path.setAttribute("class", "shorthand_" + i);
@@ -278,7 +303,7 @@ function updateSVG(toAnimate) {
   const text = input.value;
   const chars = parseInputText(text);
 
-  svg.setAttribute("data-text", encodeURIComponent(text));
+  //svg.setAttribute("data-text", encodeURIComponent(text));
 
   svg.textContent = "";
   svg.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}));
