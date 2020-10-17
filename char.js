@@ -1091,6 +1091,11 @@ WasedaKi.prototype.setPaths = function() {
       this.paths = ["m 0 0 c 2.4983 -0.1309 5.0044 -0.1745 7.5 0 c 0.2567 0.0135 0.4381 -0.2273 0.495 -0.4949 c 0.1591 -0.689 -0.5687 -0.8506 -0.6661 -0.5109 c -0.0924 0.322 -0.1392 0.6553 -0.1392 0.9902"];
       break;
 
+    case "S":
+      this.dp = p(6.8, 0);
+      this.paths = ["m 0 0 h 7.5 c 0.407467 0 0.283251 -0.447164 0.192383 -0.656213 c -0.110495 -0.254199 -0.497258 -0.501418 -0.743035 -0.373278 c -0.307475 0.160307 -0.149348 0.545765 -0.149348 1.02949"];
+      break;
+
     default:
       this.dp = p(6.8, 0);
       this.paths = ["m 0 0l 7.5 0c 0.58408 0 0.63639 -0.844999999999999 0.0713499999999998 -0.9192c -0.46945 -0.0616999999999983 -0.49342 0.588000000000001 -0.77135 0.9192"];
@@ -4344,11 +4349,12 @@ WasedaWa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["わ"] = WasedaWa;
 
 WasedaWa.prototype.setPaths = function() {
-  //const name_ = this.getPrevName();
+  const name_ = this.getPrevName();
   const model_ = this.getPrevModel();
   const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   const _model = this.getNextModel();
+  const _headModel = this.getNextHeadModel();
   const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
@@ -4357,11 +4363,16 @@ WasedaWa.prototype.setPaths = function() {
 
   //switch (name_ + "_" + _head) {}
 
-  //switch (name_) {}
+  switch (name_) {
+    case "WasedaShi":
+      this.dp = p(1.94979, 3.31739);
+      this.paths = ["m 0 0 c -0.14818 0.553004 -0.29433 1.21369 -0.29433 2.22289 c 0 0.9992 1.20263 1.5802 2.24412 1.0945"];
+      return;
+  }
 
   //switch (model_ + "_" + _name) {}
 
-  switch (model_ + "_" + _model.replace(/(\D+\d+).*/, "$1")) {
+  switch (model_ + "_" + _headModel) {
     case "NEL8_NEL8":
     case "NEL16_NEL8":
     case "E8CL4_NEL8":
@@ -5083,7 +5094,7 @@ WasedaShi.prototype.setPaths = function() {
   const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
   const tail_ = this.getPrevTailType();
-  //const _name = this.getNextName();
+  const _name = this.getNextName();
   const _model = this.getNextModel();
   const _head = this.getNextHeadType();
 
@@ -5108,7 +5119,12 @@ WasedaShi.prototype.setPaths = function() {
 
   //switch (model_) {}
 
-  //switch (tail_ + "_" + _name) {}
+  switch (tail_ + "_" + _name) {
+    case "SEL_WasedaWa":
+      this.dp = p(4.31285, -2.04335);
+      this.paths = ["m 0 0 c 2.3283 0 5.8218 -2.584 5.8218 -4.8855 c 0 -1.0555 -0.714786 0.398232 -0.832488 0.718004 c -0.182455 0.495695 -0.382129 0.910457 -0.676462 2.12415"];
+      return;
+  }
 
   //switch (tail_ + "_" + _model) {}
 
@@ -5227,7 +5243,7 @@ WasedaSu.prototype.setPaths = function() {
       }
   }
 
-  switch (this.getNextModel().replace(/(\D+\d+).*/, "$1")) {
+  switch (this.getNextHeadModel()) {
     case "EL8":
       this.dp = p(5.12678, -3.06292);
       this.paths = ["m 0 0 c 2.05895 -1.0491 5.86209 -2.4626 5.86209 -4.7471 c 0 -1.0867 -1.9661 -1.3883 -3.09921 -0.7602 c -1.06108 0.5881 0.524317 1.84668 2.3639 2.44438"];
@@ -5236,6 +5252,11 @@ WasedaSu.prototype.setPaths = function() {
     case "EL16":
       this.dp = p(5.05454, -2.98447);
       this.paths = ["m 0 0 c 2.0589 -1.0491 5.8621 -2.4625 5.8621 -4.747 c 0 -1.0868 -2.1644 -1.1935 -3.2975 -0.5654 c -1.0814 0.5994 0.537436 1.87722 2.48994 2.32793"];
+      return;
+
+    case "SER8":
+      this.dp = p(4.68984, -2.91633);
+      this.paths = ["m 0 0 c 2.0288 -1.1246 5.7144 -2.6743 5.7144 -4.9674 c 0 -2.1677 -3.21889 -0.804741 -3.51502 0.334357 c -0.253688 0.975835 0.897163 0.601059 2.49046 1.71671"];
       return;
 
     case "ER8":
@@ -6707,29 +6728,73 @@ WasedaHu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ふ"] = WasedaHu;
 
 WasedaHu.prototype.setPaths = function() {
-  switch (this.getNextName()) {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _headModel = this.getNextHeadModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  switch (_name) {
     case "WasedaWa":
       this.dp = p(0.92649, 4.62699);
       this.paths = ["m 0 0 c 0 1.867 0.307 3.31 0.765 4.3381 c 0.493 1.0114 1.382 1.4475 2.722 1.4475 c 0.628 0 1.34865 -0.166261 1.32745 -0.660206 c -0.0512 -1.19284 -2.61931 -0.871696 -3.88796 -0.498401"];
       return;
   }
 
-  switch (this.getNextHeadType()) {
+  //switch (_model) {}
+
+  switch (_headModel) {
+    case "SW8":
+      this.dp = p(1.13864, 4.93499);
+      this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.22488 -0.231572 1.3022 -0.7218 c 0.155566 -0.986318 -1.04802 -2.22656 -2.0458 -2.18813 c -0.848915 0.032689 -1.09557 0.561082 -1.59227 1.99003"];
+      return;
+
+    case "SE4":
+      this.dp = p(2.91358, 5.8235);
+      this.paths = ["m 0 0 c -0.03365 2.67325 0.754208 5.81682 3.4745 5.8549 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -1.70377 -2.23519 -2.83527 -3.16704 -2.00337 c -0.744182 0.66436 0.659576 2.04944 1.30392 2.69378"];
+      return;
+  }
+
+  switch (_head) {
     case "EL":
       this.dp = p(0.349, 3.1511);
       this.paths = ["m 0 0 c 0 1.867 0.354 3.3083 0.687 4.3331 c 0.367 1.0094 0.996 1.4914 1.979 1.4914 c 0.46 0 0.855 -0.0783 0.855 -0.4361 c 0 -0.3631 -0.654 -0.8706 -1.387 -1.2934 c -0.724 -0.4355 -1.547 -0.8066 -1.785 -0.9439"];
-      break;
+      return;
 
     case "SER":
       this.dp = p(0.072595, 3.44336);
       this.paths = ["m 0 0 c -0.11586 1.657 0.04527 3.59 0.25878 4.938 c 0.198361 0.933 0.917832 2.51173 1.8085 2.19043 c 0.637534 -0.22998 0.522335 -1.35924 -0.004552 -2.03324 c -0.327236 -0.435 -1.26594 -1.18183 -1.99013 -1.65183"];
-      break;
-
-    default:
-      this.dp = p(0.6103, 3.8936);
-      this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207"];
-      break;
+      return;
   }
+
+  this.dp = p(0.6103, 3.8936);
+  this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207"];
 };
 
 WasedaHe = function() { WasedaChar.call(this, "WasedaHe", "へ", "SEL16CL1", "SEL", "CL", "black", false, p(0.0, -7.0)); };
@@ -6737,7 +6802,7 @@ WasedaHe.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["へ"] = WasedaHe;
 
 WasedaHe.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextHeadModel()) {
     case "NEL8":
     case "NEL8CL1":
       this.dp = p(8.54163, 13.034);
@@ -6754,6 +6819,11 @@ WasedaHe.prototype.setPaths = function() {
     case "NEL16CL8":
       this.dp = p(8.55068, 13.0147);
       this.paths = ["m 0 0 c 0 4.132 0.507 7.8422 1.648 10.4039 c 1.185 2.5413 4.18778 4.17684 6.4 3.261 c 0.61545 -0.254791 0.578 -0.7769 0.351 -1.0789 c -0.39 -0.5366 -1.10954 -0.281369 -1.52354 0.268031 c -0.425 0.564 0.71122 0.81073 1.67522 0.16063"];
+      return;
+
+    case "SW8":
+      this.dp = p(7.01351, 13.9014);
+      this.paths = ["m 0 0 c 0 8.2946 1.44769 15.1564 7.9403 13.753 c 0.273487 -0.05912 0.485738 -0.243699 0.507664 -0.474227 c 0.025536 -0.268487 -0.206842 -0.651987 -0.476534 -0.653873 c -0.531972 -0.0037 -0.738032 0.672356 -0.957922 1.2765"];
       return;
   }
 
@@ -8538,6 +8608,11 @@ WasedaMi.prototype.setPaths = function() {
       this.paths = ["m 0 0 c 1.859 -0.828 7.951 -2.109 7.951 -0.556 c 0 0.594 -0.31177 0.93732 -0.65242 0.83953 c -0.48228 -0.13845 -0.34758 -0.95953 -0.15258 -1.49753"];
       break;
 
+    case "S":
+      this.dp = p(6.73913, -1.27096);
+      this.paths = ["m 0 0 c 1.8517 -0.8635 7.64527 -2.13214 7.9805 -0.558 c 0.124224 0.583319 -0.301954 0.59088 -0.561318 0.551584 c -0.473203 -0.071694 -0.680051 -0.611148 -0.680051 -1.26455"];
+      break;
+
     default:
       this.dp = p(7.5344, -1.1129);
       this.paths = ["m 0 0 c 1.8517 -0.8635 7.9805 -2.1169 7.9805 -0.558 c 0 0.5964 -1.0114 0.9895 -1.2013 0.8411 c -0.3914 -0.317 0.2804 -0.7426 0.7552 -1.396"];
@@ -8550,7 +8625,7 @@ WasedaMu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["む"] = WasedaMu;
 
 WasedaMu.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextHeadModel()) {
     case "NEL8":
       this.dp = p(5.85932, -1.19414);
       this.paths = ["m 0 0 c 2.036 -0.7814 3.682 -1.2533 5.027 -1.2533 c 1.082 0 2.797 0.3136 2.797 1.5504 c 0 1.4252 -3.9947 0.929334 -4.10017 -0.486666 c -0.0584 -0.784484 1.37449 -0.582574 2.13549 -1.00457"];
@@ -8574,6 +8649,11 @@ WasedaMu.prototype.setPaths = function() {
     case "SER8":
       this.dp = p(7.78283, -0.018803);
       this.paths = ["m 0 0 c 2.0357 -0.7814 3.6823 -1.2533 5.0266 -1.2533 c 1.0822 0 2.7973 0.3135 2.7973 1.5506 c 0 1.0442 -1.14874 1.11866 -1.84713 1.02667 c -0.702563 -0.09254 -1.80655 -0.827439 -1.52733 -1.47874 c 0.438173 -1.02209 1.73029 -0.986527 3.33339 0.135973"];
+      return;
+
+    case "SER16":
+      this.dp = p(7.77707, 0.000381);
+      this.paths = ["m 0 0 c 2.0293 -0.8199 3.6962 -1.258 5.0456 -1.258 c 1.0861 0 2.78 0.3634 2.78 1.6051 c 0 1.26668 -3.65304 0.090422 -3.3579 -1.04396 c 0.28386 -1.09102 2.59777 0.302791 3.30937 0.697239"];
       return;
   }
 
@@ -8650,7 +8730,7 @@ WasedaMo.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["も"] = WasedaMo;
 
 WasedaMo.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextHeadModel()) {
     case "EL8":
       this.dp = p(16, 0);
       this.paths = ["m 0 0 c 3.43 -1.249 12.509 -1.067 16 0"];
@@ -8659,6 +8739,11 @@ WasedaMo.prototype.setPaths = function() {
     case "EL16":
       this.dp = p(16, 0);
       this.paths = ["m 0 0 c 3.4161 -1.2433 10.8034 -1.19989 16 0"];
+      return;
+
+    case "SW8":
+      this.dp = p(16, 0);
+      this.paths = ["m 0 0 c 4.3601 -1.5869 17.3428 -3.68933 16 0"];
       return;
   }
 
