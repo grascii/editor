@@ -475,7 +475,7 @@ WasedaKya.prototype.setPaths = function() {
   }
 };
 
-WasedaTa = function() { WasedaChar.call(this, "WasedaTa", "た", "SW8/NE8", "SW/NE", "SW/NE", "black"); };
+WasedaTa = function() { WasedaChar.call(this, "WasedaTa", "た", "SW8/NE8", "SW/NE", "SW/NE", "black", false, p(2.9, -3.3)); };
 WasedaTa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["た"] = WasedaTa;
 
@@ -4515,7 +4515,7 @@ WasedaKe.prototype.setPaths = function() {
       break;
   }
 
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextHeadModel()) {
     case "ER8":
       this.dp = p(15.495, -0.495);
       this.paths = ["m 0 0 c 4.99656 -0.262 10.0034 -0.262 15 0 c 0.2699 0.014 0.561845 -0.22395 0.495 -0.495 c -0.145958 -0.59184 -0.435556 -0.69907 -0.698982 -0.62394 c -0.262078 0.0747 -0.498252 0.33 -0.541307 0.46811 c -0.07713 0.24743 0.246543 0.67314 1.24029 0.15583"];
@@ -4525,6 +4525,10 @@ WasedaKe.prototype.setPaths = function() {
       this.dp = p(15.9203, -0.708327);
       this.paths = ["m 0 0 c 4.99656 -0.2619 10.0034 -0.2619 15 0 c 0.986194 0.05169 1.25342 -0.957776 0.439318 -1.39679 c -0.599829 -0.323463 -1.3404 0.524022 -1.12758 0.972392 c 0.233471 0.491865 1.07591 -0.110871 1.60852 -0.283931"];
       break;
+    case "EL4":
+      this.dp = p(15, 0);
+      this.paths = ["m 0 0 c 4.9965 -0.2618 10.0034 -0.2618 15 0 c 0.2699 0.0142 0.555225 -0.269561 0.495 -0.495 c -0.125561 -0.470008 -1.17026 -0.803634 -1.40917 -0.379852 c -0.207139 0.367412 0.561684 0.687428 0.914175 0.874852"];
+      return;
 
     case "EL8":
       this.dp = p(15.3539, -0.133);
@@ -16809,7 +16813,8 @@ WasedaTsu.prototype.setPaths = function() {
   //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   const _model = this.getNextModel();
-  //const _head = this.getNextHeadType();
+  const _headModel = this.getNextHeadModel();
+  const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -16837,17 +16842,32 @@ WasedaTsu.prototype.setPaths = function() {
 
   //switch (_name) {}
 
-  switch (_model.replace(/[CO].*/, "")) {
+  switch (_headModel) {
+    case "ER4":
+      this.dp = p(-0.024474, 3.09364);
+      this.paths = ["m 0 0 c -0.046547 1.3329 -0.046547 2.6671 0 4 c 0.019752 0.5656 -0.64819 0.806362 -0.9 0.5588 c -0.405708 -0.398865 0.309068 -1.13811 0.875526 -1.46516"];
+      return;
+
     case "ER16":
       this.dp = p(-0.018172, 3.37002);
       this.paths = ["m 0 0 c -0.0464 1.3278 -0.0464 2.657 0 3.9852 c 0.0295 0.563 -0.472256 0.745747 -0.799617 0.645136 c -0.203352 -0.0625 -0.257223 -0.410116 -0.185902 -0.610544 c 0.130226 -0.36596 0.756585 -0.573104 0.967347 -0.649773"];
       return;
+
+    case "SER16":
+      this.dp = p(0, 3.47802);
+      this.paths = ["m 0 0 v 4 c 0 0.79209 -1.12546 0.107757 -1.12028 -0.276872 c 0.005139 -0.382227 0.390019 -0.633379 1.12028 -0.245112"];
+      return;
   }
 
-  //switch (_head) {}
+  switch (_head) {
+    case "E":
+      this.dp = p(0, 3.47802);
+      this.paths = ["m 0 0 v 4 c 0 0.79209 -1.14634 0.276059 -1.19101 -0.120459 c -0.046901 -0.416323 0.45875 -0.401525 1.19101 -0.401525"];
+      return;
+  }
 
-  this.dp = p(0, 3);
-  this.paths = ["m 0 0 c -0.046547 1.3329 -0.046547 2.6671 0 4 c 0.019752 0.5656 -0.567037 0.8732 -0.9 0.5588 c -0.59069 -0.5576 0.559666 -0.9693 0.9 -1.5588"];
+  this.dp = p(0, 2.99114);
+  this.paths = ["m 0 0 c 0 1.3336 0 2.65895 0 4 c 0 0.565945 -0.567037 0.8732 -0.9 0.5588 c -0.59069 -0.5576 0.559666 -0.978163 0.9 -1.56766"];
 };
 
 WasedaTai = function() { WasedaChar.call(this, "WasedaTai", "たい", "S4", "S", "S", "black", false, p(0.0, -2.0)); };
@@ -18693,4 +18713,135 @@ WasedaYo.prototype.setPaths = function() {
 
   this.dp = p(11.3138, -11.3137);
   this.paths = ["m 0 0 c 1.2151 -3.3384 7.9227 -11.3137 11.3138 -11.3137"];
+};
+
+WasedaChi = function() { WasedaChar.call(this, "WasedaChi", "ち", "SW8CR1", "SW", "CR", "black", false, p(2.9, -3.3)); };
+WasedaChi.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ち"] = WasedaChi;
+
+WasedaChi.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _headModel = this.getNextHeadModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_headModel) {
+    case "EL8":
+      this.dp = p(-2.40816, 6.59592);
+      this.paths = ["m 0 0 c -0.810734 2.06327 -1.92536 5.23978 -2.67013 7.33311 c -0.1914 0.53797 -1.11511 -0.474227 -0.940642 -0.862111 c 0.165326 -0.367557 0.820941 0.000902 1.20261 0.124922"];
+      return;
+  }
+
+  switch (_head) {
+    case "E":
+      this.dp = p(-2.37824, 6.47577);
+      this.paths = ["m 0 0 c -0.81073 2.06327 -1.88487 5.08986 -2.62964 7.18319 c -0.26253 0.7379 -0.99705 -0.04434 -0.9737 -0.393647 c 0.0281 -0.42061 0.8453 -0.313774 1.2251 -0.313774"];
+      return;
+  }
+
+  this.dp = p(-2.1692, 5.9151);
+  this.paths = ["m 0 0 c -0.810734 2.06327 -1.89263 5.14374 -2.6374 7.23707 c -0.15815 0.5902 -1.12987 0.250236 -0.800381 -0.320464 c 0.17532 -0.2918 0.922846 -0.777012 1.26858 -1.00151"];
+};
+
+WasedaTe = function() { WasedaChar.call(this, "WasedaTe", "て", "NE16CL1", "NE", "CL", "black", false, p(0.0, 5.9)); };
+WasedaTe.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["て"] = WasedaTe;
+
+WasedaTe.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _head = this.getNextHeadType();
+  const _headModel = this.getNextHeadModel();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  switch (_headModel) {
+    case "SER8":
+      this.dp = p(9.86129, -10.5895);
+      this.paths = ["m 0 0 c 3.27921 -3.75924 6.74414 -7.38622 10.1917 -10.9293 c 0.4169 -0.3754 0.265013 -0.593038 0.0819 -0.7793 c -0.335104 -0.340867 -1.26764 -0.324578 -1.4285 0.125542 c -0.159424 0.446094 0.651052 0.737856 1.01619 0.99353"];
+      return;
+
+    case "NEL8":
+      this.dp = p(9.82335, -10.56);
+      this.paths = ["m 0 0 c 3.27921 -3.75924 6.69605 -7.43365 10.1917 -10.9293 c 0.284296 -0.284296 0.281278 -0.558693 0.09601 -0.708729 c -0.294914 -0.238832 -0.976442 0.01666 -1.07177 0.383985 c -0.077227 0.297578 0.085826 0.971341 0.607415 0.694042"];
+      return;
+
+    case "ER8":
+      this.dp = p(9.7548, -10.558);
+      this.paths = ["m 0 0 c 3.27921 -3.75924 6.74414 -7.38622 10.1917 -10.9293 c 0.4169 -0.3754 0.30146 -0.637817 0.0819 -0.7793 c -0.427713 -0.275616 -1.33895 0.264215 -1.31655 0.772546 c 0.012958 0.293979 0.128565 0.661971 0.797747 0.378054"];
+      return;
+
+    case "EL8":
+      this.dp = p(9.7548, -10.558);
+      this.paths = ["m 0 0 c 3.27921 -3.75924 6.74414 -7.38622 10.1917 -10.9293 c 0.345553 -0.355127 0.293862 -0.62667 0.0819 -0.7793 c -0.369512 -0.266079 -1.18606 0.11442 -1.24318 0.566167 c -0.038915 0.307798 0.299442 0.446353 0.724379 0.584433"];
+      return;
+  }
+
+  switch (_head) {
+    case "S":
+      this.dp = p(9.53261, -10.2511);
+      this.paths = ["m 0 0 c 3.27921 -3.75924 6.74414 -7.38622 10.1917 -10.9293 c 0.22987 -0.236239 0.221307 -0.617198 0.04275 -0.828242 c -0.08826 -0.104319 -0.297177 -0.127937 -0.407246 -0.04696 c -0.424524 0.312325 -0.294591 0.962206 -0.294591 1.55342"];
+      return;
+  }
+
+  this.dp = p(9.44089, -11.3614);
+  this.paths = ["m 0 0 c 3.18352 -3.82759 6.43506 -8.36185 9.85983 -11.7866 c 0.283896 -0.283896 0.2463 -0.5763 0.0819 -0.7793 c -0.1259 -0.1611 -0.454 -0.2328 -0.606 -0.0959 c -0.3046 0.284 -0.025641 0.992434 0.105159 1.30043"];
 };
