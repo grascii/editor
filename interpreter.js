@@ -24,7 +24,7 @@ Lexer.prototype.command = function() {
     result += this.currentChar;
     this.advance();
   }
-  if (/\s/.test(this.currentChar)) this.advance();
+  //if (/\s/.test(this.currentChar)) this.advance();
   return result;
 };
 

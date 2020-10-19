@@ -81,6 +81,13 @@ function savePages() {
   openPage();
 }
 
+function updatePagePos() {
+  const svg = document.getElementById('svg_root');
+  const viewBox = svg.viewBox;
+  const pageNum = document.getElementById('page_select').value;
+  svg.setAttribute("viewBox", viewBox.baseVal.x + " " + (pageNum - 1)* 297 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
+}
+
 function openPage() {
   const title = pageList.value;
 
@@ -252,15 +259,19 @@ function parseInputText(text) {
           break;
             
         default:
-          const match = items[i].match(/^([hv])space{(-?\d+(?:\.\d+)?)}/);
-          if (match) {
+          var match;
+          if ((match = items[i].match(/^([hv])space{(-?\d+(?:\.\d+)?)}/)) !== null) {
             if (match[1] == "h") {
               chars.push(new CharRight(parseFloat(match[2])));
             } else if (match[1] == "v") {
               chars.push(new CharUp(parseFloat(match[2])));
             }
+          } else if ((match = items[i].match(/newpage/)) !== null) {
+            chars.push(new CharNewpage());
+            //const svg = document.getElementById('svg_root');
+            //const viewBox = svg.viewBox;
+            //svg.setAttribute("viewBox", viewBox.baseVal.x + " " + 0 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
           }
-
           break;
       }
     }
