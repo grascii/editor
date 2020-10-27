@@ -701,7 +701,7 @@ WasedaMa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ま"] = WasedaMa;
 
 WasedaMa.prototype.setPaths = function() {
-  switch (this.getNextModel().replace(/[CO].*/, "")) {
+  switch (this.getNextHeadModel()) {
     case "EL4":
       this.dp = p(8, 0);
       this.paths = ["m 0 0 c 1.7244 -0.7319 6.3524 -0.876 8 0"];
