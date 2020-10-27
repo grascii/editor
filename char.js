@@ -20025,7 +20025,7 @@ WasedaTe = function() { WasedaChar.call(this, "WasedaTe", "て", "NE16CL1", "NE"
 WasedaTe.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["て"] = WasedaTe;
 WasedaTe.prototype.filterReverseTail = function(tail) {
-  return tail.replace(/^(?:ELCL|NELCL|ECL|NER|ERCR4|ERCR|NEL|EL|ER|E)$/, "R");
+  return tail.replace(/^(?:ELCL|NELCL|ECL|NER|ERCR4|ERCR|NEL|EL|ER|E|ER4)$/, "R");
 };
 WasedaTe.prototype.reverse = function() {
   this.headType = "SW";
