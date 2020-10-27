@@ -20795,6 +20795,11 @@ WasedaTon.prototype.setPaths = function() {
 
   switch (tail_ + "_" + _head) {
     case "_SW":
+      this.dp = p(-3.87094, 12.5398 - 15);
+      this.paths = ["m 0 -15 l -6.76188 14.5009 l 1.17817 -0.928409"];
+      this.reverse();
+      return;
+
     case "R_SW":
       this.dp = p(12.4728, -15.5415);
       this.paths = ["m 0 0 c 3.4282 -4.08557 9.06295 -11.3863 10.2846 -12.2567 l 0.610987 -1.36992"];
