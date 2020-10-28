@@ -22620,3 +22620,60 @@ WasedaKen.prototype.setPaths = function() {
   this.dp = p(18.9887, 0.021416);
   this.paths = ["m 0 0 h 15 c 0.2699 0.0142 0.543088 -0.266663 0.495 -0.495 c -0.06578 -0.312346 -0.584509 -0.486739 -0.8927 -0.346515 c -0.375333 0.170772 -0.689204 0.862934 0.886392 0.862934 l 1.5 -3e-05"];
 };
+
+WasedaToki = function() { WasedaChar.call(this, "WasedaToki", "とき", "NE4CL1", "NE", "CL", "black", false, p(0.0, 1.5)); };
+WasedaToki.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["とき"] = WasedaToki;
+
+WasedaToki.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  switch (_headModel) {
+    case "EL8":
+      this.dp = p(2.45854, -1.75595);
+      this.paths = ["m 0 0 c 0.428695 -0.292419 2.07203 -1.4683 2.88276 -2.06659 c 0.693154 -0.511523 0.141389 -0.747297 -0.087724 -0.761831 c -0.365843 -0.023209 -0.915485 0.197418 -0.944801 0.562823 c -0.021154 0.263681 0.37938 0.439656 0.608313 0.509643"];
+      return;
+  }
+
+  //switch (_head) {}
+
+  this.dp = p(2.42724, -1.74161);
+  this.paths = ["m 0 0 c 0.428694 -0.292419 1.98435 -1.36712 2.79985 -1.9589 c 0.615974 -0.44699 0.0276 -1.05043 -0.32051 -1.00377 c -0.40377 0.05412 -0.25421 0.870841 -0.0521 1.22106"];
+};
