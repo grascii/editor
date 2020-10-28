@@ -22781,3 +22781,71 @@ WasedaRazu.prototype.setPaths = function() {
   this.dp = p(1.5292, 8.3633);
   this.paths = ["m 0 0 c 1.94949 1.36506 4.28069 3.92722 4.28069 5.98892 c 0 0.559889 -0.191765 1.04601 0.182881 1.18856 c 0.3024 0.115058 0.577886 -0.229652 0.703805 -0.485287 c 0.177758 -0.360878 0.289692 -1.12548 -0.062444 -1.20523 c -0.206161 -0.046689 -0.297133 0.086901 -0.796583 0.52929 c -0.586499 0.519492 -0.496892 0.459868 -1.2325 1.07903"];
 };
+
+WasedaRepeat = function() { WasedaChar.call(this, "WasedaRepeat", "ー", "E30F", "E", "EF", "black", false, p(0.0, 0.0)); };
+WasedaRepeat.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["−"] = WasedaRepeat;
+
+WasedaRepeat.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(32, 0);
+  this.paths = ["m 0 0 h 30"];
+};
+
+WasedaPointSu = function() { WasedaChar.call(this, "WasedaPointSu", "加点す", "P", "P", "P", "black"); };
+WasedaPointSu.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["すｐ"] = WasedaPointSu;
+
+WasedaPointSu.prototype.setPaths = function() {
+  switch (this.getPrevTailType()) {
+    case "S":
+      this.dp = p(-1, -2.5);
+      break;
+
+    default:
+      this.dp = p(2, 0);
+      break;
+  }
+};
