@@ -4965,6 +4965,11 @@ WasedaKe.prototype.setPaths = function() {
       this.paths = ["m 0 0 c 4.99748 0 10.0024 0 15 0 c 0.2699 0.0142 0.543088 -0.266663 0.495 -0.495 c -0.06578 -0.312346 -0.584509 -0.486739 -0.8927 -0.346515 c -0.375333 0.170772 -0.689204 0.862934 0.886392 0.862934"];
       return;
 
+   case "S":
+     this.dp = p(14.4396, -0.02826);
+     this.paths = ["m 0 0 c 4.9965 -0.2618 10.0034 -0.2618 15 0 c 0.2699 0.0142 0.4853 -0.2165 0.495 -0.495 c 0 -0.971122 -0.69289 -0.865939 -0.899239 -0.519408 c -0.170277 0.285955 -0.156175 0.576677 -0.156175 0.986148"];
+     return;
+
     default:
       this.dp = p(14.0904, -0.0448);
       this.paths = ["m 0 0 c 4.9965 -0.2618 10.0034 -0.2618 15 0 c 0.2699 0.0142 0.4853 -0.2165 0.495 -0.495 c 0.0127 -0.3655 -0.3393 -0.5802 -0.5561 -0.3983 c -0.307 0.2576 -0.5909 0.5415 -0.8485 0.8485"];
@@ -23711,7 +23716,7 @@ WasedaEi.prototype.setPaths = function() {
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
   //const _headModel = this.getNextHeadModel();
-  //const _head = this.getNextHeadType();
+  const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -23745,7 +23750,12 @@ WasedaEi.prototype.setPaths = function() {
 
   //switch (_headModel) {}
 
-  //switch (_head) {}
+  switch (_head) {
+   case "SEL":
+     this.dp = p(1.87157, 1.87206);
+     this.paths = ["m 0 0 c 0.938951 0.955664 2.62877 2.62062 2.62877 2.62062 c 0.369896 0.344259 0.00308 0.881939 -0.41677 0.769441 c -0.36465 -0.097708 -0.340425 -1.05665 -0.340425 -1.518"];
+     return;
+  }
 
   this.dp = p(2.25183, 2.24647);
   this.paths = ["m 0 0 c 0.938951 0.955664 2.62877 2.62062 2.62877 2.62062 c 0.369896 0.344259 -0.278096 0.880053 -0.567572 0.755732 c -0.350952 -0.150722 -0.092791 -0.840602 0.190627 -1.12988"];
@@ -24086,7 +24096,7 @@ WasedaHun2.prototype.setPaths = function() {
   this.paths = ["m 0 0 c 0 0.56523 -0.514572 1.37937 -1 1.73205 l 6.47213 -4.70228"];
 };
 
-WasedaTen2 = function() { WasedaChar.call(this, "WasedaTen2", "てん", "P", "P", "P", "black", true, p(0.0, 0.0)); };
+WasedaTen2 = function() { WasedaChar.call(this, "WasedaTen2", "てん", "P", "P", "P", "black", false, p(0.0, 0.0)); };
 WasedaTen2.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["てん２"] = WasedaTen2;
 WasedaChar.dict["テン"] = WasedaTen2;
@@ -24108,10 +24118,10 @@ WasedaTen2.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
-    case "WasedaHon":
-      this.dp = p(2-1.5, 0);
-      this.paths = ["m-1.5 -2 v0.1"];
-      return;
+    //case "WasedaHon":
+    //  this.dp = p(2-1.5, 0);
+    //  this.paths = ["m-1.5 -2 v0.1"];
+    //  return;
   }
 
   //switch (model_ + "_" + _name) {}
@@ -24131,14 +24141,29 @@ WasedaTen2.prototype.setPaths = function() {
       this.dp = p(3, 0);
       this.paths = ["m3 -2 v0.1"];
       return;
+
+    case "SEL16F_SW":
+      this.dp = p(2, 1);
+      this.paths = ["m2,-1v0.1"];
+      return;
+
+    case "NER8CR1_SW":
+      this.dp = p(2, 1);
+      this.paths = ["m2,-1v0.1"];
+      return;
   }
 
   //switch (tailModel_) {}
 
   switch (model_) {
+    case "SEL16F":
+      this.dp = p(2-1.5, 0);
+      this.paths = ["m-1.5 -2 v0.1"];
+      return;
+
     case "NEL8CL1":
       this.dp = p(2, 0);
-      this.paths = ["m2 -2 v0.1"];
+      this.paths = ["m0 -4 v0.1"];
       return;
 
     case "E8CL1":
@@ -24280,8 +24305,8 @@ WasedaHun.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(1.67096, 2.83294);
-  this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207 l 1.06066 -1.06066"];
+ this.dp = p(3.08518, 1.41873);
+ this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207 l 1.06066 -1.06066"];
 };
 
 WasedaKun = function() { WasedaChar.call(this, "WasedaKun", "くん", "E8CL4E1F", "E", "EF", "black", false, p(0.0, 1.4)); };
