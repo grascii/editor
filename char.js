@@ -19508,7 +19508,15 @@ WasedaLtsuP.prototype.setPaths = function() {
 
   //switch (name_) {}
 
-  //switch (model_ + "_" + _name) {}
+  switch (model_ + "_" + _name) {
+   case "SEL8_WasedaTen2":
+     this.dp = p(-4.2, -0.7);
+     return;
+
+   case "E16CL1_WasedaTen2":
+     this.dp = p(-7.5, 0.6);
+     return;
+  }
 
   //switch (model_ + "_" + _model) {}
 
@@ -24137,6 +24145,10 @@ WasedaTen2.prototype.setPaths = function() {
     //  this.dp = p(2-1.5, 0);
     //  this.paths = ["m-1.5 -2 v0.1"];
     //  return;
+    case "WasedaLtsuP":
+      this.dp = p(3.68618, -2.5811);
+      this.paths = ["m 0 0 l 2.04788 -1.43394"];
+      return;
   }
 
   //switch (model_ + "_" + _name) {}
