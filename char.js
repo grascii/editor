@@ -16757,7 +16757,7 @@ WasedaTo.prototype.reverse = function() {
       this.model = "SW16";
 };
 WasedaTo.prototype.filterReverseTail = function(tail) {
-  return tail.replace(/^(?:SELCL4|E|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP)$/, "R");
+  return tail.replace(/^(?:SELCL4|E|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4)$/, "R");
 };
 WasedaTo.prototype.setPaths = function() {
   const name_ = this.getPrevName();
@@ -19501,7 +19501,7 @@ WasedaLtsuP.prototype.setPaths = function() {
   const model_ = this.getPrevModel();
   //const tail_ = this.getPrevTailType();
   const _name = this.getNextName();
-  //const _model = this.getNextModel();
+  const _model = this.getNextModel();
   const _head = this.getNextHeadType();
 
   switch (name_ + "_" + _name) { }
@@ -19527,9 +19527,57 @@ WasedaLtsuP.prototype.setPaths = function() {
      return;
   }
 
-  //switch (model_ + "_" + _model) {}
+  switch (model_ + "_" + _model) {
+    case "EL16_E8CL4":
+      this.dp = p(-7.6, 4.8);
+      return;
+  }
 
   switch (model_ + "_" + _head) {
+    case "SW16_E":
+      this.dp = p(1.4, -7.3);
+      return;
+
+    case "ER16_E":
+      this.dp = p(-8, 2.0);
+      return;
+
+    case "ER16_SW":
+      this.dp = p(-6.3, -3.0);
+      return;
+
+    case "SEL16_NEL":
+      this.dp = p(-8.3, -3.1);
+      return;
+
+    case "SEL8CL1_NE":
+      this.dp = p(-3.7, 0);
+      return;
+
+    case "SEL8CL1_NEL":
+      this.dp = p(-4.2, -0.5);
+      return;
+
+    case "SEL8_E":
+      this.dp = p(-5.7, -2.2);
+      return;
+
+    case "SEL8CL1_E":
+      this.dp = p(-4.8, -2.3);
+      return;
+
+    case "NEL16_E":
+      this.dp = p(-5.5, 5.5);
+      return;
+
+    case "NEL16_SW":
+      this.dp = p(-3.7, 4.4);
+      return;
+
+    case "NEL8_E":
+      this.dp = p(-3.6, 2.6);
+      return;
+
     case "EL4_SW":
       this.dp = p(-1.4, -0.8);
       return;
@@ -19594,6 +19642,10 @@ WasedaLtsuP.prototype.setPaths = function() {
     case "EL8_ER":
     case "EL8_E":
       this.dp = p(-4, 2.5);
+      return;
+
+    case "EL16CL1_SW":
+      this.dp = p(-5, -1.2);
       return;
 
     case "ER8_EL":
