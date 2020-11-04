@@ -26036,7 +26036,7 @@ WasedaRya.prototype.setPathsExtra = function() {
   this.pathsExtra = ["m1.5,4.2v0.1"]; 
 };
 
-WasedaRyo = function() { WasedaChar.call(this, "WasedaRyo", "りょ", "SER8OSWR4", "SER", "SEROSWR", "black", false, p(0.0, -4.2)); };
+WasedaRyo = function() { WasedaChar.call(this, "WasedaRyo", "りょ", "SER8OSWR4", "SER", "SEROSWR", "black", false, p(0.0, -3.5)); };
 WasedaRyo.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["りょ"] = WasedaRyo;
 
@@ -26102,7 +26102,7 @@ WasedaRyo.prototype.setPaths = function() {
   this.paths = ["m 0 0 c 2.26387 1.5852 5.22323 4.8095 4 6.9282 c -0.463317 0.80249 -1.87098 1.74249 -2.21541 1.45605 c -0.556246 -0.462612 0.91316 -1.79681 2.49678 -2.71112"];
 };
 
-WasedaRyu = function() { WasedaChar.call(this, "WasedaRyu", "りゅ", "SER8OWR4", "SER", "SEROWR", "black", false, p(0.0, -3.7)); };
+WasedaRyu = function() { WasedaChar.call(this, "WasedaRyu", "りゅ", "SER8OWR4", "SER", "SEROWR", "black", false, p(0.0, -3.5)); };
 WasedaRyu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["りゅ"] = WasedaRyu;
 
