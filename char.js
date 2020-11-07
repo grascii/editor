@@ -1,7 +1,35 @@
-function Point(x, y) { return {x: x, y: y}; }
-function PPoint(r, deg) { return {x: r * Math.cos(deg * Math.PI / 180), y: r * Math.sin(deg * Math.PI / 180)}; }
-p = Point;
-pp = PPoint;
+function Point(x, y) {
+  this.x = x;
+  this.y = y;
+}
+
+Point.prototype.move = function(dx, dy) {
+  this.x += dx;
+  this.y += dy;
+  return this;
+};
+
+Point.prototype.add = function(pt) {
+  this.x += pt.x;
+  this.y += pt.y
+  return this;
+};
+
+Point.prototype.toString = function() {
+  return this.x + "," + this.y;
+};
+
+Point.prototype.m = function() {
+  return "m" + this.x + "," + this.y;
+};
+
+p = function(x, y) {
+  return new Point(x, y);
+};
+
+pp = function(r, deg) {
+  return new Point(r * Math.cos(deg * Math.PI / 180), r * Math.sin(deg * Math.PI / 180));
+};
 
 function Char(name, kana, model, headType, tailType, color, bold, offset, right) {
   this.name           = name
@@ -458,7 +486,7 @@ WasedaI.prototype.setPaths = function() {
   this.paths = ["m 0,0 c 1.57891,-0.9116 4.00001,-1.2364 4,0"];
 };
 
-WasedaKa = function() { WasedaChar.call(this, "WasedaKa", "か", "E8", "E", "E", "black"); };
+WasedaKa = function() { WasedaChar.call(this, "WasedaKa", "か", "E8", "E", "E", "black", false, p(0, 0)); };
 WasedaKa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["か"] = WasedaKa;
 
@@ -20739,7 +20767,6 @@ WasedaChi.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
-    case "E":
     case "SW":
     case "CR":
       this.dp = p(6.47839, -4.23201);
