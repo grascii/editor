@@ -16897,7 +16897,7 @@ WasedaTo.prototype.reverse = function() {
       this.model = "SW16";
 };
 WasedaTo.prototype.filterReverseTail = function(tail) {
-  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4)$/, "R");
+  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4|SEL)$/, "R");
 };
 WasedaTo.prototype.setPaths = function() {
   const name_ = this.getPrevName();
@@ -28047,7 +28047,13 @@ WasedaZaa = function() { WasedaChar.call(this, "WasedaZaa", "ざあ", "NEL8", "N
 WasedaZaa.prototype = Object.create(WasedaSa.prototype);
 WasedaChar.dict["ざあ"] = WasedaZaa;
 WasedaChar.dict["ざー"] = WasedaZaa;
-WasedaZaa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 3.268934,-2.775263 c 0,0.545901 0.118182,1.053504 0.6755299,1.202845"]; };
+WasedaZaa.prototype.setPathsExtra = function() {
+  if (this.model == "SWR8") {
+    this.pathsExtra = ["m -0.919854,3.35137 c 0,0.5459 0.312901,1.05351 0.870249,1.20285"]; 
+    return;
+  }
+  this.pathsExtra = ["m 3.268934,-2.775263 c 0,0.545901 0.118182,1.053504 0.6755299,1.202845"];
+};
 
 
 WasedaJii = function() { WasedaChar.call(this, "WasedaJii", "じい", "NEL8CL1", "NEL", "NELCL", "black", false, p(0.0, 2.5)); };
@@ -28102,7 +28108,13 @@ WasedaDou = function() { WasedaChar.call(this, "WasedaDou", "どう", "NE16", "N
 WasedaDou.prototype = Object.create(WasedaTo.prototype);
 WasedaChar.dict["どう"] = WasedaDou;
 WasedaChar.dict["どー"] = WasedaDou;
-WasedaDou.prototype.setPathsExtra = function() { this.pathsExtra = ["m 5.33028,-7.278636 c 0,0.545901 0.118182,1.053504 0.67553,1.202845"]; };
+WasedaDou.prototype.setPathsExtra = function() {
+  if (this.model == "SW16") {
+    this.pathsExtra = ["m -3.804665,6.66675 c 0,0.5459 0.312901,1.05351 0.870249,1.20285"];
+    return;
+  }
+  this.pathsExtra = ["m 5.33028,-7.278636 c 0,0.545901 0.118182,1.053504 0.67553,1.202845"];
+};
 
 WasedaBaa = function() { WasedaChar.call(this, "WasedaBaa", "ばあ", "SEL8", "SEL", "SEL", "black", false, p(0.0, -3.0)); };
 WasedaBaa.prototype = Object.create(WasedaHa.prototype);
@@ -28196,13 +28208,13 @@ WasedaJaa.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.9566643
 
 WasedaJuu = function() { WasedaChar.call(this, "WasedaJuu", "じゅう", "NE16CL1", "NE", "NECL", "black", false, p(0.0, 2.7)); };
 WasedaJuu.prototype = Object.create(WasedaChu.prototype);
-WasedaChar.dict["じゅう"] = WasedaJuu;
+WasedaChar.dict["ぢゅう"] = WasedaJuu;
 WasedaChar.dict["ぢゅー"] = WasedaJuu;
 WasedaJuu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.9566643,-3.10252 c 0,0.5459 0.743997,1.0535 1.301345,1.20284"]; };
 
 WasedaJou = function() { WasedaChar.call(this, "WasedaJou", "じょう", "NE8OWL4", "NE", "OWL", "black", false, p(0.0, 2.6)); };
 WasedaJou.prototype = Object.create(WasedaCho.prototype);
-WasedaChar.dict["じょう"] = WasedaJou;
+WasedaChar.dict["ぢょう"] = WasedaJou;
 WasedaChar.dict["ぢょー"] = WasedaJou;
 WasedaJou.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.9566643,-3.10252 c 0,0.5459 0.743997,1.0535 1.301345,1.20284"]; };
 
@@ -28211,3 +28223,9 @@ WasedaJei.prototype = Object.create(WasedaTer.prototype);
 WasedaChar.dict["ぢぇい"] = WasedaJei;
 WasedaChar.dict["ぢぇー"] = WasedaJei;
 WasedaJei.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.775684,-3.22317 c 0,0.5459 0.743997,1.0535 1.301345,1.20284"]; };
+
+WasedaHou = function() { WasedaChar.call(this, "WasedaHou", "ほう", "SEL16", "SEL", "SEL", "black", false, p(0.0, -6.9)); };
+WasedaHou.prototype = Object.create(WasedaHo.prototype);
+WasedaChar.dict["ほう"] = WasedaHou;
+WasedaChar.dict["ほー"] = WasedaHou;
+WasedaHou.prototype.setPathsExtra = function() { this.pathsExtra = ["m -0.250365,8.556441 c 0,0.5459 0.118182,1.05351 0.67553,1.20285"]; };
