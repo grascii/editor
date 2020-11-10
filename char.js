@@ -28112,6 +28112,13 @@ WasedaDou.prototype.setPathsExtra = function() {
   if (this.model == "SW16") {
     this.pathsExtra = ["m -3.804665,6.66675 c 0,0.5459 0.312901,1.05351 0.870249,1.20285"];
     return;
+  } else {
+    switch (this.getNextHeadType()) {
+      case "SW":
+      case "SWR":
+        this.pathsExtra = ["m 6.260263,-5.21438 c 0,0.5459 0.312901,1.05351 0.870249,1.20285"];
+        return;
+    }
   }
   this.pathsExtra = ["m 5.33028,-7.278636 c 0,0.545901 0.118182,1.053504 0.67553,1.202845"];
 };
