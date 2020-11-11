@@ -5774,6 +5774,11 @@ WasedaShi.prototype.setPaths = function() {
   }
 
   switch (this.getFilteredPrevTailType() + "_" + _head) {
+    case "R_S":
+      this.dp = p(-3.59281, 6.88971);
+      this.paths = ["m 0 0 c 0 2.8227 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.411187 -1.15847 -0.027787 -1.15014 c 0.47899 0.010411 0.434975 0.692213 0.434975 1.11165"];
+      return;
+
     case "NER_SW":
       this.dp = p(-3.7418, 6.90721);
       this.paths = ["m 0 0 c 1.11189 1.112 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.180466 -1.26904 0.236543 -1.23317 c 0.402636 0.034641 0.196616 0.731507 0.021661 1.21218"];
@@ -5944,8 +5949,8 @@ WasedaShi.prototype.setPaths = function() {
       return;
 
     case "NEL8":
-      this.dp = p(5.5418, -4.0331);
-      this.paths = ["m 0 0 c 2.0364 -1.1288 5.7358 -2.6844 5.7358 -4.986 c 0 -0.610686 -0.467534 -0.332436 -0.822417 0.104487 c -0.258376 0.318105 -0.457038 0.720319 -0.372084 0.924818 c 0.128317 0.308879 0.458674 0.270288 1.0005 -0.076405"];
+      this.dp = p(5.70879, -4.64675);
+      this.paths = ["m 0 0 c 2.0364 -1.1288 5.7358 -2.6844 5.7358 -4.986 c 0 -0.998414 -1.25738 -0.193443 -1.25842 0.265386 c -0.00119 0.52533 0.689589 0.420561 1.23142 0.073869"];
       return;
   }
 
@@ -18618,6 +18623,11 @@ WasedaTsu.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "SW":
+      this.dp = p(-0.196529, 3.82711);
+      this.paths = ["m 0 0 v 3.31915 c 0 0.565945 -0.567014 0.873176 -0.9 0.5588 c -0.346852 -0.327467 0.182979 -1.02217 0.545302 -0.959124 c 0.302767 0.052682 0.405463 0.22887 0.158169 0.908281"];
+      return;
+
     case "SEL":
     case "S":
       this.dp = p(0, 3.31915);
@@ -25470,6 +25480,11 @@ WasedaShu.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "NER":
+      this.dp = p(1.27667, 5.20086);
+      this.paths = ["m 0 0 c 1.499 2.2223 1.76954 7.32571 0.33599 8.15337 c -0.526587 0.304026 -0.271056 -0.47084 0.115778 -1.32122 c 0.294663 -0.647766 0.665513 -1.33935 0.824899 -1.63128"];
+      return;
+
     case "SEL":
       this.dp = p(-0, 7.9701);
       this.paths = ["m 0 0 c 1.499 2.2223 1.9629 6.491 0 7.9701 c -0.2799 0.2187 -0.782033 -0.062009 -0.862349 -0.363425 c -0.093165 -0.349641 0.306707 -0.950492 0.657917 -0.863425 c 0.402407 0.099759 0.204432 0.728437 0.204432 1.22685"];
@@ -27806,7 +27821,7 @@ WasedaJi.prototype = Object.create(WasedaShi.prototype);
 WasedaChar.dict["じ"] = WasedaJi;
 WasedaJi.prototype.setPathsExtra = function() {
   this.thicknessExtra = this.thickness * 1.5;
-  this.pathsExtra = ["m 3.0902351,-2.920441 v 0.1"];
+  this.pathsExtra = ["m 3.0902351,-3.4 v 0.1"];
 };
 
 WasedaZu = function() { WasedaChar.call(this, "WasedaZu", "ず", "NEL8CL4", "NEL", "NELCL4", "black", false, p(0.0, 2.5)); };
@@ -28434,3 +28449,13 @@ WasedaGin.prototype.setPathsExtra = function() {
   this.thicknessExtra = this.thickness * 1.5;
   this.pathsExtra = ["m 4.5,1v0.1"];
 };
+
+WasedaZen = function() { WasedaChar.call(this, "WasedaZen", "ぜん", "NE8", "NE", "NEF", "black", false, p(0.0, 2.4)); };
+WasedaZen.prototype = Object.create(WasedaSen2.prototype);
+WasedaChar.dict["ぜん"] = WasedaZen;
+WasedaZen.prototype.setPathsExtra = WasedaDya.prototype.setPathsExtra;
+
+WasedaJin = function() { WasedaChar.call(this, "WasedaJin", "じん", "NEL8CL1NE1F", "NEL", "NEF", "black", false, p(0.0, 3.3)); };
+WasedaJin.prototype = Object.create(WasedaShin.prototype);
+WasedaChar.dict["じん"] = WasedaJin;
+WasedaJin.prototype.setPathsExtra = WasedaJi.prototype.setPathsExtra;
