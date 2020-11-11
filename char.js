@@ -865,7 +865,7 @@ WasedaO.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
-    case "WasedaRi":
+    //case "WasedaRi":
     case "WasedaRu":
       this.dp = p(-2.82843, 2.82843);
       this.paths = ["m 0 0 l -2.82843 2.82843"];
@@ -12689,6 +12689,11 @@ WasedaRi.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "SW":
+      this.dp = p(3.9643, 4.24556);
+      this.paths = ["m 0 0 c 1.8914 1.3243 4.3722 3.7473 4.3371 5.7555 c 0 1.0663 -1.1744 0.945736 -0.9294 0.1639 c 0.1484 -0.473575 0.460045 -1.40855 0.556605 -1.67384"];
+      return;
+
     case "E":
       this.dp = p(4.2446, 5.0477);
       this.paths = ["m 0 0 c 1.907 1.2863 4.3559 3.7332 4.3209 5.734 c 0 1.0622 -1.2807 0.2697 -1.3431 -0.1745 c -0.0722 -0.5135 0.6411 -0.5118 1.2668 -0.5118"];
