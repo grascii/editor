@@ -19667,6 +19667,10 @@ WasedaLtsuP.prototype.setPaths = function() {
     case "E16CL1_SW4":
       this.dp = p(-5.5, -1.5);
       return;
+
+    case "E16CL1_SE3":
+      this.dp = p(-6, 0);
+      return;
   }
 
   switch (model_ + "_" + _head) {
