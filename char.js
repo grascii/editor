@@ -12845,6 +12845,11 @@ WasedaRu.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "SW":
+      this.dp = p(3.06667, 2.4472);
+      this.paths = ["m 0 0 c 1.907 1.2863 5.49441 3.97639 4.37183 5.92076 c -0.364356 0.631082 -0.798349 -0.064161 -0.981506 -0.454103 c -0.359308 -0.764966 -0.4709 -2.46992 -0.323653 -3.01946"];
+      return;
+
     case "S":
       this.dp = p(2.74705, 1.93815);
       this.paths = ["m 0 0 c 1.907 1.2863 5.08783 3.1232 4.5758 5.43558 c -0.048904 0.220856 -0.369003 0.391596 -0.607193 0.36058 c -0.037157 -0.00484 -0.072321 -0.014587 -0.10415 -0.02982 c -1.129 -0.540336 -1.11741 -2.56457 -1.11741 -3.82819"];
@@ -20886,6 +20891,11 @@ WasedaChi.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "SEL":
+      this.dp = p(-2.58089, 7.07816);
+      this.paths = ["m 0 0 c -0.810734 2.06327 -1.89263 5.14374 -2.6374 7.23707 c -0.15815 0.5902 -0.821381 0.000244 -0.821381 -0.488461 c 0 -0.305512 0.221549 -0.796551 0.523812 -0.752106 c 0.375344 0.055191 0.335438 0.513575 0.354081 1.08166"];
+      return;
+
     case "E":
       this.dp = p(-2.37824, 6.47577);
       this.paths = ["m 0 0 c -0.81073 2.06327 -1.88487 5.08986 -2.62964 7.18319 c -0.26253 0.7379 -0.99705 -0.04434 -0.9737 -0.393647 c 0.0281 -0.42061 0.8453 -0.313774 1.2251 -0.313774"];
@@ -29408,6 +29418,9 @@ WasedaDakeP.prototype.setPaths = function() {
   //switch (tailModel_) {}
 
   switch (model_) {
+    case "E4":
+      this.dp = p(-1, -2);
+      return;
   }
 
   //switch (tail_ + "_" + _name) {}
@@ -29424,6 +29437,26 @@ WasedaDakeP.prototype.setPaths = function() {
     case "S":
       this.tailType = "TAHENKI";
       this.dp = p(-1.749784, -1.028684);
+      return;
+
+    case "SERCR":
+      this.tailType = "TAHENKI";
+      this.dp = p(-1.749784, -1.028684);
+      return;
+
+    case "SERCR4":
+      this.tailType = "TAHENKI";
+      this.dp = p(-2, 1);
+      return;
+
+    case "SW":
+      this.tailType = "TAHENKI";
+      this.dp = p(-1.749784, -1.028684);
+      return;
+
+    case "ERCR4":
+      this.tailType = "TAHENKI";
+      this.dp = p(0, -2);
       return;
   }
 
@@ -29749,6 +29782,23 @@ WasedaKiriP.prototype.setPaths = function() {
   }
 
   switch (model_) {
+    case "SE4NE1F":
+      this.dp = p(-6, 1.2);
+      return;
+
+    case "NE16CL1":
+      this.dp = p(-6, 4);
+      return;
+
+    case "ER8CR1":
+      this.dp = p(-3, -2);
+      this.tailType = "VERTICAL";
+      return;
+
+    case "SER16CR1":
+      this.dp = p(-4, -4);
+      return;
+
     case "SEL8":
       this.dp = p(-6, -2.5);
       return;
@@ -30076,4 +30126,70 @@ WasedaBakarito.prototype.setPaths = function() {
 
   this.dp = p(5.12733, 7.26915);
   this.paths = ["m 0 0 c 0 3.7764 0.935824 6.85098 4.18711 5.9798 v 1.25 v 0.625 v 0.625 c 0.08275 -0.57893 0.461904 -0.92743 0.940224 -1.21065"];
+};
+
+WasedaBunsuu = function() { WasedaChar.call(this, "WasedaBunsuu", "ぶんすう", "PE10P", "PE", "P", "black", false, p(0.0, 0.0)); };
+WasedaBunsuu.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ぶんすう"] = WasedaBunsuu;
+
+WasedaBunsuu.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _headModel) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _headModel) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tailModel_ + "_" + _name) {}
+
+  //switch (tailModel_ + "_" + _model) {}
+
+  //switch (tailModel_ + "_" + _headModel) {}
+
+  //switch (tailModel_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _headModel) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(10, 0);
+  this.paths = ["m 0 0 h 10"];
 };
