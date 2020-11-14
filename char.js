@@ -581,7 +581,7 @@ WasedaTa.prototype.reverse = function() {
 };
 WasedaTa.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
+  const model_ = this.getPrevModel();
   //const tailModel_ = this.getPrevTailModel();
   const tail_ = this.getFilteredPrevTailType();
   //const _name = this.getNextName();
@@ -605,7 +605,13 @@ WasedaTa.prototype.setPaths = function() {
 
   //switch (tailModel_) {}
 
-  //switch (model_) {}
+  switch (model_) {
+    case "SER4CR1":
+      this.dp = p(6.63226, -4.4736);
+      this.paths = ["m 0 0l 6.63226 -4.4736"];
+      this.reverse();
+      return;
+  }
 
   //switch (tail_ + "_" + _name) {}
 
@@ -1315,8 +1321,8 @@ WasedaKi.prototype.setPaths = function() {
 
     case "SER4":
     case "SER8":
-      this.dp = p(6.8, -0);
-      this.paths = ["m 0 0 h 7.5 c 0.574732 0 0.328935 -0.643224 0.037754 -0.870573 c -0.362256 -0.282843 -0.919091 -0.194793 -1.06421 -0.102179 c -0.288314 0.183998 -0.324933 0.516637 0.326459 0.972752"];
+      this.dp = p(7.5, -0);
+      this.paths = ["m 0 0 h 7.5 c 0.574732 0 0.471236 -0.830049 0.037754 -1.08032 c -0.377426 -0.217907 -1.27396 -0.166828 -1.27396 0.29401 c 0 0.342023 0.584811 0.330195 1.2362 0.78631"];
       return;
 
     case "SER16":
@@ -24256,6 +24262,11 @@ WasedaRei.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "NE":
+      this.dp = p(1.91114, 1.97174);
+      this.paths = ["m 0 0 c 1.13193 0.793 2.39846 2.04701 1.9367 2.8468 c -0.497621 0.861904 -1.5316 0.14375 -1.08017 -0.163703 c 0.325053 -0.221382 0.697519 -0.469244 1.05461 -0.711355"];
+      return;
+
     case "SW":
      this.dp = p(1.59208, 1.45464);
      this.paths = ["m 0 0 c 1.13193 0.793 2.41954 1.8056 1.9367 2.8468 c -0.079918 0.172334 -0.50736 0.509172 -0.566752 0.05971 c -0.050711 -0.383762 0.140129 -1.14582 0.222136 -1.45187"];
@@ -31038,8 +31049,8 @@ WasedaKore.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(6e-06, 0);
-  this.paths = ["m 0 0 c -0.767599 0.205678 -1.59105 0.735027 -2.06963 1.42165 c -0.316489 0.454063 -0.906049 1.70501 -0.408433 1.60942 c 0.700267 -0.134512 2.47807 -3.03107 2.47807 -3.03107"];
+  this.dp = p(-2e-06, -1e-05);
+  this.paths = ["m 0 0 c -0.246867 0.142528 -0.929546 0.984295 -1.23455 1.57861 c -0.302872 0.590156 -1.07917 2.15984 -0.558772 1.90995 c 0.780763 -0.374902 1.77743 -2.32943 1.79332 -3.48857"];
 };
 
 WasedaOnajiP = function() { WasedaChar.call(this, "WasedaOnajiP", "おなじｐ", "P/X", "P/X", "P/X", "black"); };
