@@ -19784,6 +19784,10 @@ WasedaLtsuP.prototype.setPaths = function() {
   }
 
   switch (model_ + "_" + _head) {
+    case "NEL8CL1_SW":
+      this.dp = p(-1.5, 0.5);
+      return;
+
     case "E8_SL":
       this.dp = p(-3, -2);
       return;
