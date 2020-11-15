@@ -937,8 +937,8 @@ WasedaO.prototype.setPaths = function() {
 
   switch (_head) {
     case "SW":
-      this.dp = p(-1.1181, 3.3258);
-      this.paths = ["m 0 0l -1.3681 3.7588l 0.25 -0.433"];
+      this.dp = p(-0.968894, 3.43238);
+      this.paths = ["m 0 0 l -1.3681 3.7588 l 0.399206 -0.326424"];
       return;
 
     case "SEL":
@@ -4945,8 +4945,8 @@ WasedaKu.prototype.setPaths = function() {
       return;
 
     case "SW8":
-      this.dp = p(3.88904, -0.053282);
-      this.paths = ["m 0 0 c 2.132 -0.0745 4.267 -0.0745 6.4 0 c 1.847 0.0645 0.397964 -2.39677 -0.459854 -2.61623 c -1.06007 -0.271204 -1.74973 1.79597 -2.05111 2.56295"];
+      this.dp = p(4.55466, -0.05328);
+      this.paths = ["m 0 0 c 2.132 -0.0745 4.93263 -0.074488 7.06563 0 c 1.01877 0.035577 1.19687 -1.58383 0.566574 -2.57855 c -0.512412 -0.808677 -1.79507 -0.998311 -2.23199 0.202126 c -0.170818 0.469321 -0.515553 1.50943 -0.845547 2.32314"];
       return;
 
     case "SWR8":
@@ -23074,7 +23074,7 @@ WasedaChar.dict["さい"] = WasedaSai;
 WasedaSai.prototype.setPaths = function() {
   const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
-  //const tailModel_ = this.getPrevTailModel();
+  const tailModel_ = this.getPrevTailModel();
   const tail_ = this.getPrevTailType();
   const _name = this.getNextName();
   //const _model = this.getNextModel();
