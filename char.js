@@ -5828,6 +5828,11 @@ WasedaShi.prototype.setPaths = function() {
   }
 
   switch (this.getFilteredPrevTailType() + "_" + _head) {
+    case "R_SEL":
+      this.dp = p(-3.59281, 6.88971);
+      this.paths = ["m 0 0 c 0 2.8227 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.132112 -1.33289 0.251288 -1.32456 c 0.47899 0.010411 0.1559 0.866635 0.1559 1.28607"];
+      return;
+
     case "R_S":
       this.dp = p(-3.59281, 6.88971);
       this.paths = ["m 0 0 c 0 2.8227 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.411187 -1.15847 -0.027787 -1.15014 c 0.47899 0.010411 0.434975 0.692213 0.434975 1.11165"];
@@ -17019,7 +17024,7 @@ WasedaTo.prototype.reverse = function() {
       this.model = "SW16";
 };
 WasedaTo.prototype.filterReverseTail = function(tail) {
-  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4|SEL|NW)$/, "R");
+  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4|SEL|NW|ELCL)$/, "R");
 };
 WasedaTo.prototype.setPaths = function() {
   const name_ = this.getPrevName();
