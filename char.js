@@ -19128,6 +19128,10 @@ WasedaSore.prototype.setPaths = function() {
   //switch (_model) {}
 
   switch (_head) {
+    case "E":
+      this.dp.move(0, 1);
+      return;
+
     case "ER":
       this.dp.move(0, 1);
       return;
@@ -20869,6 +20873,11 @@ WasedaYu.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "S":
+      this.dp = p(5.49979, -4.94365);
+      this.paths = ["m 0 0 c 0.9622 -2.5068 3.5566 -4.997 6.1707 -4.997 c 0.2753 0 0.632342 0.143832 0.655595 0.39851 c 0.02529 0.276987 -0.290675 0.644354 -0.622742 0.555377 c -0.322919 -0.086526 -0.703768 -0.616207 -0.703768 -0.900532"];
+      return;
+
     case "SE":
       this.dp = p(5.20004, -4.88636);
       this.paths = ["m 0 0 c 0.9622 -2.5068 3.5566 -4.997 6.1707 -4.997 c 0.449809 0 0.575534 0.297236 0.520514 0.541477 c -0.047618 0.211381 -0.393356 0.26049 -0.607906 0.230203 c -0.364134 -0.051404 -0.57162 -0.349392 -0.883264 -0.661036"];
@@ -31240,6 +31249,7 @@ WasedaDaitaiP.prototype.setPaths = function() {
 WasedaSunawachi = function() { WasedaChar.call(this, "WasedaSunawachi", "すなわち", "SW4E4NW4", "SW", "NW", "black", false, p(1.8, -1.5)); };
 WasedaSunawachi.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["すなわち"] = WasedaSunawachi;
+WasedaChar.dict["△"] = WasedaSunawachi;
 
 WasedaSunawachi.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
