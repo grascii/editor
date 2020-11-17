@@ -60,7 +60,7 @@ Char.connectChars = function(chars) {
     chars[i - 1].next = chars[i];
     chars[i].prev = chars[i - 1];
   }
-  for (var i = 0; i < 3; i++) {
+  for (var i = 0; i < 2; i++) {
     chars.forEach(function(c) {
       c.setPaths();
       c.setPathsExtra();
@@ -5807,6 +5807,7 @@ WasedaShi.prototype.setPaths = function() {
     case "R_NE16":
       this.dp = p(-1.29737, 4.85515);
       this.paths = ["m 0 0 c 0 2.8227 -2.05011 7.42882 -3.67845 6.99251 c -0.549348 -0.147197 2.0602 -1.92159 2.38108 -2.13736"];
+      this.reverse();
       return;
 
     case "R_ER8":
@@ -17786,8 +17787,11 @@ WasedaSuru.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["する"] = WasedaSuru;
 
 WasedaSuru.prototype.setPaths = function() {
+  this.pdp = pp(3, 45);
+  this.paths = ["m0,0v0.1"];
+
   //const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
+  const model_ = this.getPrevModel();
   //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
@@ -17807,7 +17811,11 @@ WasedaSuru.prototype.setPaths = function() {
 
   //switch (model_ + "_" + _head) {}
 
-  //switch (model_) {}
+  switch (model_) {
+    case "SE4CR1":
+      this.pdp = pp(4, 45);
+      return;
+  }
 
   //switch (tail_ + "_" + _name) {}
 
@@ -17822,9 +17830,6 @@ WasedaSuru.prototype.setPaths = function() {
   //switch (_model) {}
 
   //switch (_head) {}
-
-  this.dp = p(2.1, 2.2);
-  this.paths = ["m2.1,2.1v0.1"];
 };
 
 WasedaIruP = function() { WasedaChar.call(this, "WasedaIruP", "いる", "P", "P", "P", "black", false, p(0.0, -0.1)); };
@@ -24355,6 +24360,11 @@ WasedaRei.prototype.setPaths = function() {
   //switch (_model) {}
 
   switch (_headModel) {
+    case "NEL8":
+      this.dp = p(1.99759, 2.21004);
+      this.paths = ["m 0 0 c 1.13193 0.793 2.39846 2.04701 1.9367 2.8468 c -0.412248 0.714034 -1.16031 0.518301 -1.04761 0.068839 c 0.094144 -0.375475 0.663869 -0.469207 1.10851 -0.705595"];
+      return;
+
     case "NE16":
       this.dp = p(1.79186, 1.74639);
       this.paths = ["m 0 0 c 1.13193 0.793 2.39846 2.04701 1.9367 2.8468 c -0.497621 0.861904 -1.37596 0.317737 -1.01544 -0.098971 c 0.284747 -0.329119 0.608401 -0.65566 0.870599 -1.00144"];
