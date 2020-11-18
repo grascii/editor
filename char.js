@@ -19146,6 +19146,10 @@ WasedaSore.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "S":
+      this.paths = ["m 0 0 c 0.906265 0.906265 -0.949482 2.99724 -2.20899 3.33472"];
+      return;
+
     case "SW":
       this.paths = ["m 0 0 c 0.745105 1.29056 -0.949482 2.99724 -2.20899 3.33472"];
       return;
