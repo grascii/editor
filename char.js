@@ -18401,6 +18401,10 @@ WasedaNakuHitei.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
+    case "WasedaMoJoshi":
+      this.pdp = p(0.7, -1.8);
+      return;
+
     case "WasedaWa":
       this.pdp = p(-0.8, 1.3);
       return;
@@ -18740,6 +18744,7 @@ WasedaToJoshi.prototype.setPaths = function() {
     case "XS":
     case "XSW":
     case "XEL":
+    case "P":
     case "":
       this.dp = p(-0.070515, 2.94263);
       this.paths = ["m 0 0 l -1.3681 3.7587 c 0.12032 -0.44904 0.938561 -0.816068 1.29759 -0.816068"];
@@ -33422,6 +33427,12 @@ WasedaNakute.prototype.setPaths = function() {
   }
 
   switch (tail_ + "_" + _head) {
+    case "E_SEL":
+    case "E_S":
+      this.pdp = p(-1, -1.5);
+      this.dp = p(0, 3.31915);
+      this.paths = ["m 0 0 v 3.31915 c 0 0.565945 -0.567037 0.8732 -0.9 0.5588 c -0.263693 -0.248921 -0.016341 -0.889627 0.231761 -1.07571 c 0.307662 -0.23076 0.668239 0.056411 0.668239 0.516914"];
+      return;
   }
 
   switch (tail_) {
