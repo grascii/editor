@@ -18293,7 +18293,7 @@ WasedaNaiHitei.prototype.setPaths = function() {
   this.paths = ["m 0 0 l -1.0261 2.819"];
 
   const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
+  const model_ = this.getPrevModel();
   const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
@@ -18313,6 +18313,7 @@ WasedaNaiHitei.prototype.setPaths = function() {
     case "WasedaTeJoshi":
     case "WasedaToJoshi":
       this.dp = p(-1.0261, 2.819).pmove(2, 120);
+      this.tailType = "SWF";
       this.paths = ["m 0 0 l -1.0261 2.819"];
       return;
   }
@@ -18323,7 +18324,11 @@ WasedaNaiHitei.prototype.setPaths = function() {
 
   //switch (model_ + "_" + _head) {}
 
-  //switch (model_) {}
+  switch (model_) {
+    case "SEL8":
+      this.pdp = p(-1, -2);
+      return;
+  }
 
   //switch (tail_ + "_" + _name) {}
 
@@ -18511,6 +18516,10 @@ WasedaNakattaHitei.prototype.setPaths = function() {
   //switch (model_ + "_" + _head) {}
 
   switch (model_) {
+    case "ER8CR1":
+      this.pdp = p(-3, -1);
+      return;
+
     case "SEL8":
       horizontal(this);
       this.pdp = p(-4.3, -1.7);
@@ -31395,8 +31404,8 @@ WasedaKore.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(-2e-06, -1e-05);
-  this.paths = ["m 0 0 c -0.246867 0.142528 -0.929546 0.984295 -1.23455 1.57861 c -0.302872 0.590156 -1.07917 2.15984 -0.558772 1.90995 c 0.780763 -0.374902 1.77743 -2.32943 1.79332 -3.48857"];
+  this.dp = p(0, 0);
+  this.paths = ["m 0 0 c 0 0 -2.03002 1.43387 -2.43907 2.51572 c -0.15303 0.40475 -0.12347 0.81821 0.22187 0.61756 c 0.86451 -0.50229 2.2172 -3.13328 2.2172 -3.13328"];
 };
 
 WasedaOnajiP = function() { WasedaChar.call(this, "WasedaOnajiP", "おなじｐ", "P/X", "P/X", "P/X", "black"); };
