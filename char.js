@@ -34903,6 +34903,6 @@ WasedaMashou.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(32.0429, 0.11011).pmove(2, 30);
-  this.paths = ["m 0 0 c 7.69906 -4.44505 21.884 -5.75513 32.0429 0.11011"];
+  this.dp = p(25, 0).pmove(2, 45);
+  this.paths = ["m 0 0 c 5.99485 -3.48865 17.0584 -4.5488 25 0"];
 };
