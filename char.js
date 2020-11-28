@@ -7201,7 +7201,7 @@ CharDottedCircle.prototype.setPaths = function() {
   }
 };
 
-WasedaMasu = function() { WasedaChar.call(this, "WasedaMasu", "ます", "E24F", "E", "EF", "black"); };
+WasedaMasu = function() { WasedaChar.call(this, "WasedaMasu", "ます", "E25F", "E", "EF", "black"); };
 WasedaMasu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ます"] = WasedaMasu;
 
@@ -7209,14 +7209,14 @@ WasedaMasu.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(24 + 2, 0);
-      this.paths = ["m0,0h24"];
+      this.dp = p(25, 0).move(2, 0);
+      this.paths = ["m0,0h25"];
       break;
   }
 };
 
 
-WasedaMashite = function() { WasedaChar.call(this, "WasedaMashite", "まして", "NE24F", "NE", "NEF", "black"); };
+WasedaMashite = function() { WasedaChar.call(this, "WasedaMashite", "まして", "NE25F", "NE", "NEF", "black"); };
 WasedaMashite.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["まして"] = WasedaMashite;
 
@@ -7224,9 +7224,9 @@ WasedaMashite.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(21.298, -14.9129);
-      this.paths = ["m0,0l19.6597,-13.7658"];
-      break;
+      this.dp = p(20.4788, -14.3394).pmove(2, -35);
+      this.paths = ["m 0 0 l 20.4788 -14.3394"];
+      return;
   }
 };
 
@@ -34641,4 +34641,268 @@ WasedaNaitoshite.prototype.setPaths = function() {
   //switch (_headModel) {}
 
   //switch (_head) {}
+};
+
+WasedaMashita = function() { WasedaChar.call(this, "WasedaMashita", "ました", "SE25F", "SE", "SEF", "black", false, p(0.0, -7.2)); };
+WasedaMashita.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ました"] = WasedaMashita;
+
+WasedaMashita.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _headModel) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _headModel) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tailModel_ + "_" + _name) {}
+
+  //switch (tailModel_ + "_" + _model) {}
+
+  //switch (tailModel_ + "_" + _headModel) {}
+
+  //switch (tailModel_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _headModel) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(20.4788, 14.3394).pmove(2, 35);
+  this.paths = ["m 0 0 l 20.4788 14.3394"];
+};
+
+WasedaMashitemo = function() { WasedaChar.call(this, "WasedaMashitemo", "ましても", "NE25CR1NE1F", "NE", "NEF", "black", false, p(0.0, 7.8)); };
+WasedaMashitemo.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ましても"] = WasedaMashitemo;
+
+WasedaMashitemo.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _headModel) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _headModel) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tailModel_ + "_" + _name) {}
+
+  //switch (tailModel_ + "_" + _model) {}
+
+  //switch (tailModel_ + "_" + _headModel) {}
+
+  //switch (tailModel_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _headModel) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(20.9735, -15.6176).pmove(2, -55);
+  this.paths = ["m 0 0 l 20.4788 -14.3394 c 0.16259 -0.113847 0.412482 -0.04295 0.46407 0.1072 c 0.147916 0.430508 -0.433841 1.2184 -0.860697 1.06026 c -0.360699 -0.133634 -0.160993 -0.812152 0.03199 -1.15353 c 0.258913 -0.457996 0.684588 -1.04459 0.859358 -1.29211"];
+};
+
+WasedaMasen = function() { WasedaChar.call(this, "WasedaMasen", "ません", "SW25F", "SW", "SWF", "black", false, p(16.1, -9.6)); };
+WasedaMasen.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ません"] = WasedaMasen;
+
+WasedaMasen.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _headModel) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _headModel) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tailModel_ + "_" + _name) {}
+
+  //switch (tailModel_ + "_" + _model) {}
+
+  //switch (tailModel_ + "_" + _headModel) {}
+
+  //switch (tailModel_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _headModel) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(-16.0697, 19.1511).pmove(2, 130);
+  this.paths = ["m 0 0 l -16.0697 19.1511"];
+};
+
+WasedaMashou = function() { WasedaChar.call(this, "WasedaMashou", "ましょう", "ER25F", "ER", "ERF", "black", false, p(0.0, 1.4)); };
+WasedaMashou.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["ましょう"] = WasedaMashou;
+
+WasedaMashou.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _headModel) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _headModel) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (model_) {}
+
+  //switch (tailModel_ + "_" + _name) {}
+
+  //switch (tailModel_ + "_" + _model) {}
+
+  //switch (tailModel_ + "_" + _headModel) {}
+
+  //switch (tailModel_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _headModel) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(32.0429, 0.11011).pmove(2, 30);
+  this.paths = ["m 0 0 c 7.69906 -4.44505 21.884 -5.75513 32.0429 0.11011"];
 };
