@@ -978,22 +978,68 @@ WasedaChar.dict["あるｐ"] = WasedaPointAru;
 WasedaChar.dict["ある"] = WasedaPointAru;
 
 WasedaPointAru.prototype.setPaths = function() {
-
-  switch (this.getPrevTailType()) {
-    case "E":
-      this.dp = p(2, 0);
-      this.paths = ["m2,0v0.1"];
-      break;
-
-    default:
-      this.dp = pp(2, -25);
-      this.paths = ["m2,0v0.1"];
-      break;
-  }
-
   if (this.getNextHeadType() !== "") {
     this.paths = [];
+  } else {
+    this.paths = ["m0,0v0.1"];
   }
+
+  this.pdp = pp(2, -25);
+
+  const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  switch (name_) {
+    case "WasedaTeJoshi":
+      this.pdp = p(3, 0.2);
+      return;
+
+    case "WasedaMoJoshi":
+      this.pdp = p(3.2, -2.0);
+      return;
+  }
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  switch (tail_) {
+    case "E":
+      this.pdp = p(2, 0);
+      return;
+  }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
 };
 
 WasedaKai = function() { WasedaChar.call(this, "WasedaKai", "かい", "E4", "E", "E", "black"); };
@@ -4781,7 +4827,7 @@ WasedaWa.prototype.setPaths = function() {
   switch (model_ + "_" + _head) {
     case "EL8CL1_EL":
       this.dp = p(1.69545, 2.69701);
-      this.paths = ["m 0 0 c -0.69084 0.90515 -1.28108 2.22721 -0.596457 2.96901 c 0.521773 0.565352 1.69893 0.755071 2.29191 -0.272004"];
+      this.paths = ["m 0 0 c -0.69084 0.90515 -1.28108 2.22721 -0.596457 2.96901 c 0.521773 0.565352 1.44117 0.578741 2.29191 -0.272004"];
       return;
 
     case "SEL4CL1_E":
