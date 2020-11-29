@@ -225,6 +225,13 @@ CharRight.prototype = Object.create(Char.prototype);
 CharRight.prototype.setPaths = function() { this.dp = typeof(this.mm) != 'undefined' ? p(this.mm, 0) : p(1, 0); };
 Char.dict["→"] = CharRight;
 
+CharMove = function(x, y) {
+  Char.call(this, "CharMove", "移動", "", "", "", "black", false, p(0, 0));
+  this.dp = p(x, y);
+};
+CharMove.prototype = Object.create(Char.prototype);
+CharMove.prototype.setPaths = function() {};
+//Char.dict[""] = CharMove;
 
 CharNewline = function() {Char.call(this, "CharNewline", "改行", "", "", "", "black"); };
 CharNewline.prototype = Object.create(Char.prototype);
@@ -987,7 +994,7 @@ WasedaPointAru.prototype.setPaths = function() {
   this.pdp = pp(2, -25);
 
   const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
+  const model_ = this.getPrevModel();
   //const tailModel_ = this.getPrevTailModel();
   const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
@@ -1002,6 +1009,10 @@ WasedaPointAru.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
+    case "WasedaSore":
+      this.pdp = p(4.7, -1.0);
+      return;
+
     case "WasedaTeJoshi":
       this.pdp = p(3, 0.2);
       return;
@@ -1019,7 +1030,7 @@ WasedaPointAru.prototype.setPaths = function() {
 
   //switch (tailModel_) {}
 
-  //switch (model_) {}
+  switch (model_) { }
 
   //switch (tail_ + "_" + _name) {}
 
@@ -19503,7 +19514,7 @@ WasedaSore.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
   const tail_ = this.getPrevTailType();
-  //const _name = this.getNextName();
+  const _name = this.getNextName();
   //const _model = this.getNextModel();
   const _head = this.getNextHeadType();
 
@@ -19535,7 +19546,12 @@ WasedaSore.prototype.setPaths = function() {
       this.paths = ["m 0 0 c 1.81463 1.04767 -0.949482 2.99724 -2.20899 3.33472"];
   }
 
-  //switch (_name) {}
+  switch (_name) {
+    case "WasedaMasen":
+      this.dp = p(-2.77114, 3.0938);
+      this.paths = ["m 0 0 c 0 1.34814 -0.947128 3.58254 -2.77114 3.0938"];
+      return;
+  }
 
   //switch (_model) {}
 
@@ -21444,6 +21460,14 @@ WasedaChi.prototype.setPaths = function() {
 
   //switch (tail_ + "_" + _model) {}
 
+  switch (tail_ + "_" + _headModel) {
+    case "R_EL8":
+      this.dp = p(6.53713, -4.25044);
+      this.paths = ["m 0 0 c 2.26448 -1.53943 4.57194 -3.0056 6.851 -4.4493 c 1.10192 -0.763812 -0.561368 -0.899328 -0.829113 -0.666757 c -0.253503 0.2202 -0.1295 0.668512 0.515243 0.865617"];
+      this.reverse();
+      return;
+  }
+
   switch (tail_ + "_" + _head) {
     case "SERCR_SE":
       this.dp = p(6.47839, -4.23201);
@@ -21454,11 +21478,17 @@ WasedaChi.prototype.setPaths = function() {
     case "R_SW":
       this.dp = p(5.77029, -3.764);
       this.paths = ["m 0 0 c 2.26448 -1.53943 4.57194 -3.0056 6.851 -4.4493 c 0.8233 -0.521531 -0.291622 -1.48413 -0.535556 -0.813953 c -0.143911 0.39538 -0.418539 1.15139 -0.545157 1.49926"];
+      this.reverse();
       return;
-
   }
 
   switch (tail_) {
+    case "R":
+      this.dp = p(6.53713, -4.25044);
+      this.paths = ["m 0 0 c 2.26448 -1.53943 4.57194 -3.0056 6.851 -4.4493 c 1.10192 -0.763812 -0.280593 -1.15681 -0.566 -0.8714 c -0.385784 0.385784 0.073648 0.761117 0.252133 1.07026"];
+      this.reverse();
+      return;
+
     case "SW":
     case "SERCR":
       this.dp = p(6.47839, -4.23201);
@@ -35028,10 +35058,17 @@ WasedaChar.dict["あった"] = [WasedaAtteP, WasedaTa];
 WasedaChar.dict["あり"] = [WasedaPointAru, WasedaA];
 WasedaChar.dict["あれば"] = [WasedaPointAru, WasedaHo];
 WasedaChar.dict["あります"] = [WasedaPointAru, WasedaMasu];
+WasedaChar.dict["であります"] = [WasedaTeJoshi, WasedaPointAru, WasedaMasu];
+WasedaChar.dict["ありましょう"] = [WasedaPointAru, WasedaMashou];
+WasedaChar.dict["のでありましょう"] = [WasedaSore, WasedaPointAru, WasedaMashou];
+WasedaChar.dict["ありました"] = [WasedaPointAru, WasedaMashita];
+WasedaChar.dict["ありません"] = [WasedaPointAru, WasedaMasen];
+WasedaChar.dict["でありません"] = [WasedaTeJoshi, WasedaMasen];
+WasedaChar.dict["のでありません"] = [WasedaSore, WasedaMasen];
 
 WasedaAtteP.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
-  //const model_ = this.getPrevModel();
+  const model_ = this.getPrevModel();
   //const tailModel_ = this.getPrevTailModel();
   const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
@@ -35055,7 +35092,11 @@ WasedaAtteP.prototype.setPaths = function() {
 
   //switch (tailModel_) {}
 
-  //switch (model_) {}
+  switch (model_) {
+    case "EL8CL1":
+      this.pdp = p(2.3, -1.6);
+      return;
+  }
 
   //switch (tail_ + "_" + _name) {}
 
