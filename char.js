@@ -5874,6 +5874,13 @@ WasedaShi.prototype.setPaths = function() {
       this.reverse();
       return;
 
+    case "ER_SE25":
+      this.dp = p(-2.99564, 6.68933);
+      this.paths = ["m 0 0 c 1.30093 2.25326 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.54742 -1.32544 -0.00709 -0.947099 c 0.440906 0.308725 0.594366 0.416179 1.01145 0.708224"];
+      this.reverse();
+      return;
+
+
     case "R_EL8":
       this.dp = p(-3.0131, 6.6771);
       this.paths = ["m 0 0 c 0 2.8227 -1.5507 6.9282 -4 6.9282 c -0.9199 0 -0.8301 -1.0327 -0.3834 -0.8612 c 0.4733 0.1629 0.9205 0.3907 1.3703 0.6101"];
@@ -6148,6 +6155,13 @@ WasedaSu.prototype.setPaths = function() {
   //switch (model_ + "_" + _name) {}
 
   //switch (model_ + "_" + _model) {}
+
+  switch (model_ + "_" + _head) {
+    case "SEL8_E":
+      this.dp = p(4.48813, -3.05947);
+      this.paths = ["m 0 0 c 2.3202 0 5.8001 -3.832 5.8001 -6.125 c 0 -2.17 -5.49859 3.06553 -2.86977 3.06553 c 0.973812 0 0.706733 0 1.55779 0"];
+      return;
+  }
 
   switch (model_ + "_" + _headModel) {
     case "SEL8_EL8":
