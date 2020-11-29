@@ -198,7 +198,7 @@ CharUp = function(mm) {
   this.mm = mm;
 };
 CharUp.prototype = Object.create(Char.prototype);
-CharUp.prototype.setPaths = function() { this.dp = this.mm ? p(0, -this.mm) : p(0, -1); };
+CharUp.prototype.setPaths = function() { this.dp = (typeof(this.mm) != 'undefined') ? p(0, -this.mm) : p(0, -1); };
 Char.dict["↑"] = CharUp;
 
 CharDown = function(mm) {
@@ -206,7 +206,7 @@ CharDown = function(mm) {
   this.mm = mm;
 };
 CharDown.prototype = Object.create(Char.prototype);
-CharDown.prototype.setPaths = function() { this.dp = this.mm ? p(0, this.mm) : p(0, 1); };
+CharDown.prototype.setPaths = function() { this.dp = (typeof(this.mm) != 'undefined') ? p(0, this.mm) : p(0, 1); };
 Char.dict["↓"] = CharDown;
 
 CharLeft = function(mm) {
@@ -214,7 +214,7 @@ CharLeft = function(mm) {
   this.mm = mm;
 };
 CharLeft.prototype = Object.create(Char.prototype);
-CharLeft.prototype.setPaths = function() { this.dp = this.mm ? p(-this.mm, 0) : p(1, 0); };
+CharLeft.prototype.setPaths = function() { this.dp = (typeof(this.mm) != 'undefined') ? p(-this.mm, 0) : p(1, 0); };
 Char.dict["←"] = CharLeft;
 
 CharRight = function(mm) {
@@ -222,7 +222,7 @@ CharRight = function(mm) {
   this.mm = mm;
 };
 CharRight.prototype = Object.create(Char.prototype);
-CharRight.prototype.setPaths = function() { this.dp = this.mm ? p(this.mm, 0) : p(1, 0); };
+CharRight.prototype.setPaths = function() { this.dp = typeof(this.mm) != 'undefined' ? p(this.mm, 0) : p(1, 0); };
 Char.dict["→"] = CharRight;
 
 
@@ -975,14 +975,19 @@ WasedaPointAru = function() {
 };
 WasedaPointAru.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["あるｐ"] = WasedaPointAru;
+WasedaChar.dict["ある"] = WasedaPointAru;
 
 WasedaPointAru.prototype.setPaths = function() {
 
   switch (this.getPrevTailType()) {
+    case "E":
+      this.dp = p(2, 0);
+      this.paths = ["m2,0v0.1"];
+      break;
 
     default:
-      this.dp = p(2, 0);
-      this.paths = ["m2 0 0 0"];
+      this.dp = pp(2, -25);
+      this.paths = ["m2,0v0.1"];
       break;
   }
 
@@ -34967,3 +34972,77 @@ WasedaMashou.prototype.setPaths = function() {
   this.dp = p(25, 0).pmove(2, 33);
   this.paths = ["m 0 0 c 6.0068 -3.46803 19.4421 -3.47898 25 0"];
 };
+
+
+WasedaAtteP = function() { WasedaChar.call(this, "WasedaAtteP", "あってｐ", "P/X", "P/X", "P/X", "black"); };
+WasedaAtteP.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["あってｐ"] = WasedaAtteP;
+WasedaChar.dict["あって"] = [WasedaAtteP, WasedaE];
+WasedaChar.dict["あった"] = [WasedaAtteP, WasedaTa];
+WasedaChar.dict["あり"] = [WasedaPointAru, WasedaA];
+WasedaChar.dict["あれば"] = [WasedaPointAru, WasedaHo];
+WasedaChar.dict["あります"] = [WasedaPointAru, WasedaMasu];
+
+WasedaAtteP.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  switch (tail_ + "_" + _head) {
+    case "E_SW":
+      this.dp = p(3, -1.5);
+      return;
+
+    case "S_SW":
+      this.dp = p(3, -1.5);
+      return;
+
+    case "E_SE":
+      this.dp = p(1, -1.5);
+      return;
+
+    case "S_SE":
+      this.dp = p(1, -1.5);
+      return;
+  }
+
+  switch (tail_) { }
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.dp = p(0, 0);
+};
+
