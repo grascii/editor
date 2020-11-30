@@ -21647,6 +21647,11 @@ switch (this.filterReverseTail(tail_)) {
   //switch (_name) {}
 
   switch (_headModel) {
+    case "EL4":
+      this.dp = p(9.84128, -11.5678);
+      this.paths = ["m 0 0 c 3.24938 -3.82788 6.56818 -8.36248 10.0638 -11.7875 c 0.289768 -0.283918 0.266394 -0.592683 0.08359 -0.779359 c -0.200371 -0.204616 -0.644256 -0.119138 -0.855987 0.0737 c -0.350471 0.319194 0.029922 0.648929 0.549883 0.925399"];
+      return;
+
     case "SER8":
       this.dp = p(9.86129, -10.5895);
       this.paths = ["m 0 0 c 3.27921 -3.75924 6.74414 -7.38622 10.1917 -10.9293 c 0.4169 -0.3754 0.265013 -0.593038 0.0819 -0.7793 c -0.335104 -0.340867 -1.26764 -0.324578 -1.4285 0.125542 c -0.159424 0.446094 0.651052 0.737856 1.01619 0.99353"];
@@ -25407,6 +25412,7 @@ WasedaTen2.prototype.setPaths = function() {
 WasedaN = function() { WasedaChar.call(this, "WasedaN", "ん", "NE1F", "NE", "NEF", "black", false, p(0.0, 0.5)); };
 WasedaN.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict[" ん"] = WasedaN;
+WasedaChar.dict["ン"] = WasedaN;
 
 WasedaN.prototype.setPaths = function() {
   //const name_ = this.getPrevName();
