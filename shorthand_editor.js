@@ -23,7 +23,10 @@ const fileNameInput = document.getElementById("page_name");
 
 const downloadButtonSVG = document.getElementById("download_button_svg");
 downloadButtonSVG.addEventListener("click", 
-  function() { downloadSVG(fileNameInput.value + ".svg"); }
+  function() { 
+    const rs = Math.floor(((+new Date()) * Math.random())).toString(36);
+    downloadSVG(rs + "_" + fileNameInput.value + ".svg");
+  }
 );
 
 const downloadButtonPNG = document.getElementById("download_button_png");
@@ -78,6 +81,7 @@ function savePages() {
 
   storage.setItem("pages", JSON.stringify(pages));
   loadPageList();
+  if (title != "") pageList.value = title;
   openPage();
 }
 
@@ -196,52 +200,44 @@ function parseInputText(text) {
         } else if (Char.dict[tok]) {
           chars.push(new Char.dict[tok]());
         } else {
+          var entry;
           switch (shorthand) {
             case "waseda":
-              if (WasedaChar.dict[tok]) {
-                chars.push(new WasedaChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = WasedaChar.dict[tok];
               break;
             case "nakane":
-              if (NakaneChar.dict[tok]) {
-                chars.push(new NakaneChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = NakaneChar.dict[tok];
               break;
+
             case "svsd":
-              if (SvsdChar.dict[tok]) {
-                chars.push(new SvsdChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = SvsdChar.dict[tok];
               break;
+
             case "shugiin":
-              if (ShugiinChar.dict[tok]) {
-                chars.push(new ShugiinChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = ShugiinChar.dict[tok];
               break;
+
             case "takusari": 
-              if (TakusariChar.dict[tok]) {
-                chars.push(new TakusariChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = TakusariChar.dict[tok];
               break;
+
             case "gregg":
-              if (GreggChar.dict[tok]) {
-                chars.push(new GreggChar.dict[tok]());
-              } else {
-                chars.push(new CharText("\u25A1"));
-              }
+              entry = GreggChar.dict[tok];
               break;
+
             default:
               chars.push(new CharText("\u25A1"));
               break;
+          }
+
+          if (entry) {
+            if (Array.isArray(entry)) {
+              entry.forEach(function(ctor) { chars.push(new ctor()); });
+            } else {
+              chars.push(new entry());
+            }
+          } else {
+            chars.push(new CharText("\u25A1"));
           }
         }
       }
@@ -260,12 +256,14 @@ function parseInputText(text) {
             
         default:
           var match;
-          if ((match = items[i].match(/^([hv])space{(-?\d+(?:\.\d+)?)}/)) !== null) {
+          if ((match = items[i].match(/^([hv])sp(?:ace){(-?\d+(?:\.\d+)?)}/)) !== null) {
             if (match[1] == "h") {
               chars.push(new CharRight(parseFloat(match[2])));
             } else if (match[1] == "v") {
               chars.push(new CharUp(parseFloat(match[2])));
             }
+          } else if ((match = items[i].match(/^sp(?:ace)?{(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)}/)) !== null) {
+            chars.push(new CharMove(parseFloat(match[1]), parseFloat(match[2])));
           } else if ((match = items[i].match(/newpage/)) !== null) {
             chars.push(new CharNewpage());
             //const svg = document.getElementById('svg_root');
