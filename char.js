@@ -1036,6 +1036,10 @@ WasedaPointAru.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
+    case "WasedaNoJoshi":
+      this.pdp.set(5.7, 1.2);
+      return;
+
     case "WasedaKotode":
       this.pdp = p(3, 0);
       return;
@@ -8113,8 +8117,8 @@ WasedaHi.prototype.setPaths = function() {
       break;
 
     case "SW":
-      this.dp = p(3.63045, 5.73098);
-      this.paths = ["m 0 0 c 0 3.7342 0.9929 5.765 4.3442 5.765 c 0.3919 0 0.534242 -0.39503 0.549706 -0.688227 c 0.010682 -0.202526 -0.12508 -0.501815 -0.327595 -0.512699 c -0.49789 -0.026759 -0.675179 0.542121 -0.935859 1.1669"];
+      this.dp = p(3.63868, 5.70836);
+      this.paths = ["m 0 0 c 0 3.7342 1.84433 5.765 4.3442 5.765 c 0.440085 0 0.549706 -0.394622 0.549706 -0.688227 c 0 -0.820229 -0.760526 -0.727581 -1.04912 0.065327 c -0.118439 0.325407 0.00624 -0.052489 -0.206104 0.566264"];
       return;
 
     default:
@@ -21537,8 +21541,8 @@ WasedaYo.prototype.setPaths = function() {
       return;
 
     case "SWR":
-      this.dp = p(11.3138, -11.3137);
-      this.paths = ["m 0 0 c 1.2151 -3.3384 8.91307 -13.7087 11.3138 -11.3137"];
+      this.dp = p(12.853, -9.77455);
+      this.paths = ["m 0 0 c 1.2151 -3.3384 8.59164 -14.0257 12.853 -9.77455"];
       return;
   }
 
@@ -36048,7 +36052,7 @@ WasedaChar.dict["てき"] = WasedaTeki;
 
 WasedaTeki.prototype.setPaths = function() {
   this.dp = p(0, 0);
-  if (this.getPrevTailType() != "" && this.getNextHeadType() != "") {
+  if (this.getPrevTailType() != "" && this.getNextHeadType() != "" && this.getNextHeadType() != "P") {
     this.paths = [];
   } else {
     this.paths = ["m0,0v0.1"];
@@ -36085,6 +36089,29 @@ WasedaTeki.prototype.setPaths = function() {
   //switch (tailModel_) {}
 
   switch (model_) {
+    case "SL8ONEL4":
+      this.pdp.set(-0.8, 1.8);
+      return;
+
+    case "NEL8CL1":
+      this.pdp.pset(2.0, 106.9);
+      return;
+
+    case "E8CL4":
+      this.pdp.set(1.9, 1.8);
+      return;
+
+    case "SW8CR1":
+      this.pdp.set(-2.1, 3.3);
+      return;
+
+    case "ER8CR4":
+      this.pdp.set(1.7, 3.8);
+      return;
+
+    case "SEL8CL4":
+      this.pdp.set(-0.3, 2.9);
+      return;
   }
 
   //switch (tail_ + "_" + _name) {}
@@ -36116,6 +36143,8 @@ WasedaTeki.prototype.setPaths = function() {
   //switch (_headModel) {}
 
   switch (_head) {
+    case "SER":
+    case "NEL":
     case "NE":
     case "NER":
     case "SW":
