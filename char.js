@@ -24969,7 +24969,7 @@ WasedaEi.prototype.setPaths = function() {
   //const tail_ = this.getPrevTailType();
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
-  //const _headModel = this.getNextHeadModel();
+  const _headModel = this.getNextHeadModel();
   const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
@@ -25002,9 +25002,19 @@ WasedaEi.prototype.setPaths = function() {
 
   //switch (_model) {}
 
-  //switch (_headModel) {}
+  switch (_headModel) {
+    case "EL8":
+      this.dp = p(2.73116, 2.78334);
+      this.paths = ["m 0 0 c 0.938951 0.955664 2.62877 2.62062 2.62877 2.62062 c 0.369896 0.344259 -0.274527 0.847626 -0.609863 0.808596 c -0.348434 -0.040555 -0.838966 -0.723553 -0.42378 -0.963261 c 0.192214 -0.110975 0.933556 0.251594 1.13604 0.317387"];
+      return;
+  }
 
   switch (_head) {
+    case "NE":
+      this.dp = p(2.26329, 2.25978);
+      this.paths = ["m 0 0 c 0.938951 0.955664 2.62877 2.62062 2.62877 2.62062 c 0.238306 0.238306 -0.071868 0.677062 -0.380923 0.777304 c -0.524825 0.170225 -1.14276 -0.291272 -0.683626 -0.626988 l 0.699069 -0.511159"];
+      return;
+
     case "E":
       this.dp = p(2.41441, 2.40911);
       this.paths = ["m 0 0 c 0.938951 0.955664 2.62877 2.62062 2.62877 2.62062 c 0.572965 0.572964 -0.610614 0.889135 -1.02809 0.280207 c -0.406809 -0.593365 0.364044 -0.491721 0.813738 -0.491721"];
