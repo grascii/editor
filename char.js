@@ -6382,6 +6382,12 @@ WasedaSu.prototype.setPaths = function() {
   }
 
   switch (tail_ + "_" + _head) {
+    case "NER_E":
+      this.dp = p(-0.756429, 3.85681);
+      this.paths = ["m 0 0 c 1.11189 1.112 -1.96809 7.09343 -3.84679 6.92264 c -1.60821 -0.146203 -1.15697 -2.96419 1.68323 -3.03216 l 1.40713 -0.033671"];
+      this.reverse();
+      return;
+
     case "R_NE":
       this.dp = p(-0.874496, 4.08031);
       this.paths = ["m 0 0 c 0 3.21345 -1.96809 7.09344 -3.84679 6.92264 c -2.27958 -0.207237 2.21189 -2.32943 2.97229 -2.84233"];
@@ -17584,6 +17590,11 @@ WasedaTei.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "SWR":
+      this.dp = p(-1.25684, 3.60256);
+      this.paths = ["m 0 0 c -0.122896 0.333597 -0.484321 1.49283 -1.10117 3.37142 c -0.15815 0.5902 -1.39748 0.343475 -1.15235 -0.403008 c 0.067768 -0.206371 0.421586 -0.731884 0.74497 -0.45001 c 0.125588 0.109467 0.251709 0.561167 0.251709 1.08416"];
+      return;
+
     case "SW":
      this.dp = p(-1.25157, 3.63128);
      this.paths = ["m 0 0 c -0.312294 0.66971 -0.51629 1.45836 -1.10117 3.37142 c -0.199697 0.630314 -0.958924 0.223651 -0.958924 -0.317933 c 0 -0.514576 0.651141 -0.809813 0.918082 -0.542872 c 0.277434 0.277434 0.00884 0.678774 -0.109561 1.12067"];
@@ -22404,15 +22415,13 @@ WasedaSan.prototype.setPaths = function() {
 
   switch (_headModel) {
     case "SWL8":
-      this.dp.x += 2;
-      this.dp.y += 1.5;
+      this.dp.move(2, 1.5);
       return;
   }
 
   switch (_head) {
     case "SW":
-      this.dp.x += 0.9;
-      this.dp.y -= 0.3;
+      this.dp.move(1.5, -0.3);
       return;
   }
 };
@@ -25736,6 +25745,9 @@ WasedaHun.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ふん"] = WasedaHun;
 
 WasedaHun.prototype.setPaths = function() {
+  this.dp = p(3.08518, 1.41873);
+  this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207 l 1.06066 -1.06066"];
+
   //const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
   //const tailModel_ = this.getPrevTailModel();
@@ -25743,7 +25755,7 @@ WasedaHun.prototype.setPaths = function() {
   //const _name = this.getNextName();
   //const _model = this.getNextModel();
   //const _headModel = this.getNextHeadModel();
-  //const _head = this.getNextHeadType();
+  const _head = this.getNextHeadType();
 
   //switch (name_ + "_" + _name) {}
 
@@ -25777,10 +25789,11 @@ WasedaHun.prototype.setPaths = function() {
 
   //switch (_headModel) {}
 
-  //switch (_head) {}
-
- this.dp = p(3.08518, 1.41873);
- this.paths = ["m 0 0 c 0 1.8741 0.2905 3.3309 0.7678 4.3545 c 0.4951 1.0151 1.3611 1.5004 2.7067 1.5004 c 0.6304 0 1.3022 -0.1748 1.3022 -0.7218 c 0 -0.42 -0.7718 -0.8055 -1.6955 -1.0188 c -0.9158 -0.2453 -2.0018 -0.2207 -2.4709 -0.2207 l 1.06066 -1.06066"];
+  switch (_head) {
+    case "SEL":
+      this.dp.move(2, 0);
+      return;
+  }
 };
 
 WasedaKun = function() { WasedaChar.call(this, "WasedaKun", "くん", "E8CL4E1F", "E", "EF", "black", false, p(0.0, 1.4)); };
