@@ -36791,6 +36791,14 @@ WasedaRepeat.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "SER":
+      this.pdp.pset(2, 120);
+      return;
+
+    case "SERCR":
+      this.pdp.pset(4, 120);
+      return;
+
     case "NE":
       this.pdp.pset(2, 110);
       return;
