@@ -6160,6 +6160,11 @@ WasedaShi.prototype.setPaths = function() {
   }
 
   switch (_headModel) {
+    case "ER25":
+      this.dp.set(5.63619, -4.39209);
+      this.paths = ["m 0 0 c 2.048 -1.0891 5.714 -2.6744 5.714 -4.9675 c 0 -1.0513 -1.71352 0.204855 -1.48458 0.774343 c 0.171941 0.427703 0.731581 0.160232 1.40677 -0.198933"];
+      return;
+
     case "NE25":
       this.dp = p(5.69391, -4.56388);
       this.paths = ["m 0 0 c 2.0364 -1.1288 5.7358 -2.6844 5.7358 -4.986 c 0 -1.0553 -1.35193 0.271939 -1.18083 0.695492 c 0.146241 0.362006 0.508587 0.168003 1.13894 -0.273374"];
@@ -6572,6 +6577,22 @@ WasedaSe.prototype.setPaths = function() {
   //switch (_model) {}
 
   switch (_headModel) {
+    case "ER4":
+      this.dp.set(11.3533, -9.3388);
+      this.paths = ["m 0 0 c 3.0001 -1.8027 11.4445 -6.7149 11.4445 -9.9485 c 0 -1.0469 -1.63414 -0.056935 -1.42184 0.732958 c 0.110912 0.41265 0.468133 0.374722 1.33064 -0.123254"];
+      return;
+
+    case "ER8":
+    case "ER16":
+      this.dp.set(11.3533, -9.3388);
+      this.paths = ["m 0 0 c 3.0001 -1.8027 11.4445 -6.7149 11.4445 -9.9485 c 0 -1.0469 -1.66548 -0.088268 -1.45317 0.701625 c 0.110912 0.41265 0.679224 0.163114 1.36197 -0.091925"];
+      return;
+
+    case "ER25":
+      this.dp.set(11.3533, -9.3388);
+      this.paths = ["m 0 0 c 3.0001 -1.8027 11.4445 -6.7149 11.4445 -9.9485 c 0 -1.0469 -1.66548 0.096144 -1.45317 0.886037 c 0.110912 0.41265 0.624877 0.149224 1.36197 -0.276337"];
+      return;
+
     case "EL8":
       this.dp = p(11.018, -9.1428);
       this.paths = ["m 0 0 c 2.989 -1.7958 11.402 -6.6898 11.402 -9.9113 c 0 -1.043 -1.127 -0.658 -1.404 -0.3501 c -0.375 0.4161 0.272 0.8755 1.02 1.1186"];
@@ -36732,7 +36753,7 @@ WasedaRepeat.prototype.setPaths = function() {
     this.paths = [];
   }
 
-  //const name_ = this.getPrevName();
+  const name_ = this.getPrevName();
   //const model_ = this.getPrevModel();
   //const tailModel_ = this.getPrevTailModel();
   const tail_ = this.getPrevTailType();
@@ -36747,7 +36768,11 @@ WasedaRepeat.prototype.setPaths = function() {
 
   //switch (name_ + "_" + _head) {}
 
-  //switch (name_) {}
+  switch (name_) {
+    case "WasedaSei":
+      this.pdp.pset(3, 110);
+      return;
+  }
 
   //switch (model_ + "_" + _name) {}
 
@@ -36766,6 +36791,10 @@ WasedaRepeat.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "NE":
+      this.pdp.pset(2, 110);
+      return;
+
     case "ERCR":
       this.pdp.set(-1.5, 2.5);
       return;
