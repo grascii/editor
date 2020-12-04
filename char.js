@@ -21466,7 +21466,7 @@ WasedaYa.prototype.setPaths = function() {
   this.paths = ["m 0 0 c 0.925272 -2.5422 3.4945 -5.1423 6.12836 -5.1423"];
 };
 
-WasedaYu = function() { WasedaChar.call(this, "WasedaYu", "ゆ", "NER8CR1", "NER", "CR", "black", false, p(0.0, 2.5)); };
+WasedaYu = function() { WasedaChar.call(this, "WasedaYu", "ゆ", "NER8CR1", "NER", "NERCR", "black", false, p(0.0, 2.5)); };
 WasedaYu.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ゆ"] = WasedaYu;
 WasedaYu.prototype.filterFlatterModel = function(model) {
@@ -36791,6 +36791,18 @@ WasedaRepeat.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "NERCR":
+      this.pdp.set(-1, 2);
+      return;
+
+    case "NEL":
+      this.pdp.pset(3, 100);
+      return;
+
+    case "NELCL4":
+      this.pdp.pset(2, 110);
+      return;
+
     case "SER":
       this.pdp.pset(2, 120);
       return;
