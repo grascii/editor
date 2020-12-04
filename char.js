@@ -703,9 +703,8 @@ WasedaTaa.prototype.setPathsExtra = function() {
 WasedaSa = function() { WasedaChar.call(this, "WasedaSa", "さ", "NEL8", "NEL", "NEL", "black", false, p(0.0, 2.5)); };
 WasedaSa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["さ"] = WasedaSa;
-WasedaSa.prototype.filterReverseTail = function(tail) { return tail.replace(/^(NELCL4|ECL4|ECL|E|NE)$/, "R"); };
 WasedaSa.prototype.getFilteredPrevTailType = function() {
-  return this.getPrevTailType().replace(/^(?:ELCL4|NELCL4|ECL4|SERCL4|ECL|NE|NEP|E|SEL4|EP|ECL4P|NECLP|NELCL8|ELONL|NWR)$/, "R");
+  return this.getPrevTailType().replace(/^(?:ELCL4|NELCL4|ECL4|SERCL4|ECL|NE|NEP|E|SEL4|EP|ECL4P|NECLP|NELCL8|ELONL|NWR|ER_P)$/, "R");
 };
 WasedaSa.prototype.reverse = function() {
   this.headType = this.tailType = "SWR";
@@ -6387,6 +6386,12 @@ WasedaSu.prototype.setPaths = function() {
   }
 
   switch (tail_ + "_" + _head) {
+    case "R_E":
+      this.dp.set(-0.9317, 4.14797);
+      this.paths = ["m 0 0 c 0 3.21345 -2.07382 7.80976 -4.30601 5.92268 c -1.11939 -0.946326 0.817472 -1.83977 3.37431 -1.77471"];
+      this.reverse();
+      return;
+
     case "NER_E":
       this.dp = p(-0.756429, 3.85681);
       this.paths = ["m 0 0 c 1.11189 1.112 -1.96809 7.09343 -3.84679 6.92264 c -1.60821 -0.146203 -1.15697 -2.96419 1.68323 -3.03216 l 1.40713 -0.033671"];
@@ -20456,6 +20461,8 @@ WasedaLtsuP.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["っ"] = WasedaLtsuP;
 
 WasedaLtsuP.prototype.setPaths = function() {
+  this.tailType = this.getPrevTailType() + "_P";
+  
   const name_ = this.getPrevName();
   const model_ = this.getPrevModel();
   //const tail_ = this.getPrevTailType();
@@ -20475,8 +20482,6 @@ WasedaLtsuP.prototype.setPaths = function() {
   }
 
   //switch (name_) {}
-  this.tailType = this.getPrevTailType() + "P";
-
   switch (model_ + "_" + _name) {
     case "SEL8_WasedaTen2":
      this.dp = p(-4.2, -0.7);
@@ -20546,6 +20551,10 @@ WasedaLtsuP.prototype.setPaths = function() {
   }
 
   switch (model_ + "_" + _head) {
+    case "ER8_SWR":
+      this.dp.set(-3, -2.5);
+      return;
+
     case "NEL16CL8_E":
       this.dp = p(-4, 2);
       return;
