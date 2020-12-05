@@ -30718,7 +30718,7 @@ WasedaDakeP.prototype.setPaths = function() {
 };
 
 
-WasedaZuHitei = function() { WasedaChar.call(this, "WasedaZuHitei", "ズ", "S24F", "S", "SF", "black", false, p(0.0, -13.0)); };
+WasedaZuHitei = function() { WasedaChar.call(this, "WasedaZuHitei", "ズ", "S16F", "S", "SF", "black", false, p(0.0, -)); };
 WasedaZuHitei.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ズ"] = WasedaZuHitei;
 
@@ -30780,8 +30780,8 @@ WasedaZuHitei.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(0, 26.1);
-  this.paths = ["m 0 0 v 24"];
+  this.dp = p(0, 16).move(0, 2);
+  this.paths = ["m 0 0 v 16"];
 };
 
 CharDottedVerticalLine = function() { Char.call(this, "CharDottedVerticalLine", "…↓", "S8", "S", "S", "black", false, p(0.0, 1.5)); };
@@ -37558,21 +37558,25 @@ WasedaKagi.prototype.setPaths = function() {
   switch (_head) {
     case "SE":
       this.dp.set(-0.1507, -1.4251);
+      this.pdp.set(0.1507, 1.4251);
       this.paths = ["m 0 0 c 0.2335 -0.3923 0.3426 -0.9184 -0.1507 -1.4251"];
       return;
 
     case "SWL":
       this.dp.set(1.52514, -0.13547);
+      this.pdp.set(-1.52514, 0.13547);
       this.paths = ["m 0 0 c 0.551862 0.34774 0.973854 0.15533 1.52514 -0.13547"];
       return;
 
     case "NE":
       this.dp.set(-0.65718, 2.108);
+      this.pdp.set(0.65718, -2.108);
       this.paths = ["m 0 0 c 0.41871 0.57 -0.07736 1.682 -0.65718 2.108"];
       return;
 
     case "NEL":
       this.dp.set(-0.6689, 1.544);
+      this.pdp.set(0.6689, -1.544);
       this.paths = ["m 0 0 c 0.202 0.678 -0.3671 1.225 -0.6689 1.544"];
       return;
 
@@ -37593,6 +37597,7 @@ WasedaKagi.prototype.setPaths = function() {
 
     case "ER":
       this.dp.set(-1.08213, 1.28841);
+      this.pdp.set(1.08213, -1.28841);
       this.paths = ["m 0 0 c 0 0.70722 -0.701658 1.06874 -1.08213 1.28841"];
       return;
 
@@ -37603,6 +37608,7 @@ WasedaKagi.prototype.setPaths = function() {
 
     case "EL":
       this.dp.set(-0.84264, -1.4497);
+      this.pdp.set(0.84264, 1.4497);
       this.paths = ["m 0 0 c 0 -0.3809 -0.16894 -1.14 -0.84264 -1.4497"];
       return;
 
@@ -37614,6 +37620,7 @@ WasedaKagi.prototype.setPaths = function() {
     case "S":
     case "SEL":
       this.dp.set(1.12919, -1.30948);
+      this.pdp.set(-1.12919, 1.30948);
       this.paths = ["m 0 0 c 0.441044 -0.11818 1.12919 -0.60226 1.12919 -1.30948"];
       return;
   }
