@@ -37556,6 +37556,11 @@ WasedaKagi.prototype.setPaths = function() {
   //switch (_headModel) {}
 
   switch (_head) {
+    case "SE":
+      this.dp.set(-0.1507, -1.4251);
+      this.paths = ["m 0 0 c 0.2335 -0.3923 0.3426 -0.9184 -0.1507 -1.4251"];
+      return;
+
     case "SWL":
       this.dp.set(1.52514, -0.13547);
       this.paths = ["m 0 0 c 0.551862 0.34774 0.973854 0.15533 1.52514 -0.13547"];
