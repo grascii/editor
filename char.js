@@ -5109,8 +5109,8 @@ WasedaKu.prototype.setPaths = function() {
       return;
 
     case "ER8":
-      this.dp = p(8.70691, -0.921319);
-      this.paths = ["m 0 0 c 2.6653 -0.1864 5.3383 -0.23291 7.9999 0 c 1.0615 0.09289 1.1318 -2.241 -1.1418 -2.241 c -1.0213 0 -1.9973 0.6793 -1.8511 1.4317 c 0.2131 1.0964 2.09277 0.537313 3.69991 -0.112019"];
+      this.dp.set(8.70691, -0.921319);
+      this.paths = ["m 0 0 c 2.6653 -0.1864 5.3383 -0.23291 7.9999 0 c 1.0615 0.09289 0.93345 -2.60936 -2.58692 -2.60936 c -1.0213 0 -1.97584 1.04407 -1.82964 1.79647 c 0.2131 1.0964 3.51644 0.54091 5.12358 -0.108422"];
       return;
 
     case "UWL4":
@@ -6414,8 +6414,9 @@ WasedaSu.prototype.setPaths = function() {
       return;
 
     case "R_SER8":
-      this.dp = p(-1.66931, 5.46821);
-      this.paths = ["m 0 0 c 0 3.21345 -1.96809 7.09343 -3.84679 6.92264 c -0.702213 -0.063838 -1.2843 -0.447712 -1.158 -0.925417 c 0.287731 -1.08833 2.11503 -1.3836 3.33548 -0.529014"];
+      this.dp.set(-1.66931, 5.46821);
+      this.paths = ["m 0 0 c 0 3.21345 -1.96809 7.09343 -3.84679 6.92264 c -0.702213 -0.063838 -1.22306 -0.550331 -1.158 -1.04015 c 0.201682 -1.51857 2.11503 -1.26887 3.33548 -0.414282"];
+      this.reverse();
       return;
   }
 
@@ -17531,7 +17532,7 @@ WasedaTo.prototype.reverse = function() {
 };
 WasedaTo.prototype.filterReverseTail = function(tail) {
   if (this.getPrevTailType().endsWith("F")) return "R";
-  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4|SEL|NW|ELCL|NWF|ER_P)$/, "R");
+  return tail.replace(/^(?:SELCL4|E|EP|ER|ER4|ERCR|ERCR4|EL|ECL|NELCL|NEL|NE|SELCL|NEF|ELP|ELCLP|NELP|NELCL4|SEL|NW|ELCL|NWF|ER_P|ECL4)$/, "R");
 };
 WasedaTo.prototype.setPaths = function() {
   const name_ = this.getPrevName();
@@ -30718,7 +30719,7 @@ WasedaDakeP.prototype.setPaths = function() {
 };
 
 
-WasedaZuHitei = function() { WasedaChar.call(this, "WasedaZuHitei", "ズ", "S16F", "S", "SF", "black", false, p(0.0, -)); };
+WasedaZuHitei = function() { WasedaChar.call(this, "WasedaZuHitei", "ズ", "S16F", "S", "SF", "black", false, p(0.0, 0.0)); };
 WasedaZuHitei.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ズ"] = WasedaZuHitei;
 
