@@ -256,15 +256,15 @@ function parseInputText(text) {
             
         default:
           var match;
-          if ((match = items[i].match(/^([hv])sp(?:ace){(-?\d+(?:\.\d+)?)}/)) !== null) {
+          if ((match = items[i].match(/^([hv])sp(?:ace)?{(-?\d+(?:\.\d+)?)}/)) !== null) {
             if (match[1] == "h") {
               chars.push(new CharRight(parseFloat(match[2])));
             } else if (match[1] == "v") {
               chars.push(new CharUp(parseFloat(match[2])));
             }
           } else if ((match = items[i].match(/^sp(?:ace)?{(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)}/)) !== null) {
-            chars.push(new CharMove(parseFloat(match[1]), parseFloat(match[2])));
-          } else if ((match = items[i].match(/newpage/)) !== null) {
+            chars.push(new CharMove(parseFloat(match[1]), -parseFloat(match[2])));
+          } else if ((match = items[i].match(/newpage|pb/)) !== null) {
             chars.push(new CharNewpage());
             //const svg = document.getElementById('svg_root');
             //const viewBox = svg.viewBox;
@@ -287,25 +287,53 @@ function setAnimation(speed) {
   }
 
   var start_ms = 0;
+  const keyTimes = [0];
   var style = "@keyframes shorthand_draw{100%{stroke-dashoffset:0;}}";
+  var y = 0; 
+  var viewBoxes = [];
+
+  const animate_scroll = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+  animate_scroll.setAttribute("attributeName", "viewBox");
+  animate_scroll.setAttribute("calcMode", "discrete");
+  animate_scroll.setAttribute("fill", "freeze");
+  animate_scroll.setAttribute("restart", "always");
 
   paths.forEach(function(path, i) {
     const margin = speed;
     const dash = (path.getTotalLength());
     const duration_ms = (dash / speed);
     path.setAttribute("class", "shorthand_" + i);
+    if (path.getAttribute("data-char") == "CharNewpage") {
+      start_ms += 300;
+      keyTimes.push(start_ms);
+      start_ms += 300;
+    }
     style += ".shorthand_" + i + "{" +
              "animation:shorthand_draw " + duration_ms + "ms linear " + start_ms + "ms forwards;" +
              "stroke-dasharray:" + dash + " " + (dash + margin * 2) + ";" +
              "stroke-dashoffset:" + (dash + margin) + ";}"
     start_ms += duration_ms;
   });
+  for (var i = 0; i < keyTimes.length; i++) {
+    if (start_ms > 0.0) keyTimes[i] /= start_ms;
+    viewBoxes.push("0 " + y + " 210 297");
+    y += 297;
+  }
+  keyTimes.push(1.0);
+  viewBoxes.push(viewBoxes[viewBoxes.length-1]);
 
+  animate_scroll.setAttribute("dur", start_ms + "ms");
+  animate_scroll.setAttribute("values", viewBoxes.join("; "));
+  animate_scroll.setAttribute("keyTimes", keyTimes.join("; "));
+  console.log(keyTimes);
+  console.log(keyTimes.join("; "));
   const style_new = document.createElementNS("http://www.w3.org/2000/svg", "style");
   style_new.setAttribute("id", "style_animation");
   style_new.textContent = style;
 
   svg.appendChild(style_new);
+  svg.appendChild(animate_scroll);
+  animate_scroll.beginElement();
 }
 
 function updateSVG(toAnimate) {
