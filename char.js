@@ -1540,8 +1540,8 @@ WasedaKi.prototype.setPaths = function() {
       return;
 
     case "SEL":
-      this.dp = p(7.1897, -0.0156);
-      this.paths = ["m 0 0 c 2.4983 -0.1309 5.0044 -0.1745 7.5 0 c 0.2567 0.0135 0.4381 -0.2273 0.495 -0.4949 c 0.1591 -0.689 -0.5687 -0.8506 -0.6661 -0.5109 c -0.0924 0.322 -0.1392 0.6553 -0.1392 0.9902"];
+      this.dp.set(6.88606, -0.03859);
+      this.paths = ["m 0 0 c 2.4983 -0.1309 5.0044 -0.1745 7.5 0 c 0.2567 0.0135 0.4381 -0.2273 0.495 -0.4949 c 0.1591 -0.689 -0.527907 -0.597722 -0.683626 -0.40496 c -0.190581 0.235917 -0.352178 0.50629 -0.425318 0.86127"];
       return;
 
     case "S":
@@ -8354,6 +8354,7 @@ WasedaHa.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "ECL":
     case "ELCL":
     case "ELCL4":
       this.dp = p(4.18711, 5.9798);
@@ -18085,7 +18086,7 @@ WasedaNoJoshi.prototype.setPaths = function() {
   }
 
   this.dp.set(4.37113, -1.71217);
-  this.paths = ["m 0 0 c 2.04073 0.6631 7.67821 1.825 8 0 c 0.224913 -1.27557 -1.9467 -2.16291 -3.62887 -1.71217"];
+  this.paths = ["m 0 0 c 2.04073 0.6631 7.71449 2.20603 8.07352 -0.4656 c 0.173435 -1.2906 -2.02021 -1.69731 -3.70239 -1.24657"];
 };
 
 WasedaMoJoshi = function() { WasedaChar.call(this, "WasedaMoJoshi", "〜も", "ER8SWR4", "ER", "SWR", "black", false, p(0.0, -0.6)); };
@@ -38178,3 +38179,55 @@ WasedaPaku.prototype.setPaths = function() {
   this.dp.set(-4.68585, 6.51608);
   this.paths = ["m 0 0 c -1.00475 0.604918 -2.61097 2.06149 -2.47686 3.18136 c 0.1603 1.33858 -0.949482 2.99724 -2.20899 3.33472"];
 };
+
+WasedaHatarakuP = function() { WasedaChar.call(this, "WasedaHatarakuP", "働ｐ", "P/X", "P/X", "P/X", "black"); };
+WasedaHatarakuP.prototype = Object.create(WasedaChar.prototype);
+WasedaChar.dict["働"] = [WasedaHa, WasedaHatarakuP];
+
+WasedaHatarakuP.prototype.setPaths = function() {
+  //const name_ = this.getPrevName();
+  //const model_ = this.getPrevModel();
+  //const tailModel_ = this.getPrevTailModel();
+  //const tail_ = this.getPrevTailType();
+  //const _name = this.getNextName();
+  //const _model = this.getNextModel();
+  //const _headModel = this.getNextHeadModel();
+  //const _head = this.getNextHeadType();
+
+  //switch (name_ + "_" + _name) {}
+
+  //switch (name_ + "_" + _model) {}
+
+  //switch (name_ + "_" + _head) {}
+
+  //switch (name_) {}
+
+  //switch (model_ + "_" + _name) {}
+
+  //switch (model_ + "_" + _model) {}
+
+  //switch (model_ + "_" + _head) {}
+
+  //switch (tailModel_) {}
+
+  //switch (model_) {}
+
+  //switch (tail_ + "_" + _name) {}
+
+  //switch (tail_ + "_" + _model) {}
+
+  //switch (tail_ + "_" + _head) {}
+
+  //switch (tail_) {}
+
+  //switch (_name) {}
+
+  //switch (_model) {}
+
+  //switch (_headModel) {}
+
+  //switch (_head) {}
+
+  this.pdp.set(-1, -3);
+};
+
