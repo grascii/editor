@@ -734,7 +734,7 @@ WasedaSa = function() { WasedaChar.call(this, "WasedaSa", "さ", "NEL8", "NEL", 
 WasedaSa.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["さ"] = WasedaSa;
 WasedaSa.prototype.getFilteredPrevTailType = function() {
-  return this.getPrevTailType().replace(/^(?:ELCL4|NELCL4|ECL4|SERCL4|ECL|NE|NEP|E|SEL4|EP|ECL4P|NECLP|NELCL8|ELONL|NWR|ER_P|HENKI_SA)$/, "R");
+  return this.getPrevTailType().replace(/^(?:ELCL4|NELCL4|ECL4|SERCL4|ECL|NE|NEP|E|SEL4|EP|ECL4P|NECLP|NELCL8|ELONL|NWR|ER_P|HENKI_SA|NERB|NEOWLB)$/, "R");
 };
 WasedaSa.prototype.reverse = function() {
   this.headType = this.tailType = "SWR";
@@ -8403,7 +8403,6 @@ WasedaHa.prototype.setPaths = function() {
 
   switch (_head) {
     case "BEL":
-    case "BE":
     case "E":
     //case "SEL":
     case "EL":
@@ -20981,7 +20980,7 @@ WasedaLtsuP.prototype.setPaths = function() {
 
     case "ER8_SW":
     case "ER8_BSW":
-      this.dp = p(-2.8, -2.4);
+      this.dp = p(-3.5, -2.4);
       return;
 
     case "E8CL4_SWR":
@@ -21716,7 +21715,6 @@ WasedaYa.prototype.setPaths = function() {
       return;
   }
 
-  console.log(model_);
   switch (model_) {
     case "S4CR1":
     case "SW8CR1":
@@ -21826,6 +21824,13 @@ WasedaYu.prototype.setPaths = function() {
   //switch (tail_) {}
 
   //switch (_name) {}
+
+  switch (_model) {
+    case "BUWL4":
+      this.dp.set(7.74434, -4.87143);
+      this.paths = ["m 0 0 c 0.9622 -2.5068 3.5566 -4.997 6.1707 -4.997 c 0.2753 0 0.528444 0.250972 0.536378 0.493884 c 0.00991 0.303312 -0.340825 0.56119 -0.628078 0.659078 c -0.165748 0.056483 -0.43293 0.072514 -0.519219 -0.079858 c -0.189742 -0.335054 0.368086 -1.51694 2.18456 -0.947531"];
+      return;
+  }
 
   switch (_headModel) {
     case "EL8":
@@ -25475,6 +25480,11 @@ WasedaMei.prototype.setPaths = function() {
   }
 
   switch (_head) {
+    case "BE":
+      this.dp.set(1.76455, 1.32078);
+      this.paths = ["m 0 0 c 1.57891 -0.9116 4.00001 -1.2364 4 0 c 0 0.5964 -0.543029 1.32078 -0.930032 1.26894 c -0.317474 -0.042528 -0.888811 -0.622997 -0.414393 -0.970442 c 0.406119 -0.297425 0.939401 0.158303 0.520536 0.642822 c -0.293419 0.33941 -1.24642 0.379461 -1.41156 0.379461"];
+      return;
+
     case "S":
       this.dp = p(3.03691, -0.797642);
       this.paths = ["m 0 0 c 1.57891 -0.9116 4 -1.2364 4 0 c 0 0.378241 -0.067924 0.694199 -0.32183 0.690481 c -0.540079 -0.007908 -0.459257 -0.80887 -0.641263 -1.48812"];
@@ -27222,7 +27232,7 @@ WasedaChu.prototype.setPaths = function() {
 };
 
 
-WasedaCho = function() { WasedaChar.call(this, "WasedaCho", "ちょ", "NE8OWL4", "NE", "OWL", "black", false, p(0.0, 2.6)); };
+WasedaCho = function() { WasedaChar.call(this, "WasedaCho", "ちょ", "NE8OWL4", "NE", "NEOWL", "black", false, p(0.0, 2.6)); };
 WasedaCho.prototype = Object.create(WasedaChar.prototype);
 WasedaChar.dict["ちょ"] = WasedaCho;
 WasedaCho.prototype.getFilteredPrevTailType = WasedaCha.prototype.getFilteredPrevTailType;
@@ -27420,7 +27430,8 @@ WasedaSho.prototype.setPaths = function() {
 
   switch (tail_) {
     case "R":
-      this.dp = p(-1.749, 8.1606);
+    case "NERB":
+      this.dp.set(-1.749, 8.1606);
       this.paths = ["m 0 0 c 0 6.4269 -3.93618 14.1869 -7.69358 13.8453 c -4.55916 -0.4145 3.7432 -5.0948 5.94458 -5.6847"];
       this.reverse();
       return;
@@ -29699,7 +29710,7 @@ WasedaDyu.prototype.setPathsExtra = function() {
   this.pathsExtra = ["m 2.8588032,-3.4825 v 0.1"];
 };
 
-WasedaDyo = function() { WasedaChar.call(this, "WasedaDyo", "ぢょ", "NE8OWL4", "NE", "OWL", "black", false, p(0.0, 2.6)); };
+WasedaDyo = function() { WasedaChar.call(this, "WasedaDyo", "ぢょ", "NE8OWL4", "NE", "NEOWL", "black", false, p(0.0, 2.6)); };
 WasedaDyo.prototype = Object.create(WasedaCho.prototype);
 WasedaChar.dict["ぢょ"] = WasedaDyo;
 WasedaDyo.prototype.setPathsExtra = function() {
@@ -29952,7 +29963,7 @@ WasedaChar.dict["ぢゅう"] = WasedaJuu;
 WasedaChar.dict["ぢゅー"] = WasedaJuu;
 WasedaJuu.prototype.setPathsExtra = function() { this.pathsExtra = ["m 2.9566643,-3.10252 c 0,0.5459 0.743997,1.0535 1.301345,1.20284"]; };
 
-WasedaJou = function() { WasedaChar.call(this, "WasedaJou", "じょう", "NE8OWL4", "NE", "OWL", "black", false, p(0.0, 2.6)); };
+WasedaJou = function() { WasedaChar.call(this, "WasedaJou", "じょう", "NE8OWL4", "NE", "NEOWL", "black", false, p(0.0, 2.6)); };
 WasedaJou.prototype = Object.create(WasedaCho.prototype);
 WasedaChar.dict["ぢょう"] = WasedaJou;
 WasedaChar.dict["ぢょー"] = WasedaJou;
@@ -37945,6 +37956,9 @@ WasedaKagi.prototype.setPaths = function() {
   //switch (model_ + "_" + _model) {}
 
   switch (model_ + "_" + _headModel) {
+    case "NER8CR1_UWL4":
+      return;
+
     case "SEL8_EL4":
       this.pdp.set(-1.4, -0.6);
       return;
@@ -37960,7 +37974,7 @@ WasedaKagi.prototype.setPaths = function() {
       return;
 
     case "NER8_NEL16":
-      this.tailType = "HENKI_SA";
+      this.pdp.set(0.1, 1.5);
       return;
 
     case "NER8_SWR16":
@@ -37972,6 +37986,28 @@ WasedaKagi.prototype.setPaths = function() {
   }
 
   switch (model_ + "_" + _head) {
+    case "NE8OWL4_SWR":
+      this.pdp.set(0.3, -1.5);
+      this.dp.set(0, 0);
+      this.paths = [];
+      return;
+
+    case "NER16_E":
+      this.pdp.set(-4, 0);
+      return;
+
+    case "SER8OWR4_NER":
+      this.pdp.set(-0.7, 1.6);
+      return;
+
+    case "SEL8_E":
+      this.pdp.set(-3, 0);
+      return;
+
+    case "SEL8CL1E1F_ER":
+      this.pdp.set(-5, -2);
+      return;
+
     case "NEL16CL8_NEL":
       this.pdp.set(-4.2, -5.0);
       return;
@@ -38043,6 +38079,10 @@ WasedaKagi.prototype.setPaths = function() {
   //switch (tail_ + "_" + _model) {}
 
   switch (tail_ + "_" + _headModel) {
+    case "S_NEL8":
+      this.pdp.set(-1.2, 0.9);
+      return;
+
     case "NEF_EL4":
       this.pdp.set(-2.5, -0.5);
       return;
@@ -38080,6 +38120,13 @@ WasedaKagi.prototype.setPaths = function() {
   }
 
   switch (tail_ + "_" + _head) {
+    case "ERCR_E":
+      return;
+
+    case "SELF_E":
+      this.pdp.set(-3, 0);
+      return;
+
     case "SELCL_E":
       return;
 
