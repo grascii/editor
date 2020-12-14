@@ -7,6 +7,7 @@ svg.setAttribute("version", "1.1");
 svg.setAttribute("viewBox", "0 0 210 297");
 svg.setAttribute("width", "210mm");
 svg.setAttribute("height", "297mm");
+//svg.setAttribute("preserveAspectRatio", "none");
 svg.setAttribute("data-text", "");
 svg.setAttribute("transform", "scale(1, 1) translate(0)");
 svg.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;background-color:white;");
@@ -266,9 +267,8 @@ function parseInputText(text) {
             chars.push(new CharMove(parseFloat(match[1]), -parseFloat(match[2])));
           } else if ((match = items[i].match(/newpage|pb/)) !== null) {
             chars.push(new CharNewpage());
-            //const svg = document.getElementById('svg_root');
-            //const viewBox = svg.viewBox;
-            //svg.setAttribute("viewBox", viewBox.baseVal.x + " " + 0 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
+          } else if ((match = items[i].match(/^scroll{(-?\d+(?:\.\d+)?)/))) {
+            chars.push(new CharScroll(parseFloat(match[1])));
           }
           break;
       }
@@ -291,6 +291,7 @@ function setAnimation(speed) {
   var style = "@keyframes shorthand_draw{100%{stroke-dashoffset:0;}}";
   var y = 0; 
   var viewBoxes = [];
+  var scrollList = [];
 
   const animate_scroll = document.createElementNS("http://www.w3.org/2000/svg", "animate");
   animate_scroll.setAttribute("attributeName", "viewBox");
@@ -303,10 +304,20 @@ function setAnimation(speed) {
     const dash = (path.getTotalLength());
     const duration_ms = (dash / speed);
     path.setAttribute("class", "shorthand_" + i);
-    if (path.getAttribute("data-char") == "CharNewpage") {
-      start_ms += 300;
-      keyTimes.push(start_ms);
-      start_ms += 300;
+    console.log(path.getAttribute("data-scroll-y"));
+    switch (path.getAttribute("data-char")) {
+      case "CharNewpage":
+        start_ms += 300;
+        keyTimes.push(start_ms);
+        start_ms += 300;
+        break;
+
+      case "CharScroll":
+        start_ms += 100;
+        keyTimes.push(start_ms);
+        start_ms += 100;
+        scrollList.push(path.getAttribute("data-scroll-y"));
+        break;
     }
     style += ".shorthand_" + i + "{" +
              "animation:shorthand_draw " + duration_ms + "ms linear " + start_ms + "ms forwards;" +
@@ -314,10 +325,11 @@ function setAnimation(speed) {
              "stroke-dashoffset:" + (dash + margin) + ";}"
     start_ms += duration_ms;
   });
+  console.log(scrollList);
   for (var i = 0; i < keyTimes.length; i++) {
     if (start_ms > 0.0) keyTimes[i] /= start_ms;
     viewBoxes.push("0 " + y + " 210 297");
-    y += 297;
+    y += parseFloat(scrollList[i]);
   }
   keyTimes.push(1.0);
   viewBoxes.push(viewBoxes[viewBoxes.length-1]);
@@ -325,8 +337,6 @@ function setAnimation(speed) {
   animate_scroll.setAttribute("dur", start_ms + "ms");
   animate_scroll.setAttribute("values", viewBoxes.join("; "));
   animate_scroll.setAttribute("keyTimes", keyTimes.join("; "));
-  console.log(keyTimes);
-  console.log(keyTimes.join("; "));
   const style_new = document.createElementNS("http://www.w3.org/2000/svg", "style");
   style_new.setAttribute("id", "style_animation");
   style_new.textContent = style;
