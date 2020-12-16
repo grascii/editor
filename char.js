@@ -18421,6 +18421,10 @@ WasedaSuru.prototype.setPaths = function() {
   //switch (tail_ + "_" + _head) {}
 
   switch (tail_) {
+    case "SELF":
+      this.pdp.set(0.8, 3.1);
+      return;
+
     case "ELF":
       this.pdp.set(1, 3.5);
       return;
@@ -27130,8 +27134,8 @@ WasedaShu.prototype.setPaths = function() {
       return;
 
     case "E":
-      this.dp = p(0.75947, 7.1657);
-      this.paths = ["m 0 0 c 1.499 2.2223 1.9629 6.491 0 7.9701 c -0.403256 0.315084 -0.979353 -0.139 -0.765553 -0.4227 c 0.3455 -0.4267 0.877382 -0.381702 1.52502 -0.381702"];
+      this.dp.set(0.708541, 7.15951);
+      this.paths = ["m 0 0 c 1.499 2.2223 1.9629 6.491 0 7.9701 c -0.534537 0.417661 -1.10882 -0.810586 -0.12823 -0.810586 c 0.373648 0 0.189133 0 0.836771 0"];
       return;
 
     case "SW":
@@ -38102,6 +38106,10 @@ WasedaKagi.prototype.setPaths = function() {
   //switch (tail_ + "_" + _model) {}
 
   switch (tail_ + "_" + _headModel) {
+    case "S_ER8":
+      this.pdp.set(-1.5, 0.5);
+      return;
+
     case "S_NEL8":
       this.pdp.set(-1.2, 0.9);
       return;
