@@ -20,7 +20,7 @@ Lexer.prototype.error = function() {
 Lexer.prototype.command = function() {
   var result = this.currentChar;
   this.advance();
-  while ((this.currentChar !== null) && /[a-z{}_\d.-]+/.test(this.currentChar)) {
+  while ((this.currentChar !== null) && /[a-z{}_\d.,-]+/.test(this.currentChar)) {
     result += this.currentChar;
     this.advance();
   }
@@ -51,7 +51,7 @@ Lexer.prototype.peek = function(dp) {
 Lexer.prototype.atomicSequence = function() {
   var result = this.currentChar;
   this.advance();
-  while (this.pos < this.text.length && /[ゃゅょぁぃぅぇぉーん]/.test(this.currentChar)) {
+  while (this.pos < this.text.length && /[ゃゅょぁぃぅぇぉーんャュョァィゥェォン]/.test(this.currentChar)) {
     result += this.currentChar;
     this.advance();
   }

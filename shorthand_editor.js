@@ -1,37 +1,103 @@
+String.prototype.insert = function(pos, str) {
+  return this.substring(0, pos) + str + this.substring(pos)
+};
+
 const viewer = document.getElementById("svg_viewer");
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
-svg.setAttribute("id", "svg_root");
-svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-svg.setAttribute("xmlns:xlink", "http://www.w3.org/1999/xlink");
-svg.setAttribute("version", "1.1");
-svg.setAttribute("viewBox", "0 0 210 297");
-svg.setAttribute("width", "210mm");
-svg.setAttribute("height", "297mm");
-//svg.setAttribute("preserveAspectRatio", "none");
-svg.setAttribute("data-text", "");
-svg.setAttribute("transform", "scale(1, 1) translate(0)");
-svg.setAttribute("style", "fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;background-color:white;");
+const attr = {
+  "id": "svg_root",
+  "xmlns": "http://www.w3.org/2000/svg",
+  "xmlns:xlink": "http://www.w3.org/1999/xlink",
+  "version": "1.1",
+  "viewBox": "0 0 210 297",
+  "width": "210mm",
+  "height": "297mm",
+  "preserveAspectRatio": "none",
+  "data-text": "",
+  "transform": "scale(1, 1)",
+  "transform-origin": "center",
+  "style": "fill:none;"
+         + "stroke:#000000;"
+         + "stroke-linecap:round;"
+         + "stroke-linejoin:round;"
+         + "stroke-miterlimit:4;"
+         + "stroke-opacity:1;"
+         + "background-color:white;"
+};
+Object.keys(attr).forEach(function(key) {
+  svg.setAttribute(key, attr[key]);
+});
 const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
 viewer.appendChild(svg);
 const styleAnimation = document.createElement("style");
 styleAnimation.setAttribute("id", "style_animation");
 svg.appendChild(styleAnimation);
 
+viewer.addEventListener("click", function() {
+  //document.getElementById("animation_switch").checked = true;
+  updateSVG(true);
+});
+
 const input = document.getElementById("input");
 input.addEventListener("input", function() { updateSVG(false); });
+input.addEventListener("compositionend", function(e) {
+  const newStr = e.data;
+  const pos = input.selectionStart;
+  const c = input.value.charAt(pos);
+
+  if (newStr == "（）") {
+    input.setSelectionRange(pos - 1, pos - 1);
+  } else if (newStr.endsWith('（')) {
+    input.value = input.value.insert(pos, "）");
+    input.setSelectionRange(pos, pos);
+  } else if (newStr.startsWith("（") && !newStr.endsWith("）")) {
+    input.value = input.value.insert(pos, "）");
+    input.setSelectionRange(pos + 1, pos + 1);
+  } else if (c == "）") {
+      input.setSelectionRange(pos + 1, pos + 1);
+  } else {
+    return;
+  }
+
+  updateSVG(false); 
+});
 
 const fileNameInput = document.getElementById("page_name");
+const svgDownloadBtn = document.getElementById("svgDownloadBtn");
+svgDownloadBtn.addEventListener("click", function(e) {
+  downloadSVG(null, false);
+});
 
-const downloadButtonSVG = document.getElementById("download_button_svg");
-downloadButtonSVG.addEventListener("click", 
-  function() { 
-    const rs = Math.floor(((+new Date()) * Math.random())).toString(36);
-    downloadSVG(rs + "_" + fileNameInput.value + ".svg");
-  }
-);
+const startAnimBtn = document.getElementById("startAnimBtn");
+startAnimBtn.addEventListener("click", function(e) {
+  updateSVG(true);
+});
 
-const downloadButtonPNG = document.getElementById("download_button_png");
-downloadButtonPNG.addEventListener("click", downloadPNG);
+const flipBtn = document.getElementById("flipBtn");
+flipBtn.addEventListener("click", function(e) {
+  setMirrorMode();
+});
+
+const animDownloadBtn = document.getElementById("animDownloadBtn");
+animDownloadBtn.addEventListener("click", function(e) {
+  downloadSVG(null, true);
+});
+
+const pngDownloadBtn = document.getElementById("pngDownloadBtn");
+pngDownloadBtn.addEventListener("click", function(e) {
+  downloadPNG();
+});
+
+//const downloadButtonSVG = document.getElementById("download_button_svg");
+//downloadButtonSVG.addEventListener("click", 
+//  function() { 
+//    const rs = Math.floor(((+new Date()) * Math.random())).toString(36);
+//    downloadSVG(rs + "_" + fileNameInput.value + ".svg");
+//  }
+//);
+
+//const downloadButtonPNG = document.getElementById("download_button_png");
+//downloadButtonPNG.addEventListener("click", downloadPNG);
 
 const save_button = document.getElementById("save_button");
 save_button.addEventListener("click", savePages);
@@ -43,6 +109,33 @@ const pages = savedPages ? JSON.parse(savedPages) : {};
 const pageList = document.getElementById("saved_page_list");
 const pageNameInput = document.getElementById("page_name");
 const inputTextArea = document.getElementById("input");
+
+
+
+document.onkeydown = function(e) {
+  if (e.metaKey || e.ctrlKey) {
+    switch (e.which) {
+      case 83: // S
+        e.preventDefault();
+        savePages();
+        break;
+
+      case 80: // P 
+        e.preventDefault();
+        addNewPage();
+        break;
+
+      case 77: // M
+        e.preventDefault();
+        setMirrorMode(!e.shiftKey);
+        break;
+    }
+  }
+};
+
+window.onbeforeunload = function(e) {
+  savePages();
+};
 
 loadPageList();
 resume();
@@ -67,40 +160,57 @@ function loadPageList() {
   });
 }
 
-function savePages() {
-  const text = inputTextArea.value;
-  const title = pageNameInput.value;
+const saveDialog = document.getElementById("saveDialog");
 
-  if (title == "new_page") return;
+function addNewPage() {
+  saveDialog.showModal();
+}
+
+document.getElementById("newPageForm").addEventListener("submit", function() {
+  const newPageName = document.getElementById("saveName").value;
+  if (!newPageName) return false;
+
+  if (!pages[newPageName]) {
+    pages[newPageName] = "\\none";
+  }
+  loadPageList();
+  pageList.value = newPageName;
+  storage.setItem("lastPage", newPageName);
+  openPage();
+
+  return false;
+});
+
+function savePages() {
+  const title = pageList.value;
+  const text = inputTextArea.value;
 
   if (text == "") {
     delete pages[title];
-    pageNameInput.value = "";
+    loadPageList();
   } else if (title != "") {
     pages[title] = text;
   }
-
   storage.setItem("pages", JSON.stringify(pages));
-  loadPageList();
-  if (title != "") pageList.value = title;
-  openPage();
 }
 
 function updatePagePos() {
   const svg = document.getElementById('svg_root');
   const viewBox = svg.viewBox;
   const pageNum = document.getElementById('page_select').value;
-  svg.setAttribute("viewBox", viewBox.baseVal.x + " " + (pageNum - 1)* 297 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
+  svg.setAttribute("viewBox", viewBox.baseVal.x + " " + (pageNum - 1) * 297 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
 }
 
 function openPage() {
   const title = pageList.value;
+  const lastPage = storage.getItem("lastPage");
+
+  document.title = title;
 
   if (title == "new_page") {
-    pageNameInput.value = "";
     inputTextArea.value = "\\none";
+    savePages();
   } else if (title) {
-    pageNameInput.value = title;
     inputTextArea.value = pages[title];
     storage.setItem("lastPage", pageList.value);
   }
@@ -118,19 +228,25 @@ function resume() {
   }
 }
 
+input.dispatchEvent(
+  new Event("input", {
+    bubbles: true,
+    cancelable: true
+}));
 
-const event = new Event("input", {
-  bubbles: true,
-  cancelable: true
-});
-input.dispatchEvent(event);
-
-
-function setMirrorMode(mirrored) {
-  svg.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
+var mirrored = true;
+function setMirrorMode() {
+  //svg.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1) translate(" + (mirrored ? -svg.viewBox.baseVal.width : 0) + ")");
+  svg.setAttribute("transform", "scale(" + (mirrored ? -1 : 1) + ", 1)");
+  mirrored = !mirrored;
 }
 
-function downloadSVG(fileName) {
+function downloadSVG(fileName, animate) {
+  if (animate) {
+    updateSVG(true);
+  } else {
+    updateSVG(false);
+  }
   const svg = document.getElementById('svg_root');
   const svgStr = new XMLSerializer().serializeToString(svg);
   const blob = new Blob([svgStr], {type: "data:image/svg+xml;charset=utf-8"});
@@ -142,21 +258,27 @@ function downloadSVG(fileName) {
   window.setTimeout(function() {
     window.URL.revokeObjectURL(url);
   }, 10);
+  updateSVG(false);
 }
 
 function downloadPNG() {
   const svg = document.getElementById('svg_root');
   const svgStr = new XMLSerializer().serializeToString(svg);
+  const density = 3.0;
   const img = new Image();
 
   img.onload = function() {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
-    canvas.width = svg.width.baseVal.value;
-    canvas.height = svg.height.baseVal.value;
+    canvas.width = svg.width.baseVal.value * density;
+    canvas.height = svg.height.baseVal.value * density;
     ctx.fillStyle = "white";
     ctx.fillRect(0, 0, canvas.width, canvas.height);
-    ctx.drawImage(img, 0, 0);
+    ctx.drawImage(img,
+                  0, 0,
+                  svg.width.baseVal.value, svg.height.baseVal.value,
+                  0, 0,
+                  svg.width.baseVal.value * density, svg.height.baseVal.value * density);
 
     const url = canvas.toDataURL("image/png");
     const a = document.createElement("a");
@@ -238,7 +360,8 @@ function parseInputText(text) {
               chars.push(new entry());
             }
           } else {
-            chars.push(new CharText("\u25A1"));
+            //chars.push(new CharText("\u25A1"));
+            //chars.push(new CharText(tok));
           }
         }
       }
@@ -281,6 +404,7 @@ function parseInputText(text) {
 function setAnimation(speed) {
   const svg = document.getElementById("svg_root");
   const paths = svg.querySelectorAll("path");
+  //document.querySelectorAll('div.inputarea')[0].style.display = "none";
 
   if ((speed === undefined) || (speed <= 0)) {
     speed = 0.03;
@@ -301,10 +425,9 @@ function setAnimation(speed) {
 
   paths.forEach(function(path, i) {
     const margin = speed;
-    const dash = (path.getTotalLength());
+    const dash = path.getTotalLength();
     const duration_ms = (dash / speed);
     path.setAttribute("class", "shorthand_" + i);
-    console.log(path.getAttribute("data-scroll-y"));
     switch (path.getAttribute("data-char")) {
       case "CharNewpage":
         start_ms += 300;
@@ -325,7 +448,6 @@ function setAnimation(speed) {
              "stroke-dashoffset:" + (dash + margin) + ";}"
     start_ms += duration_ms;
   });
-  console.log(scrollList);
   for (var i = 0; i < keyTimes.length; i++) {
     if (start_ms > 0.0) keyTimes[i] /= start_ms;
     viewBoxes.push("0 " + y + " 210 297");
@@ -349,18 +471,23 @@ function setAnimation(speed) {
 function updateSVG(toAnimate) {
   const text = input.value;
   const chars = parseInputText(text);
+  //const isPlaying = (svg.childNodes[svg.childNodes.length - 1] instanceof SVGAnimateElement);
 
   //svg.setAttribute("data-text", encodeURIComponent(text));
 
   svg.textContent = "";
   svg.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}));
+
   if (toAnimate) {
     setAnimation();
-  } else {
-    const animationSwitch = document.getElementById("animation_switch");
-    const animationSwitchOff = document.getElementById("animation_switch_off");
-    animationSwitch.checked = false;
-    animationSwitchOff.checked = true;
   }
 }
 
+function toggleMenu() {
+  const x = document.getElementById("myLinks");
+  if (x.style.display == "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}

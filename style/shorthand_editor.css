@@ -1,45 +1,175 @@
-    .inputarea {
-      position: absolute;
-      top: 6rem;
-      left: 0rem;
-      width: 100%;
-      height: 20rem;
-      overflow: auto;
-      margin: 1rem;
-    }
+body {
+  /*background: #eee;*/
+  background-color: #68A146;
+  /*background-color: #4AA1EB;*/
+  /*background-image: url("paper_00237.jpg");*/
+  /*background-image: url("p0183.jpg");*/
+}
 
-    .inputarea > * {
-      height: 90%;
-      width: 90%;
-      resize: none;
-    }
+#saveDialog {
+  position: absolute;
+  top: 4rem;
+}
 
-    .sidebar {
-      position: absolute;
-      top: 0;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 40rem;
-      overflow: auto;
-      margin: 1rem;
-    }
+/* Style the navigation menu */
+.topnav {
+  overflow: hidden;
+  background-color: #0C2F1F;
+  position: relative;
+  padding: 14px 16px;
+  margin: 1rem;
+  vertical-align: top;
+}
 
-    .sidebar > * {
-    }
+.topnav input#page_name {
+  /*margin: 0rem;*/
+}
 
-    .viewer {
-      position: absolute;
-      top: 25rem;
-      bottom: 0;
-      left: 0rem;
-      width: 100%;
-      overflow: visible;
-      margin: 1rem;
-    }
+.topnav form {
+  vertical-align: top;
+  height: 100%;
+}
 
-    .viewer > * {
-      border: 2px solid #0;
-      width: 100%;
-      height: auto;
-    }
+/* Hide the links inside the navigation menu (except for logo/home) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: white;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.topnav label {
+  color: white;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  font-size: 17px;
+  /*display: block;*/
+}
+
+/* Style the hamburger menu */
+.topnav a.icon {
+  background: #0C2F1F;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("bars_24.svg");
+  background-size: 32px 28px;
+  display: none;
+}
+
+.topnav #newPageBtn {
+  width: 50px;
+  height: 50px;
+  vertical-align: top;
+}
+
+.topnav #flipBtn {
+  background-image: url("flip.svg");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.topnav #startAnimBtn {
+  background-image: url("anim_start.svg");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+button {
+  outline: none;
+}
+
+button:hover {
+  background-color: cadetblue;
+}
+button:active {
+  background-color: green;
+}
+
+.topnav #svgDownloadBtn {
+  background-image: url("svg_download.svg");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+.topnav #animDownloadBtn {
+  background-image: url("anim_download.svg");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+#pngDownloadBtn {
+  background-image: url("png_download.svg");
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
+
+
+/* Add a grey background color on mouse-over */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the active link (or home/logo) */
+.active {
+  /*background-color: #4CAF50;*/
+  background-color: #0C2F1F;
+  color: white;
+}
+
+.control {
+  border: thin solid #0C2F1F;
+  margin: 1rem;
+  padding: 1rem;
+  /*background: #fff;*/
+}
+
+.control > * {
+}
+
+.inputarea {
+  height: 20rem;
+  margin: 1rem;
+  border: thin solid #0C2F1F;
+  resize: vertical;
+  overflow: hidden;
+  min-height: 2rem;
+  outline: none;
+}
+
+.inputarea > #input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+#saved_page_list {
+   /*width: 10rem;*/
+}
+
+.viewer {
+  margin: 1rem;
+  border: thin solid #0C2F1F;
+}
+
+.viewer > #svg_root {
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  display: block;
+}

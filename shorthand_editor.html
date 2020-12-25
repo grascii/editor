@@ -1,75 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shorthand editor</title>
-<!--
-<link rel="stylesheet" href="style/sidebar.css">
-<link rel="stylesheet" href="style/viewer.css">
-<link rel="stylesheet" href="style/inputarea.css">
--->
-<link rel="stylesheet" href="style/shorthand_editor.css"> 
+  <meta charset="UTF-8" />
+  <title>Shorthand editor</title>
+  <link rel="stylesheet" href="style/shorthand_editor.css"> 
 </head>
 <body>
+<dialog id="saveDialog">
+  <form id="newPageForm" method="dialog">
+    <p>
+      <label>Page name: </label>
+      <input id="saveName" autofocus="autofocus">
+    </p>
+    <button value="cancel">Cancel</button>
+    <button value="default" id="saveBtn">Add a page</button>
+  </form>
+</dialog>
 
-<div class="sidebar">
-<input id="page_name">
-<button id="save_button">Save</button>
-<button id="download_button_svg">Download as SVG</button>
-<button id="download_button_png">Download as PNG</button>
-<br>
-<label>Animation</label>
-<input id="animation_switch" type="radio" name="animation" value="animationOn" onclick="updateSVG(true)">ON
-<input id="animation_switch_off" type="radio" name="animation" value="animationOff" checked="checked" onclick="updateSVG(false)">OFF
-<label>Mirror</label>
-<input id="mirror_switch" type="radio" name="mirror" value="mirrorOn" onclick="setMirrorMode(true)">ON
-<input type="radio" name="mirror" value="mirrorOff" checked="checked" onclick="setMirrorMode(false)">OFF
-<form style="display: inline;">
-<select size="1" id="saved_page_list" onChange="openPage()">
-</select>
-</form>
-<input type="number" id="page_select" value="1" min="1" max="100" onChange="updatePagePos()">
-<div id="objects"></div>
+<div class="topnav">
+  <div>
+    <form style="display: inline;">
+    <select id="saved_page_list" onChange="openPage()"></select>
+    </form>
+
+    <button id="newPageBtn" value="+" onClick="addNewPage()">New page</button>
+    <button id="startAnimBtn"></button>
+    <!--<label id="flipLbl"><input id="flipBtn" type="checkbox"><span id="flipIcon"></span></label>-->
+    <button id="flipBtn"></button>
+    <button id="svgDownloadBtn"></button>
+    <button id="pngDownloadBtn"></button>
+    <button id="animDownloadBtn"></button>
+  </div>
+
+  <div id="myLinks">
+    <div style="display: none;">
+    <label>Save this page as:</label>
+    <input id="page_name">
+    <button id="save_button">Save</button>
+    </div>
+    <a href="javascript:downloadSVG(null, false)">SVG<u>↓</u></a>
+    <a href="javascript:downloadSVG(null, true)">Animated SVG<u>↓</u></a>
+    <a href="javascript:downloadPNG()">PNG<u>↓</u></a>
+  </div>
+  <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"></a>
 </div>
 
 <div class="inputarea">
-<textarea id="input" autofocus="autofocus">
-\svsd
-あ     い      う    え    お
-\none
-あ          い         う       え      お
-
-
-\nakane
-かげん きけん ちじん いじん こんかん
-そっき はっぱ じっけん こっか さっそく
-  いろ々 いろ々な さま々 ねん々 かく々
-（〜に）
-
-\shugiin
-やわ らさ らた らな らま らや らわ
-わか わさ わた わな わは わま わや
-
-か（やま） さ（やま） た（やま） は（やま） またや かまた
-
-…が …わ …や …だ
-
-\waseda
-
-ひ ひの なか はなす あさはか
-
-きふ へさき へそ ふな ひな
-はすの はな はし はき はか
-
-しふく そふ はす はえぬき ひわ
-
-
-</textarea>
+  <textarea id="input" autofocus="autofocus"></textarea>
 </div>
 
+<a id="shorthand">
 <div id="svg_viewer" class="viewer"></div>
-
 </body>
 
 <script type="text/javascript" src="char.js"></script>
