@@ -267,6 +267,8 @@ function downloadPNG() {
   const density = 3.0;
   const img = new Image();
 
+  updateSVG(false);
+
   img.onload = function() {
     const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
