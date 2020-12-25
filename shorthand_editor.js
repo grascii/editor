@@ -85,6 +85,7 @@ animDownloadBtn.addEventListener("click", function(e) {
 
 const pngDownloadBtn = document.getElementById("pngDownloadBtn");
 pngDownloadBtn.addEventListener("click", function(e) {
+  updateSVG(false);
   downloadPNG();
 });
 
@@ -266,8 +267,6 @@ function downloadPNG() {
   const svgStr = new XMLSerializer().serializeToString(svg);
   const density = 3.0;
   const img = new Image();
-
-  updateSVG(false);
 
   img.onload = function() {
     const canvas = document.createElement("canvas");
