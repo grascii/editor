@@ -203,6 +203,7 @@ CharSpace.prototype.updatePenPos = function(pos) {
   pos.y = pos.row + offset.y;
 };
 Char.dict["\u0020"] = CharSpace;
+Char.dict["\u3000"] = CharSpace;
 
 CharFullWidthSpace = function() { Char.call(this, "CharFullWidthSpace", "空白", "", "", "", "black"); };
 CharFullWidthSpace.prototype = Object.create(Char.prototype);
