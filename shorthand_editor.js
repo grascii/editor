@@ -103,6 +103,7 @@ pngDownloadBtn.addEventListener("click", function(e) {
 const save_button = document.getElementById("save_button");
 save_button.addEventListener("click", savePages);
 
+var speed = 0.03;
 
 const storage = localStorage;
 const savedPages = storage.getItem("pages");
@@ -361,7 +362,7 @@ function parseInputText(text) {
               chars.push(new entry());
             }
           } else {
-            //chars.push(new CharText("\u25A1"));
+            chars.push(new CharText("\u25A1"));
             //chars.push(new CharText(tok));
           }
         }
