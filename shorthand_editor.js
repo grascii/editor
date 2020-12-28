@@ -103,8 +103,6 @@ pngDownloadBtn.addEventListener("click", function(e) {
 const save_button = document.getElementById("save_button");
 save_button.addEventListener("click", savePages);
 
-var speed = 0.03;
-
 const storage = localStorage;
 const savedPages = storage.getItem("pages");
 const pages = savedPages ? JSON.parse(savedPages) : {};
@@ -394,6 +392,8 @@ function parseInputText(text) {
             chars.push(new CharNewpage());
           } else if ((match = items[i].match(/^scroll{(-?\d+(?:\.\d+)?)/))) {
             chars.push(new CharScroll(parseFloat(match[1])));
+          } else if ((match = items[i].match(/^speed{(\d+(?:\.\d+)?)/))) {
+            chars.push(new CharSpeed(parseFloat(match[1]) / 1000));
           }
           break;
       }
@@ -426,6 +426,7 @@ function setAnimation(speed) {
   animate_scroll.setAttribute("restart", "always");
 
   paths.forEach(function(path, i) {
+    const speed = parseFloat(path.getAttribute("data-speed"));
     const margin = speed;
     const dash = path.getTotalLength();
     const duration_ms = (dash / speed);
@@ -478,7 +479,7 @@ function updateSVG(toAnimate) {
   //svg.setAttribute("data-text", encodeURIComponent(text));
 
   svg.textContent = "";
-  svg.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}));
+  svg.appendChild(Char.createElements(chars, {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10, speed: 0.03}));
 
   if (toAnimate) {
     setAnimation();

@@ -77,6 +77,7 @@ function Char(name, kana, model, headType, tailType, color, bold, offset, right)
   this.thicknessExtra = this.thickness;
   this.description    = "";
   this.speedFactor    = 1.0;
+  this.speed          = 0.03;
   this.timingFunction = "linear";
 }
 
@@ -163,6 +164,7 @@ Char.prototype.createElement    = function(pos) {
     path.setAttribute("data-key", "");
     path.setAttribute("data-speed-factor", me.speedFactor);
     path.setAttribute("data-scroll-y", me.scrollY || "0");
+    path.setAttribute("data-speed", pos.speed);
     g.appendChild(path);
   });
   this.updatePenPos(pos);
@@ -297,6 +299,17 @@ CharScroll = function(dy) {
 CharScroll.prototype = Object.create(Char.prototype);
 CharScroll.prototype.setPaths = function() { this.paths = ["m0,0"]; };
 Char.dict["scroll"] = CharScroll;
+
+CharSpeed = function(speed) {
+  Char.call(this, "CharSpeed", "スピード", "", "", "", "black");
+  this.speed = speed;
+};
+CharSpeed.prototype = Object.create(Char.prototype);
+CharSpeed.prototype.setPaths = function() { this.paths = ["m0,0"]; };
+CharSpeed.prototype.updatePenPos = function(pos) {
+  pos.speed = this.speed;
+};
+Char.dict["scroll"] = CharSpeed;
 
 CharDottedLine = function() { Char.call(this, "CharDottedLine", "点線", "E8", "E", "E", "black"); };
 CharDottedLine.prototype = Object.create(Char.prototype);
@@ -27491,6 +27504,12 @@ WasedaSho.prototype.setPaths = function() {
   //switch (tail_ + "_" + _model) {}
 
   switch (tail_ + "_" + _headModel) {
+    case "R_NEL8":
+      this.dp.set(-1.41836, 7.37483);
+      this.paths = ["m 0 0 c 0 6.4269 -3.87591 14.0054 -6.66159 13.9396 c -1.77915 -0.04206 -2.35542 -2.49515 0.446812 -4.02348 c 1.72769 -0.942277 3.63237 -1.92243 4.79642 -2.54129"];
+      this.reverse();
+      return;
+
     case "SR8":
       this.dp = p(9.28081, -5.73627);
       this.paths = ["m 0 0 c 4.0576 -2.2492 11.4288 -5.3486 11.4288 -9.9348 c 0 -4.3354 -4.99079 -3.72655 -3.97439 -1.37472 c 0.772142 1.78666 1.29555 3.59207 1.8264 5.57325"];
@@ -39128,6 +39147,6 @@ WasedaHain.prototype.setPaths = function() {
 
   //switch (_head) {}
 
-  this.dp = p(3.27993, 2.29595).move(2, 50);;
+  this.dp = p(3.27993, 2.29595).move(2, 50);
   this.paths = ["m 0 0 c 0 1.61602 1.71103 4.20452 3.27993 2.29595"];
 };
