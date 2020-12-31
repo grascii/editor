@@ -394,6 +394,11 @@ function parseInputText(text) {
             chars.push(new CharScroll(parseFloat(match[1])));
           } else if ((match = items[i].match(/^speed{(\d+(?:\.\d+)?)/))) {
             chars.push(new CharSpeed(parseFloat(match[1]) / 1000));
+          } else if ((match = items[i].match(/^br{(\d+)/))) {
+            const n = parseInt(match[1]);
+            for (let i = 0; i < n; i++) {
+              chars.push(new CharNewline());
+            }
           }
           break;
       }
@@ -403,17 +408,11 @@ function parseInputText(text) {
 }
 
 
-function setAnimation(speed) {
+function setAnimation() {
   const svg = document.getElementById("svg_root");
   const paths = svg.querySelectorAll("path");
-  //document.querySelectorAll('div.inputarea')[0].style.display = "none";
-
-  if ((speed === undefined) || (speed <= 0)) {
-    speed = 0.03;
-  }
-
-  var start_ms = 0;
   const keyTimes = [0];
+  var start_ms = 0;
   var style = "@keyframes shorthand_draw{100%{stroke-dashoffset:0;}}";
   var y = 0; 
   var viewBoxes = [];
@@ -451,15 +450,18 @@ function setAnimation(speed) {
              "stroke-dashoffset:" + (dash + margin) + ";}"
     start_ms += duration_ms;
   });
+
+  const total_ms = start_ms;
+
   for (var i = 0; i < keyTimes.length; i++) {
-    if (start_ms > 0.0) keyTimes[i] /= start_ms;
+    if (total_ms > 0.0) keyTimes[i] /= total_ms;
     viewBoxes.push("0 " + y + " 210 297");
     y += parseFloat(scrollList[i]);
   }
   keyTimes.push(1.0);
-  viewBoxes.push(viewBoxes[viewBoxes.length-1]);
+  viewBoxes.push(viewBoxes[viewBoxes.length - 1]);
 
-  animate_scroll.setAttribute("dur", start_ms + "ms");
+  animate_scroll.setAttribute("dur", total_ms + "ms");
   animate_scroll.setAttribute("values", viewBoxes.join("; "));
   animate_scroll.setAttribute("keyTimes", keyTimes.join("; "));
   const style_new = document.createElementNS("http://www.w3.org/2000/svg", "style");

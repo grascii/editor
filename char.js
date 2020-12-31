@@ -171,6 +171,7 @@ Char.prototype.createElement    = function(pos) {
   return g;
 };
 Char.prototype.createElementExtra = function() {
+  const that = this;
   const g = document.createElementNS("http://www.w3.org/2000/svg", "g");
   const style = "stroke-width:" + this.thicknessExtra + ";" + "stroke:" + this.color + ";";
   const transform = "translate(" + this.pos.x + " " + this.pos.y + ")";
@@ -184,6 +185,7 @@ Char.prototype.createElementExtra = function() {
   this.pathsExtra.forEach(function(d) {
     const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
     path.setAttribute("d", d);
+    path.setAttribute("data-speed", that.speed);
     g.appendChild(path);
   });
   return g;
