@@ -67,23 +67,23 @@ body {
 }
 
 .topnav #newPageBtn {
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
   vertical-align: top;
 }
 
 .topnav #flipBtn {
   background-image: url("flip.svg");
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .topnav #startAnimBtn {
   background-image: url("anim_start.svg");
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 button {
@@ -100,22 +100,22 @@ button:active {
 .topnav #svgDownloadBtn {
   background-image: url("svg_download.svg");
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 .topnav #animDownloadBtn {
   background-image: url("anim_download.svg");
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 #pngDownloadBtn {
   background-image: url("png_download.svg");
   background-size: contain;
-  width: 50px;
-  height: 50px;
+  width: 3rem;
+  height: 3rem;
 }
 
 
