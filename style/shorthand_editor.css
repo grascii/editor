@@ -88,6 +88,9 @@ body {
 
 button {
   outline: none;
+  background-color: #EDEDED;
+  -webkit-appearance: none;
+  border-radius: 0;
 }
 
 button:hover {
@@ -159,7 +162,7 @@ button:active {
 }
 
 #saved_page_list {
-   /*width: 10rem;*/
+   width: 10rem;
 }
 
 .viewer {
