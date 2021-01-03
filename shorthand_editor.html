@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <title>Shorthand editor</title>
-  <link rel="stylesheet" href="style/shorthand_editor.css"> 
+  <link rel="stylesheet" href="style/shorthand_editor.css" /> 
+  <link rel="stylesheet" type="text/css" href="dialog-polyfill/dialog-polyfill.css" />
 </head>
 <body>
 <dialog id="saveDialog">
@@ -38,9 +39,6 @@
     <input id="page_name">
     <button id="save_button">Save</button>
     </div>
-    <a href="javascript:downloadSVG(null, false)">SVG<u>↓</u></a>
-    <a href="javascript:downloadSVG(null, true)">Animated SVG<u>↓</u></a>
-    <a href="javascript:downloadPNG()">PNG<u>↓</u></a>
   </div>
   <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"></a>
 </div>
@@ -49,12 +47,16 @@
   <textarea id="input" autofocus="autofocus"></textarea>
 </div>
 
-<a id="shorthand">
 <div id="svg_viewer" class="viewer"></div>
-</body>
-
 <script type="text/javascript" src="char.js"></script>
 <script type="text/javascript" src="interpreter.js"></script>
 <script type="text/javascript" src="shorthand_editor.js"></script>
+<script type="text/javascript" src="dialog-polyfill/dialog-polyfill.js"></script>
+<script>
+  var dialog = document.querySelector('dialog');
+  dialogPolyfill.registerDialog(dialog);
+</script>
+</body>
+
 </html>
 

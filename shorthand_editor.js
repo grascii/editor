@@ -2,6 +2,8 @@ String.prototype.insert = function(pos, str) {
   return this.substring(0, pos) + str + this.substring(pos)
 };
 
+const title = "";
+
 const viewer = document.getElementById("svg_viewer");
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 const attr = {
