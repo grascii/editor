@@ -20,13 +20,13 @@
 
 <div class="topnav">
   <div>
-    <form style="display: inline;">
+    <form>
     <select id="saved_page_list" onChange="openPage()"></select>
     </form>
 
-    <button id="newPageBtn" value="+" onClick="addNewPage()">New page</button>
+    <button id="newPageBtn" onClick="addNewPage()">New page</button>
+    <button id="savePageBtn" onClick="savePages()">Save</button>
     <button id="startAnimBtn"></button>
-    <!--<label id="flipLbl"><input id="flipBtn" type="checkbox"><span id="flipIcon"></span></label>-->
     <button id="flipBtn"></button>
     <button id="svgDownloadBtn"></button>
     <button id="pngDownloadBtn"></button>
