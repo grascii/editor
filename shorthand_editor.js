@@ -431,7 +431,7 @@ function setAnimation() {
     const margin = speed;
     const dash = path.getTotalLength();
     const duration_ms = (dash / speed);
-    path.setAttribute("class", "shorthand_" + i);
+
     switch (path.getAttribute("data-char")) {
       case "CharNewpage":
         start_ms += 300;
@@ -445,11 +445,18 @@ function setAnimation() {
         start_ms += 100;
         scrollList.push(path.getAttribute("data-scroll-y"));
         break;
+
+      default:
+        const pathAnimate = document.createElementNS("http://www.w3.org/2000/svg", "animate");
+        pathAnimate.setAttribute("attributeName", "stroke-dashoffset");
+        pathAnimate.setAttribute("values", (dash + margin) + ";0");
+        pathAnimate.setAttribute("dur", duration_ms + "ms");
+        pathAnimate.setAttribute("begin", start_ms + "ms");
+        pathAnimate.setAttribute("fill", "freeze");
+        path.appendChild(pathAnimate);
+        path.setAttribute("style", "stroke-dasharray:" + dash + " " + (dash + margin * 2) + ";stroke-dashoffset:" + (dash + margin));
+        break;
     }
-    style += ".shorthand_" + i + "{" +
-             "animation:shorthand_draw " + duration_ms + "ms linear " + start_ms + "ms forwards;" +
-             "stroke-dasharray:" + dash + " " + (dash + margin * 2) + ";" +
-             "stroke-dashoffset:" + (dash + margin) + ";}"
     start_ms += duration_ms;
   });
 
@@ -466,13 +473,14 @@ function setAnimation() {
   animate_scroll.setAttribute("dur", total_ms + "ms");
   animate_scroll.setAttribute("values", viewBoxes.join("; "));
   animate_scroll.setAttribute("keyTimes", keyTimes.join("; "));
+  animate_scroll.setAttribute("fill", "freeze");
   const style_new = document.createElementNS("http://www.w3.org/2000/svg", "style");
   style_new.setAttribute("id", "style_animation");
   style_new.textContent = style;
 
-  svg.appendChild(style_new);
+  //svg.appendChild(style_new);
   svg.appendChild(animate_scroll);
-  animate_scroll.beginElement();
+  //animate_scroll.beginElement();
 }
 
 function updateSVG(toAnimate) {
@@ -487,6 +495,9 @@ function updateSVG(toAnimate) {
 
   if (toAnimate) {
     setAnimation();
+    //https://developer.mozilla.org/en-US/docs/Web/API/SVGSVGElement
+    //svg.pauseAnimations();
+    svg.setCurrentTime(0);
   }
 }
 
