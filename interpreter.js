@@ -155,122 +155,6 @@ Parser.prototype.parse = function() {
   return this.page();
 };
 
-function parseInputText(text) {
-  const lexer = new Lexer(text);
-  const parser = new Parser(lexer);
-  const items = parser.parse(); 
-  const chars = [];
-  var shorthand = "none";
-  for (var i = 0; i < items.length; i++) {
-    if (Array.isArray(items[i])) {
-      for (var j = 0; j < items[i].length; j++) {
-        const tok = items[i][j];
-
-        if (shorthand == "none") {
-          var s = "";
-          while (j < items[i].length) {
-            if (items[i][j] == "\n") {
-              if (s != "") {
-                chars.push(new CharText(s));
-              }
-              chars.push(new Char.dict["\n"]);
-              s = "";
-            } else {
-              s += items[i][j];
-            }
-            j++;
-          }
-          if (s != "") {
-            chars.push(new CharText(s));
-          }
-        } else if (Char.dict[tok]) {
-          chars.push(new Char.dict[tok]());
-        } else {
-          var entry;
-          switch (shorthand) {
-            case "waseda":
-              entry = WasedaChar.dict[tok];
-              break;
-            case "nakane":
-              entry = NakaneChar.dict[tok];
-              break;
-
-            case "svsd":
-              entry = SvsdChar.dict[tok];
-              break;
-
-            case "shugiin":
-              entry = ShugiinChar.dict[tok];
-              break;
-
-            case "takusari": 
-              entry = TakusariChar.dict[tok];
-              break;
-
-            case "gregg":
-              entry = GreggChar.dict[tok];
-              break;
-
-            default:
-              chars.push(new CharText("\u25A1"));
-              break;
-          }
-
-          if (entry) {
-            if (Array.isArray(entry)) {
-              entry.forEach(function(ctor) { chars.push(new ctor()); });
-            } else {
-              chars.push(new entry());
-            }
-          } else {
-            chars.push(new CharText("\u25A1"));
-            //chars.push(new CharText(tok));
-          }
-        }
-      }
-    } else {
-      items[i] = items[i].substring(1);
-      switch (items[i]) {
-        case "waseda":
-        case "svsd":
-        case "nakane":
-        case "shugiin":
-        case "gregg":
-        case "takusari":
-        case "none":
-          shorthand = items[i];
-          break;
-            
-        default:
-          var match;
-          if ((match = items[i].match(/^([hv])sp(?:ace)?{(-?\d+(?:\.\d+)?)}/)) !== null) {
-            if (match[1] == "h") {
-              chars.push(new CharRight(parseFloat(match[2])));
-            } else if (match[1] == "v") {
-              chars.push(new CharUp(parseFloat(match[2])));
-            }
-          } else if ((match = items[i].match(/^sp(?:ace)?{(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)}/)) !== null) {
-            chars.push(new CharMove(parseFloat(match[1]), -parseFloat(match[2])));
-          } else if ((match = items[i].match(/newpage|pb/)) !== null) {
-            chars.push(new CharNewpage());
-          } else if ((match = items[i].match(/^scroll{(-?\d+(?:\.\d+)?)/))) {
-            chars.push(new CharScroll(parseFloat(match[1])));
-          } else if ((match = items[i].match(/^speed{(\d+(?:\.\d+)?)/))) {
-            chars.push(new CharSpeed(parseFloat(match[1]) / 1000));
-          } else if ((match = items[i].match(/^br{(\d+)/))) {
-            const n = parseInt(match[1]);
-            for (var i = 0; i < n; i++) {
-              chars.push(new CharNewline());
-            }
-          }
-          break;
-      }
-    }
-  }
-  return chars;
-}
-
-
 function parseInputTexts(texts) {
   const charsArray = [];
   var shorthand = "none";
@@ -279,7 +163,6 @@ function parseInputTexts(texts) {
     const lexer = new Lexer(text);
     const parser = new Parser(lexer);
     const items = parser.parse(); 
-    console.log(items);
     const chars = [];
     for (var i = 0; i < items.length; i++) {
       if (Array.isArray(items[i])) {
@@ -306,84 +189,42 @@ function parseInputTexts(texts) {
           } else if (Char.dict[tok]) {
             chars.push(new Char.dict[tok]());
           } else if (tok != "") {
-            var entry;
-            switch (shorthand) {
-              case "waseda":
-                entry = WasedaChar.dict[tok];
-                break;
-              case "nakane":
-                entry = NakaneChar.dict[tok];
-                break;
-
-              case "svsd":
-                entry = SvsdChar.dict[tok];
-                break;
-
-              case "shugiin":
-                entry = ShugiinChar.dict[tok];
-                break;
-
-              case "takusari": 
-                entry = TakusariChar.dict[tok];
-                break;
-
-              case "gregg":
-                entry = GreggChar.dict[tok];
-                break;
-
-              default:
-                chars.push(new CharText("\u25A1"));
-                break;
-            }
-
-            if (entry) {
+            if (Char.catalog[shorthand]) {
+              let entry = Char.catalog[shorthand][tok];
               if (Array.isArray(entry)) {
                 entry.forEach(function(ctor) { chars.push(new ctor()); });
               } else {
                 chars.push(new entry());
               }
             } else {
-              chars.push(new CharText("\u25A1"));
-              //chars.push(new CharText(tok));
+                chars.push(new CharText("\u25A1"));
             }
           }
         }
       } else {
         items[i] = items[i].substring(1);
-        switch (items[i]) {
-          case "waseda":
-          case "svsd":
-          case "nakane":
-          case "shugiin":
-          case "gregg":
-          case "takusari":
-          case "none":
-            shorthand = items[i];
-            break;
-              
-          default:
-            var match;
-            if ((match = items[i].match(/^([hv])sp(?:ace)?{(-?\d+(?:\.\d+)?)}/)) !== null) {
-              if (match[1] == "h") {
-                chars.push(new CharRight(parseFloat(match[2])));
-              } else if (match[1] == "v") {
-                chars.push(new CharUp(parseFloat(match[2])));
-              }
-            } else if ((match = items[i].match(/^sp(?:ace)?{(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)}/)) !== null) {
-              chars.push(new CharMove(parseFloat(match[1]), -parseFloat(match[2])));
-            } else if ((match = items[i].match(/newpage|pb/)) !== null) {
-              chars.push(new CharNewpage());
-            } else if ((match = items[i].match(/^scroll{(-?\d+(?:\.\d+)?)/))) {
-              chars.push(new CharScroll(parseFloat(match[1])));
-            } else if ((match = items[i].match(/^speed{(\d+(?:\.\d+)?)/))) {
-              chars.push(new CharSpeed(parseFloat(match[1]) / 1000));
-            } else if ((match = items[i].match(/^br{(\d+)/))) {
-              const n = parseInt(match[1]);
-              for (var i = 0; i < n; i++) {
-                chars.push(new CharNewline());
-              }
-            }
-            break;
+        var match;
+        if ((match = items[i].match(/^([hv])sp(?:ace)?{(-?\d+(?:\.\d+)?)}/)) !== null) {
+          if (match[1] == "h") {
+            chars.push(new CharRight(parseFloat(match[2])));
+          } else if (match[1] == "v") {
+            chars.push(new CharUp(parseFloat(match[2])));
+          }
+        } else if ((match = items[i].match(/^sh(?:orthand)?{([a-z]+)}/)) !== null) {
+          shorthand = match[1];
+        } else if ((match = items[i].match(/^sp(?:ace)?{(-?\d+(?:\.\d+)?),(-?\d+(?:\.\d+)?)}/)) !== null) {
+          chars.push(new CharMove(parseFloat(match[1]), -parseFloat(match[2])));
+        } else if ((match = items[i].match(/newpage|pb/)) !== null) {
+          chars.push(new CharNewpage());
+        } else if ((match = items[i].match(/^scroll{(-?\d+(?:\.\d+)?)}/))) {
+          chars.push(new CharScroll(parseFloat(match[1])));
+        } else if ((match = items[i].match(/^speed{(\d+(?:\.\d+)?)}/))) {
+          chars.push(new CharSpeed(parseFloat(match[1]) / 1000));
+        } else if ((match = items[i].match(/^br{(\d+)}/))) {
+          const n = parseInt(match[1]);
+          for (var i = 0; i < n; i++) {
+            chars.push(new CharNewline());
+          }
         }
       }
     }
