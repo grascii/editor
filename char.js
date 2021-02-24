@@ -120,6 +120,63 @@ Char.createElements = function(chars, pos) {
   }
 
   return groups;
+}
+Char.createElements = function(chars, pos, groupTop) {
+  if (!pos) pos = {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}
+
+  if (chars.length > 0) {
+    pos.x += chars[0].offset.x;
+    pos.y += chars[0].offset.y;
+  }
+
+  Char.connectChars(chars);
+
+  const groups = document.createDocumentFragment();
+
+  for (var i = 0, j = 0; i < chars.length; i++) {
+    const c = chars[i];
+    groups.append(c.createElement(pos));
+    if (["CharNewline", "CharSpace", "CharFullWidthSpace"].includes(c.name) || i + 1 == chars.length) {
+      do {
+        const cx = chars[j];
+        if (cx.pathsExtra.length > 0) {
+          groups.append(cx.createElementExtra());
+        }
+      } while (++j <= i);
+    }
+  }
+
+  return groups;
+};
+Char.createElementList = function(charsArray, pos) {
+  if (!pos) pos = {x: 5, y: 10, left: 5, right: 5, bottom: 10, row: 10}
+  const charsFlat = charsArray.flat();
+  const groupList = []; 
+
+  if (charsFlat.length > 0) {
+    pos.x += charsFlat[0].offset.x;
+    pos.y += charsFlat[0].offset.y;
+  }
+
+  Char.connectChars(charsFlat);
+
+  charsArray.forEach(function(chars) {
+    const groups = document.createDocumentFragment();
+    for (var i = 0, j = 0; i < chars.length; i++) {
+      const c = chars[i];
+      groups.append(c.createElement(pos));
+      if (["CharNewline", "CharSpace", "CharFullWidthSpace"].includes(c.name) || i + 1 == chars.length) {
+        do {
+          const cx = chars[j];
+          if (cx.pathsExtra.length > 0) {
+            groups.append(cx.createElementExtra());
+          }
+        } while (++j <= i);
+      }
+    }
+    groupList.push(groups);
+  });
+  return groupList;
 };
 Char.prototype.getPaths = function() { return this.paths; };
 Char.prototype.updatePenPos = function(pos) {
