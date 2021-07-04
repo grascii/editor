@@ -157,7 +157,7 @@ Parser.prototype.parse = function() {
 
 function parseInputTexts(texts) {
   const charsArray = [];
-  var shorthand = "none";
+  var shorthand = "gregg";
 
   texts.forEach(function(text) {
     const lexer = new Lexer(text);
