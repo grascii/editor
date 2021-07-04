@@ -564,6 +564,7 @@ GreggU.prototype.setPaths = function() {
 GreggTen = function() { GreggChar.call(this, "GreggTen", "tn", "NER9", "NER", "NER", "black", false, p(0.0, 2.7)); };
 GreggTen.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["tn"] = GreggTen;
+GreggChar.dict["dn"] = GreggTen;
 
 GreggTen.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
@@ -578,6 +579,7 @@ GreggTen.prototype.setPaths = function() {
 GreggTm = function() { GreggChar.call(this, "GreggTm", "tm", "NER17", "NER", "NER", "black", false, p(0.2, 4.3)); };
 GreggTm.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["tm"] = GreggTm;
+GreggChar.dict["dm"] = GreggTm;
 
 GreggTm.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
@@ -592,6 +594,7 @@ GreggTm.prototype.setPaths = function() {
 GreggNt = function() { GreggChar.call(this, "GreggNt", "nt", "NEL10", "NEL", "NEL", "black", false, p(0.0, 2.9)); };
 GreggNt.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["nt"] = GreggNt;
+GreggChar.dict["nd"] = GreggNt;
 
 GreggNt.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
@@ -606,6 +609,7 @@ GreggNt.prototype.setPaths = function() {
 GreggMt = function() { GreggChar.call(this, "GreggMt", "mt", "NEL15", "NEL", "NEL", "black", false, p(0.0, 4.2)); };
 GreggMt.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["mt"] = GreggMt;
+GreggChar.dict["md"] = GreggMt;
 
 GreggMt.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
@@ -620,6 +624,8 @@ GreggMt.prototype.setPaths = function() {
 GreggDf = function() { GreggChar.call(this, "GreggDf", "df", "UNER10", "NER", "SWR", "black", false, p(0.4, 3.0)); };
 GreggDf.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["df"] = GreggDf;
+GreggChar.dict["dv"] = GreggDf;
+GreggChar.dict["tv"] = GreggDf;
 
 GreggDf.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
@@ -634,6 +640,9 @@ GreggDf.prototype.setPaths = function() {
 GreggJnt = function() { GreggChar.call(this, "GreggJnt", "jnt", "USWL9", "SWL", "NEL", "black", false, p(4.1, -4.0)); };
 GreggJnt.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["jnt"] = GreggJnt;
+GreggChar.dict["jnd"] = GreggJnt;
+GreggChar.dict["pnt"] = GreggJnt;
+GreggChar.dict["pnd"] = GreggJnt;
 
 GreggJnt.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
