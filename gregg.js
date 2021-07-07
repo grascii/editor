@@ -10,14 +10,15 @@ GreggChar.dict["k"] = GreggK;
 
 GreggK.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
-    case "C":
-      this.dp = p(7, 0);
-      this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
-      return;
+    //case "C":
+      //this.dp = p(7, 0);
+      //this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
+      //return;
 
     default:
       this.dp = p(7, 0);
-      this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
+      //this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
+      this.paths = ["m 0 0 c 2.3661,-0.8172 6.9303,-2.3707 7,0"]
       break;
   }
 };
