@@ -472,6 +472,11 @@ GreggE.prototype.setPaths = function() {
   //const _model = this.getNextModel();
   const _head = this.getNextHeadType();
 
+  after_R = {
+    dp: p(0, 0),
+    paths: ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
+  }
+
   switch (name_ + "_" + _name) {
     case "GreggK_GreggT":
       this.dp = p(-0.238854, -0.68917);
@@ -497,6 +502,11 @@ GreggE.prototype.setPaths = function() {
     case "NE_E":
       this.dp = p(0, 0);
       this.paths = ["m 0, 0 c 0.4986,-0.252 1.4055,-0.643 1.2127,-1.053 -0.504,-1.071 -1.92,0.202 -1.2127,1.053"];
+      return;
+
+    case "EL_NE":
+      this.dp = after_R.dp;
+      this.paths = after_R.paths;
       return;
 
   }
@@ -540,8 +550,10 @@ GreggE.prototype.setPaths = function() {
 
     case "GreggR":
     case "GreggL":
-      this.dp = p(0, 0);
-      this.paths = ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
+      this.dp = after_R.dp;
+      this.paths = after_R.paths;
+      //this.dp = p(0, 0);
+      //this.paths = ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
       return;
 
     case "GreggT":

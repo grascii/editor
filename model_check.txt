@@ -41,7 +41,7 @@ deg
 ret
 red
 let
-red
+led
 
 en
 em
