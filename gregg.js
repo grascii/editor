@@ -485,7 +485,14 @@ GreggE.prototype.setPaths = function() {
 
   //switch (name_ + "_" + _head) {}
 
-  //switch (name_) {}
+  switch (name_) {
+    case "GreggK":
+    case "GreggG":
+      //this.dp = p(-1.7326138, -0.2059328);
+      this.dp = p(0, 0);
+      this.paths = ["m 0, 0 c -0.015655,0.43164345 -0.6768339,1.5889867 -1.2835329,1.2910004 -0.9780838,-0.53606745 -0.1437985,-1.41780047 1.2835329,-1.2910004"]
+      return;
+  }
 
   //switch (model_ + "_" + _name) {}
 
