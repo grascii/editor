@@ -61,3 +61,8 @@ tet
 ted
 det
 ded
+
+ker
+kel
+ger
+gel
