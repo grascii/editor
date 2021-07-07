@@ -50,3 +50,14 @@ nen
 nem
 men
 mem
+
+ne
+me
+
+et
+ed
+
+tet
+ted
+det
+ded

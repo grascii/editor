@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="31.814141"
-     inkscape:cx="389.87379"
-     inkscape:cy="576.31604"
+     inkscape:zoom="11.247998"
+     inkscape:cx="381.35677"
+     inkscape:cy="583.65944"
      inkscape:window-width="1366"
      inkscape:window-height="713"
      inkscape:window-x="0"
@@ -45,7 +45,7 @@
     <g
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
        id="g6726"
-       transform="translate(95.793607,140.98944)">
+       transform="translate(94.171032,140.86015)">
       <g
          style="stroke:#000000;stroke-width:0.425197"
          transform="translate(6,10)"
@@ -60,7 +60,7 @@
         <title
            id="title6710">GreggE</title>
         <path
-           d="m -0.41127422,-2.2832002 c 0,0.9849085 1.48802842,1.2269407 1.93712862,0.4490765 0.2946087,-0.5102773 -0.3514309,-0.4639892 -1.93712862,-0.4490765"
+           d="m -0.41127422,-2.2832002 c 1.58569772,-0.014913 2.23173732,-0.061201 1.93712862,0.4490765 -0.4491002,0.7778642 -1.93712862,0.535832 -1.93712862,-0.4490765"
            data-char="GreggE"
            data-head="C"
            data-tail="C"
