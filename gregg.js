@@ -486,12 +486,19 @@ GreggE.prototype.setPaths = function() {
   //switch (name_ + "_" + _head) {}
 
   switch (name_) {
+
     case "GreggK":
     case "GreggG":
-      //this.dp = p(-1.7326138, -0.2059328);
       this.dp = p(0, 0);
       this.paths = ["m 0, 0 c -0.015655,0.43164345 -0.6768339,1.5889867 -1.2835329,1.2910004 -0.9780838,-0.53606745 -0.1437985,-1.41780047 1.2835329,-1.2910004"]
       return;
+
+    case "GreggR":
+    case "GreggL":
+      this.dp = p(-0.90469, 0.17126);
+      this.paths = ["m 0, 0 c 0.799944,-0.320742 0.7529,-0.79724 0.380469,-0.82449 -1.205868,-0.08823 -1.189982,0.759144 -1.285159,0.99575"]
+      return;
+
   }
 
   //switch (model_ + "_" + _name) {}
@@ -517,6 +524,7 @@ GreggE.prototype.setPaths = function() {
 
   switch (_name) {
     case "GreggK":
+    case "GreggG":
       this.dp = p(-1.03437, 0.45655);
       this.paths = ["m 0 0 c 0.21019 0.36406 -0.0477 0.95534 -0.743096 1.28304 c -0.414734 0.19545 -1.16244 0.4689 -1.24418 0.0568 c -0.06026 -0.30378 0.568195 -0.6635 0.952903 -0.88329"];
       return;
