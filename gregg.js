@@ -475,6 +475,11 @@ GreggE.prototype.setPaths = function() {
   after_R = {
     dp: p(0, 0),
     paths: ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
+  };
+
+  before_R = {
+    dp: p(-0.3934, -0.9523),
+    paths: ["m 0 0 c 0.63894 -0.0982 1.05516 -0.6312 0.83595 -1.05873 c -0.22995 -0.44849 -1.08496 -0.27871 -1.22935 0.10643"]
   }
 
   switch (name_ + "_" + _name) {
@@ -509,6 +514,12 @@ GreggE.prototype.setPaths = function() {
       this.paths = after_R.paths;
       return;
 
+    case "ER_EL":
+      this.dp = p(0, 0);
+      this.paths = ["m 0,0 c 0,0.8198 1.47563,1.132 1.47563,-0.0401 0,-1.0526 -1.47563,-1.174 -1.47563,0.0401 z"]
+      return;
+
+
   }
 
   switch (_name) {
@@ -521,8 +532,8 @@ GreggE.prototype.setPaths = function() {
     case "GreggR":
     case "GreggL":
       if (tail_ == "") {
-        this.dp = p(-0.3934, -0.9523);
-        this.paths = ["m 0 0 c 0.63894 -0.0982 1.05516 -0.6312 0.83595 -1.05873 c -0.22995 -0.44849 -1.08496 -0.27871 -1.22935 0.10643"];
+        this.dp = before_R.dp;
+        this.paths = before_R.paths;
         return;
       }
       break;
