@@ -80,3 +80,6 @@ ga
 
 ar
 al
+
+ra
+la
