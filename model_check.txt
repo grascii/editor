@@ -66,3 +66,11 @@ ker
 kel
 ger
 gel
+
+rek
+reg
+lek
+leg
+
+ak
+ag

@@ -394,6 +394,16 @@ GreggA.prototype.setPaths = function() {
   //const _model = this.getNextModel();
   const _head = this.getNextHeadType();
 
+  if (tail_ === "") {
+    switch(_name) {
+      case "GreggK":
+      case "GreggG":
+        this.dp = p(-3.05108186, 0.87675363);
+        this.paths = ["m 0,0 c 0.3174112,0.5302327 -1.3149156,2.54847934 -3.5735405,2.71899764 -1.2535818,0.094641 -0.8100123,-1.1825076 0.5224587,-1.84224404"];
+        return;
+    }
+  }
+
   //switch (name_ + "_" + _name) {
     //case "GreggG_GreggT":
       //this.dp = p(-0.866314, -1.97876);
