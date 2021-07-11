@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg12448"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   sodipodi:docname="ar.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview12450"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="15.907071"
+     inkscape:cx="422.92513"
+     inkscape:cy="580.37084"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g21847" />
+  <defs
+     id="defs12445" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#cccccc;stroke-width:0.158294"
+       d="m 109.66832,155.00618 c -1.58858,-0.59738 -1.3671,-1.91353 0.42277,-2.5123 0.97348,-0.32566 1.42067,-0.31986 1.84522,0.0239 0.32255,0.26118 0.32899,0.30949 0.11076,0.83104 -0.12744,0.30455 -0.45173,0.71614 -0.72066,0.91464 -0.78643,0.58046 -0.63442,0.72486 0.65867,0.62568 1.20571,-0.0925 2.78851,-0.59528 3.42193,-1.08705 0.39753,-0.30863 0.6936,-0.26569 0.56045,0.0813 -0.11401,0.29709 -1.2858,0.83829 -2.12242,0.98024 -0.39178,0.0665 -0.85479,0.15088 -1.02891,0.18757 -0.91396,0.19258 -2.57932,0.16876 -3.14781,-0.045 z m 1.38141,-0.79593 c 0.74492,-0.63696 0.92017,-0.97569 0.71203,-1.37616 -0.25577,-0.49211 -1.63051,-0.30094 -2.38852,0.33216 -0.44907,0.37507 -0.34592,0.93641 0.23744,1.29209 0.28295,0.17252 0.57437,0.31393 0.64759,0.31426 0.0732,3.3e-4 0.42938,-0.25273 0.79146,-0.56235 z"
+       id="path22004" />
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g21859"
+       transform="translate(101.40907,132.88906)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g21841">
+        <title
+           id="title21839">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(8.1,13.2)"
+         id="g21847">
+        <title
+           id="title21843">GreggA</title>
+        <path
+           d="m -0.64566,7.85119 c 0,2.371695 4.63395,0.817184 7,0"
+           id="path25832" />
+        <path
+           d="m 0.7129921,9.060118 c 0.1836205,-0.191555 2.6045381,-1.8680404 1.4925124,-2.6143763 -0.7345027,-0.4929614 -2.8511645,0.1932796 -2.8511645,1.4054483"
+           id="path21845"
+           sodipodi:nodetypes="csc" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g21881"
+       transform="translate(103.86341,139.54025)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g21863">
+        <title
+           id="title21861">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(5,14.4)"
+         id="g21869">
+        <title
+           id="title21865">GreggR</title>
+      </g>
+    </g>
+  </g>
+</svg>
