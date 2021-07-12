@@ -106,3 +106,8 @@ kan
 kam
 gan
 gam
+
+tak
+tag
+dak
+dag
