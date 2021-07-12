@@ -111,3 +111,8 @@ tak
 tag
 dak
 dag
+
+rat
+rad
+lat
+lad
