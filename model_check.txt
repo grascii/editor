@@ -140,3 +140,8 @@ kar
 kal
 gar
 gal
+
+rak
+rag
+lak
+lag
