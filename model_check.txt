@@ -86,3 +86,8 @@ la
 
 ta
 da
+
+tan
+tam
+dan
+dam
