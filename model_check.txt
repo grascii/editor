@@ -124,3 +124,9 @@ nan
 nam
 man
 mam
+
+na
+ma
+
+at
+ad
