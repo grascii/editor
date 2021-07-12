@@ -482,6 +482,11 @@ GreggA.prototype.setPaths = function() {
       this.paths = ["m 0,0 c 1.068987,-0.61723 3.4352,-1.707 4.1888,-1.186 1.0954,0.756 -3.192844,4.9024 -4.1888,1.186"];
       return;
 
+    case "GreggN":
+    case "GreggM":
+      this.dp = p(0.9588543, 0);
+      this.paths = ["m 0,0 c 2.5058,0 2.2876,0.812 1.9472,1.03 -0.8992,0.573 -2.9062,0.478 -2.9062,-1.03"];
+      return;
   }
 
   //switch (name_ + "_" + _name) {
