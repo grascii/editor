@@ -91,3 +91,13 @@ tan
 tam
 dan
 dam
+
+nat
+nad
+mat
+mad
+
+rar
+ral
+lar
+lal

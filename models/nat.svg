@@ -6,15 +6,15 @@
    height="297mm"
    viewBox="0 0 210 297"
    version="1.1"
-   id="svg5"
+   id="svg4517"
+   sodipodi:docname="nat.svg"
    inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
-   sodipodi:docname="tan.svg"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <sodipodi:namedview
-     id="namedview7"
+     id="namedview4519"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -23,10 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:snap-nodes="true"
      inkscape:zoom="15.907071"
-     inkscape:cx="365.8436"
-     inkscape:cy="529.0729"
+     inkscape:cx="330.01047"
+     inkscape:cy="608.03148"
      inkscape:window-width="1366"
      inkscape:window-height="713"
      inkscape:window-x="0"
@@ -34,31 +33,27 @@
      inkscape:window-maximized="1"
      inkscape:current-layer="g110" />
   <defs
-     id="defs2" />
+     id="defs4514" />
   <g
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <path
-       style="fill:#cccccc;stroke-width:0.22769"
-       d="m 96.481373,142.76574 c 0,-0.34344 1.146197,-1.2678 1.572047,-1.2678 0.13721,0 0.24947,-0.10241 0.24947,-0.2277 0,-0.12522 -0.14234,-0.22768 -0.31631,-0.22768 -0.17398,0 -0.5409,-0.18186 -0.815381,-0.40413 -0.448277,-0.36299 -0.469458,-0.46913 -0.208052,-1.04287 0.607023,-1.33227 3.530563,-2.06933 4.086643,-1.03028 0.2117,0.39555 0.17109,0.60068 -0.2249,1.13628 l -0.48322,0.6536 1.31444,-0.0548 c 1.96782,-0.082 1.83903,0.36941 -0.16555,0.58023 -1.1034,0.11603 -1.92599,0.33759 -2.32462,0.62614 -0.3393,0.2456 -0.70567,0.44656 -0.81414,0.44656 -0.10847,0 -0.43787,0.25615 -0.73198,0.56922 -0.5917,0.62985 -1.138447,0.74664 -1.138447,0.2432 z m 3.341777,-2.69087 c 0.75169,-0.83497 0.7987,-1.04299 0.29648,-1.31176 -0.6168,-0.33011 -1.95287,0.0891 -2.28966,0.7184 -0.558269,1.04314 1.1346,1.5471 1.99318,0.59336 z m 4.75787,0.31157 c -0.17592,-0.28464 0.55199,-0.68933 0.97093,-0.5398 0.27034,0.0965 3.20046,-0.18738 5.55851,-0.5385 0.63996,-0.0953 0.85383,-0.0474 0.85383,0.19104 0,0.2446 -0.7735,0.3864 -3.3455,0.61327 -1.84003,0.16231 -3.46904,0.3425 -3.62002,0.40044 -0.15097,0.058 -0.33896,0.001 -0.41775,-0.12645 z"
-       id="path502" />
     <g
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
        id="g122">
       <g
-         style="stroke:#000000;stroke-width:0.16454486104500002"
+         style="stroke:#000000;stroke-width:0.164545"
          id="g104">
         <title
            id="title102">CharNewline</title>
       </g>
       <g
-         style="stroke:#000000;stroke-width:0.16454486104500002"
+         style="stroke:#000000;stroke-width:0.164545"
          id="g110">
         <title
            id="title106">GreggA</title>
         <path
-           d="m 94.912469,140.06309 c 1.4194,-0.82 1.3963,-1.897 0.8669,-2.148 -1.3221,-0.627 -3.5293,0.518 -3.0483,1.492 0.3732,0.755 0.8055,0.651 2.1814,0.656"
+           d="m 88.572456,161.64133 c 1.3759,0.005 1.8082,-0.099 2.1814,0.656 0.481,0.974 -1.7262,2.119 -3.0483,1.492 -0.5294,-0.251 -0.5525,-1.328 0.8669,-2.148"
            data-char="GreggA"
            data-head="C"
            data-tail="C"
@@ -74,7 +69,7 @@
     <g
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
        id="g144"
-       transform="translate(94.576633,125.7863)">
+       transform="rotate(180,46.013009,88.087563)">
       <g
          style="stroke:#000000;stroke-width:0.425197"
          transform="translate(6,10)"
@@ -105,7 +100,7 @@
     <g
        style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
        id="g166"
-       transform="translate(91.112533,126.7863)">
+       transform="rotate(180,47.745059,87.587563)">
       <g
          style="stroke:#000000;stroke-width:0.425197"
          transform="translate(6,10)"
