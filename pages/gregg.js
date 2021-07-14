@@ -221,8 +221,8 @@ GreggP.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-4.01503, 5.73407);
-      this.paths = ["m 0 0 c -2.00147 1.15832 -6.41868 4.61076 -4.01503 5.73407"];
+      this.dp = p(-3.5, 6.062);
+      this.paths = ["m 0,0 c -1.89,1.64 -5.518,4.816 -3.5,6.062"];
       break;
   }
 };
@@ -235,8 +235,8 @@ GreggB.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-9.8995, 9.8995);
-      this.paths = ["m 0 0 c -4.22191 0.909691 -13.2433 7.74135 -9.8995 9.8995"];
+      this.dp = p(-8.0004, 13.856);
+      this.paths = ["m 0,0 c -4.099,3.778 -11.9729,11.606 -8.0004,13.856"];
       break;
   }
 };
@@ -249,8 +249,8 @@ GreggF.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-4.01504, 5.73406);
-      this.paths = ["m 0 0 c 2.55794 0.627846 -1.67707 4.31762 -4.01504 5.73406"];
+      this.dp = p(-3.499998, 6.062);
+      this.paths = ["m 0,0 c 2.018,1.246 -1.609998,4.422 -3.499998,6.062"];
       break;
   }
 };
@@ -263,8 +263,8 @@ GreggV.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-8.03007, 11.4681);
-      this.paths = ["m 0 0 c 4.35631 1.1221 -3.77167 8.9541 -8.03007 11.4681"];
+      this.dp = p(-8.0004, 13.856);
+      this.paths = ["m 0,0 c 3.9725,2.25 -3.9014,10.078 -8.0004,13.856"];
       break;
   }
 };
