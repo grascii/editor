@@ -342,14 +342,14 @@ GreggSh.prototype.setPaths = function() {
 
 GreggH = function() { GreggChar.call(this, "GreggH", "h", "P", "P", "P", "black", true, p(0.0, -0.0)); };
 GreggH.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["h"] = GreggH;
+GreggChar.dict["'"] = GreggH;
 
 GreggH.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(0, 0.1);
-      this.paths = ["m 0 0 v 0.1"];
+      this.dp = p(0, 0);
+      this.paths = ["m 0 -1.5 v 0.1"];
       break;
   }
 };
@@ -702,7 +702,7 @@ GreggE.prototype.setPaths = function() {
 
     case "GreggR":
     case "GreggL":
-      if (tail_ == "") {
+      if (tail_ == "" || tail_ == "P") {
         this.dp = before_R.dp;
         this.paths = before_R.paths;
         return;
