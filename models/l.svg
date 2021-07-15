@@ -1,1 +1,61 @@
-<svg id="svg_root" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 210 297" width="210mm" height="297mm" preserveAspectRatio="none" data-text="" transform="scale(1, 1)" transform-origin="center" style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;background-color:white;"><g style="stroke-width:0.42519683999999996;stroke:black;" transform="translate(6 10)"><title>CharNewline</title></g><g style="stroke-width:0.42519683999999996;stroke:black;" transform="translate(5 13.8)"><title>GreggL</title><path d="m 0 0 c -0.038258 4.56535 10.6791 1.65963 16 0" data-char="GreggL" data-head="EL" data-tail="EL" data-kana="l" data-model="EL16" data-key="" data-speed-factor="1" data-scroll-y="0" data-speed="0.03"/></g></svg>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   id="svg_root"
+   version="1.1"
+   viewBox="0 0 210 297"
+   width="210mm"
+   height="297mm"
+   preserveAspectRatio="none"
+   data-text=""
+   transform="scale(1, 1)"
+   transform-origin="center"
+   style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;background-color:white;"
+   sodipodi:docname="l.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs5500" />
+  <sodipodi:namedview
+     id="namedview5498"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="3.7914703"
+     inkscape:cx="62.376858"
+     inkscape:cy="60.662483"
+     inkscape:window-width="1366"
+     inkscape:window-height="713"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg_root" />
+  <g
+     style="stroke-width:0.42519683999999996;stroke:black;"
+     transform="translate(6 10)"
+     id="g5489">
+    <title
+       id="title5487">CharNewline</title>
+  </g>
+  <path
+     d="m 17.538833,20.7608 c -0.015,1.79345 1.62979,2.43394 3.95523,2.44995 3.59413,0.0247 6.81556,-1.44229 10.0462,-2.44995"
+     data-char="GreggL"
+     data-head="EL"
+     data-tail="EL"
+     data-kana="l"
+     data-model="EL16"
+     data-key=""
+     data-speed-factor="1"
+     data-scroll-y="0"
+     data-speed="0.03"
+     id="path1959"
+     sodipodi:nodetypes="csc"
+     style="fill:none;stroke:#000000;stroke-width:0.425197;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+</svg>

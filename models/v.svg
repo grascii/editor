@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="5.3619487"
-     inkscape:cx="340.45458"
-     inkscape:cy="520.89272"
+     inkscape:zoom="10.24"
+     inkscape:cx="379.15039"
+     inkscape:cy="503.125"
      inkscape:window-width="1366"
      inkscape:window-height="713"
      inkscape:window-x="0"
@@ -39,7 +39,7 @@
      inkscape:groupmode="layer"
      id="layer1">
     <path
-       d="m 91.207069,130.70266 c 3.9725,2.25 -3.9014,10.078 -8.0004,13.856"
+       d="m 101.91642,126.9265 c 1.56067,0.88373 1.29296,2.62842 0.1441,4.6503 -1.77568,3.12497 -4.656834,5.18131 -7.144814,7.47529"
        data-char="GreggL"
        data-head="EL"
        data-tail="EL"
@@ -49,7 +49,7 @@
        data-speed-factor="1"
        data-scroll-y="0"
        data-speed="0.03"
-       id="path145-5"
-       style="fill:none;stroke:#000000;stroke-width:0.212599;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+       id="path1959"
+       style="fill:none;stroke:#000000;stroke-width:0.425197;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
   </g>
 </svg>

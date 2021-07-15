@@ -23,9 +23,9 @@
      inkscape:pagecheckerboard="0"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="5.6239988"
-     inkscape:cx="374.02213"
-     inkscape:cy="563.83369"
+     inkscape:zoom="7.9535354"
+     inkscape:cx="374.86474"
+     inkscape:cy="579.11354"
      inkscape:window-width="1366"
      inkscape:window-height="713"
      inkscape:window-x="0"
@@ -54,7 +54,7 @@
         <title
            id="title143-3">GreggL</title>
         <path
-           d="m 104.786,142.066 c -4.099,3.778 -11.9729,11.606 -8.0004,13.856"
+           d="m 104.0992,147.07596 c -2.48798,2.29398 -5.36914,4.35032 -7.144819,7.47529 -1.148853,2.02188 -1.416569,3.76657 0.144102,4.6503"
            data-char="GreggL"
            data-head="EL"
            data-tail="EL"
@@ -64,7 +64,8 @@
            data-speed-factor="1"
            data-scroll-y="0"
            data-speed="0.03"
-           id="path145-5" />
+           id="path1959"
+           style="fill:none;stroke:#000000;stroke-width:0.425197;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
       </g>
     </g>
   </g>

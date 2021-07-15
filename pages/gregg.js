@@ -23,7 +23,7 @@ GreggK.prototype.setPaths = function() {
   }
 };
 
-GreggG = function() { GreggChar.call(this, "GreggG", "g", "ER16", "ER", "ER", "black", false, p(0.0, 1.3)); };
+GreggG = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER", "black", false, p(0.0, 1.3)); };
 GreggG.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["g"] = GreggG;
 
@@ -71,10 +71,8 @@ GreggG.prototype.setPaths = function() {
       //return;
   //}
 
-  //this.dp = p(14.8883, -0.300773);
-  //this.paths = ["m 0 0 c 3.86615 -2.10782 16.7769 -4.49967 14.8883 -0.300773"];
-  this.dp = p(16, 0);
-  this.paths = ["m 0, 0 c 5.321,-1.66 16.038,-4.565 16,0"]
+  this.dp = p(14, 0);
+  this.paths = ["m 0,0 c 3.23064,-1.00766 6.45207,-2.47465 10.0462,-2.44995 2.32544,0.016 3.97023,0.6565 3.95523,2.44995"]
 };
 
 GreggR = function() { GreggChar.call(this, "GreggR", "r", "EL7", "EL", "EL", "black", false, p(0.0, -0.6)); };
@@ -91,7 +89,7 @@ GreggR.prototype.setPaths = function() {
   }
 };
 
-GreggL = function() { GreggChar.call(this, "GreggL", "l", "EL16", "EL", "EL", "black", false, p(0.0, -1.2)); };
+GreggL = function() { GreggChar.call(this, "GreggL", "l", "EL14", "EL", "EL", "black", false, p(0.0, -1.2)); };
 GreggL.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["l"] = GreggL;
 
@@ -108,8 +106,8 @@ GreggL.prototype.setPaths = function() {
       //break;
 
     default:
-      this.dp = p(16, 0);
-      this.paths = ["m 0 0 c -0.038258 4.56535 10.6791 1.65963 16 0"];
+      this.dp = p(14, 0);
+      this.paths = ["m 0,0 c -0.015,1.79345 1.62979,2.43394 3.95523,2.44995 3.59413,0.0247 6.81556,-1.44229 10.0462,-2.44995"];
       break;
   }
 };
@@ -235,8 +233,8 @@ GreggB.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-8.0004, 13.856);
-      this.paths = ["m 0,0 c -4.099,3.778 -11.9729,11.606 -8.0004,13.856"];
+      this.dp = p(-7.000717, 12.12559);
+      this.paths = ["m 0,0 c -2.48798,2.29398 -5.36914,4.35032 -7.144819,7.47529 -1.148853,2.02188 -1.416569,3.76657 0.144102,4.6503"];
       break;
   }
 };
@@ -263,8 +261,8 @@ GreggV.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-8.0004, 13.856);
-      this.paths = ["m 0,0 c 3.9725,2.25 -3.9014,10.078 -8.0004,13.856"];
+      this.dp = p(-7.000714, 12.12559);
+      this.paths = ["m 0,0 c 1.56067,0.88373 1.29296,2.62842 0.1441,4.6503 -1.77568,3.12497 -4.656834,5.18131 -7.144814,7.47529"];
       break;
   }
 };
