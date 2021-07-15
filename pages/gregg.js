@@ -523,6 +523,12 @@ GreggA.prototype.setPaths = function() {
       this.paths = ["m 0,0 c -3.846236,-0.62157 -2.42044,-3.58214 -0.948451,-2.82421"];
       return;
 
+    case "GreggSh":
+    case "GreggCh":
+    case "GreggJ":
+      this.dp = p(0.55161, -0.95543);
+      this.paths = ["m 0,0 c -1.56421,0 -1.93663,-1.14836 -1.2955,-1.78949 0.83908,-0.83908 2.53423,-0.35606 1.84711,0.83406"];
+      return;
   }
 
   if (_head === "") {
@@ -570,6 +576,12 @@ GreggA.prototype.setPaths = function() {
       this.paths = ["m 0,0 c 1.47199,0.75793 2.89779,-2.20264 -0.94845,-2.82421"];
       return;
 
+    case "GreggSh":
+    case "GreggCh":
+    case "GreggJ":
+      this.dp = p(0.5739, -0.99404);
+      this.paths = ["m 0,0 c -0.58122,1.00671 -1.69388,0.6352 -1.69388,-0.15071 0,-1.06833 1.47407,-1.30158 2.26778,-0.84333"];
+      return;
   }
 
   //switch (name_ + "_" + _name) {
