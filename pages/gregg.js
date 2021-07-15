@@ -276,8 +276,8 @@ GreggCh.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-4.01504, 5.73406);
-      this.paths = ["m 0 0 l -4.01504 5.73406"];
+      this.dp = p(-3.5, 6.06218);
+      this.paths = ["m 0,0 -3.5,6.06218"];
       break;
   }
 };
