@@ -24,12 +24,12 @@
      inkscape:document-units="mm"
      showgrid="false"
      inkscape:zoom="5.6239988"
-     inkscape:cx="379.88984"
-     inkscape:cy="610.24195"
-     inkscape:window-width="1366"
-     inkscape:window-height="713"
-     inkscape:window-x="0"
-     inkscape:window-y="27"
+     inkscape:cx="374.73337"
+     inkscape:cy="610.15305"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
      inkscape:window-maximized="1"
      inkscape:current-layer="layer1" />
   <defs
@@ -50,6 +50,6 @@
        data-scroll-y="0"
        data-speed="0.03"
        id="path134"
-       style="fill:none;stroke:#000000;stroke-width:0.212599;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+       style="fill:none;stroke:#000000;stroke-width:0.425;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
   </g>
 </svg>
