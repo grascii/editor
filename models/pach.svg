@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg7389"
+   sodipodi:docname="pach.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7391"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.6239988"
+     inkscape:cx="435.6331"
+     inkscape:cy="538.14023"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g7599" />
+  <defs
+     id="defs7386" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#cccccc;stroke-width:0.199654"
+       d="m 110.14274,152.63319 c 0,-0.0908 0.38183,-0.58256 0.84853,-1.09282 0.46669,-0.51027 1.11807,-1.25915 1.44749,-1.66417 0.32943,-0.40501 0.83864,-0.98691 1.13156,-1.29308 l 0.5326,-0.55668 -0.3732,-0.73203 c -0.58552,-1.14846 -0.25769,-2.17834 1.20987,-3.80059 0.67411,-0.74516 2.64268,-2.27553 2.9271,-2.27553 0.0748,0 0.52859,-0.18998 1.00823,-0.42217 0.47964,-0.23219 0.92342,-0.37083 0.98615,-0.30809 0.2035,0.20349 -0.11342,0.73026 -0.43933,0.73026 -0.66147,0 -2.77817,1.24092 -3.80716,2.23199 -1.10111,1.0605 -1.58043,2.02507 -1.50895,3.03654 0.0608,0.86052 0.22565,0.99285 0.70014,0.56204 1.05249,-0.95564 2.08217,-1.46491 2.83364,-1.4015 1.38381,0.11676 1.39737,1.0644 0.0308,2.15953 -0.50749,0.40671 -0.86465,0.50515 -1.92889,0.53167 l -1.30609,0.0326 -0.87444,1.06557 c -2.0904,2.54728 -3.41813,3.78893 -3.41813,3.19653 z m 6.52569,-4.83754 c 0.58541,-0.21966 1.46049,-1.03229 1.46049,-1.35627 0,-0.2935 -0.57921,-0.4417 -1.16388,-0.2978 -0.70766,0.17418 -1.40117,0.63638 -1.64862,1.09875 -0.3877,0.72441 0.22772,0.97718 1.35201,0.55532 z"
+       id="path7770" />
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g7611">
+      <g
+         style="stroke:#000000;stroke-width:0.374021139474"
+         id="g7593">
+        <title
+           id="title7591">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.374021139474"
+         id="g7599">
+        <title
+           id="title7595">GreggA</title>
+        <path
+           d="m 118.42054,147.29659 c 1.307,0.723 4.878,-0.763 3.449,-1.864 -0.979,-0.754 -2.833,0.796 -3.449,1.864"
+           data-char="GreggA"
+           data-head="C"
+           data-tail="C"
+           data-kana="a"
+           data-model="C4"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path7597" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g7626"
+       transform="translate(19.126335,24.324645)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g163">
+        <title
+           id="title161">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(-1.4019369,14.355933)"
+         id="g169">
+        <title
+           id="title165">GreggCh</title>
+        <path
+           d="m 96.841407,109.17733 -3.5,6.06218"
+           data-char="GreggCh"
+           data-head="SW"
+           data-tail="SW"
+           data-kana="ch"
+           data-model="SW7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path167" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g148"
+       transform="translate(6.5516251,-16.508862)">
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g130">
+        <title
+           id="title128">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g136">
+        <title
+           id="title132">GreggR</title>
+        <path
+           d="m 111.51418,158.30477 c -1.89,1.64 -5.518,4.816 -3.5,6.062"
+           data-char="GreggR"
+           data-head="EL"
+           data-tail="EL"
+           data-kana="r"
+           data-model="EL7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path134"
+           style="stroke-width:0.425;stroke-miterlimit:4;stroke-dasharray:none" />
+      </g>
+    </g>
+  </g>
+</svg>

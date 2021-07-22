@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg9110"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   sodipodi:docname="chaf.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview9112"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="7.9535353"
+     inkscape:cx="379.39103"
+     inkscape:cy="733.82461"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs9107" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g7626"
+       transform="rotate(180,96.830024,158.97321)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g163">
+        <title
+           id="title161">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(-1.4019369,14.355933)"
+         id="g169">
+        <title
+           id="title165">GreggCh</title>
+        <path
+           d="m 96.841407,109.17733 -3.5,6.06218"
+           data-char="GreggCh"
+           data-head="SW"
+           data-tail="SW"
+           data-kana="ch"
+           data-model="SW7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path167" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g148"
+       transform="rotate(180,103.11738,179.38996)">
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g130">
+        <title
+           id="title128">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g136">
+        <title
+           id="title132">GreggR</title>
+        <path
+           d="m 111.51418,158.30477 c -1.89,1.64 -5.518,4.816 -3.5,6.062"
+           data-char="GreggR"
+           data-head="EL"
+           data-tail="EL"
+           data-kana="r"
+           data-model="EL7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path134"
+           style="stroke-width:0.425;stroke-miterlimit:4;stroke-dasharray:none" />
+      </g>
+    </g>
+    <path
+       d="m 96.088358,193.35503 c -0.616,1.068 -2.470004,2.61799 -3.449004,1.864 -1.429,-1.101 2.142004,-2.58701 3.449004,-1.864"
+       data-char="GreggA"
+       data-head="C"
+       data-tail="C"
+       data-kana="a"
+       data-model="C4"
+       data-key=""
+       data-speed-factor="1"
+       data-scroll-y="0"
+       data-speed="0.03"
+       id="path7597"
+       style="fill:none;stroke:#000000;stroke-width:0.374021;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1" />
+  </g>
+</svg>
