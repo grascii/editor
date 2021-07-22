@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg5"
+   sodipodi:docname="fach.svg"
+   inkscape:version="1.1 (ce6663b3b7, 2021-05-25)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="15.907071"
+     inkscape:cx="368.4525"
+     inkscape:cy="596.18142"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g938" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <path
+       style="fill:#e6e6e6;stroke-width:0.235889"
+       d="m 97.228163,161.76782 c 0.08852,-0.29191 0.362023,-0.75092 0.607776,-1.02002 0.569947,-0.6241 0.369088,-0.82178 -0.563297,-0.55437 -0.827387,0.23729 -1.588975,-0.23282 -1.588975,-0.98085 0,-0.85818 2.24289,-2.01573 3.548705,-1.83148 0.322482,0.0455 0.682599,0.31707 0.812208,0.6125 0.12807,0.29191 0.32904,0.53075 0.44661,0.53075 0.11756,0 0.93755,-0.74714 1.8222,-1.66031 2.06321,-2.12975 2.45647,-3.54877 1.05345,-3.80122 -0.64118,-0.11537 -0.59751,-0.53822 0.0653,-0.63205 0.63443,-0.0898 1.68712,0.77168 1.68712,1.38068 0,1.20722 -2.1714,3.80528 -4.25546,5.09164 -1.231313,0.76001 -3.057112,2.67013 -3.057112,3.19831 0,0.10844 -0.166378,0.19718 -0.36973,0.19718 -0.273853,0 -0.327992,-0.13764 -0.208777,-0.53076 z m 1.411696,-2.40582 c 0.990408,-0.41382 1.17064,-1.30943 0.263512,-1.30943 -1.285335,0 -2.848177,1.00056 -2.346477,1.50227 0.2545,0.2545 1.228045,0.16437 2.082965,-0.19284 z"
+       id="path1882" />
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g950">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         id="g932">
+        <title
+           id="title930">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         id="g938">
+        <title
+           id="title934">GreggA</title>
+        <path
+           d="m 98.664276,156.93032 c -1.4602,1.115 -3.8388,1.176 -3.6875,0.051 0.1208,-0.898 1.6526,-1.355 2.4143,-1.357 0.762,-0.001 1.6159,0.712 1.2732,1.306"
+           data-char="GreggA"
+           data-head="C"
+           data-tail="C"
+           data-kana="a"
+           data-model="C4"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path936" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g965"
+       transform="translate(-5.86445,37.74792)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g163">
+        <title
+           id="title161">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(9,12.1)"
+         id="g169">
+        <title
+           id="title165">GreggCh</title>
+        <path
+           d="m 96.841407,109.17733 -3.5,6.06218"
+           data-char="GreggCh"
+           data-head="SW"
+           data-tail="SW"
+           data-kana="ch"
+           data-model="SW7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path167" />
+      </g>
+    </g>
+    <path
+       d="m 103.47695,152.96325 c 2.018,1.246 -1.60999,4.422 -3.499993,6.062"
+       data-char="GreggR"
+       data-head="EL"
+       data-tail="EL"
+       data-kana="r"
+       data-model="EL7"
+       data-key=""
+       data-speed-factor="1"
+       data-scroll-y="0"
+       data-speed="0.03"
+       id="path134"
+       style="fill:none;stroke:#000000;stroke-width:0.425;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+  </g>
+</svg>
