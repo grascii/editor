@@ -943,6 +943,12 @@ GreggE.prototype.setPaths = function() {
       this.paths = ["m 0,0 c 0.5179,0.31 1.0037,-0.488 0.6506,-0.848 -0.3301,-0.337 -0.8578,-0.196 -1.2162,0.071"];
       return;
 
+    case "GreggF":
+    case "GreggV":
+      this.dp = p(0, 0);
+      this.paths = ["m 0,0 c -0.913819,0.62316 -1.029063,0.67387 -1.234768,0.32554 -0.03994,-0.87953 1.118927,-0.95042 1.234768,-0.32554"];
+      return;
+
     case "GreggSh":
     case "GreggCh":
     case "GreggJ":
