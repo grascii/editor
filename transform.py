@@ -27,13 +27,14 @@ class Transformations:
 
 class ModelBuilder():
 
-    def __init__(self):
+    def __init__(self, base_path):
+        self.base_path = base_path
         self.bases = {}
 
     def get_base_paths(self, name):
         if name in self.bases:
             return self.bases[name]
-        filename = Path("models", name).with_suffix(".svg")
+        filename = Path(self.base_path, name).with_suffix(".svg")
         if not filename.exists():
             raise FileNotFoundError
         doc = Document(filename)
@@ -60,7 +61,7 @@ class ModelBuilder():
             new_doc.add_path(path.d(rel=True), group=[MODEL_ID])
         new_doc.write(filename)
 
-builder = ModelBuilder()
+builder = ModelBuilder("base_models")
 
 with open("recipes.json") as recipe_file:
     recipes = json.load(recipe_file)
