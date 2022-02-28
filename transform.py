@@ -84,4 +84,6 @@ for stroke_name, stroke in recipes.items():
                 "paths": list(map(lambda path: path.d(rel=True), paths))
             }
 
-json.dump(output, open("out.json", "w"), indent=2)
+with open("pages/paths.js", "w") as out_file:
+    out_file.write("PATHS = ")
+    json.dump(output, out_file, indent=2)

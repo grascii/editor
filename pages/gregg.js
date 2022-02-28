@@ -1,6 +1,10 @@
 GreggChar = function(name, kana, model, headType, tailType, color) { Char.apply(this, arguments); };
 GreggChar.prototype = Object.create(Char.prototype);
 GreggChar.dict = {};
+GreggChar.prototype.setPathsFromObject = function(obj) {
+  this.dp = p(obj.dp.x, obj.dp.y);
+  this.paths = obj.paths;
+}
 Char.catalog["gregg"] = GreggChar.dict;
 
 
@@ -16,9 +20,7 @@ GreggK.prototype.setPaths = function() {
       //return;
 
     default:
-      this.dp = p(7, 0);
-      //this.paths = ["m 0 0 c 2.17775 -1.24421 7.47367 -1.654 7 0"];
-      this.paths = ["m 0 0 c 2.3661,-0.8172 6.9303,-2.3707 7,0"]
+      this.setPathsFromObject(PATHS.K.default)
       break;
   }
 };
@@ -83,8 +85,7 @@ GreggR.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(7, 0);
-      this.paths = ["m 0 0 c 0.069725 2.37067 4.63395 0.817184 7 0"];
+      this.setPathsFromObject(PATHS.R.default)
       break;
   }
 };

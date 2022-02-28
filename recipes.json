@@ -1,11 +1,11 @@
 {
-  "r": {
+  "R": {
     "default": {
       "base": "r",
       "transformation": "identity"
     }
   },
-  "k": {
+  "K": {
     "default": {
       "base": "r",
       "transformation": "r_to_k"
