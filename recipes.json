@@ -5,10 +5,70 @@
       "transformation": "identity"
     }
   },
+  "L": {
+    "default": {
+      "base": "l",
+      "transformation": "identity"
+    }
+  },
   "K": {
     "default": {
       "base": "r",
       "transformation": "r_to_k"
+    }
+  },
+  "G": {
+    "default": {
+      "base": "l",
+      "transformation": "r_to_k"
+    }
+  },
+  "N": {
+    "default": {
+      "base": "n",
+      "transformation": "identity"
+    }
+  },
+  "M": {
+    "default": {
+      "base": "m",
+      "transformation": "identity"
+    }
+  },
+  "T": {
+    "default": {
+      "base": "t",
+      "transformation": "identity"
+    }
+  },
+  "SH": {
+    "default": {
+      "base": "sh",
+      "transformation": "identity"
+    }
+  },
+  "CH": {
+    "default": {
+      "base": "ch",
+      "transformation": "identity"
+    }
+  },
+  "J": {
+    "default": {
+      "base": "j",
+      "transformation": "identity"
+    }
+  },
+  "A": {
+    "default": {
+      "base": "a",
+      "transformation": "identity"
+    }
+  },
+  "E": {
+    "default": {
+      "base": "e",
+      "transformation": "identity"
     }
   }
 }

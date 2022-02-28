@@ -73,8 +73,7 @@ GreggG.prototype.setPaths = function() {
       //return;
   //}
 
-  this.dp = p(14, 0);
-  this.paths = ["m 0,0 c 3.23064,-1.00766 6.45207,-2.47465 10.0462,-2.44995 2.32544,0.016 3.97023,0.6565 3.95523,2.44995"]
+  this.setPathsFromObject(PATHS.G.default);
 };
 
 GreggR = function() { GreggChar.call(this, "GreggR", "r", "EL7", "EL", "EL", "black", false, p(0.0, -0.6)); };
@@ -107,8 +106,7 @@ GreggL.prototype.setPaths = function() {
       //break;
 
     default:
-      this.dp = p(14, 0);
-      this.paths = ["m 0,0 c -0.015,1.79345 1.62979,2.43394 3.95523,2.44995 3.59413,0.0247 6.81556,-1.44229 10.0462,-2.44995"];
+      this.setPathsFromObject(PATHS.L.default);
       break;
   }
 };
@@ -128,8 +126,7 @@ GreggN.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(4, 0);
-      this.paths = ["m 0 0 l 4 0"];
+      this.setPathsFromObject(PATHS.N.default)
       break;
   }
 };
@@ -150,8 +147,7 @@ GreggM.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(10, 0);
-      this.paths = ["m 0 0 l 10 0"];
+      this.setPathsFromObject(PATHS.M.default);
       break;
   }
 };
@@ -164,8 +160,7 @@ GreggT.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(3.4641, -2);
-      this.paths = ["m 0 0 l 3.4641 -2"];
+      this.setPathsFromObject(PATHS.T.default);
       break;
   }
 };
@@ -277,8 +272,7 @@ GreggCh.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-3.5, 6.06218);
-      this.paths = ["m 0,0 -3.5,6.06218"];
+      this.setPathsFromObject(PATHS.CH.default);
       break;
   }
 };
@@ -291,8 +285,7 @@ GreggJ.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-7, 12.1243);
-      this.paths = ["m 0 0 l -7 12.1243"];
+      this.setPathsFromObject(PATHS.J.default);
       break;
   }
 };
@@ -333,8 +326,7 @@ GreggSh.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-2, 3.4641);
-      this.paths = ["m 0 0 l -2 3.4641"];
+      this.setPathsFromObject(PATHS.SH.default);
       break;
   }
 };
@@ -761,9 +753,8 @@ GreggA.prototype.setPaths = function() {
   //switch (_model) {}
 
   //switch (_head) {}
+  this.setPathsFromObject(PATHS.A.default);
 
-  this.dp = p(0, 0);
-  this.paths = ["m 0 0 c -1.2047 -0.10718 -2.8967 0.74715 -3.06293 1.94513 c -0.0975 0.70262 0.711768 1.51973 1.41794 1.58685 c 1.25154 0.11895 2.94049 -1.03272 2.99782 -2.28859 c 0.02793 -0.61184 -0.74276 -1.18911 -1.35283 -1.24339"];
 };
 
 GreggE = function() { GreggChar.call(this, "GreggE", "e", "C1", "C", "C", "black", false, p(1.0, -0.6)); };
@@ -984,8 +975,7 @@ GreggE.prototype.setPaths = function() {
       return;
   }
 
-  this.dp = p(0, 0);
-  this.paths = ["m 0 0 c -0.405 -0.036 -0.97382 0.25118 -1.02971 0.65392 c -0.0328 0.23621 0.23929 0.51091 0.47668 0.53348 c 0.42076 0.0399 0.98856 -0.34718 1.00783 -0.76939 c 0.009 -0.20569 -0.24971 -0.39976 -0.4548 -0.41801"];
+  this.setPathsFromObject(PATHS.E.default);
 };
 
 GreggO = function() { GreggChar.call(this, "GreggO", "o", "USW2.5", "SWL", "NEL", "black", false, p(0.8, -0.8)); };
