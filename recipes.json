@@ -1,0 +1,10 @@
+{
+  "r": {
+    "base": "r",
+    "transformation": "identity"
+  },
+  "k": {
+    "base": "r",
+    "transformation": "r_to_k"
+  }
+}
