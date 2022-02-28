@@ -1,10 +1,14 @@
 {
   "r": {
-    "base": "r",
-    "transformation": "identity"
+    "default": {
+      "base": "r",
+      "transformation": "identity"
+    }
   },
   "k": {
-    "base": "r",
-    "transformation": "r_to_k"
+    "default": {
+      "base": "r",
+      "transformation": "r_to_k"
+    }
   }
 }

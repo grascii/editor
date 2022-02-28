@@ -36,9 +36,23 @@ def create_model(recipe):
         shifted = shift_to_origin(path)
         new_doc.add_path(shifted.d(rel=True), group=[MODEL_ID])
     print(new_doc)
+    return new_paths
 
 with open("recipes.json") as recipe_file:
     recipes = json.load(recipe_file)
 
-for _, recipe in recipes.items():
-    create_model(recipe)
+output = {}
+for stroke_name, stroke in recipes.items():
+    output[stroke_name] = {}
+    for recipe_name, recipe in stroke.items():
+        paths = create_model(recipe)
+        delta_position = paths[-1].end - paths[0].start
+        output[stroke_name][recipe_name] = {
+            "dp": {
+                "x": delta_position.real,
+                "y": delta_position.imag
+            },
+            "paths": list(map(lambda path: path.d(rel=True), paths))
+        }
+
+json.dump(output, open("out.json", "w"), indent=2)
