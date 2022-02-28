@@ -1,6 +1,7 @@
 
 import json
 import numpy as np
+import warnings
 from pathlib import Path
 from svgpathtools import svg2paths, disvg, Document, QuadraticBezier, CubicBezier
 from svgpathtools.path import transform
@@ -16,27 +17,50 @@ class Transformations:
     def identity(path):
         return path
 
-def shift_to_origin(path):
-    shift = np.array([
-        [1, 0, -path.start.real],
-        [0, 1, -path.start.imag],
-        [0, 0, 1]
-    ])
-    return transform(path, shift)
+    def shift_to_origin(path):
+        shift = np.array([
+            [1, 0, -path.start.real],
+            [0, 1, -path.start.imag],
+            [0, 0, 1]
+        ])
+        return transform(path, shift)
 
-def create_model(recipe):
-    filename = Path("models", recipe["base"]).with_suffix(".svg")
-    doc = Document(filename)
-    paths = doc.paths_from_group([MODEL_ID])
-    new_paths = list(map(getattr(Transformations, recipe["transformation"]), paths))
+class ModelBuilder():
 
-    new_doc = Document()
-    new_doc.root.set("style", STYLE)
-    for path in new_paths:
-        shifted = shift_to_origin(path)
-        new_doc.add_path(shifted.d(rel=True), group=[MODEL_ID])
-    print(new_doc)
-    return new_paths
+    def __init__(self):
+        self.bases = {}
+
+    def get_base_paths(self, name):
+        if name in self.bases:
+            return self.bases[name]
+        filename = Path("models", name).with_suffix(".svg")
+        if not filename.exists():
+            raise FileNotFoundError
+        doc = Document(filename)
+        paths = doc.paths_from_group([MODEL_ID])
+        self.bases[name] = paths
+        return paths
+
+    def create_model(self, recipe, name):
+        paths = self.get_base_paths(recipe["base"])
+        transformation = Transformations.identity
+        try:
+            transformation = getattr(Transformations, recipe["transformation"])
+        except AttributeError:
+            warnings.warn(f"{name}: {recipe['transformation']} " \
+                    "is not a known transformation. " \
+                    "The identity transformation will be applied instead.")
+        new_paths = list(map(lambda p: Transformations.shift_to_origin(transformation(p)), paths))
+        return new_paths
+
+    def write_model(paths, filename):
+        new_doc = Document()
+        new_doc.root.set("style", STYLE)
+        for path in new_paths:
+            new_doc.add_path(path.d(rel=True), group=[MODEL_ID])
+        new_doc.write(filename)
+
+builder = ModelBuilder()
 
 with open("recipes.json") as recipe_file:
     recipes = json.load(recipe_file)
@@ -45,14 +69,19 @@ output = {}
 for stroke_name, stroke in recipes.items():
     output[stroke_name] = {}
     for recipe_name, recipe in stroke.items():
-        paths = create_model(recipe)
-        delta_position = paths[-1].end - paths[0].start
-        output[stroke_name][recipe_name] = {
-            "dp": {
-                "x": delta_position.real,
-                "y": delta_position.imag
-            },
-            "paths": list(map(lambda path: path.d(rel=True), paths))
-        }
+        full_name = f"{stroke_name}.{recipe_name}"
+        try:
+            paths = builder.create_model(recipe, full_name)
+        except FileNotFoundError:
+            warnings.warn(f"{full_name}: Base file does not exist.")
+        else:
+            delta_position = paths[-1].end - paths[0].start
+            output[stroke_name][recipe_name] = {
+                "dp": {
+                    "x": delta_position.real,
+                    "y": delta_position.imag
+                },
+                "paths": list(map(lambda path: path.d(rel=True), paths))
+            }
 
 json.dump(output, open("out.json", "w"), indent=2)
