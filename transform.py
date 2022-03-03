@@ -3,7 +3,7 @@ import json
 import numpy as np
 import warnings
 from pathlib import Path
-from svgpathtools import svg2paths, disvg, Document, QuadraticBezier, CubicBezier
+from svgpathtools import Document, SVG_GROUP_TAG, SVG_NAMESPACE
 from svgpathtools.path import transform
 
 MODEL_ID = "model"
@@ -48,7 +48,9 @@ class ModelBuilder():
         if not filename.exists():
             raise FileNotFoundError
         doc = Document(filename)
-        paths = doc.paths_from_group([MODEL_ID])
+        groups = doc.root.findall(f".//{SVG_GROUP_TAG}[@id='{MODEL_ID}']", SVG_NAMESPACE)
+        assert len(groups) == 1
+        paths = doc.paths_from_group(groups[0])
         self.bases[name] = paths
         return paths
 
