@@ -47,6 +47,18 @@
       "transformation": "n_to_t"
     }
   },
+  "P": {
+    "default": {
+      "base": "r",
+      "transformation": "r_to_p"
+    }
+  },
+  "B": {
+    "default": {
+      "base": "l",
+      "transformation": "r_to_p"
+    }
+  },
   "SH": {
     "default": {
       "base": "sh",

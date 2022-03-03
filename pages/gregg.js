@@ -214,8 +214,7 @@ GreggP.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-3.5, 6.062);
-      this.paths = ["m 0,0 c -1.89,1.64 -5.518,4.816 -3.5,6.062"];
+      this.setPathsFromObject(PATHS.P.default);
       break;
   }
 };
@@ -228,8 +227,7 @@ GreggB.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(-7.000717, 12.12559);
-      this.paths = ["m 0,0 c -2.48798,2.29398 -5.36914,4.35032 -7.144819,7.47529 -1.148853,2.02188 -1.416569,3.76657 0.144102,4.6503"];
+      this.setPathsFromObject(PATHS.B.default);
       break;
   }
 };

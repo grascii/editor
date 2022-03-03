@@ -17,8 +17,17 @@ class Transformations:
     def n_to_t(path):
         return path.rotated(-30)
 
+    def r_to_p(path):
+        return Transformations.reflect_across_x_axis(path).rotated(-60).reversed()
+
     def identity(path):
         return path
+
+    def reflect_across_x_axis(path):
+        return path.scaled(1, -1)
+
+    def reflect_across_y_axis(path):
+        return path.scaled(-1, 1)
 
     def shift_to_origin(path):
         return path.translated(-path.start)
