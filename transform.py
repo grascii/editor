@@ -18,12 +18,7 @@ class Transformations:
         return path
 
     def shift_to_origin(path):
-        shift = np.array([
-            [1, 0, -path.start.real],
-            [0, 1, -path.start.imag],
-            [0, 0, 1]
-        ])
-        return transform(path, shift)
+        return path.translated(-path.start)
 
 class ModelBuilder():
 
