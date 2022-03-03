@@ -26,6 +26,9 @@ class Transformations:
     def identity(path):
         return path
 
+    def rotate_180(path):
+        return path.rotated(180)
+
     def reflect_across_x_axis(path):
         return path.scaled(1, -1)
 
@@ -72,6 +75,7 @@ class ModelBuilder():
         for path in new_paths:
             new_doc.add_path(path.d(rel=True), group=[MODEL_ID])
         new_doc.write(filename)
+
 
 builder = ModelBuilder("base_models")
 

@@ -93,6 +93,10 @@
     "default": {
       "base": "a",
       "transformation": "identity"
+    },
+    "NE_E": {
+      "base": "a/tan",
+      "transformation": "identity"
     }
   },
   "E": {
