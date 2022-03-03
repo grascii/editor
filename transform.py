@@ -20,6 +20,9 @@ class Transformations:
     def r_to_p(path):
         return Transformations.reflect_across_x_axis(path).rotated(-60).reversed()
 
+    def r_to_f(path):
+        return Transformations.reflect_across_y_axis(path).rotated(-60)
+
     def identity(path):
         return path
 

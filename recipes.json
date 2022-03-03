@@ -59,6 +59,18 @@
       "transformation": "r_to_p"
     }
   },
+  "F": {
+    "default": {
+      "base": "r",
+      "transformation": "r_to_f"
+    }
+  },
+  "V": {
+    "default": {
+      "base": "l",
+      "transformation": "r_to_f"
+    }
+  },
   "SH": {
     "default": {
       "base": "sh",
