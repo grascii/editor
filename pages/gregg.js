@@ -173,8 +173,7 @@ GreggD.prototype.setPaths = function() {
   switch (this.getNextHeadType()) {
 
     default:
-      this.dp = p(8.66025, -5);
-      this.paths = ["m 0 0 l 8.66025 -5"];
+      this.setPathsFromObject(PATHS.D.default);
       break;
   }
 };

@@ -14,6 +14,9 @@ class Transformations:
     def r_to_k(path):
         return path.rotated(180).reversed()
 
+    def n_to_t(path):
+        return path.rotated(-30)
+
     def identity(path):
         return path
 

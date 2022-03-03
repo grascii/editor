@@ -37,8 +37,14 @@
   },
   "T": {
     "default": {
-      "base": "t",
-      "transformation": "identity"
+      "base": "n",
+      "transformation": "n_to_t"
+    }
+  },
+  "D": {
+    "default": {
+      "base": "m",
+      "transformation": "n_to_t"
     }
   },
   "SH": {
