@@ -26,8 +26,8 @@ class Transformations:
     def identity(path):
         return path
 
-    def rotate_180(path):
-        return path.rotated(180)
+    def rotate_180_reverse(path):
+        return path.rotated(180).reversed()
 
     def reflect_across_x_axis(path):
         return path.scaled(1, -1)

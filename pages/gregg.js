@@ -386,8 +386,7 @@ GreggA.prototype.setPaths = function() {
       return;
 
     case "E_NE":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.3759,0.005 1.8082,-0.099 2.1814,0.656 0.481,0.974 -1.7262,2.119 -3.0483,1.492 -0.5294,-0.251 -0.5525,-1.328 0.8669,-2.148"];
+      this.setPathsFromObject(PATHS.A.E_NE);
       return;
 
     case "EL_EL":

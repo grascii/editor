@@ -97,6 +97,10 @@
     "NE_E": {
       "base": "a/tan",
       "transformation": "identity"
+    },
+    "E_NE": {
+      "base": "a/tan",
+      "transformation": "rotate_180_reverse"
     }
   },
   "E": {
