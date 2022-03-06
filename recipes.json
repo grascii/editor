@@ -161,6 +161,102 @@
     "NE_EL": {
       "base": "a/tar",
       "transformation": "identity"
+    },
+    "ER_SWL": {
+      "base": "a/kap",
+      "transformation": "identity"
+    },
+    "SWR_EL": {
+      "base": "a/kap",
+      "transformation": "rotate_180_reverse"
+    },
+    "EL_SWL": {
+      "base": "a/rap",
+      "transformation": "identity"
+    },
+    "SWR_ER": {
+      "base": "a/rap",
+      "transformation": "rotate_180_reverse"
+    },
+    "E_SWL": {
+      "base": "a/nap",
+      "transformation": "identity"
+    },
+    "SWR_E": {
+      "base": "a/nap",
+      "transformation": "rotate_180_reverse"
+    },
+    "NE_SWL": {
+      "base": "a/tap",
+      "transformation": "identity"
+    },
+    "SWR_NE": {
+      "base": "a/tap",
+      "transformation": "rotate_180_reverse"
+    },
+    "ER_SW": {
+      "base": "a/kach",
+      "transformation": "identity"
+    },
+    "SW_EL": {
+      "base": "a/kach",
+      "transformation": "rotate_180_reverse"
+    },
+    "EL_SW": {
+      "base": "a/rach",
+      "transformation": "identity"
+    },
+    "SW_ER": {
+      "base": "a/rach",
+      "transformation": "rotate_180_reverse"
+    },
+    "E_SW": {
+      "base": "a/nach",
+      "transformation": "identity"
+    },
+    "SW_E": {
+      "base": "a/nach",
+      "transformation": "rotate_180_reverse"
+    },
+    "NE_SW": {
+      "base": "a/tach",
+      "transformation": "identity"
+    },
+    "SW_NE": {
+      "base": "a/tach",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_SW": {
+      "base": "a/pach",
+      "transformation": "identity"
+    },
+    "SW_SWR": {
+      "base": "a/pach",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWR_SW": {
+      "base": "a/fach",
+      "transformation": "identity"
+    },
+    "SW_SWL": {
+      "base": "a/fach",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_SWL": {
+      "base": "a/pap",
+      "transformation": "identity"
+    },
+    "SWR_SWR": {
+      "base": "a/faf",
+      "transformation": "identity"
+    },
+    "SWR_SWL": {
+      "base": "a/fap",
+      "transformation": "identity"
+    },
+    "SW_SW": {
+      "base": "a/nan",
+      "transformation": "flip_rotate_60_reverse"
     }
   },
   "E": {

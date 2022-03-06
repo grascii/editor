@@ -35,6 +35,9 @@ class Transformations:
     def reflect_across_y_axis(path):
         return path.scaled(-1, 1)
 
+    def flip_rotate_60_reverse(path):
+        return Transformations.reflect_across_x_axis(path).rotated(-60).reversed()
+
     def shift_to_origin(path):
         return path.translated(-path.start)
 

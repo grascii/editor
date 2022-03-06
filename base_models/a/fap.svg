@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m111.89 172.74c0.0899-0.14552 0.32806-0.26459 0.52916-0.26459 0.20111 0 0.43923 0.11907 0.52917 0.26459 0.0931 0.15065-0.13475 0.26458-0.52917 0.26458-0.39441 0-0.62227-0.11393-0.52916-0.26458zm-9.0031-1.9702c-0.51907-1.7855-0.34155-2.8782 0.84057-5.1736 0.81059-1.574 2.2633-3.3048 4.227-5.0362 2.0073-1.7699 3.4584-4.2477 3.1672-5.408-0.20301-0.80883 0.46047-1.408 1.033-0.93281 0.21828 0.18116 0.39688 0.53839 0.39688 0.79384 0 0.74021-0.76743 2.3759-1.4705 3.134-0.80117 0.86404-0.81197 1.0981-0.0509 1.1032 1.0344 7e-3 1.4028 0.40297 1.1149 1.1982-0.28894 0.79796-1.7565 1.4331-3.3266 1.4396-1.9278 8e-3 -4.3739 3.0001-5.1554 6.306-0.26834 1.1352-0.26722 1.6594 6e-3 2.712 0.27946 1.0774 0.27733 1.3048-0.0123 1.3048-0.19704 0-0.5343-0.63146-0.76964-1.441zm7.9808-9.9361c0.0218 0 0.11174-0.18803 0.19992-0.41784 0.13373-0.3485 0.0177-0.38734-0.69929-0.23403-0.47281 0.10109-1.0072 0.30261-1.1875 0.44782-0.55828 0.44961-0.10485 0.70654 0.79266 0.44914 0.47002-0.1348 0.87239-0.24509 0.89417-0.24509z" fill="#ccc" stroke-width=".26458"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(.56552 .083165)" stroke-width=".19461">
+   <g>
+    <title>CharNewline</title>
+   </g>
+   <g id="model">
+    <title>GreggA</title>
+    <path d="m109.5 161.85c-1.621 1.599 3.344 0.972 3.556-0.219 0.301-1.696-2.408-0.823-3.556 0.219" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <path d="m111.68 154.61c2.018 1.246-1.61 4.422-3.5 6.062" stroke-width=".425" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  <g transform="translate(-3.3298 2.3671)" stroke-width=".2126">
+   <g>
+    <title>CharNewline</title>
+   </g>
+   <g>
+    <title>GreggR</title>
+    <path d="m111.51 158.3c-1.89 1.64-5.518 4.816-3.5 6.062" stroke-width=".425" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>
