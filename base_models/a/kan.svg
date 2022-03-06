@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m96.137 149.78c-0.86875-0.506-0.0199-1.2673 1.7182-1.541 0.72381-0.11398 1.316-0.26237 1.316-0.32976 0-0.76315-2.7867-0.82187-4.7374-0.0998-0.70568 0.2612-1.4356 0.61297-1.6221 0.7817-0.41012 0.37115-0.87044 0.19041-0.53732-0.21098 0.52852-0.63683 1.5077-1.0129 3.4074-1.3088 2.1142-0.32929 3.379-0.19339 3.886 0.41753 0.17178 0.20697 0.56706 0.23507 1.8959 0.13475 1.3969-0.10544 1.6644-0.0827 1.5926 0.13536-0.058 0.17617-0.60534 0.3233-1.6696 0.44881-1.3318 0.15707-1.7002 0.27882-2.3195 0.76655-1.302 1.0254-2.1518 1.259-2.9302 0.80563zm1.9003-0.5075c0.35198-0.17479 0.67842-0.43587 0.72543-0.58019 0.12727-0.39072-1.8501-0.1275-2.153 0.2866-0.48956 0.66926 0.33114 0.83805 1.4275 0.29359z" fill="#ccc" stroke-width=".18672"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(88.347 136.13)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g id="model" transform="translate(8.1,13.2)">
+    <title>GreggA</title>
+    <path d="m0.67294-0.57435c0 0.81613-2.8482 2.1966-3.2503 1.1467-0.29323-0.76583 1.6592-1.1467 3.2503-1.1467" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <g transform="translate(56.867 127.34)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+    <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+  <g transform="translate(94.393 133.3)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,15)">
+    <title>GreggN</title>
+    <path d="m0 0h4" data-char="GreggN" data-head="E" data-kana="n" data-key="" data-model="E4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="E"/>
+   </g>
+  </g>
+ </g>
+</svg>

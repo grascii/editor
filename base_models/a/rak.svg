@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m95.065 149.21c-0.17415-0.27887-0.30738-0.30933-0.76414-0.17476-1.0065 0.29658-2.8999 0.21501-3.3179-0.14293-0.41658-0.35668-0.48177-0.69321-0.17144-0.88501 0.11309-0.0699 0.33893 0.0526 0.50659 0.27496 0.17994 0.23855 0.51534 0.41119 0.82772 0.42605 1.0285 0.0489 3.3711-0.2614 3.8526-0.51036 1.4487-0.74914 6.3813-1.3861 7.631-0.98539 0.97618 0.31302 1.5766 0.87568 1.2956 1.2142-0.18079 0.21784-0.24089 0.21895-0.4015 8e-3 -0.51548-0.67884-1.07-0.8603-2.6288-0.8603-2.0085 0-2.5625 0.11957-2.7727 0.59841-0.45438 1.0349-3.5623 1.8298-4.057 1.0377zm1.8409-0.21596c1.2773-0.408 1.5969-0.57473 1.5969-0.83305 0-0.14662-0.10519-0.22622-0.23375-0.17688-0.12857 0.0493-0.7328 0.22972-1.3427 0.40086-1.2265 0.34414-1.8408 0.80391-1.0741 0.80391 0.24409 0 0.71828-0.0877 1.0537-0.19484z" fill="#ccc" stroke-width=".17944"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke-width=".4252">
+   <g>
+    <title>CharNewline</title>
+   </g>
+   <g id="model">
+    <title>GreggA</title>
+    <path d="m96.576 148.94c2.5129-0.836 2.8133 0.223 0.5264 1.072-2.287 0.849-3.0393-0.236-0.5264-1.072" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <g transform="translate(61.276 127.17)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+    <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+  <g transform="translate(84.803 133.72)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,14.4)">
+    <title>GreggR</title>
+    <path d="m0 0c0.069725 2.3707 4.634 0.81718 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>

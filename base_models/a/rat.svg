@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m75.544 164.64c-0.50132-0.18433-1.0583-0.73528-1.0583-1.0468 0-0.3762 0.5172-0.36417 0.83556 0.0194 0.28857 0.34771 2.2942 0.65292 3.0477 0.4638 0.39286-0.0986 0.48323-0.23657 0.40907-0.62452-0.28263-1.4785 4.0107-3.1437 4.9154-1.9064 0.26251 0.35901 0.37917 0.33803 2.1495-0.38656 1.0296-0.4214 1.9441-0.72319 2.0323-0.67063 0.33066 0.19701-0.541 0.7676-1.7451 1.1424-0.68569 0.21341-1.4193 0.47529-1.6301 0.58196-1.2451 0.62976-3.9489 1.7856-5.0328 2.1514-1.1869 0.4006-3.1993 0.54217-3.9232 0.276zm6.5522-2.0402c1.4684-0.70928 1.4039-1.0739-0.16476-0.93168-1.3475 0.12218-2.5774 0.76152-2.5774 1.3398 0 0.41947 1.487 0.19817 2.7422-0.40809z" fill="#ccc" stroke-width=".21167"/>
+ <g id="model">
+  <path d="m79.076 161.54c1.5758-0.59803 2.2662-1.4599 1.4985-1.8137-1.3854-0.63866-4.3392 1.1147-4.1292 1.7862 0.35565 1.1374 4.1171-0.5457 5.1044-1.1158" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".41551" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+ </g>
+ <g transform="rotate(180 58.699 92.076)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke="#000" stroke-width=".4252">
+   <title>GreggR</title>
+   <path d="m35.717 20.882c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  </g>
+ </g>
+ <g transform="rotate(180 47.082 89.067)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="translate(6,10)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="translate(5,16)">
+   <title>GreggT</title>
+   <path d="m1.5438 2.0071 3.4641-2" data-char="GreggT" data-head="NE" data-kana="t" data-key="" data-model="NE4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="NE"/>
+  </g>
+ </g>
+</svg>

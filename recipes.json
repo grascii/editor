@@ -101,6 +101,66 @@
     "E_NE": {
       "base": "a/tan",
       "transformation": "rotate_180_reverse"
+    },
+    "EL_EL": {
+      "base": "a/rar",
+      "transformation": "identity"
+    },
+    "ER_E": {
+      "base": "a/kan",
+      "transformation": "identity"
+    },
+    "NE_ER": {
+      "base": "a/tak",
+      "transformation": "identity"
+    },
+    "EL_NE": {
+      "base": "a/rat",
+      "transformation": "identity"
+    },
+    "E_E": {
+      "base": "a/nan",
+      "transformation": "identity"
+    },
+    "NE_NE": {
+      "base": "a/nan",
+      "transformation": "n_to_t"
+    },
+    "ER_EL": {
+      "base": "a/kar",
+      "transformation": "identity"
+    },
+    "EL_ER": {
+      "base": "a/rak",
+      "transformation": "identity"
+    },
+    "ER_ER": {
+      "base": "a/kak",
+      "transformation": "identity"
+    },
+    "EL_E": {
+      "base": "a/ran",
+      "transformation": "identity"
+    },
+    "E_ER": {
+      "base": "a/ran",
+      "transformation": "rotate_180_reverse"
+    },
+    "E_EL": {
+      "base": "a/nar",
+      "transformation": "identity"
+    },
+    "ER_E": {
+      "base": "a/nar",
+      "transformation": "rotate_180_reverse"
+    },
+    "ER_NE": {
+      "base": "a/kat",
+      "transformation": "identity"
+    },
+    "NE_EL": {
+      "base": "a/tar",
+      "transformation": "identity"
     }
   },
   "E": {

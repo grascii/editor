@@ -390,73 +390,63 @@ GreggA.prototype.setPaths = function() {
       return;
 
     case "EL_EL":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0.843,-0.299 3.587,-0.964 3.582,-1.956 -0.004,-0.668 -1.574,-0.473 -2.299,-0.22 -0.994,0.347 -1.489,0.841 -1.283,2.176"];
+      this.setPathsFromObject(PATHS.A.EL_EL);
       return;
 
     case "ER_E":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0,0.81613014 -2.8482433,2.1966216 -3.2502542,1.14669441 -0.2932326,-0.76583205 1.65917755,-1.14669441 3.2502542,-1.14669441"];
+      this.setPathsFromObject(PATHS.A.ER_E);
       return;
 
     case "NE_ER":
-      this.dp = p(2.789699, -1.126);
-      this.paths = ["m 0,0 c 1.0447,-0.503 3.058699,-1.574 3.395699,-0.859 0.209,0.444 -1.529,1.832 -2.727399,1.649 -0.8357,-0.127 0.2474,-1.471 2.121399,-1.916"];
+      this.setPathsFromObject(PATHS.A.NE_ER);
       return;
 
     case "EL_NE":
-      this.dp = p(2.473805, -1.14324);
-      this.paths = ["m 0,0 c 1.57579,-0.59803 2.266179,-1.45987 1.49852,-1.81373 -1.385449,-0.63866 -4.33915,1.11467 -4.129157,1.78624 0.35565,1.13738 4.117091,-0.5457 5.104442,-1.11575"];
+      this.setPathsFromObject(PATHS.A.EL_NE);
       return;
 
     case "E_E":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.945012,0 1.658435,1.54372 4.65e-4,1.54372 -1.65797,0 -1.945477,-1.54372 -4.65e-4,-1.54372 z"];
+      this.setPathsFromObject(PATHS.A.E_E);
       return;
 
     case "NE_NE":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.68444,-0.97251 2.20811,0.50768 0.77227,1.33667 -1.43585,0.82898 -2.4567,-0.36416 -0.77227,-1.33667 z"];
+      this.setPathsFromObject(PATHS.A.NE_NE);
       return;
 
     case "ER_EL":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0.57472,2.33378 3.78504,0.71753 3.07657,-0.90707 -0.934,-1.617 -3.45677,-0.51093 -3.07657,0.90707"];
+      this.setPathsFromObject(PATHS.A.ER_EL);
       return;
 
     case "EL_ER":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 2.5129,-0.836 2.813304,0.223 0.5264,1.072 -2.287,0.849 -3.0393,-0.236 -0.5264,-1.072"];
+      this.setPathsFromObject(PATHS.A.EL_ER);
       return;
 
     case "ER_ER":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0,0.3183319 0.4770307,1.85534263 -1.292299,2.56204545 -0.929827,0.37139035 -2.372574,0.0738208 -1.414678,-1.21913686 0.597153,-0.80602969 2.093982,-1.17865709 2.706977,-1.34290859"];
+      this.setPathsFromObject(PATHS.A.ER_ER);
       return;
 
     case "EL_E":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.161,-0.403 2.226,-1.12 1.669,-1.666 -0.652,-0.639 -3.955895,0.477 -3.609495,1.285 0.2418,0.564 1.353495,0.381 1.940495,0.381"];
+      this.setPathsFromObject(PATHS.A.EL_E);
       return;
 
     case "E_ER":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0.587,0 1.6987,-0.183 1.9405,0.381 0.3464,0.808 -2.9575,1.924 -3.6095,1.285 -0.557,-0.546 0.508,-1.263 1.669,-1.666"];
+      this.setPathsFromObject(PATHS.A.E_ER);
       return;
 
     case "E_EL":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.591,0 3.544,-0.381 3.25,-1.146 -0.402,-1.05 -3.25,0.33 -3.25,1.146"];
+      this.setPathsFromObject(PATHS.A.E_EL);
+      return;
+
+    case "ER_E":
+      this.setPathsFromObject(PATHS.A.ER_E);
       return;
 
     case "ER_NE":
-      this.dp = p(-0.117, -0.534);
-      this.paths = ["m 0,0 c 0,0.251 0.197,1.32 -0.763,1.942 -1.833,1.186 -2.06,-0.33 -1.191,-1.136 0.739,-0.687 1.409,-1.093 1.837,-1.34"];
+      this.setPathsFromObject(PATHS.A.ER_NE);
       return;
 
     case "NE_EL":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 0.43932,-0.25364 0.852251,-0.43879 1.577553,-0.97792 1.113808,-0.8279 0.876309,-2.58877 -0.902515,-1.59026 -0.873187,0.49014 -0.900686,1.72606 -0.67504,2.56818"];
+      this.setPathsFromObject(PATHS.A.NE_EL);
       return;
 
     case "ER_SWL":

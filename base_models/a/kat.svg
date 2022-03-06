@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m102.77 151.27c-0.24814-0.40151 0.12936-1.0373 1.173-1.9757 0.97302-0.87483 1.0116-0.9468 0.57084-1.0649-1.2596-0.33764-4.1529 0.11628-5.622 0.88204-0.84484 0.44035-1.0949 0.41983-1.0949-0.0899 0-0.36013 0.5384-0.63501 2.0464-1.0448 2.1264-0.57782 3.6617-0.69737 4.8922-0.38095l1.1178 0.28743 1.0755-0.73985c1.1258-0.77444 1.3538-0.85728 1.5382-0.55894 0.12299 0.19901-0.5056 0.81096-1.4097 1.3724-0.44675 0.27742-0.58208 0.5259-0.58208 1.0687 0 0.74916-0.7578 1.7855-1.6265 2.2244-0.57861 0.29232-1.9027 0.30506-2.0788 0.02zm2.4191-0.96943c0.71823-0.60434 0.87402-1.3571 0.28082-1.3568-0.42953 1.9e-4 -1.9579 1.2952-1.9579 1.659 0 0.44089 1.0104 0.25887 1.6771-0.30211z" fill="#ccc" stroke-width=".21167"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="translate(-3.2098 .63246)">
+   <g>
+    <title>CharNewline</title>
+   </g>
+   <g id="model">
+    <title>GreggA</title>
+    <path d="m105.97 148.81c0 0.251 0.197 1.32-0.763 1.942-1.833 1.186-2.06-0.33-1.191-1.136 0.739-0.687 1.409-1.093 1.837-1.34" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <g transform="translate(63.443 127.85)">
+   <title>GreggR</title>
+   <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  </g>
+  <g transform="translate(101.88 132.09)">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,16)">
+    <title>GreggT</title>
+    <path d="m-1.0267 0.17834 3.4641-2" data-char="GreggT" data-head="NE" data-kana="t" data-key="" data-model="NE4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="NE"/>
+   </g>
+  </g>
+ </g>
+</svg>
