@@ -69,7 +69,7 @@ select {
   position: absolute;
   right: 0;
   top: 0;
-  background-image: url("bars_24.svg");
+  background-image: url("../images/bars_24.svg");
   background-size: 32px 28px;
   display: none;
 }
@@ -87,14 +87,14 @@ select {
 }
 
 .topnav #flipBtn {
-  background-image: url("flip.svg");
+  background-image: url("../images/flip.svg");
   background-size: contain;
   width: 3rem;
   height: 3rem;
 }
 
 .topnav #startAnimBtn {
-  background-image: url("anim_start.svg");
+  background-image: url("../images/anim_start.svg");
   background-size: contain;
   width: 3rem;
   height: 3rem;
@@ -115,21 +115,21 @@ button:active {
 }
 
 .topnav #svgDownloadBtn {
-  background-image: url("svg_download.svg");
+  background-image: url("../images/svg_download.svg");
   background-size: contain;
   width: 3rem;
   height: 3rem;
 }
 
 .topnav #animDownloadBtn {
-  background-image: url("anim_download.svg");
+  background-image: url("../images/anim_download.svg");
   background-size: contain;
   width: 3rem;
   height: 3rem;
 }
 
 #pngDownloadBtn {
-  background-image: url("png_download.svg");
+  background-image: url("../images/png_download.svg");
   background-size: contain;
   width: 3rem;
   height: 3rem;

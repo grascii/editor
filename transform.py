@@ -111,6 +111,6 @@ for stroke_name, stroke in recipes.items():
                         warnings.warn(f"{full_name}: {stroke_name}.{alias} already exists and is being overwritten.")
                     output[stroke_name][alias] = output[stroke_name][recipe_name]
 
-with open("pages/paths.js", "w") as out_file:
+with open("app/data/paths.js", "w") as out_file:
     out_file.write("PATHS = ")
     json.dump(output, out_file, indent=2)
