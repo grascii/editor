@@ -103,6 +103,9 @@ for stroke_name, stroke in recipes.items():
                 },
                 "paths": list(map(lambda path: path.d(rel=True), paths))
             }
+            if "aliases" in recipe:
+                for alias in recipe["aliases"]:
+                    output[stroke_name][alias] = output[stroke_name][recipe_name]
 
 with open("pages/paths.js", "w") as out_file:
     out_file.write("PATHS = ")
