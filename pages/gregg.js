@@ -405,53 +405,14 @@ GreggA.prototype.setPaths = function() {
 
   }
 
+  const succedingTypes = "after_" + name_;
+  pathsObject = PATHS.A[succedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
   switch(name_) {
-    case "GreggK":
-    case "GreggG":
-      this.dp = p(-0.871532, -1.699156);
-      this.paths = ["m 0,0 c -0.04148,0.991096 -2.217639,1.203131 -2.414712,0.569912 -0.181741,-0.583958 0.679321,-1.185365 1.54318,-1.699156"];
-      return;
-
-    case "GreggR":
-    case "GreggL":
-      this.dp = p(-2.0752386, 0.6715101);
-      this.paths = ["m 0,0 c 2.2029871,-0.7631695 1.8134648,-1.9100036 -0.51989472,-1.1888845 -1.18553818,0.4183306 -1.94357888,0.9066048 -1.55334388,1.8603946"];
-      return;
-
-    case "GreggT":
-    case "GreggD":
-      this.dp = p(0, 0);
-      this.paths = ["m 0,0 c 1.068987,-0.61723 3.4352,-1.707 4.1888,-1.186 1.0954,0.756 -3.192844,4.9024 -4.1888,1.186"];
-      return;
-
-    case "GreggN":
-    case "GreggM":
-      this.dp = p(0.9588543, 0);
-      this.paths = ["m 0,0 c 2.5058,0 2.2876,0.812 1.9472,1.03 -0.8992,0.573 -2.9062,0.478 -2.9062,-1.03"];
-      return;
-
-    case "GreggF":
-    case "GreggV":
-      this.dp = p(1.618, -1.46);
-      this.paths = ["m 0,0 c -1.191,1.031 -1.531,-0.421 -0.623,-1.328 0.322,-0.323 1.25,-1.123 2.241,-0.132"];
-      return;
-
-    case "GreggP":
-      this.dp = p(0.0994, 2.32966);
-      this.paths = ["m 0,0 c 1.30501,0.72616 2.50877,-1.59109 -0.0994,-2.32966"];
-      return;
-
-    case "GreggB":
-      this.dp = p(-0.94845, -2.82421);
-      this.paths = ["m 0,0 c 1.47199,0.75793 2.89779,-2.20264 -0.94845,-2.82421"];
-      return;
-
-    case "GreggSh":
-    case "GreggCh":
-    case "GreggJ":
-      this.dp = p(0.5739, -0.99404);
-      this.paths = ["m 0,0 c -0.58122,1.00671 -1.69388,0.6352 -1.69388,-0.15071 0,-1.06833 1.47407,-1.30158 2.26778,-0.84333"];
-      return;
   }
 
   //switch (name_ + "_" + _name) {

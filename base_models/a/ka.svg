@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m77.125 132.56c-0.26359-0.26821-0.13288-0.74847 0.31934-1.1733 0.25091-0.23572 0.4562-0.49639 0.4562-0.57925 0-0.20016-1.1991-0.19242-1.9031 0.0122-1.8197 0.52917-2.6039 0.82074-2.8913 1.075-0.36151 0.31978-0.82678 0.0596-0.58707-0.32823 0.24251-0.39239 2.4385-1.167 3.9216-1.3834 0.66992-0.0977 2.7833 0.22234 3.3303 0.50434 0.5143 0.26518 0.40955 1.1456-0.18248 1.5337-0.52554 0.34454-2.2278 0.57869-2.4635 0.33888zm2.0967-0.6947c0.46227-0.28745 0.31907-0.74161-0.25485-0.80828-0.52603-0.0611-1.5276 0.75612-1.3262 1.0821 0.1266 0.20484 1.0756 0.0406 1.581-0.27378z" fill="#ccc" stroke-width=".18248"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(38.357 108.95)" stroke-width=".4252">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+   </g>
+  </g>
+  <g transform="translate(67.667 115.92)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,15.7)">
+    <title>GreggK</title>
+   </g>
+  </g>
+  <g transform="translate(37.236 110.72)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+    <g id="model">
+     <path d="m41.689 21.29c-0.04148 0.9911-2.2176 1.2031-2.4147 0.56991-0.18174-0.58396 0.67932-1.1854 1.5432-1.6992"/>
+    </g>
+    <path d="m35.586 20.888c2.3661-0.8172 6.9303-2.3707 7 0"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -298,6 +298,44 @@
       "base": "a/ach",
       "transformation": "identity",
       "aliases": ["before_GreggSh", "before_GreggJ"]
+    },
+    "after_GreggK": {
+      "base": "a/ka",
+      "transformation": "identity",
+      "aliases": ["after_GreggG"]
+    },
+    "after_GreggR": {
+      "base": "a/ra",
+      "transformation": "identity",
+      "aliases": ["after_GreggL"]
+    },
+    "after_GreggT": {
+      "base": "a/ta",
+      "transformation": "identity",
+      "aliases": ["after_GreggD"]
+    },
+    "after_GreggN": {
+      "base": "a/na",
+      "transformation": "identity",
+      "aliases": ["after_GreggM"]
+    },
+    "after_GreggF": {
+      "base": "a/fa",
+      "transformation": "identity",
+      "aliases": ["after_GreggV"]
+    },
+    "after_GreggP": {
+      "base": "a/pa",
+      "transformation": "identity"
+    },
+    "after_GreggB": {
+      "base": "a/ba",
+      "transformation": "identity"
+    },
+    "after_GreggCh": {
+      "base": "a/cha",
+      "transformation": "identity",
+      "aliases": ["after_GreggSh", "after_GreggJ"]
     }
   },
   "E": {
