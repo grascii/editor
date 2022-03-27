@@ -375,6 +375,30 @@
       "base": "e/ter",
       "transformation": "identity"
     },
+    "ER_SW": {
+      "base": "e/kech",
+      "transformation": "identity"
+    },
+    "SW_EL": {
+      "base": "e/kech",
+      "transformation": "rotate_180_reverse"
+    },
+    "EL_SWL": {
+      "base": "e/rep",
+      "transformation": "identity"
+    },
+    "SWR_ER": {
+      "base": "e/rep",
+      "transformation": "rotate_180_reverse"
+    },
+    "EL_SW": {
+      "base": "e/rech",
+      "transformation": "identity"
+    },
+    "SW_ER": {
+      "base": "e/rech",
+      "transformation": "rotate_180_reverse"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
