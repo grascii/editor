@@ -390,12 +390,14 @@ GreggA.prototype.setPaths = function() {
   if (tail_ === "") {
   }
 
+  const precedingTypes = "before_" + _name;
+  pathsObject = PATHS.A[precedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
   switch(_name) {
-    case "GreggK":
-    case "GreggG":
-      this.dp = p(-3.0510818, 0.8767537);
-      this.paths = ["m 0,0 c 0.215948,0.6864856 -1.31404357,2.56045201 -3.5735405,2.71899771 -1.226446,0.086058 -0.9311872,-1.32319301 0.5224587,-1.84224401"];
-      return;
 
     case "GreggR":
       this.dp = p(-1.3586521, -1.208928);

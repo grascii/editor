@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m101.5 147.63c-0.55573-0.66961 0.0711-1.6139 1.3364-2.0133 0.63271-0.19972 1.2694-0.44684 1.415-0.54915 0.80157-0.56356 4.6942-0.98067 5.3368-0.57186 0.53706 0.34163 0.66993 1.4749 0.23963 2.0438-0.39103 0.51696-0.40045 0.51355-0.40868-0.14787-0.01-0.78595-0.49721-1.512-1.0667-1.5889-0.93071-0.12571-2.0114 0.37506-2.5188 1.1671-0.96718 1.51-3.6162 2.5248-4.3337 1.6602zm3.0557-1.2613c0.4831-0.46825 0.8437-0.88603 0.80131-0.92841-0.0424-0.0424-0.54661 0.0503-1.1205 0.20606-1.3668 0.37085-2.8109 1.2634-2.599 1.6064 0.3123 0.5053 2.0178-0.0114 2.9182-0.88403z" fill="#ccc" stroke-width=".26458"/>
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(95.094 132)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g id="model" transform="translate(8.1,13.2)">
+    <title>GreggA</title>
+    <path d="m1.5019-2.9636c0.21595 0.68649-1.314 2.5605-3.5735 2.719-1.2264 0.086058-0.93119-1.3232 0.52246-1.8422"/>
+   </g>
+  </g>
+  <g transform="rotate(180 55.461 83.315)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,15.7)">
+    <title>GreggK</title>
+   </g>
+  </g>
+  <g transform="translate(93.906 134.72)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,14.4)">
+    <title>GreggR</title>
+   </g>
+  </g>
+  <g transform="translate(67.271 124.9)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+   </g>
+  </g>
+  <g transform="translate(67.26 124.88)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+    <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>

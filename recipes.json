@@ -257,6 +257,11 @@
     "SW_SW": {
       "base": "a/nan",
       "transformation": "flip_rotate_60_reverse"
+    },
+    "before_GreggK": {
+      "base": "a/ak",
+      "transformation": "identity",
+      "aliases": ["before_GreggG"]
     }
   },
   "E": {
