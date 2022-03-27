@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg_root" transform="scale(1)" width="210mm" height="297mm" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" style="background-color:white" data-text="" preserveAspectRatio="none" transform-origin="center" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width=".4252">
+  <g transform="translate(6 10)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="translate(6 15)">
+   <title>CharSpace</title>
+  </g>
+  <g transform="translate(8 15)">
+   <title>CharSpace</title>
+  </g>
+  <g id="model" transform="translate(10 14.4)">
+   <title>GreggE</title>
+   <path d="m0 0c0.63894-0.0982 1.0552-0.6312 0.83595-1.0587-0.22995-0.44849-1.085-0.27871-1.2294 0.10643" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+  </g>
+  <g transform="translate(9.6066 13.448)">
+   <title>GreggR</title>
+   <path d="m0 0c0.069725 2.3707 4.634 0.81718 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  </g>
+ </g>
+</svg>

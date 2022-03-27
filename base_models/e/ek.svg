@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg_root" transform="scale(1)" width="210mm" height="297mm" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" style="background-color:white" data-text="" preserveAspectRatio="none" transform-origin="center" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width=".4252">
+  <g transform="translate(6 10)">
+   <title>CharNewline</title>
+  </g>
+  <g id="model" transform="translate(6 14.4)">
+   <title>GreggE</title>
+   <path d="m-0.02332 0.1191c0.21593 0.49955-0.02438 0.83624-0.71978 1.1639-0.41473 0.19545-1.1624 0.4689-1.2442 0.0568-0.06026-0.30378 0.46371-0.70704 0.9529-0.88329" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+  </g>
+  <g transform="translate(4.9656 14.857)">
+   <title>GreggK</title>
+   <path d="m0 0c2.3661-0.81718 6.9303-2.3707 7-3.5527e-15" data-char="GreggK" data-head="ER" data-kana="k" data-key="" data-model="ER7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="ER"/>
+  </g>
+ </g>
+</svg>

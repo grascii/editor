@@ -383,12 +383,32 @@
     "before_GreggT": {
       "base": "e/en",
       "transformation": "n_to_t",
-      "aliases": ["before_GreggD"]
+      "aliases": ["before_GreggD", "ER_NE"]
     },
     "before_GreggCh": {
       "base": "e/ech",
       "transformation": "identity",
       "aliases": ["before_GreggSh", "before_GreggJ"]
+    },
+    "before_GreggR": {
+      "base": "e/er",
+      "transformation": "identity",
+      "aliases": ["before_GreggL"]
+    },
+    "before_GreggP": {
+      "base": "e/re",
+      "transformation": "r_to_p",
+      "aliases": ["before_GreggB"]
+    },
+    "before_GreggF": {
+      "base": "e/er",
+      "transformation": "r_to_f",
+      "aliases": ["before_GreggV"]
+    },
+    "before_GreggK": {
+      "base": "e/ek",
+      "transformation": "identity",
+      "aliases": ["before_GreggG"]
     },
     "after_GreggK": {
       "base": "e/ke",
@@ -413,7 +433,17 @@
     "after_GreggR": {
       "base": "e/re",
       "transformation": "identity",
-      "aliases": ["after_GreggL", "EL_NE"]
+      "aliases": ["after_GreggL", "EL_NE", "EL_EL"]
+    },
+    "after_GreggP": {
+      "base": "e/er",
+      "transformation": "r_to_p",
+      "aliases": ["after_GreggB"]
+    },
+    "after_GreggF": {
+      "base": "e/re",
+      "transformation": "r_to_f",
+      "aliases": ["after_GreggV"]
     }
   }
 }
