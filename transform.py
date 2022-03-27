@@ -96,6 +96,8 @@ for stroke_name, stroke in recipes.items():
             warnings.warn(f"{full_name}: Base file does not exist.")
         else:
             delta_position = paths[-1].end - paths[0].start
+            if recipe_name in output[stroke_name]:
+                warnings.warn(f"{full_name}: {full_name} already exists and is being overwritten.")
             output[stroke_name][recipe_name] = {
                 "dp": {
                     "x": delta_position.real,
@@ -105,6 +107,8 @@ for stroke_name, stroke in recipes.items():
             }
             if "aliases" in recipe:
                 for alias in recipe["aliases"]:
+                    if alias in output[stroke_name]:
+                        warnings.warn(f"{full_name}: {stroke_name}.{alias} already exists and is being overwritten.")
                     output[stroke_name][alias] = output[stroke_name][recipe_name]
 
 with open("pages/paths.js", "w") as out_file:
