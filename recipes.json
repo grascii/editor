@@ -389,6 +389,31 @@
       "base": "e/ech",
       "transformation": "identity",
       "aliases": ["before_GreggSh", "before_GreggJ"]
+    },
+    "after_GreggK": {
+      "base": "e/ke",
+      "transformation": "identity",
+      "aliases": ["after_GreggG"]
+    },
+    "after_GreggT": {
+      "base": "e/te",
+      "transformation": "identity",
+      "aliases": ["after_GreggD"]
+    },
+    "after_GreggN": {
+      "base": "e/ne",
+      "transformation": "identity",
+      "aliases": ["after_GreggM"]
+    },
+    "after_GreggCh": {
+      "base": "e/che",
+      "transformation": "identity",
+      "aliases": ["after_GreggSh", "after_GreggJ", "SW_E"]
+    },
+    "after_GreggR": {
+      "base": "e/re",
+      "transformation": "identity",
+      "aliases": ["after_GreggL", "EL_NE"]
     }
   }
 }

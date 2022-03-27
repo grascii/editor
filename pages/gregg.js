@@ -232,19 +232,9 @@ GreggE.prototype.setPaths = function() {
   const _name = this.getNextName();
   const _head = this.getNextHeadType();
 
-  after_R = {
-    dp: p(0, 0),
-    paths: ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
-  };
-
   before_R = {
     dp: p(-0.3934, -0.9523),
     paths: ["m 0 0 c 0.63894 -0.0982 1.05516 -0.6312 0.83595 -1.05873 c -0.22995 -0.44849 -1.08496 -0.27871 -1.22935 0.10643"]
-  }
-
-  after_CH = {
-    dp: p(0, 0),
-    paths: ["m 0, 0 c -0.5567,0.964 -1.2585,1.748 -1.6357,1.038 -0.4716,-0.888 1.2375,-1.038 1.6357,-1.038"]
   }
 
   switch (name_ + "_" + _name) {
@@ -264,20 +254,6 @@ GreggE.prototype.setPaths = function() {
   if (pathsObject) {
     this.setPathsFromObject(pathsObject);
     return;
-  }
-
-  switch (tail_ + "_" + _head) {
-
-    case "EL_NE":
-      this.dp = after_R.dp;
-      this.paths = after_R.paths;
-      return;
-
-    case "SW_E":
-      this.dp = after_CH.dp;
-      this.paths = after_CH.paths;
-      return;
-
   }
 
   const precedingTypes = "before_" + this.getNextName();
@@ -317,34 +293,14 @@ GreggE.prototype.setPaths = function() {
 
   }
 
+  const succedingTypes = "after_" + this.getPrevName();
+  pathsObject = PATHS.E[succedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
   switch (name_) {
-
-    case "GreggK":
-    case "GreggG":
-      this.dp = p(0, 0);
-      this.paths = ["m 0, 0 c -0.015655,0.43164345 -0.6768339,1.5889867 -1.2835329,1.2910004 -0.9780838,-0.53606745 -0.1437985,-1.41780047 1.2835329,-1.2910004"]
-      return;
-
-    case "GreggR":
-    case "GreggL":
-      this.dp = after_R.dp;
-      this.paths = after_R.paths;
-      //this.dp = p(0, 0);
-      //this.paths = ["m 0, 0 c 0.996582,-0.479811 1.098117,-0.554262 0.89931,-0.90657 -0.741727,-0.474359 -1.382557,0.493805 -0.89931,0.90657"]
-      return;
-
-    case "GreggT":
-    case "GreggD":
-      this.dp = p(0, 0);
-      this.paths = ["m 0, 0 c 0.4843179,-0.2789337 1.3080777,-0.823577 1.5453342,-0.4377786 0.6200609,1.0082694 -1.2209741,1.4954815 -1.5453342,0.4377786"]
-      return;
-
-    case "GreggN":
-    case "GreggM":
-      this.dp = p(0, 0);
-      this.paths = ["m 0, 0c 1.58569772,-0.014913 2.23173732,-0.061201 1.93712862,0.4490765 -0.4491002,0.7778642 -1.93712862,0.535832 -1.93712862,-0.4490765"]
-      return;
-
     case "GreggP":
     case "GreggB":
       this.dp = p(0.5656, 0.777);
@@ -357,20 +313,6 @@ GreggE.prototype.setPaths = function() {
       this.paths = ["m 0,0 c -0.913819,0.62316 -1.029063,0.67387 -1.234768,0.32554 -0.03994,-0.87953 1.118927,-0.95042 1.234768,-0.32554"];
       return;
 
-    case "GreggSh":
-    case "GreggCh":
-    case "GreggJ":
-      this.dp = after_CH.dp;
-      this.paths = after_CH.paths;
-      return;
-
-  }
-
-  switch (_head) {
-    case "C":
-      this.dp = p(-2.86436, 0.17299);
-      this.paths = ["m 0 0 c -0.784766 1.74476 -3.19525 2.60409 -4.26711 2.03439 c -1.07186 -0.5697 -0.01844 -1.48059 1.40275 -1.8614"];
-      return;
   }
 
   this.setPathsFromObject(PATHS.E.default);

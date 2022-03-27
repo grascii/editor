@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <path d="m96.658 132.19c-0.88091-0.11542-1.3441-0.39423-1.3535-0.81461-0.0067-0.30055 0.4479-0.37623 0.64455-0.1073 0.35102 0.48005 1.4136 0.66106 2.9353 0.50005 2.357-0.24941 2.6088-0.32352 2.6747-0.78724 0.0733-0.51557 1.0962-1.0618 1.7531-0.93624 0.7027 0.13433 0.57808 0.53734-0.32662 1.0563-1.478 0.84778-4.3702 1.3456-6.3276 1.0891zm6.1862-1.4386c0.19535-0.23539 0.17147-0.28285-0.14238-0.28285-0.20742 0-0.48276 0.12727-0.61188 0.28285-0.19534 0.23537-0.17145 0.28284 0.1424 0.28284 0.20741 0 0.48276-0.12728 0.61186-0.28284z" fill="#ccc" stroke-width=".18856"/>
+ <g transform="translate(96.987 115.37)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="translate(6,10)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="translate(6.2127 14.918)">
+   <title>GreggE</title>
+  </g>
+ </g>
+ <image x="90.556" y="135.99" width="11.853" height="4.6567" preserveAspectRatio="none" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADgAAAAWCAIAAAAaQsgPAAAAAXNSR0IArs4c6QAAAARnQU1BAACx jwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAD9SURBVEhL7ZPBDYMwDAAZhmUYhmUYpsswDL3G ruWCCURNBZVyryg4zmE73fInNNHaNNESHom+76dpkjXotzdXis7zjBB+3YZhGDTozWWiWKrUDgRo aOIaUW/pG00hZfMWFUVLbMZx1K2kbjOwtYRYlFyryleEFyNC/unIDrDWuE8CUTv2I1ev5aGQmRsD UWuBb00tUAHJL3Ad7BXSCEQ1QeLw/Hnws7diUAv2NSJLIGozJJA935QQDOSgZnGwyf+XliB+TFyj WSPkGpuQk+BX+reeWFQgdamN8Spmqpzm+pqcqEAZVjAb4gHWYpk2Qw/X41j0JjTR2jTRuizLE6NV tik4Y8V2AAAAAElFTkSuQmCC "/>
+ <g transform="translate(91.265 119.42)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m3.9851 13.944c0.056283 2.2994 4.7486 1.2136 7.3773-0.04075" stroke="#000" stroke-width=".4252"/>
+  <g transform="translate(6,10)" stroke="#000" stroke-width=".4252">
+   <title>CharNewline</title>
+  </g>
+  <g id="model">
+   <path d="m11.741 13.151c0.99658-0.47981 1.0981-0.55426 0.89931-0.90657-0.74173-0.47436-1.3826 0.4938-0.89931 0.90657" stroke="#000" stroke-width=".4252"/>
+  </g>
+ </g>
+</svg>
