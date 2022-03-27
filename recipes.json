@@ -262,6 +262,42 @@
       "base": "a/ak",
       "transformation": "identity",
       "aliases": ["before_GreggG"]
+    },
+    "before_GreggR": {
+      "base": "a/ar",
+      "transformation": "identity"
+    },
+    "before_GreggL": {
+      "base": "a/al",
+      "transformation": "identity"
+    },
+    "before_GreggN": {
+      "base": "a/an",
+      "transformation": "identity",
+      "aliases": ["before_GreggM"]
+    },
+    "before_GreggT": {
+      "base": "a/an",
+      "transformation": "n_to_t",
+      "aliases": ["before_GreggD"]
+    },
+    "before_GreggP": {
+      "base": "a/ap",
+      "transformation": "identity",
+      "aliases": ["before_GreggB"]
+    },
+    "before_GreggF": {
+      "base": "a/af",
+      "transformation": "identity"
+    },
+    "before_GreggV": {
+      "base": "a/av",
+      "transformation": "identity"
+    },
+    "before_GreggCh": {
+      "base": "a/ach",
+      "transformation": "identity",
+      "aliases": ["before_GreggSh", "before_GreggJ"]
     }
   },
   "E": {
