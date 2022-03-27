@@ -399,10 +399,46 @@
       "base": "e/rech",
       "transformation": "rotate_180_reverse"
     },
+    "E_SWL": {
+      "base": "e/nep",
+      "transformation": "identity"
+    },
+    "SWR_E": {
+      "base": "e/nep",
+      "transformation": "rotate_180_reverse"
+    },
+    "E_SW": {
+      "base": "e/nech",
+      "transformation": "identity"
+    },
+    "NE_SWL": {
+      "base": "e/tep",
+      "transformation": "identity"
+    },
+    "SWR_NE": {
+      "base": "e/tep",
+      "transformation": "rotate_180_reverse"
+    },
+    "NE_SW": {
+      "base": "e/tech",
+      "transformation": "identity"
+    },
+    "SW_NE": {
+      "base": "e/tech",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_SW": {
+      "base": "e/pech",
+      "transformation": "identity"
+    },
+    "SW_SW": {
+      "base": "e/en",
+      "transformation": "flip_rotate_60_reverse"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
-      "aliases": ["before_GreggM", "SWL_E"]
+      "aliases": ["before_GreggM", "SWL_E", "E_E"]
     },
     "before_GreggT": {
       "base": "e/en",
@@ -412,7 +448,7 @@
     "before_GreggCh": {
       "base": "e/ech",
       "transformation": "identity",
-      "aliases": ["before_GreggSh", "before_GreggJ"]
+      "aliases": ["before_GreggSh", "before_GreggJ", "SWR_SW"]
     },
     "before_GreggR": {
       "base": "e/er",

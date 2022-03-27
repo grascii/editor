@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg11984"
+   inkscape:version="1.1.2 (76b9e6a115, 2022-02-25)"
+   sodipodi:docname="nep.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview11986"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="31.814141"
+     inkscape:cx="322.37237"
+     inkscape:cy="531.94898"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="model" />
+  <defs
+     id="defs11981" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g12111"
+       transform="translate(78.061492,125.38306)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g2449">
+        <title
+           id="title2447">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(5,15)"
+         id="g15915">
+        <title
+           id="title2451">GreggN</title>
+        <path
+           d="m 0,0 h 4"
+           data-char="GreggN"
+           data-head="E"
+           data-tail="E"
+           data-kana="n"
+           data-model="E4"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path2453" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g12179"
+       transform="translate(81.896401,124.2252)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g2687">
+        <title
+           id="title2685">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,14.4)"
+         id="model">
+        <title
+           id="title2689">GreggE</title>
+        <path
+           d="m -0.834909,1.75786 c 1.17409562,0 2.0603422,-0.3784763 1.71380864,-0.85707188 -0.34653355,-0.47859561 -0.88888265,0.18834928 -1.71380864,0.85707188"
+           data-char="GreggE"
+           data-head="C"
+           data-tail="C"
+           data-kana="e"
+           data-model="C1"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path2691"
+           sodipodi:nodetypes="czc" />
+      </g>
+    </g>
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g148"
+       transform="translate(-24.452688,-17.92171)">
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g130">
+        <title
+           id="title128">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.212599"
+         id="g136">
+        <title
+           id="title132">GreggR</title>
+        <path
+           d="m 111.51418,158.30477 c -1.89,1.64 -5.518,4.816 -3.5,6.062"
+           data-char="GreggR"
+           data-head="EL"
+           data-tail="EL"
+           data-kana="r"
+           data-model="EL7"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path134"
+           style="stroke-width:0.425;stroke-miterlimit:4;stroke-dasharray:none" />
+      </g>
+    </g>
+  </g>
+</svg>
