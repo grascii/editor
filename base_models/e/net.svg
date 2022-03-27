@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="svg_root" transform="scale(1)" width="210mm" height="297mm" fill="none" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" style="background-color:white" data-text="" preserveAspectRatio="none" transform-origin="center" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g stroke="#000" stroke-width=".4252">
+  <g transform="translate(6 10)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="translate(5 15)">
+   <title>GreggM</title>
+   <path d="m0 0h10" data-char="GreggM" data-head="E" data-kana="m" data-key="" data-model="E10" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="E"/>
+  </g>
+  <g id="model" transform="translate(15 15)">
+   <title>GreggE</title>
+   <path d="m0 0c0.20509 0.01825 0.4638 0.21232 0.4548 0.41801-0.01927 0.42221-0.41964 0.63428-0.75711 0.70341-0.33884 0.069409-0.88105-0.018089-0.97665-0.3505-0.090341-0.31413 0.21743-0.5466 0.60597-0.77093" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+  </g>
+  <g transform="translate(14.327 15)">
+   <title>GreggT</title>
+   <path d="m0 0 3.4641-2" data-char="GreggT" data-head="NE" data-kana="t" data-key="" data-model="NE4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="NE"/>
+  </g>
+ </g>
+</svg>

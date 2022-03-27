@@ -342,6 +342,38 @@
     "default": {
       "base": "e",
       "transformation": "identity"
+    },
+    "E_NE": {
+      "base": "e/net",
+      "transformation": "identity"
+    },
+    "NE_E": {
+      "base": "e/net",
+      "transformation": "rotate_180_reverse"
+    },
+    "ER_EL": {
+      "base": "e/ker",
+      "transformation": "identity"
+    },
+    "ER_EL": {
+      "base": "e/kek",
+      "transformation": "identity"
+    },
+    "EL_E": {
+      "base": "e/ren",
+      "transformation": "identity"
+    },
+    "E_ER": {
+      "base": "e/ren",
+      "transformation": "rotate_180_reverse"
+    },
+    "E_EL": {
+      "base": "e/ner",
+      "transformation": "identity"
+    },
+    "NE_EL": {
+      "base": "e/ter",
+      "transformation": "identity"
     }
   }
 }
