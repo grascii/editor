@@ -374,6 +374,21 @@
     "NE_EL": {
       "base": "e/ter",
       "transformation": "identity"
+    },
+    "before_GreggN": {
+      "base": "e/en",
+      "transformation": "identity",
+      "aliases": ["before_GreggM"]
+    },
+    "before_GreggT": {
+      "base": "e/en",
+      "transformation": "n_to_t",
+      "aliases": ["before_GreggD"]
+    },
+    "before_GreggCh": {
+      "base": "e/ech",
+      "transformation": "identity",
+      "aliases": ["before_GreggSh", "before_GreggJ"]
     }
   }
 }

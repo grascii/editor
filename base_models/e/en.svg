@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m101.62 147.07c-0.19531-0.0788-0.16371-0.32749 0.0715-0.56269 0.12923-0.12923 0.43678-0.23345 0.82978-0.28119 0.34345-0.0417 0.7172-0.0927 0.83056-0.11333 0.78793-0.14329 1.9025-0.2565 1.9904-0.20217 0.22515 0.13915 0.0875 0.26705-0.29605 0.27513-0.87068 0.0184-1.859 0.25908-2.0426 0.49757-0.2806 0.36432-0.96495 0.5556-1.3836 0.38668zm0.99039-0.35736 0.32121-0.21273-0.30148-5e-4c-0.34064-1e-3 -0.71568 0.16913-0.71568 0.32427 0 0.1716 0.3548 0.11509 0.69595-0.11084zm3.0782-0.77625c0.0525-0.2625 0.93685-0.40062 0.93685-0.14632 0 0.15515-0.31395 0.27621-0.72271 0.27869-0.13618 1e-3 -0.22927-0.0567-0.21414-0.13237z" fill="#ccc" stroke-width=".10707"/>
+ <g transform="translate(96.947 132.67)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="translate(6,10)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="translate(6,14.4)">
+   <title>GreggE</title>
+  </g>
+ </g>
+ <path d="m106.15 147.49-4.0824 0.0318" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ <g id="model">
+  <path d="m103.62 148.23c0 0.52718-0.49247 0.8309-1.0424 0.7651-0.44328-0.0531-0.59929-0.75873 0.22056-0.7651" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+</svg>
