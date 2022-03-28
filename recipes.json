@@ -505,5 +505,11 @@
       "transformation": "r_to_f",
       "aliases": ["after_GreggV", "SWR_EL"]
     }
+  },
+  "O": {
+    "default": {
+      "base": "o",
+      "transformation": "skewx_30"
+    }
   }
 }

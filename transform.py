@@ -1,5 +1,6 @@
 
 import json
+import math
 import numpy as np
 import warnings
 from pathlib import Path
@@ -37,6 +38,14 @@ class Transformations:
 
     def flip_rotate_60_reverse(path):
         return Transformations.reflect_across_x_axis(path).rotated(-60).reversed()
+
+    def skewx_30(path):
+        matrix = np.array([
+            [1, math.tan(math.radians(-30)), 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ])
+        return transform(path, matrix)
 
     def shift_to_origin(path):
         return path.translated(-path.start)
