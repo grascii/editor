@@ -47,6 +47,23 @@ class Transformations:
         ])
         return transform(path, matrix)
 
+    def skewx_45(path):
+        matrix = np.array([
+            [1, math.tan(math.radians(-45)), 0],
+            [0, 1, 0],
+            [0, 0, 1]
+        ])
+        return transform(path, matrix)
+
+    def skewx_30_rotate_40(path):
+        return Transformations.skewx_30(path).rotated(40)
+
+    def skewx_30_rotate_30(path):
+        return Transformations.skewx_30(path).rotated(30)
+
+    def rotate_90(path):
+        return path.rotated(90)
+
     def shift_to_origin(path):
         return path.translated(-path.start)
 

@@ -509,7 +509,33 @@
   "O": {
     "default": {
       "base": "o",
-      "transformation": "skewx_30"
+      "transformation": "skewx_30",
+      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV"]
+    },
+    "before_GreggK": {
+      "base": "o",
+      "transformation": "skewx_30_rotate_40",
+      "aliases": ["before_GreggG"]
+    },
+    "before_GreggT": {
+      "base": "o",
+      "transformation": "skewx_30_rotate_30",
+      "aliases": ["before_GreggD"]
+    },
+    "before_GreggN": {
+      "base": "o",
+      "transformation": "rotate_90",
+      "aliases": ["before_GreggM"]
+    },
+    "before_GreggP": {
+      "base": "o",
+      "transformation": "skewx_45",
+      "aliases": ["before_GreggB"]
+    },
+    "before_GreggR": {
+      "base": "o/or",
+      "transformation": "identity",
+      "aliases": ["before_GreggL"]
     }
   }
 }
