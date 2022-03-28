@@ -2,8 +2,6 @@ String.prototype.insert = function(pos, str) {
   return this.substring(0, pos) + str + this.substring(pos)
 };
 
-const title = "";
-
 const viewer = document.getElementById("svg_viewer");
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 const attr = {
@@ -91,42 +89,12 @@ pngDownloadBtn.addEventListener("click", function(e) {
   downloadPNG();
 });
 
-//const downloadButtonSVG = document.getElementById("download_button_svg");
-//downloadButtonSVG.addEventListener("click", 
-//  function() { 
-//    const rs = Math.floor(((+new Date()) * Math.random())).toString(36);
-//    downloadSVG(rs + "_" + fileNameInput.value + ".svg");
-//  }
-//);
-
-//const downloadButtonPNG = document.getElementById("download_button_png");
-//downloadButtonPNG.addEventListener("click", downloadPNG);
-
-const save_button = document.getElementById("save_button");
-save_button.addEventListener("click", savePages);
-
 const storage = localStorage;
-const savedPages = storage.getItem("pages");
-const pages = savedPages ? JSON.parse(savedPages) : {};
-const pageList = document.getElementById("saved_page_list");
-const pageNameInput = document.getElementById("page_name");
 const inputTextArea = document.getElementById("input");
-
-
 
 document.onkeydown = function(e) {
   if (e.metaKey || e.ctrlKey) {
     switch (e.which) {
-      case 83: // S
-        e.preventDefault();
-        savePages();
-        break;
-
-      case 80: // P 
-        e.preventDefault();
-        addNewPage();
-        break;
-
       case 77: // M
         e.preventDefault();
         setMirrorMode(!e.shiftKey);
@@ -135,99 +103,11 @@ document.onkeydown = function(e) {
   }
 };
 
-window.onbeforeunload = function(e) {
-  savePages();
-};
-
-loadPageList();
-resume();
-openPage();
-
-function loadPageList() {
-  const titles = Object.keys(pages);
-  titles.sort();
-
-  pageList.innerText = "";
-
-  const opt = document.createElement("option");
-  opt.text = "new_page";
-  opt.value = "new_page";
-  pageList.add(opt);
-
-  titles.forEach(function(title) {
-    const opt = document.createElement("option");
-    opt.text = title;
-    opt.value = title;
-    pageList.add(opt);
-  });
-}
-
-const saveDialog = document.getElementById("saveDialog");
-
-function addNewPage() {
-  saveDialog.showModal();
-}
-
-document.getElementById("newPageForm").addEventListener("submit", function() {
-  const newPageName = document.getElementById("saveName").value;
-  if (!newPageName) return false;
-
-  if (!pages[newPageName]) {
-    pages[newPageName] = "\\none";
-  }
-  loadPageList();
-  pageList.value = newPageName;
-  storage.setItem("lastPage", newPageName);
-  openPage();
-
-  return false;
-});
-
-function savePages() {
-  const title = pageList.value;
-  const text = inputTextArea.value;
-
-  if (text == "") {
-    delete pages[title];
-    loadPageList();
-  } else if (title != "") {
-    pages[title] = text;
-  }
-  storage.setItem("pages", JSON.stringify(pages));
-}
-
 function updatePagePos() {
   const svg = document.getElementById('svg_root');
   const viewBox = svg.viewBox;
   const pageNum = document.getElementById('page_select').value;
   svg.setAttribute("viewBox", viewBox.baseVal.x + " " + (pageNum - 1) * 297 + " " + viewBox.baseVal.width + " " + viewBox.baseVal.height);
-}
-
-function openPage() {
-  const title = pageList.value;
-  const lastPage = storage.getItem("lastPage");
-
-  document.title = title;
-
-  if (title == "new_page") {
-    inputTextArea.value = "\\none";
-    savePages();
-  } else if (title) {
-    inputTextArea.value = pages[title];
-    storage.setItem("lastPage", pageList.value);
-  }
-
-  updateSVG();
-}
-
-function resume() {
-  const lastPage = storage.getItem("lastPage");
-
-  if (lastPage && pages[lastPage]) {
-    pageList.value = lastPage;
-    pageNameInput.value = lastPage;
-    inputTextArea.value = pages[lastPage];
-  }
 }
 
 input.dispatchEvent(
@@ -385,11 +265,3 @@ function updateSVG(toAnimate) {
   }
 }
 
-function toggleMenu() {
-  const x = document.getElementById("myLinks");
-  if (x.style.display == "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
-  }
-}
