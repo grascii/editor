@@ -5,7 +5,7 @@ paths: app/data/paths.js
 app/data/paths.js: transform.py recipes.json
 	python transform.py
 
-release.zip: app/**
+release.zip: paths app/**
 	zip release -r app/
 
 .PHONY: clean
