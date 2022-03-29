@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(46.161 98)" stroke-width=".4252">
+   <title>GreggR</title>
+   <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  </g>
+  <g transform="translate(92.941 112.43)">
+   <path d="m7.5052 6c-0.29104 0.5041-0.89013 1.75-0.13536 1.75s1.5953-1.2477 1.8854-1.75" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+  </g>
+  <path d="m100.78 122.01c-0.54698 0.19909-1.8068 0.76841-1.2286 1.2536 0.57819 0.48516 2.0241 0.0696 2.5692-0.12867" fill-opacity="0" stroke-width=".4252"/>
+  <g transform="translate(93.507 117.47)">
+   <path d="m7.5052 6c0 0.62383-0.77185 1.3825-0.13536 1.75 0.65365 0.37738 1.5953-1.2477 1.8854-1.75" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+  </g>
+  <g transform="translate(56.401 100.84)" stroke-width=".4252">
+   <title>GreggR</title>
+   <path d="m33.627 19.243c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+  </g>
+ </g>
+ <g id="model">
+  <path d="m88.687 118.96c0 0.57899-1.4239 0.52452-1.2286 1.2536 0.20432 0.76254 2.0241 0.0696 2.5692-0.12867" fill="none" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+</svg>

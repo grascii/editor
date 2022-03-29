@@ -512,6 +512,18 @@
       "transformation": "skewx_30",
       "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV", "after_GreggR", "after_GreggL", "after_GreggN", "after_GreggM", "after_GreggT", "after_GreggD", "after_GreggSh", "after_GreggCh", "after_GreggJ"]
     },
+    "ER_ER": {
+      "base": "o/kok",
+      "transformation": "identity"
+    },
+    "ER_NE": {
+      "base": "o/kot",
+      "transformation": "identity"
+    },
+    "ER_SWL": {
+      "base": "o/kop",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "o",
       "transformation": "skewx_30_rotate_40",
@@ -525,7 +537,7 @@
     "before_GreggN": {
       "base": "o",
       "transformation": "rotate_90",
-      "aliases": ["before_GreggM"]
+      "aliases": ["before_GreggM", "ER_E"]
     },
     "before_GreggP": {
       "base": "o",
@@ -535,12 +547,12 @@
     "before_GreggR": {
       "base": "o/or",
       "transformation": "identity",
-      "aliases": ["before_GreggL"]
+      "aliases": ["before_GreggL", "ER_EL"]
     },
     "after_GreggK": {
       "base": "o/ko",
       "transformation": "identity",
-      "aliases": ["after_GreggG"]
+      "aliases": ["after_GreggG", "ER_SWR", "ER_SW"]
     },
     "after_GreggP": {
       "base": "o/po",
