@@ -505,5 +505,96 @@
       "transformation": "r_to_f",
       "aliases": ["after_GreggV", "SWR_EL"]
     }
+  },
+  "O": {
+    "default": {
+      "base": "o",
+      "transformation": "skewx_30",
+      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV", "after_GreggR", "after_GreggL", "after_GreggN", "after_GreggM", "after_GreggT", "after_GreggD", "after_GreggSh", "after_GreggCh", "after_GreggJ", "EL_SWR", "EL_SW", "E_SWR", "E_SW", "NE_SWR", "NE_SW", "SW_EL", "SW_E", "SW_NE", "SW_SWR", "SW_SW"]
+    },
+    "ER_ER": {
+      "base": "o/kok",
+      "transformation": "identity"
+    },
+    "ER_NE": {
+      "base": "o/kot",
+      "transformation": "identity"
+    },
+    "ER_SWL": {
+      "base": "o/kop",
+      "transformation": "identity"
+    },
+    "EL_E": {
+      "base": "o/ron",
+      "transformation": "identity"
+    },
+    "NE_EL": {
+      "base": "o/tor",
+      "transformation": "identity"
+    },
+    "NE_E": {
+      "base": "o/ton",
+      "transformation": "identity"
+    },
+    "SWL_SWL": {
+      "base": "o/pop",
+      "transformation": "identity"
+    },
+    "SWR_ER": {
+      "base": "o/fok",
+      "transformation": "identity"
+    },
+    "SWR_SWL": {
+      "base": "o/fop",
+      "transformation": "identity"
+    },
+    "SW_ER": {
+      "base": "o/chok",
+      "transformation": "identity"
+    },
+    "SW_SWL": {
+      "base": "o/chop",
+      "transformation": "identity"
+    },
+    "before_GreggK": {
+      "base": "o",
+      "transformation": "skewx_30_rotate_40",
+      "aliases": ["before_GreggG", "EL_ER", "E_ER", "NE_ER"]
+    },
+    "before_GreggT": {
+      "base": "o",
+      "transformation": "skewx_30_rotate_30",
+      "aliases": ["before_GreggD", "EL_NE", "E_NE", "NE_NE"]
+    },
+    "before_GreggN": {
+      "base": "o",
+      "transformation": "rotate_90",
+      "aliases": ["before_GreggM", "ER_E", "E_E"]
+    },
+    "before_GreggP": {
+      "base": "o",
+      "transformation": "skewx_45",
+      "aliases": ["before_GreggB", "EL_SWL", "E_SWL", "NE_SWL"]
+    },
+    "before_GreggR": {
+      "base": "o/or",
+      "transformation": "identity",
+      "aliases": ["before_GreggL", "ER_EL", "E_EL"]
+    },
+    "after_GreggK": {
+      "base": "o/ko",
+      "transformation": "identity",
+      "aliases": ["after_GreggG", "ER_SWR", "ER_SW"]
+    },
+    "after_GreggP": {
+      "base": "o/po",
+      "transformation": "identity",
+      "aliases": ["after_GreggB", "SWL_ER", "SWL_EL", "SWL_E", "SWL_NE", "SWL_SWR", "SWL_SW"]
+    },
+    "after_GreggF": {
+      "base": "o/fo",
+      "transformation": "identity",
+      "aliases": ["after_GreggV", "SWR_EL", "SWR_E", "SWR_NE", "SWR_SWR", "SWR_SW"]
+    }
   }
 }
