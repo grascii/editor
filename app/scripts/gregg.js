@@ -286,8 +286,28 @@ GreggU.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["u"] = GreggU;
 
 GreggU.prototype.setPaths = function() {
-  this.dp = p(1.57581, 0.15373);
-  this.paths = ["m 0 0 c 0 0 1.50684 -1.63569 2.128 -1.10768 c 0.40108 0.34093 -0.18201 0.96527 -0.55219 1.26141"];
+  const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
+  let pathsObject = PATHS.U[adjacentTypes];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  const precedingTypes = "before_" + this.getNextName();
+  pathsObject = PATHS.U[precedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  const succedingTypes = "after_" + this.getPrevName();
+  pathsObject = PATHS.U[succedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  this.setPathsFromObject(PATHS.U.default);
 };
 
 GreggTen = function() { GreggChar.call(this, "GreggTen", "tn", "NER9", "NER", "NER", "black", false, p(0.0, 2.7)); };

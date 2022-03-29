@@ -596,5 +596,11 @@
       "transformation": "identity",
       "aliases": ["after_GreggV", "SWR_EL", "SWR_E", "SWR_NE", "SWR_SWR", "SWR_SW"]
     }
+  },
+  "U": {
+    "default": {
+      "base": "u",
+      "transformation": "skewx_30"
+    }
   }
 }
