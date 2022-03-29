@@ -540,6 +540,14 @@
       "base": "o/pop",
       "transformation": "identity"
     },
+    "SWR_ER": {
+      "base": "o/fok",
+      "transformation": "identity"
+    },
+    "SWR_SWL": {
+      "base": "o/fop",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "o",
       "transformation": "skewx_30_rotate_40",
@@ -578,7 +586,7 @@
     "after_GreggF": {
       "base": "o/fo",
       "transformation": "identity",
-      "aliases": ["after_GreggV"]
+      "aliases": ["after_GreggV", "SWR_EL", "SWR_E", "SWR_NE", "SWR_SWR", "SWR_SW"]
     }
   }
 }
