@@ -601,7 +601,7 @@
     "default": {
       "base": "u",
       "transformation": "skewx_30",
-      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ"]
+      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ", "after_GreggK", "after_GreggG", "after_GreggSh", "after_GreggCh", "after_GreggJ"]
     },
     "before_GreggR": {
       "base": "u/ur",
@@ -617,6 +617,26 @@
       "base": "o/po",
       "transformation": "rotate_180_reverse",
       "aliases": ["before_GreggV"]
+    },
+    "after_GreggR": {
+      "base": "u/ru",
+      "transformation": "identity",
+      "aliases": ["after_GreggL"]
+    },
+    "after_GreggN": {
+      "base": "u",
+      "transformation": "rotate_90",
+      "aliases": ["after_GreggM"]
+    },
+    "after_GreggT": {
+      "base": "u",
+      "transformation": "skewx_30_rotate_30",
+      "aliases": ["after_GreggD"]
+    },
+    "after_GreggF": {
+      "base": "u",
+      "transformation": "skewx_45",
+      "aliases": ["after_GreggV"]
     }
   }
 }
