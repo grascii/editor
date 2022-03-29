@@ -536,6 +536,10 @@
       "base": "o/ton",
       "transformation": "identity"
     },
+    "SWL_SWL": {
+      "base": "o/pop",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "o",
       "transformation": "skewx_30_rotate_40",
@@ -569,7 +573,7 @@
     "after_GreggP": {
       "base": "o/po",
       "transformation": "identity",
-      "aliases": ["after_GreggB"]
+      "aliases": ["after_GreggB", "SWL_ER", "SWL_EL", "SWL_E", "SWL_NE", "SWL_SWR", "SWL_SW"]
     },
     "after_GreggF": {
       "base": "o/fo",
