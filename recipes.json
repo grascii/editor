@@ -510,7 +510,7 @@
     "default": {
       "base": "o",
       "transformation": "skewx_30",
-      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV"]
+      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV", "after_GreggR", "after_GreggL", "after_GreggN", "after_GreggM", "after_GreggT", "after_GreggD", "after_GreggSh", "after_GreggCh", "after_GreggJ"]
     },
     "before_GreggK": {
       "base": "o",
@@ -536,6 +536,21 @@
       "base": "o/or",
       "transformation": "identity",
       "aliases": ["before_GreggL"]
+    },
+    "after_GreggK": {
+      "base": "o/ko",
+      "transformation": "identity",
+      "aliases": ["after_GreggG"]
+    },
+    "after_GreggP": {
+      "base": "o/po",
+      "transformation": "identity",
+      "aliases": ["after_GreggB"]
+    },
+    "after_GreggF": {
+      "base": "o/fo",
+      "transformation": "identity",
+      "aliases": ["after_GreggV"]
     }
   }
 }
