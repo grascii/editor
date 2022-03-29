@@ -600,7 +600,23 @@
   "U": {
     "default": {
       "base": "u",
-      "transformation": "skewx_30"
+      "transformation": "skewx_30",
+      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ"]
+    },
+    "before_GreggR": {
+      "base": "u/ur",
+      "transformation": "identity",
+      "aliases": ["before_GreggL"]
+    },
+    "before_GreggP": {
+      "base": "o/fo",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["before_GreggB"]
+    },
+    "before_GreggF": {
+      "base": "o/po",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["before_GreggV"]
     }
   }
 }
