@@ -623,6 +623,18 @@
       "base": "u/nup",
       "transformation": "identity"
     },
+    "NE_EL": {
+      "base": "u/tur",
+      "transformation": "identity"
+    },
+    "NE_SWL": {
+      "base": "u/tup",
+      "transformation": "identity"
+    },
+    "NE_SW": {
+      "base": "u/tuch",
+      "transformation": "identity"
+    },
     "before_GreggR": {
       "base": "u/ur",
       "transformation": "identity",
@@ -651,7 +663,7 @@
     "after_GreggT": {
       "base": "u",
       "transformation": "skewx_30_rotate_30",
-      "aliases": ["after_GreggD"]
+      "aliases": ["after_GreggD", "NE_ER", "NE_E", "NE_NE", "NE_SWR"]
     },
     "after_GreggF": {
       "base": "u",
