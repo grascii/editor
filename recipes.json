@@ -611,6 +611,18 @@
       "base": "u/rup",
       "transformation": "identity"
     },
+    "E_ER": {
+      "base": "u/nuk",
+      "transformation": "identity"
+    },
+    "E_NE": {
+      "base": "u/nut",
+      "transformation": "identity"
+    },
+    "E_SWL": {
+      "base": "u/nup",
+      "transformation": "identity"
+    },
     "before_GreggR": {
       "base": "u/ur",
       "transformation": "identity",
@@ -634,7 +646,7 @@
     "after_GreggN": {
       "base": "u",
       "transformation": "rotate_90",
-      "aliases": ["after_GreggM"]
+      "aliases": ["after_GreggM", "E_EL", "E_E", "E_SWR", "E_SW"]
     },
     "after_GreggT": {
       "base": "u",
