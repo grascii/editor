@@ -603,6 +603,14 @@
       "transformation": "skewx_30",
       "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ", "after_GreggK", "after_GreggG", "after_GreggSh", "after_GreggCh", "after_GreggJ", "ER_ER", "ER_E", "ER_NE", "ER_SW"]
     },
+    "EL_EL": {
+      "base": "u/rur",
+      "transformation": "identity"
+    },
+    "EL_SWL": {
+      "base": "u/rup",
+      "transformation": "identity"
+    },
     "before_GreggR": {
       "base": "u/ur",
       "transformation": "identity",
@@ -621,7 +629,7 @@
     "after_GreggR": {
       "base": "u/ru",
       "transformation": "identity",
-      "aliases": ["after_GreggL"]
+      "aliases": ["after_GreggL", "EL_ER", "EL_E", "EL_NE", "EL_SW", "EL_SWR"]
     },
     "after_GreggN": {
       "base": "u",
