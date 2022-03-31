@@ -596,5 +596,91 @@
       "transformation": "identity",
       "aliases": ["after_GreggV", "SWR_EL", "SWR_E", "SWR_NE", "SWR_SWR", "SWR_SW"]
     }
+  },
+  "U": {
+    "default": {
+      "base": "u",
+      "transformation": "skewx_30",
+      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ", "after_GreggK", "after_GreggG", "after_GreggSh", "after_GreggCh", "after_GreggJ", "ER_ER", "ER_E", "ER_NE", "ER_SW", "SWL_ER", "SWL_E", "SWL_NE", "SWL_SW", "SW_ER", "SW_E", "SW_NE", "SW_SW"]
+    },
+    "EL_EL": {
+      "base": "u/rur",
+      "transformation": "identity"
+    },
+    "EL_SWL": {
+      "base": "u/rup",
+      "transformation": "identity"
+    },
+    "E_ER": {
+      "base": "u/nuk",
+      "transformation": "identity"
+    },
+    "E_NE": {
+      "base": "u/nut",
+      "transformation": "identity"
+    },
+    "E_SWL": {
+      "base": "u/nup",
+      "transformation": "identity"
+    },
+    "NE_EL": {
+      "base": "u/tur",
+      "transformation": "identity"
+    },
+    "NE_SWL": {
+      "base": "u/tup",
+      "transformation": "identity"
+    },
+    "NE_SW": {
+      "base": "u/tuch",
+      "transformation": "identity"
+    },
+    "SWR_EL": {
+      "base": "u/fur",
+      "transformation": "identity"
+    },
+    "SWR_SWR": {
+      "base": "u/fuf",
+      "transformation": "identity"
+    },
+    "SWR_SW": {
+      "base": "o/chop",
+      "transformation": "rotate_180_reverse"
+    },
+    "before_GreggR": {
+      "base": "u/ur",
+      "transformation": "identity",
+      "aliases": ["before_GreggL", "SWL_EL", "SW_EL"]
+    },
+    "before_GreggP": {
+      "base": "o/fo",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["before_GreggB", "ER_SWL", "SWL_SWL", "SWR_SWL", "SW_SWL"]
+    },
+    "before_GreggF": {
+      "base": "o/po",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["before_GreggV", "ER_SWR", "SWL_SWR", "SW_SWR"]
+    },
+    "after_GreggR": {
+      "base": "u/ru",
+      "transformation": "identity",
+      "aliases": ["after_GreggL", "EL_ER", "EL_E", "EL_NE", "EL_SW", "EL_SWR"]
+    },
+    "after_GreggN": {
+      "base": "u",
+      "transformation": "rotate_90",
+      "aliases": ["after_GreggM", "E_EL", "E_E", "E_SWR", "E_SW"]
+    },
+    "after_GreggT": {
+      "base": "u",
+      "transformation": "skewx_30_rotate_30",
+      "aliases": ["after_GreggD", "NE_ER", "NE_E", "NE_NE", "NE_SWR"]
+    },
+    "after_GreggF": {
+      "base": "u",
+      "transformation": "skewx_45",
+      "aliases": ["after_GreggV", "SWR_ER", "SWR_E", "SWR_NE"]
+    }
   }
 }
