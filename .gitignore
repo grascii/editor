@@ -1,3 +1,7 @@
 env/
-app/data/paths.js
+__pycache__/
+dist/
+build/
+*.egg-info/
+grascii_editor/static/data/paths.js
 release.zip
