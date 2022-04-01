@@ -1,13 +1,15 @@
 
-.PHONY: paths
-paths: app/data/paths.js
+.PHONY: paths, run_dev, clean
 
-app/data/paths.js: transform.py recipes.json
+paths: grascii_editor/static/data/paths.js
+
+grascii_editor/static/data/paths.js: transform.py recipes.json
 	python transform.py
 
-release.zip: paths app/**
-	zip release -r app/
+run_dev:
+	export FLASK_APP=grascii_editor
+	export FLASK_ENV=development
+	flask run
 
-.PHONY: clean
 clean:
-	rm -f app/data/paths.js release.zip
+	rm -f grascii_editor/static/data/paths.js
