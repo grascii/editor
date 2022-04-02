@@ -167,25 +167,28 @@ async function interpretGrascii(grascii) {
 }
 
 async function lexInput(text) {
-  const re = /\s+/;
-  const words = text.split(re);
-  const shorthand = "gregg";
   const chars = [];
-  for (const word of words) {
-    let interpretation = await interpretGrascii(word);
-    if (interpretation) {
-      for (let item of interpretation) {
-        if (typeof item === 'string') {
-          let entry = Char.catalog[shorthand][item.toLowerCase()];
-          if (Array.isArray(entry)) {
-            entry.forEach(function(ctor) { chars.push(new ctor()); });
-          } else {
-            chars.push(new entry());
+  const shorthand = "gregg";
+  const lines = text.split(/\n|\r|\n\r|\r\n/);
+  for (const line of lines) {
+    const words = line.split(/\s+/);
+    for (const word of words) {
+      let interpretation = await interpretGrascii(word);
+      if (interpretation) {
+        for (let item of interpretation) {
+          if (typeof item === 'string') {
+            let entry = Char.catalog[shorthand][item.toLowerCase()];
+            if (Array.isArray(entry)) {
+              entry.forEach(function(ctor) { chars.push(new ctor()); });
+            } else {
+              chars.push(new entry());
+            }
           }
         }
+        chars.push(new Char.dict[" "]);
       }
-      chars.push(new Char.dict[" "]);
     }
+    chars.push(new CharNewline());
   }
   return chars
 }
