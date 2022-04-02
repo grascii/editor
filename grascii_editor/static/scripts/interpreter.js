@@ -173,19 +173,23 @@ async function lexInput(text) {
   for (const line of lines) {
     const words = line.split(/\s+/);
     for (const word of words) {
-      let interpretation = await interpretGrascii(word);
-      if (interpretation) {
-        for (let item of interpretation) {
-          if (typeof item === 'string') {
-            let entry = Char.catalog[shorthand][item.toLowerCase()];
-            if (Array.isArray(entry)) {
-              entry.forEach(function(ctor) { chars.push(new ctor()); });
-            } else {
-              chars.push(new entry());
+      try {
+        let interpretation = await interpretGrascii(word);
+        if (interpretation) {
+          for (let item of interpretation) {
+            if (typeof item === 'string') {
+              let entry = Char.catalog[shorthand][item.toLowerCase()];
+              if (Array.isArray(entry)) {
+                entry.forEach(function(ctor) { chars.push(new ctor()); });
+              } else {
+                chars.push(new entry());
+              }
             }
           }
+          chars.push(new Char.dict[" "]);
         }
-        chars.push(new Char.dict[" "]);
+      } catch (e) {
+        chars.push(new CharText("\u25A1"))
       }
     }
     chars.push(new CharNewline());
