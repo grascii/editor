@@ -156,13 +156,23 @@ Parser.prototype.parse = function() {
 };
 
 const jrpc = simple_jsonrpc.connect_xhr(location.origin + "/api");
+const interpretationCache = new Map();
+async function interpretGrascii(grascii) {
+  if (interpretationCache.has(grascii)) {
+    return interpretationCache.get(grascii);
+  }
+  const interpretation = await jrpc.call('grascii.interpret', [grascii]);
+  interpretationCache.set(grascii, interpretation);
+  return interpretation;
+}
+
 async function lexInput(text) {
   const re = /\s+/;
   const words = text.split(re);
   const shorthand = "gregg";
   const chars = [];
   for (const word of words) {
-    let interpretation = await jrpc.call('grascii.interpret', [word]);
+    let interpretation = await interpretGrascii(word);
     if (interpretation) {
       for (let item of interpretation) {
         if (typeof item === 'string') {
