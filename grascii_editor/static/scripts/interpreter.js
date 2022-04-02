@@ -155,6 +155,31 @@ Parser.prototype.parse = function() {
   return this.page();
 };
 
+const jrpc = simple_jsonrpc.connect_xhr(location.origin + "/api");
+async function lexInput(text) {
+  const re = /\s+/;
+  const words = text.split(re);
+  const shorthand = "gregg";
+  const chars = [];
+  for (const word of words) {
+    let interpretation = await jrpc.call('grascii.interpret', [word]);
+    if (interpretation) {
+      for (let item of interpretation) {
+        if (typeof item === 'string') {
+          let entry = Char.catalog[shorthand][item.toLowerCase()];
+          if (Array.isArray(entry)) {
+            entry.forEach(function(ctor) { chars.push(new ctor()); });
+          } else {
+            chars.push(new entry());
+          }
+        }
+      }
+      chars.push(new Char.dict[" "]);
+    }
+  }
+  return chars
+}
+
 function parseInputTexts(texts) {
   const charsArray = [];
   var shorthand = "gregg";

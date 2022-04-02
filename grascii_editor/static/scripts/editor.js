@@ -247,9 +247,9 @@ function setAnimation() {
   //animate_scroll.beginElement();
 }
 
-function updateSVG(toAnimate) {
+async function updateSVG(toAnimate) {
   const text = input.value;
-  const chars = parseInputTexts([text])[0];
+  const chars = await lexInput(text)
   //const isPlaying = (svg.childNodes[svg.childNodes.length - 1] instanceof SVGAnimateElement);
 
   //svg.setAttribute("data-text", encodeURIComponent(text));
