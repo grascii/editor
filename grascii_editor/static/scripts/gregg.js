@@ -460,3 +460,21 @@ GreggIng.prototype.setPaths = function() {
     this.paths = ["m 0 2 v 0.1"];
   }
 };
+
+// aliases for combo strokes and unmodeled strokes
+GreggChar.dict["Z"] = GreggS;
+GreggChar.dict["X"] = GreggS;
+GreggChar.dict["LD"] = [GreggL, GreggD];
+GreggChar.dict["SS"] = [GreggS, GreggS];
+GreggChar.dict["XS"] = [GreggS, GreggS];
+GreggChar.dict["MN"] = [GreggM, GreggN];
+GreggChar.dict["MM"] = [GreggM, GreggN];
+GreggChar.dict["DT"] = [GreggD, GreggT];
+GreggChar.dict["TD"] = [GreggD, GreggT];
+GreggChar.dict["DD"] = [GreggD, GreggT];
+GreggChar.dict["I"] = GreggA;
+GreggChar.dict["A&'"] = GreggA;
+GreggChar.dict["A&E"] = GreggA;
+GreggChar.dict["EU"] = [GreggE, GreggU];
+GreggChar.dict["AU"] = [GreggA, GreggU];
+GreggChar.dict["OE"] = [GreggO, GreggE];
