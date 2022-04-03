@@ -14,8 +14,12 @@ async function lexInput(text) {
   const shorthand = "gregg";
   const lines = text.split(/\n|\r|\n\r|\r\n/);
   for (const line of lines) {
-    const words = line.split(/\s+/);
+    const words = line.split(/\s/);
     for (const word of words) {
+      if (word.length == 0) {
+        chars.push(new Char.dict[" "]);
+        continue
+      }
       if (/^[,.>?()=-]$/.test(word)) {
         chars.push(new Char.catalog[shorthand][word]);
         chars.push(new Char.dict[" "]);
