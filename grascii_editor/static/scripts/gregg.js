@@ -461,6 +461,8 @@ GreggIng.prototype.setPaths = function() {
   }
 };
 
+GreggChar.dict["^"] = CtorMove(2, 2);
+
 // aliases for combo strokes and unmodeled strokes
 GreggChar.dict["Z"] = GreggS;
 GreggChar.dict["X"] = GreggS;
