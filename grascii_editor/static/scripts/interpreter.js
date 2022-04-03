@@ -21,7 +21,7 @@ async function lexInput(text) {
         if (interpretation) {
           for (let item of interpretation) {
             if (typeof item === 'string') {
-              let entry = Char.catalog[shorthand][item.toLowerCase()];
+              let entry = Char.catalog[shorthand][item];
               if (Array.isArray(entry)) {
                 entry.forEach(function(ctor) { chars.push(new ctor()); });
               } else {
