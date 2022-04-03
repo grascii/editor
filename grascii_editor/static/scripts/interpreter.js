@@ -16,6 +16,11 @@ async function lexInput(text) {
   for (const line of lines) {
     const words = line.split(/\s+/);
     for (const word of words) {
+      if (/^[,.>?()=-]$/.test(word)) {
+        chars.push(new Char.catalog[shorthand][word]);
+        chars.push(new Char.dict[" "]);
+        continue
+      }
       try {
         let interpretation = await interpretGrascii(word);
         if (interpretation) {

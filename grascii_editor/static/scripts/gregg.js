@@ -419,7 +419,7 @@ GreggHyphen.prototype.setPaths = function() {
 
 GreggLparen = function() { GreggChar.call(this, "GreggLparen", "{", "SWL14XE4", "SWL", "E", "black", false, p(9.6, -6.0)); };
 GreggLparen.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["{"] = GreggLparen;
+GreggChar.dict["("] = GreggLparen;
 
 GreggLparen.prototype.setPaths = function() {
   this.dp = p(-5.05572 + 1, 7.7858);
@@ -428,7 +428,7 @@ GreggLparen.prototype.setPaths = function() {
 
 GreggRparen = function() { GreggChar.call(this, "GreggRparen", "}", "SWR14XE4", "SWR", "E", "black", false, p(7.7, -5.9)); };
 GreggRparen.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["}"] = GreggRparen;
+GreggChar.dict[")"] = GreggRparen;
 
 GreggRparen.prototype.setPaths = function() {
   this.dp = p(1.01114 + 1, 7.28024);
