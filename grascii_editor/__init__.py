@@ -1,6 +1,7 @@
 import os
 
 from flask import Flask, render_template
+from grascii_rpc import create_api
 
 def create_app(test_config=None):
     app = Flask(__name__, instance_relative_config=True)
@@ -18,8 +19,8 @@ def create_app(test_config=None):
     except OSError:
         pass
 
-    from grascii_server.api import grascii_api
-    grascii_api.init_app(app)
+    api = create_api(enabled_apis={"grascii.interpret"})
+    api.init_app(app)
 
     @app.route("/")
     def editor():
