@@ -5,39 +5,50 @@ images of Gregg outlines.
 
 ## Getting Started
 
-**Note**: Grascii Editor is under development in pre-alpha. Support for the
-Grascii language is limited, and many stroke joinings have not yet been modeled.
-
-### Running Locally
-
-1. Download the latest release.
-2. Unzip the release.
-3. Open `app/editor.html` in a browser.
-
-### Building from Source
-
-Alternatively, you can build the app from source.
+**Note**: Grascii Editor is under development in pre-alpha. Many stroke
+joinings have not yet been modeled. To try it early, it must be installed from
+source.
 
 #### Prerequisites
 
-- Python 3.6+
+- Python 3.7+
 
 #### Steps
 
 1. Clone the repository.
-2. Install the requirements.
+
+```
+git clone https://github.com/grascii/editor.git
+```
+
+2. Change working directory.
+
+```
+cd editor
+```
+
+Tip: Before following the next steps, it is recommended to create a new Python
+virtual environment for the application.
+
+3. Install the requirements.
 
 ```
 pip install -r requirements.txt
 ```
 
-3. Build the path data.
+4. Build the path data.
 
 ```
 python transform.py
 ```
 
-4. Open `app/editor.html` in a browser.
+5. Start the application.
+
+```
+FLASK_APP=grascii_editor flask run
+```
+
+6. Open http://localhost:5000 in a browser.
 
 ## License
 

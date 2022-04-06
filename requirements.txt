@@ -1,4 +1,20 @@
+click==8.1.2
+Flask==2.1.1
+Flask-JSONRPC==2.1.0
+grascii==0.3.0
+grascii-rpc @ git+https://github.com/grascii/rpc.git@086db160c5ee10dbe80a72849a54d5c8a52c431b
+importlib-metadata==4.11.3
+itsdangerous==2.1.2
+Jinja2==3.1.1
+lark-parser==0.12.0
+MarkupSafe==2.1.1
+mypy-extensions==0.4.3
 numpy==1.22.2
 scipy==1.8.0
 svgpathtools==1.4.4
 svgwrite==1.4.1
+typeguard==2.12.1
+typing-inspect==0.7.1
+typing_extensions==4.1.1
+Werkzeug==2.1.1
+zipp==3.8.0
