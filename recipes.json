@@ -89,6 +89,18 @@
       "transformation": "identity"
     }
   },
+  "S": {
+    "default": {
+      "base": "s",
+      "transformation": "r_to_f"
+    }
+  },
+  "SL": {
+    "default": {
+      "base": "s",
+      "transformation": "r_to_p"
+    }
+  },
   "A": {
     "default": {
       "base": "a",
