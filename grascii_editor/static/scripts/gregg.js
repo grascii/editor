@@ -81,14 +81,14 @@ GreggTh.prototype.setPaths = function() {
   this.paths = ["m 0 0 c -0.084533 -1.22722 2.78425 -2.19996 3.2766 -2.29431"];
 };
 
-//GreggThL = function() { GreggChar.call(this, "GreggThL", "Th", "NEL4", "NEL", "NEL", "black", false, p(0.0, 1.1)); };
-//GreggThL.prototype = Object.create(GreggChar.prototype);
-//GreggChar.dict["Th"] = GreggThL;
+GreggThL = function() { GreggChar.call(this, "GreggThL", "Th", "NEL4", "NEL", "NEL", "black", false, p(0.0, 1.1)); };
+GreggThL.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["THL"] = GreggThL;
 
-//GreggThL.prototype.setPaths = function() {
-  //this.dp = p(3.27661, -2.29431);
-  //this.paths = ["m 0 0 c 1.32922 0.043491 2.69759 -1.20187 3.27661 -2.29431"];
-//};
+GreggThL.prototype.setPaths = function() {
+  this.dp = p(3.27661, -2.29431);
+  this.paths = ["m 0 0 c 1.32922 0.043491 2.69759 -1.20187 3.27661 -2.29431"];
+};
 
 GreggP = function() { GreggChar.call(this, "GreggP", "p", "SWL7", "SWL", "SWL", "black", false, p(4.7, -2.9)); };
 GreggP.prototype = Object.create(GreggChar.prototype);
@@ -138,23 +138,23 @@ GreggJ.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.J.default);
 };
 
-GreggS = function() { GreggChar.call(this, "GreggS", "s", "SWL3", "SWL", "SWL", "black", false, p(1.8, -1.3)); };
+GreggS = function() { GreggChar.call(this, "GreggS", "S", "SWR3", "SWR", "SWR", "black", false, p(2.1, -1.1)); };
 GreggS.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["S"] = GreggS;
 
 GreggS.prototype.setPaths = function() {
+  this.dp = p(-2.12133, 2.12133);
+  this.paths = ["m 0 0 c 0.880428 0.925001 -0.975988 1.91308 -2.12133 2.12133"];
+};
+
+GreggSL = function() { GreggChar.call(this, "GreggSL", "s", "SWL3", "SWL", "SWL", "black", false, p(1.8, -1.3)); };
+GreggSL.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["SL"] = GreggSL;
+
+GreggSL.prototype.setPaths = function() {
   this.dp = p(-1.5, 2.59808);
   this.paths = ["m 0 0 c -0.771314 0.491248 -2.48487 1.68084 -1.5 2.59808"];
 };
-
-//GreggSR = function() { GreggChar.call(this, "GreggSR", "S", "SWR3", "SWR", "SWR", "black", false, p(2.1, -1.1)); };
-//GreggSR.prototype = Object.create(GreggChar.prototype);
-//GreggChar.dict["S"] = GreggSR;
-
-//GreggSR.prototype.setPaths = function() {
-  //this.dp = p(-2.12133, 2.12133);
-  //this.paths = ["m 0 0 c 0.880428 0.925001 -0.975988 1.91308 -2.12133 2.12133"];
-//};
 
 GreggSh = function() { GreggChar.call(this, "GreggSh", "sh", "SW4", "SW", "SW", "black", false, p(2.0, -1.7)); };
 GreggSh.prototype = Object.create(GreggChar.prototype);
@@ -464,7 +464,7 @@ GreggIng.prototype.setPaths = function() {
 GreggChar.dict["^"] = CtorMove(2, 2);
 
 // aliases for combo strokes and unmodeled strokes
-GreggChar.dict["Z"] = GreggS;
+//GreggChar.dict["Z"] = GreggS;
 GreggChar.dict["X"] = GreggS;
 GreggChar.dict["LD"] = [GreggL, GreggD];
 GreggChar.dict["SS"] = [GreggS, GreggS];

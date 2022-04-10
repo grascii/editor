@@ -4,7 +4,7 @@ async function interpretGrascii(grascii) {
   if (interpretationCache.has(grascii)) {
     return interpretationCache.get(grascii);
   }
-  const interpretation = await jrpc.call('grascii.interpret', [grascii]);
+  const interpretation = await jrpc.call('grascii.interpret', [grascii, true]);
   interpretationCache.set(grascii, interpretation);
   return interpretation;
 }
@@ -28,9 +28,39 @@ async function lexInput(text) {
       try {
         let interpretation = await interpretGrascii(word);
         if (interpretation) {
-          for (let item of interpretation) {
+          for (let i = 0; i < interpretation.length; i++) {
+            let item = interpretation[i]
             if (typeof item === 'string') {
-              let entry = Char.catalog[shorthand][item];
+              let entry;
+              if (item == "S" || item == "Z") {
+                if (Array.isArray(interpretation[i + 1])) {
+                  annotations = interpretation[i + 1];
+                  if (annotations.includes(")")) {
+                    entry = Char.catalog[shorthand]["S"];
+                  } else if (annotations.includes("(")) {
+                    entry = Char.catalog[shorthand]["SL"];
+                  } else {
+                    entry = Char.catalog[shorthand]["S"];
+                  }
+                } else {
+                  entry = Char.catalog[shorthand]["S"];
+                }
+              } else if (item == "TH") {
+                if (Array.isArray(interpretation[i + 1])) {
+                  annotations = interpretation[i + 1];
+                  if (annotations.includes(")")) {
+                    entry = Char.catalog[shorthand]["THL"];
+                  } else if (annotations.includes("(")) {
+                    entry = Char.catalog[shorthand]["TH"];
+                  } else {
+                    entry = Char.catalog[shorthand]["TH"];
+                  }
+                } else {
+                  entry = Char.catalog[shorthand]["TH"];
+                }
+              } else {
+                entry = Char.catalog[shorthand][item];
+              }
               if (Array.isArray(entry)) {
                 entry.forEach(function(ctor) { chars.push(new ctor()); });
               } else {
