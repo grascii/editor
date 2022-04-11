@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="matrix(.5 -.86603 -.86603 -.5 116.55 145.88)">
+   <g transform="translate(6.8,8.7)">
+    <path d="m0.64316 1.1801c-0.87051 0.28011-3 1.2198-3-1.9e-6" data-char="GreggSL" data-head="SWL" data-kana="s" data-key="" data-model="SWL3" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="SWL"/>
+   </g>
+   <g transform="translate(5.3,11.298)">
+    <title>CharSpace</title>
+   </g>
+   <g transform="translate(12.8,10)">
+    <title>CharNewline</title>
+   </g>
+  </g>
+  <g transform="matrix(.5 -.86603 -.86603 -.5 114.96 142.12)">
+   <title>CharNewline</title>
+  </g>
+  <g transform="matrix(.5 -.86603 -.86603 -.5 110.63 139.62)">
+   <title>CharSpace</title>
+  </g>
+  <g transform="matrix(.5 -.86603 -.86603 -.5 111.63 137.88)">
+   <title>CharSpace</title>
+  </g>
+  <g id="model" transform="matrix(.5 -.86603 -.86603 -.5 109.59 136.27)">
+   <title>GreggE</title>
+   <path d="m-0.39345-0.95227c0-0.65969 0.90703-1.0115 1.1904-0.45892 0.1448 0.28233 0.062346 0.42608-0.10041 1.0335" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+  </g>
+ </g>
+</svg>
