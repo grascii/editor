@@ -58,6 +58,8 @@ async function lexInput(text) {
                 } else {
                   entry = Char.catalog[shorthand]["TH"];
                 }
+              } else if (item == "-") {
+                entry = GreggBoundary;
               } else {
                 entry = Char.catalog[shorthand][item];
               }

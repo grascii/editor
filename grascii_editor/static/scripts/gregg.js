@@ -459,6 +459,9 @@ GreggIng.prototype.setPaths = function() {
   }
 };
 
+GreggBoundary = function() { GreggChar.call(this, "GreggBoundary", "-", "", "", "", "black", false, p(0, 0))}
+GreggBoundary.prototype = Object.create(GreggChar.prototype);
+
 GreggChar.dict["^"] = CtorMove(2, 2);
 
 // aliases for combo strokes and unmodeled strokes
