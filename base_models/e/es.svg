@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(72.498 135.34)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g id="model" transform="translate(6,14.4)">
+    <title>GreggE</title>
+    <path d="m1.2943 2.8901c-0.76187-0.43986-0.81621-0.80906-0.62071-1.1477 0.19549-0.3386 0.55805-0.40043 0.82698-0.24516" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <g transform="matrix(.5 -.86603 -.86603 -.5 85.149 162.62)" stroke-width=".4252">
+   <g transform="translate(6.8,8.7)">
+    <path d="m0.48538 1.4534c6e-8 -1.2198-2.1295-0.28011-3-1.9e-6" data-char="GreggSL" data-head="SWL" data-kana="s" data-key="" data-model="SWL3" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="SWL"/>
+   </g>
+   <g transform="translate(5.3,11.298)">
+    <title>CharSpace</title>
+   </g>
+   <g transform="translate(12.8,10)">
+    <title>CharNewline</title>
+   </g>
+  </g>
+ </g>
+</svg>

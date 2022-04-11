@@ -296,7 +296,7 @@
     "before_GreggP": {
       "base": "a/ap",
       "transformation": "identity",
-      "aliases": ["before_GreggB"]
+      "aliases": ["before_GreggB", "before_GreggSL"]
     },
     "before_GreggF": {
       "base": "a/af",
@@ -310,6 +310,10 @@
       "base": "a/ach",
       "transformation": "identity",
       "aliases": ["before_GreggSh", "before_GreggJ"]
+    },
+    "before_GreggS": {
+      "base": "a/as",
+      "transformation": "identity"
     },
     "after_GreggK": {
       "base": "a/ka",
@@ -470,7 +474,7 @@
     "before_GreggP": {
       "base": "e/re",
       "transformation": "r_to_p",
-      "aliases": ["before_GreggB", "ER_SWL", "SWR_SWL", "SWL_SWL", "SW_SWL"]
+      "aliases": ["before_GreggB", "ER_SWL", "SWR_SWL", "SWL_SWL", "SW_SWL", "before_GreggSL"]
     },
     "before_GreggF": {
       "base": "e/er",
@@ -481,6 +485,10 @@
       "base": "e/ek",
       "transformation": "identity",
       "aliases": ["before_GreggG", "SWL_ER"]
+    },
+    "before_GreggS": {
+      "base": "e/es",
+      "transformation": "identity"
     },
     "after_GreggK": {
       "base": "e/ke",
@@ -522,7 +530,7 @@
     "default": {
       "base": "o",
       "transformation": "skewx_30",
-      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV", "after_GreggR", "after_GreggL", "after_GreggN", "after_GreggM", "after_GreggT", "after_GreggD", "after_GreggSh", "after_GreggCh", "after_GreggJ", "EL_SWR", "EL_SW", "E_SWR", "E_SW", "NE_SWR", "NE_SW", "SW_EL", "SW_E", "SW_NE", "SW_SWR", "SW_SW"]
+      "aliases": ["before_GreggSh", "before_GreggCh", "before_GreggJ", "before_GreggF", "before_GreggV", "after_GreggR", "after_GreggL", "after_GreggN", "after_GreggM", "after_GreggT", "after_GreggD", "after_GreggSh", "after_GreggCh", "after_GreggJ", "EL_SWR", "EL_SW", "E_SWR", "E_SW", "NE_SWR", "NE_SW", "SW_EL", "SW_E", "SW_NE", "SW_SWR", "SW_SW", "before_GreggS"]
     },
     "ER_ER": {
       "base": "o/kok",
@@ -586,7 +594,7 @@
     "before_GreggP": {
       "base": "o",
       "transformation": "skewx_45",
-      "aliases": ["before_GreggB", "EL_SWL", "E_SWL", "NE_SWL"]
+      "aliases": ["before_GreggB", "EL_SWL", "E_SWL", "NE_SWL", "before_GreggSL"]
     },
     "before_GreggR": {
       "base": "o/or",
@@ -667,12 +675,12 @@
     "before_GreggP": {
       "base": "o/fo",
       "transformation": "rotate_180_reverse",
-      "aliases": ["before_GreggB", "ER_SWL", "SWL_SWL", "SWR_SWL", "SW_SWL"]
+      "aliases": ["before_GreggB", "ER_SWL", "SWL_SWL", "SWR_SWL", "SW_SWL", "before_GreggSL"]
     },
     "before_GreggF": {
       "base": "o/po",
       "transformation": "rotate_180_reverse",
-      "aliases": ["before_GreggV", "ER_SWR", "SWL_SWR", "SW_SWR"]
+      "aliases": ["before_GreggV", "ER_SWR", "SWL_SWR", "SW_SWR", "before_GreggS"]
     },
     "after_GreggR": {
       "base": "u/ru",
