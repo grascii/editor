@@ -43,6 +43,11 @@ GreggRHead.prototype.setPaths = function() {
     this.setPathsFromObject(PATHS.R.after_GreggF);
     return;
   }
+  if (this.getPrevName() == "GreggO") {
+    if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
+      return;
+    }
+  }
   this.setPathsFromObject(PATHS.R.default_head);
 };
 
@@ -69,6 +74,11 @@ GreggLHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "SWR") {
     this.setPathsFromObject(PATHS.L.after_GreggF);
     return;
+  }
+  if (this.getPrevName() == "GreggO") {
+    if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
+      return;
+    }
   }
   this.setPathsFromObject(PATHS.L.default_head);
 };
@@ -427,8 +437,17 @@ GreggO.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["O"] = GreggO;
 
 GreggO.prototype.setPaths = function() {
+  let pathsObject;
+
+  const adjacentTypeName = this.getPrevTailType() + "_" + this.getNextName();
+  pathsObject = PATHS.O[adjacentTypeName];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
   const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
-  let pathsObject = PATHS.O[adjacentTypes];
+  pathsObject = PATHS.O[adjacentTypes];
   if (pathsObject) {
     this.setPathsFromObject(pathsObject);
     return;

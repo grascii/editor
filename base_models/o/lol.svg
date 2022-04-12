@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g id="model" transform="matrix(-.5 .86603 .86603 .5 81.217 118.41)" stroke-width=".4252">
+   <path d="m26.438 15.027c1.3889-1.2171 1.615 0.15751 1.615 0.93241" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+  </g>
+  <g id="tail" transform="matrix(-.5 .86603 .86603 .5 80.478 117.62)" stroke-width=".4252">
+   <path d="m28.373 16.997c1e-6 0.81088-0.35707 1.7723-0.94455 2.8062-1.7756 3.125-4.6568 5.1813-7.1448 7.4753" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+  </g>
+  <g transform="translate(43.471 118.06)">
+   <g transform="translate(6,10)" stroke="#000" stroke-width=".4252">
+    <title>CharNewline</title>
+    <path d="m17.539 20.761c-0.015 1.7934 1.6298 2.4339 3.9552 2.45 3.5941 0.0247 6.8156-1.4423 10.046-2.45" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252" data-char="GreggL" data-head="EL" data-kana="l" data-key="" data-model="EL16" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>
