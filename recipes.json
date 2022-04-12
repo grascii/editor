@@ -348,6 +348,14 @@
       "base": "a/raf",
       "transformation": "identity"
     },
+    "E_SWR": {
+      "base": "a/naf",
+      "transformation": "identity"
+    },
+    "NE_SWR": {
+      "base": "a/taf",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
