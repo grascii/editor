@@ -10,19 +10,47 @@ Char.catalog["gregg"] = GreggChar.dict;
 
 GreggK = function() { GreggChar.call(this, "GreggK", "k", "ER7", "ER", "ER", "black", false, p(0.0, 0.7)); };
 GreggK.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["K"] = GreggK;
 
 GreggK.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.K.default)
 };
 
+GreggKHead = function() { GreggChar.call(this, "GreggK", "k", "ER7", "ER", "ER", "black", false, p(0.0, 0.7)); };
+GreggKHead.prototype = Object.create(GreggChar.prototype);
+
+GreggKHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.K.default_head)
+};
+
+GreggKTail = function() { GreggChar.call(this, "GreggK", "k", "ER7", "ER", "ER", "black", false, p(0.0, 0.7)); };
+GreggKTail.prototype = Object.create(GreggChar.prototype);
+
+GreggKTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.K.default_tail)
+};
+GreggChar.dict["K"] = [GreggKHead, GreggKTail];
+
 GreggG = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER", "black", false, p(0.0, 1.3)); };
 GreggG.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["G"] = GreggG;
 
 GreggG.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.G.default);
 };
+
+GreggGHead = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER", "black", false, p(0.0, 1.3)); };
+GreggGHead.prototype = Object.create(GreggChar.prototype);
+
+GreggGHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.G.default_head);
+};
+
+GreggGTail = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER", "black", false, p(0.0, 1.3)); };
+GreggGTail.prototype = Object.create(GreggChar.prototype);
+
+GreggGTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.G.default_tail);
+};
+GreggChar.dict["G"] = [GreggGHead, GreggGTail];
 
 GreggR = function() { GreggChar.call(this, "GreggR", "r", "EL7", "EL", "EL", "black", false, p(0.0, -0.6)); };
 GreggR.prototype = Object.create(GreggChar.prototype);
