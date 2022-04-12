@@ -39,7 +39,7 @@ GreggRHead = function() { GreggChar.call(this, "GreggR", "r", "EL7", "EL", "EL",
 GreggRHead.prototype = Object.create(GreggChar.prototype);
 
 GreggRHead.prototype.setPaths = function() {
-  if (this.getPrevTailType() == "SWR") {
+  if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.R.after_GreggF);
     return;
   }
@@ -71,7 +71,7 @@ GreggLHead = function() { GreggChar.call(this, "GreggL", "l", "EL14", "EL", "EL"
 GreggLHead.prototype = Object.create(GreggChar.prototype);
 
 GreggLHead.prototype.setPaths = function() {
-  if (this.getPrevTailType() == "SWR") {
+  if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.L.after_GreggF);
     return;
   }
