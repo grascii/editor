@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(-.5 .86603 .86603 .5 94.52 94.516)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g id="model" transform="translate(6,10)" stroke="#000" stroke-width=".4252">
+   <title>CharNewline</title>
+   <g id="head">
+    <path d="m26.964 14.115c0.76259 0.43185 1.0887 1.0692 1.0887 1.8441" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+   </g>
+   <g id="tail" transform="translate(-.73237 .54441)">
+    <path d="m28.373 16.997c1e-6 0.81088-0.35707 1.7723-0.94455 2.8062-1.7756 3.125-4.6568 5.1813-7.1448 7.4753" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -19,6 +19,16 @@
     "default": {
       "base": "l",
       "transformation": "identity"
+    },
+    "default_head": {
+      "base": "cut_l",
+      "id": "head",
+      "transformation": "identity"
+    },
+    "default_tail": {
+      "base": "cut_l",
+      "id": "tail",
+      "transformation": "identity"
     }
   },
   "K": {
@@ -77,6 +87,16 @@
     "default": {
       "base": "l",
       "transformation": "r_to_p"
+    },
+    "default_head": {
+      "base": "cut_l",
+      "id": "tail",
+      "transformation": "r_to_p"
+    },
+    "default_tail": {
+      "base": "cut_l",
+      "id": "head",
+      "transformation": "r_to_p"
     }
   },
   "F": {
@@ -98,6 +118,16 @@
   "V": {
     "default": {
       "base": "l",
+      "transformation": "r_to_f"
+    },
+    "default_head": {
+      "base": "cut_l",
+      "id": "head",
+      "transformation": "r_to_f"
+    },
+    "default_tail": {
+      "base": "cut_l",
+      "id": "tail",
       "transformation": "r_to_f"
     }
   },
