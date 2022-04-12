@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g id="head" transform="translate(-1.2974 -.066532)">
+  <path d="m100.5 156.32c-1e-5 0.49321 0.20039 0.81663 0.53912 1.0122" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+ <g id="tail">
+  <path d="m101.04 157.33c1.2901 0.74485 4.5869-0.36495 6.4609-1.0122" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+</svg>

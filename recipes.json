@@ -3,6 +3,16 @@
     "default": {
       "base": "r",
       "transformation": "identity"
+    },
+    "default_head": {
+      "base": "cut_r",
+      "id": "head",
+      "transformation": "identity"
+    },
+    "default_tail": {
+      "base": "cut_r",
+      "id": "tail",
+      "transformation": "identity"
     }
   },
   "L": {

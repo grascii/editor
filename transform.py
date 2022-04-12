@@ -73,21 +73,21 @@ class ModelBuilder():
         self.base_path = base_path
         self.bases = {}
 
-    def get_base_paths(self, name):
-        if name in self.bases:
-            return self.bases[name]
+    def get_base_paths(self, name, model_id):
+        if (name, model_id) in self.bases:
+            return self.bases[name, model_id]
         filename = Path(self.base_path, name).with_suffix(".svg")
         if not filename.exists():
             raise FileNotFoundError
         doc = Document(filename)
-        groups = doc.root.findall(f".//{SVG_GROUP_TAG}[@id='{MODEL_ID}']", SVG_NAMESPACE)
+        groups = doc.root.findall(f".//{SVG_GROUP_TAG}[@id='{model_id}']", SVG_NAMESPACE)
         assert len(groups) == 1
         paths = doc.paths_from_group(groups[0])
-        self.bases[name] = paths
+        self.bases[name, model_id] = paths
         return paths
 
     def create_model(self, recipe, name):
-        paths = self.get_base_paths(recipe["base"])
+        paths = self.get_base_paths(recipe["base"], recipe.get("id", MODEL_ID))
         transformation = Transformations.identity
         try:
             transformation = getattr(Transformations, recipe["transformation"])
