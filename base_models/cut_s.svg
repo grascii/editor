@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g transform="matrix(-1 -2.2981e-6 2.2981e-6 -1 91.012 147.63)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="translate(5.3,11.298)">
+   <title>CharSpace</title>
+  </g>
+  <g transform="translate(12.8,10)">
+   <title>CharNewline</title>
+  </g>
+  <g id="head">
+   <path d="m6.9245 9.5483c-3e-6 -0.25797-0.09524-0.41935-0.25367-0.51082"/>
+  </g>
+  <g id="tail">
+   <path d="m5.9925 8.8512c-0.59073-0.34105-2.06 0.28993-2.7463 0.51082"/>
+  </g>
+ </g>
+</svg>

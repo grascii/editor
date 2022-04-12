@@ -262,11 +262,25 @@ GreggJ.prototype.setPaths = function() {
 
 GreggS = function() { GreggChar.call(this, "GreggS", "S", "SWR3", "SWR", "SWR", "black", false, p(2.1, -1.1)); };
 GreggS.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["S"] = GreggS;
 
 GreggS.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.S.default);
 };
+
+GreggSHead = function() { GreggChar.call(this, "GreggS", "S", "SWR3", "SWR", "SWR", "black", false, p(2.1, -1.1)); };
+GreggSHead.prototype = Object.create(GreggChar.prototype);
+
+GreggSHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.S.default_head);
+};
+
+GreggSTail = function() { GreggChar.call(this, "GreggS", "S", "SWR3", "SWR", "SWR", "black", false, p(2.1, -1.1)); };
+GreggSTail.prototype = Object.create(GreggChar.prototype);
+
+GreggSTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.S.default_tail);
+};
+GreggChar.dict["S"] = [GreggSHead, GreggSTail];
 
 GreggSL = function() { GreggChar.call(this, "GreggSL", "s", "SWL3", "SWL", "SWL", "black", false, p(1.8, -1.3)); };
 GreggSL.prototype = Object.create(GreggChar.prototype);
@@ -275,6 +289,21 @@ GreggChar.dict["SL"] = GreggSL;
 GreggSL.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.SL.default);
 };
+
+GreggSLHead = function() { GreggChar.call(this, "GreggSL", "s", "SWL3", "SWL", "SWL", "black", false, p(1.8, -1.3)); };
+GreggSLHead.prototype = Object.create(GreggChar.prototype);
+
+GreggSLHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.SL.default_head);
+};
+
+GreggSLTail = function() { GreggChar.call(this, "GreggSL", "s", "SWL3", "SWL", "SWL", "black", false, p(1.8, -1.3)); };
+GreggSLTail.prototype = Object.create(GreggChar.prototype);
+
+GreggSLTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.SL.default_tail);
+};
+GreggChar.dict["SL"] = [GreggSLHead, GreggSLTail];
 
 GreggSh = function() { GreggChar.call(this, "GreggSh", "sh", "SW4", "SW", "SW", "black", false, p(2.0, -1.7)); };
 GreggSh.prototype = Object.create(GreggChar.prototype);

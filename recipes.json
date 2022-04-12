@@ -163,11 +163,31 @@
     "default": {
       "base": "s",
       "transformation": "r_to_f"
+    },
+    "default_head": {
+      "base": "cut_s",
+      "id": "head",
+      "transformation": "r_to_f"
+    },
+    "default_tail": {
+      "base": "cut_s",
+      "id": "tail",
+      "transformation": "r_to_f"
     }
   },
   "SL": {
     "default": {
       "base": "s",
+      "transformation": "r_to_p"
+    },
+    "default_head": {
+      "base": "cut_s",
+      "id": "tail",
+      "transformation": "r_to_p"
+    },
+    "default_tail": {
+      "base": "cut_s",
+      "id": "head",
       "transformation": "r_to_p"
     }
   },
