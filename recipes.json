@@ -13,6 +13,11 @@
       "base": "cut_r",
       "id": "tail",
       "transformation": "identity"
+    },
+    "after_GreggF": {
+      "base": "r/fr",
+      "id": "head",
+      "transformation": "identity"
     }
   },
   "L": {
@@ -28,6 +33,11 @@
     "default_tail": {
       "base": "cut_l",
       "id": "tail",
+      "transformation": "identity"
+    },
+    "after_GreggF": {
+      "base": "l/fl",
+      "id": "head",
       "transformation": "identity"
     }
   },

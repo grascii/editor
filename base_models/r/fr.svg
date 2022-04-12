@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g id="head" transform="translate(13.047 2.456)">
+  <path d="m101 156.32c-0.39685 0.33221-0.29992 0.81663 0.0388 1.0122" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+ <g id="tail" transform="translate(13.046 2.4582)">
+  <path d="m101.04 157.33c1.2901 0.74485 4.5869-0.36495 6.4609-1.0122" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+ </g>
+ <path d="m116.46 149.51c2.018 1.246-1.61 4.422-3.5 6.062" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".425" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+</svg>
