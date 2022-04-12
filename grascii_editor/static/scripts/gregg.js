@@ -195,7 +195,9 @@ GreggF.prototype.setPaths = function() {
 GreggFHead = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };
 GreggFHead.prototype = Object.create(GreggChar.prototype);
 GreggFHead.prototype.setPaths = function() {
-  this.setPathsFromObject(PATHS.F.default_head);
+  if (this.getPrevTailType() == "") {
+    this.setPathsFromObject(PATHS.F.default_head);
+  }
 };
 
 GreggFTail = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };
@@ -216,7 +218,9 @@ GreggVHead = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "S
 GreggVHead.prototype = Object.create(GreggChar.prototype);
 
 GreggVHead.prototype.setPaths = function() {
-  this.setPathsFromObject(PATHS.V.default_head);
+  if (this.getPrevTailType() == "") {
+    this.setPathsFromObject(PATHS.V.default_head);
+  }
 };
 
 GreggVTail = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };

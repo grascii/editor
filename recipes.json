@@ -340,6 +340,14 @@
       "base": "a/nan",
       "transformation": "flip_rotate_60_reverse"
     },
+    "ER_SWR": {
+      "base": "a/kaf",
+      "transformation": "identity"
+    },
+    "EL_SWR": {
+      "base": "a/raf",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
