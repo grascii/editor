@@ -581,10 +581,22 @@
       "base": "e/pef",
       "transformation": "identity"
     },
+    "SWL_EL": {
+      "base": "e/kef",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_ER": {
+      "base": "e/ref",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_E": {
+      "base": "e/nef",
+      "transformation": "rotate_180_reverse"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
-      "aliases": ["before_GreggM", "SWL_E", "E_E"]
+      "aliases": ["before_GreggM", "E_E"]
     },
     "before_GreggT": {
       "base": "e/en",
@@ -614,7 +626,7 @@
     "before_GreggK": {
       "base": "e/ek",
       "transformation": "identity",
-      "aliases": ["before_GreggG", "SWL_ER"]
+      "aliases": ["before_GreggG"]
     },
     "before_GreggS": {
       "base": "e/es",
@@ -648,7 +660,7 @@
     "after_GreggP": {
       "base": "e/er",
       "transformation": "r_to_p",
-      "aliases": ["after_GreggB", "SWL_EL"]
+      "aliases": ["after_GreggB"]
     },
     "after_GreggF": {
       "base": "e/re",
