@@ -61,6 +61,16 @@
     "default": {
       "base": "r",
       "transformation": "r_to_p"
+    },
+    "default_head": {
+      "base": "cut_r",
+      "id": "tail",
+      "transformation": "r_to_p"
+    },
+    "default_tail": {
+      "base": "cut_r",
+      "id": "head",
+      "transformation": "r_to_p"
     }
   },
   "B": {
@@ -72,6 +82,16 @@
   "F": {
     "default": {
       "base": "r",
+      "transformation": "r_to_f"
+    },
+    "default_head": {
+      "base": "cut_r",
+      "id": "head",
+      "transformation": "r_to_f"
+    },
+    "default_tail": {
+      "base": "cut_r",
+      "id": "tail",
       "transformation": "r_to_f"
     }
   },

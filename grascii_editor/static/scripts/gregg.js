@@ -111,11 +111,27 @@ GreggThL.prototype.setPaths = function() {
 
 GreggP = function() { GreggChar.call(this, "GreggP", "p", "SWL7", "SWL", "SWL", "black", false, p(4.7, -2.9)); };
 GreggP.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["P"] = GreggP;
+//GreggChar.dict["P"] = GreggP;
 
 GreggP.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.P.default);
 };
+
+GreggPHead = function() { GreggChar.call(this, "GreggP", "p", "SWL7", "SWL", "SWL", "black", false, p(4.7, -2.9)); };
+GreggPHead.prototype = Object.create(GreggChar.prototype);
+
+GreggPHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.P.default_head);
+};
+
+GreggPTail = function() { GreggChar.call(this, "GreggP", "p", "SWL7", "SWL", "SWL", "black", false, p(4.7, -2.9)); };
+GreggPTail.prototype = Object.create(GreggChar.prototype);
+
+GreggPTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.P.default_tail);
+};
+
+GreggChar.dict["P"] = [GreggPHead, GreggPTail];
 
 GreggB = function() { GreggChar.call(this, "GreggB", "b", "SWL14", "SWL", "SWL", "black", false, p(11.2, -6.1)); };
 GreggB.prototype = Object.create(GreggChar.prototype);
@@ -127,11 +143,24 @@ GreggB.prototype.setPaths = function() {
 
 GreggF = function() { GreggChar.call(this, "GreggF", "f", "SWR7", "SWR", "SWR", "black", false, p(4.0, -2.9)); };
 GreggF.prototype = Object.create(GreggChar.prototype);
-GreggChar.dict["F"] = GreggF;
+//GreggChar.dict["F"] = GreggF;
 
 GreggF.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.F.default);
 };
+
+GreggFHead = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };
+GreggFHead.prototype = Object.create(GreggChar.prototype);
+GreggFHead.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.F.default_head);
+};
+
+GreggFTail = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };
+GreggFTail.prototype = Object.create(GreggChar.prototype);
+GreggFTail.prototype.setPaths = function() {
+  this.setPathsFromObject(PATHS.F.default_tail);
+};
+GreggChar.dict["F"] = [GreggFHead, GreggFTail];
 
 GreggV = function() { GreggChar.call(this, "GreggV", "v", "SWR14", "SWR", "SWR", "black", false, p(8.0, -5.7)); };
 GreggV.prototype = Object.create(GreggChar.prototype);
