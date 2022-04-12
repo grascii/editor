@@ -862,6 +862,10 @@
       "base": "o/chop",
       "transformation": "rotate_180_reverse"
     },
+    "ER_EL": {
+      "base": "u/kur",
+      "transformation": "identity"
+    },
     "before_GreggR": {
       "base": "u/ur",
       "transformation": "identity",

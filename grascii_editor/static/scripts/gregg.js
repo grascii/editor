@@ -26,6 +26,11 @@ GreggKTail = function() { GreggChar.call(this, "GreggK", "k", "ER7", "ER", "ER",
 GreggKTail.prototype = Object.create(GreggChar.prototype);
 
 GreggKTail.prototype.setPaths = function() {
+  if (this.getNextName() == "GreggU") {
+    if (this.next.getNextHeadType() == "EL") {
+      return;
+    }
+  }
   this.setPathsFromObject(PATHS.K.default_tail)
 };
 GreggChar.dict["K"] = [GreggKHead, GreggKTail];
@@ -48,6 +53,11 @@ GreggGTail = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER"
 GreggGTail.prototype = Object.create(GreggChar.prototype);
 
 GreggGTail.prototype.setPaths = function() {
+  if (this.getNextName() == "GreggU") {
+    if (this.next.getNextHeadType() == "EL") {
+      return;
+    }
+  }
   this.setPathsFromObject(PATHS.G.default_tail);
 };
 GreggChar.dict["G"] = [GreggGHead, GreggGTail];
@@ -70,6 +80,11 @@ GreggRHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.R.after_GreggF);
     return;
+  }
+  if (this.getPrevName() == "GreggU") {
+    if (this.prev.getPrevTailType() == "ER") {
+      return;
+    }
   }
   if (this.getPrevName() == "GreggO") {
     if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
@@ -102,6 +117,11 @@ GreggLHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.L.after_GreggF);
     return;
+  }
+  if (this.getPrevName() == "GreggU") {
+    if (this.prev.getPrevTailType() == "ER") {
+      return;
+    }
   }
   if (this.getPrevName() == "GreggO") {
     if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
