@@ -368,6 +368,10 @@
       "base": "a/naf",
       "transformation": "rotate_180_reverse"
     },
+    "SWL_SWR": {
+      "base": "a/paf",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
