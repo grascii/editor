@@ -561,6 +561,26 @@
       "base": "e/en",
       "transformation": "flip_rotate_60_reverse"
     },
+    "ER_SWR": {
+      "base": "e/kef",
+      "transformation": "identity"
+    },
+    "EL_SWR": {
+      "base": "e/ref",
+      "transformation": "identity"
+    },
+    "E_SWR": {
+      "base": "e/nef",
+      "transformation": "identity"
+    },
+    "NE_SWR": {
+      "base": "e/tef",
+      "transformation": "identity"
+    },
+    "SWL_SWR": {
+      "base": "e/pef",
+      "transformation": "identity"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
@@ -589,7 +609,7 @@
     "before_GreggF": {
       "base": "e/er",
       "transformation": "r_to_f",
-      "aliases": ["before_GreggV", "ER_SWR", "SWR_SWR", "SW_SWR"]
+      "aliases": ["before_GreggV", "SWR_SWR", "SW_SWR"]
     },
     "before_GreggK": {
       "base": "e/ek",
