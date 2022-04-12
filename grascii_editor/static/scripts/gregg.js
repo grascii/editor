@@ -151,8 +151,14 @@ GreggPTail = function() { GreggChar.call(this, "GreggP", "p", "SWL7", "SWL", "SW
 GreggPTail.prototype = Object.create(GreggChar.prototype);
 
 GreggPTail.prototype.setPaths = function() {
-  if (this.getNextHeadType() != "EL") {
+  if (this.getNextHeadType() == "C") {
+    if (!["EL", "ER", "E"].includes(this.next.getNextHeadType())) {
+      this.setPathsFromObject(PATHS.P.default_tail);
+      return;
+    }
+  } else if (this.getNextHeadType() != "EL") {
     this.setPathsFromObject(PATHS.P.default_tail);
+    return;
   }
 };
 
@@ -177,8 +183,14 @@ GreggBTail = function() { GreggChar.call(this, "GreggB", "b", "SWL14", "SWL", "S
 GreggBTail.prototype = Object.create(GreggChar.prototype);
 
 GreggBTail.prototype.setPaths = function() {
-  if (this.getNextHeadType() != "EL") {
+  if (this.getNextHeadType() == "C") {
+    if (!["EL", "ER", "E"].includes(this.next.getNextHeadType())) {
+      this.setPathsFromObject(PATHS.B.default_tail);
+      return;
+    }
+  } else if (this.getNextHeadType() != "EL") {
     this.setPathsFromObject(PATHS.B.default_tail);
+    return;
   }
 };
 

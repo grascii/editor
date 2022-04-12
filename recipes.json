@@ -356,6 +356,18 @@
       "base": "a/taf",
       "transformation": "identity"
     },
+    "SWL_EL": {
+      "base": "a/kaf",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_ER": {
+      "base": "a/raf",
+      "transformation": "rotate_180_reverse"
+    },
+    "SWL_E": {
+      "base": "a/naf",
+      "transformation": "rotate_180_reverse"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
