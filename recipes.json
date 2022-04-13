@@ -221,6 +221,18 @@
       "transformation": "r_to_p"
     }
   },
+  "TH": {
+    "default": {
+      "base": "th",
+      "transformation": "identity"
+    }
+  },
+  "THL": {
+    "default": {
+      "base": "th",
+      "transformation": "rotate_180_reverse"
+    }
+  },
   "A": {
     "default": {
       "base": "a",
