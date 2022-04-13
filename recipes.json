@@ -55,6 +55,11 @@
       "base": "cut_r",
       "id": "head",
       "transformation": "r_to_k"
+    },
+    "before_GreggP": {
+      "base": "r/fr",
+      "id": "head",
+      "transformation": "r_to_k"
     }
   },
   "G": {
@@ -69,6 +74,11 @@
     },
     "default_tail": {
       "base": "cut_l",
+      "id": "head",
+      "transformation": "r_to_k"
+    },
+    "before_GreggP": {
+      "base": "l/fl",
       "id": "head",
       "transformation": "r_to_k"
     }

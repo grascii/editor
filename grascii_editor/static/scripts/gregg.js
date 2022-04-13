@@ -31,6 +31,10 @@ GreggKTail.prototype.setPaths = function() {
       return;
     }
   }
+  if (this.getNextHeadType() == "SWL") {
+    this.setPathsFromObject(PATHS.K.before_GreggP);
+    return;
+  }
   this.setPathsFromObject(PATHS.K.default_tail)
 };
 GreggChar.dict["K"] = [GreggKHead, GreggKTail];
@@ -57,6 +61,10 @@ GreggGTail.prototype.setPaths = function() {
     if (this.next.getNextHeadType() == "EL") {
       return;
     }
+  }
+  if (this.getNextHeadType() == "SWL") {
+    this.setPathsFromObject(PATHS.G.before_GreggP);
+    return;
   }
   this.setPathsFromObject(PATHS.G.default_tail);
 };
@@ -269,7 +277,7 @@ GreggFHead.prototype.setPaths = function() {
     if (["ER", "EL", "E", "NE", "SWL"].includes(this.prev.getPrevTailType())) {
       return;
     }
-  } else if (["ER", "EL", "E", "NE", "SWL"].includes(this.getPrevTailType())) {
+  } else if (["ER", "EL", "E", "NE"].includes(this.getPrevTailType())) {
     return;
   }
   this.setPathsFromObject(PATHS.F.default_head);
@@ -297,7 +305,7 @@ GreggVHead.prototype.setPaths = function() {
     if (["ER", "EL", "E", "NE", "SWL"].includes(this.prev.getPrevTailType())) {
       return;
     }
-  } else if (["ER", "EL", "E", "NE", "SWL"].includes(this.getPrevTailType())) {
+  } else if (["ER", "EL", "E", "NE"].includes(this.getPrevTailType())) {
     return;
   }
   this.setPathsFromObject(PATHS.V.default_head);
@@ -340,10 +348,10 @@ GreggSHead.prototype = Object.create(GreggChar.prototype);
 
 GreggSHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "C") {
-    if (["ER", "EL", "E", "NE", "SWL"].includes(this.prev.getPrevTailType())) {
+    if (["ER", "EL", "E", "NE"].includes(this.prev.getPrevTailType())) {
       return;
     }
-  } else if (["ER", "EL", "E", "NE", "SWL"].includes(this.getPrevTailType())) {
+  } else if (["EL", "E", "NE"].includes(this.getPrevTailType())) {
     return;
   }
   this.setPathsFromObject(PATHS.S.default_head);
