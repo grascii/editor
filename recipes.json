@@ -479,6 +479,10 @@
       "base": "a/as",
       "transformation": "identity"
     },
+    "before_GreggTh": {
+      "base": "a/ath",
+      "transformation": "identity"
+    },
     "after_GreggK": {
       "base": "a/ka",
       "transformation": "identity",
@@ -692,6 +696,10 @@
     },
     "before_GreggS": {
       "base": "e/es",
+      "transformation": "identity"
+    },
+    "before_GreggTh": {
+      "base": "e/eth",
       "transformation": "identity"
     },
     "after_GreggK": {
