@@ -185,6 +185,17 @@ GreggTh.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["TH"] = GreggTh;
 
 GreggTh.prototype.setPaths = function() {
+  if (this.getPrevName() == "GreggU") {
+    if (this.prev.getPrevTailType() == "E" || this.prev.getPrevTailType() == "SWR") {
+      this.setPathsFromObject(PATHS.TH.after_NU);
+      return;
+    }
+    if (this.prev.getPrevTailType() == "NE") {
+      this.setPathsFromObject(PATHS.TH.after_TU);
+      return;
+    }
+  }
+
   const succedingTypes = "after_" + this.getPrevName();
   pathsObject = PATHS.TH[succedingTypes]
   if (pathsObject) {

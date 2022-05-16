@@ -230,6 +230,14 @@
       "base": "th_angled",
       "transformation": "identity",
       "aliases": ["after_GreggO", "after_GreggU"]
+    },
+    "after_NU": {
+      "base": "th_angled",
+      "transformation": "skewx_30"
+    },
+    "after_TU": {
+      "base": "th_angled",
+      "transformation": "skewx_45"
     }
   },
   "THL": {
@@ -868,7 +876,7 @@
     "default": {
       "base": "u",
       "transformation": "skewx_30",
-      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ", "after_GreggK", "after_GreggG", "after_GreggSh", "after_GreggCh", "after_GreggJ", "ER_ER", "ER_E", "ER_NE", "ER_SW", "SWL_ER", "SWL_E", "SWL_NE", "SWL_SW", "SW_ER", "SW_E", "SW_NE", "SW_SW", "after_GreggSL"]
+      "aliases": ["before_GreggK", "before_GreggG", "before_GreggN", "before_GreggM", "before_GreggT", "before_GreggD", "before_GreggSh", "before_GreggCh", "before_GreggJ", "after_GreggK", "after_GreggG", "after_GreggSh", "after_GreggCh", "after_GreggJ", "ER_ER", "ER_E", "ER_NE", "ER_SW", "SWL_ER", "SWL_E", "SWL_NE", "SWL_SW", "SW_ER", "SW_E", "SW_NE", "SW_SW", "after_GreggSL", "ER_NER", "SWL_NER"]
     },
     "EL_EL": {
       "base": "u/rur",
@@ -884,7 +892,8 @@
     },
     "E_NE": {
       "base": "u/nut",
-      "transformation": "identity"
+      "transformation": "identity",
+      "aliases": ["E_NER"]
     },
     "E_SWL": {
       "base": "u/nup",
@@ -936,7 +945,7 @@
     "after_GreggR": {
       "base": "u/ru",
       "transformation": "identity",
-      "aliases": ["after_GreggL", "EL_ER", "EL_E", "EL_NE", "EL_SW", "EL_SWR"]
+      "aliases": ["after_GreggL", "EL_ER", "EL_E", "EL_NE", "EL_SW", "EL_SWR", "EL_NER"]
     },
     "after_GreggN": {
       "base": "u",
@@ -946,12 +955,12 @@
     "after_GreggT": {
       "base": "u",
       "transformation": "skewx_30_rotate_30",
-      "aliases": ["after_GreggD", "NE_ER", "NE_E", "NE_NE", "NE_SWR"]
+      "aliases": ["after_GreggD", "NE_ER", "NE_E", "NE_NE", "NE_SWR", "NE_NER"]
     },
     "after_GreggF": {
       "base": "u",
       "transformation": "skewx_45",
-      "aliases": ["after_GreggV", "SWR_ER", "SWR_E", "SWR_NE", "after_GreggS"]
+      "aliases": ["after_GreggV", "SWR_ER", "SWR_E", "SWR_NE", "after_GreggS", "SWR_NER"]
     }
   }
 }
