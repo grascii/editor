@@ -61,6 +61,12 @@ class Transformations:
     def skewx_30_rotate_30(path):
         return Transformations.skewx_30(path).rotated(30)
 
+    def rotate_180_reverse_skew_45(path):
+        return Transformations.skewx_45(path).rotated(180).reversed()
+
+    def rotate_180_reverse_skew_30(path):
+        return Transformations.skewx_30(path).rotated(180).reversed()
+
     def rotate_90(path):
         return path.rotated(90)
 

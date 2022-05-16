@@ -200,6 +200,18 @@ GreggThL.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["THL"] = GreggThL;
 
 GreggThL.prototype.setPaths = function() {
+
+  if (this.getNextName() == "GreggO") {
+    if (this.next.getNextHeadType() == "NE") {
+      this.setPathsFromObject(PATHS.THL.before_OT);
+      return;
+    }
+    if (this.next.getNextHeadType() == "SWL") {
+      this.setPathsFromObject(PATHS.THL.before_OP);
+      return;
+    }
+  }
+
   const precedingTypes = "before_" + this.getNextName();
   pathsObject = PATHS.THL[precedingTypes]
   if (pathsObject) {
