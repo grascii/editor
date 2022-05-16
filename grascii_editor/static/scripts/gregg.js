@@ -31,7 +31,7 @@ GreggKTail.prototype.setPaths = function() {
       return;
     }
   }
-  if (this.getNextHeadType() == "SWL") {
+  if (this.getNextHeadType() == "SWL" && this.getNextName() != "GreggO") {
     this.setPathsFromObject(PATHS.K.before_GreggP);
     return;
   }
@@ -62,7 +62,7 @@ GreggGTail.prototype.setPaths = function() {
       return;
     }
   }
-  if (this.getNextHeadType() == "SWL") {
+  if (this.getNextHeadType() == "SWL" && this.getNextName() != "GreggO") {
     this.setPathsFromObject(PATHS.G.before_GreggP);
     return;
   }
