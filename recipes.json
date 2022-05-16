@@ -228,13 +228,19 @@
     },
     "angled": {
       "base": "th_angled",
-      "transformation": "identity"
+      "transformation": "identity",
+      "aliases": ["after_GreggO", "after_GreggU"]
     }
   },
   "THL": {
     "default": {
       "base": "th",
       "transformation": "rotate_180_reverse"
+    },
+    "angled": {
+      "base": "th_angled",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["before_GreggO", "before_GreggU"]
     }
   },
   "A": {
