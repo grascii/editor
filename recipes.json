@@ -225,6 +225,10 @@
     "default": {
       "base": "th",
       "transformation": "identity"
+    },
+    "angled": {
+      "base": "th_angled",
+      "transformation": "identity"
     }
   },
   "THL": {

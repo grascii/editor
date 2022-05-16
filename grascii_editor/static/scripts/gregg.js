@@ -185,6 +185,11 @@ GreggTh.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["TH"] = GreggTh;
 
 GreggTh.prototype.setPaths = function() {
+  if (this.getPrevName() == "GreggO" || this.getPrevName() == "GreggU") {
+    this.setPathsFromObject(PATHS.TH.angled);
+    return;
+  }
+
   this.setPathsFromObject(PATHS.TH.default);
 };
 
