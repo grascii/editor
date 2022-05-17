@@ -927,6 +927,10 @@
       "base": "u/kur",
       "transformation": "identity"
     },
+    "NER_NE": {
+      "base": "u/thut",
+      "transformation": "identity"
+    },
     "before_GreggR": {
       "base": "u/ur",
       "transformation": "identity",
@@ -961,6 +965,11 @@
       "base": "u",
       "transformation": "skewx_45",
       "aliases": ["after_GreggV", "SWR_ER", "SWR_E", "SWR_NE", "after_GreggS", "SWR_NER"]
+    },
+    "after_GreggTh": {
+      "base": "u/thu",
+      "transformation": "identity",
+      "aliases": ["NER_ER", "NER_SWR"]
     }
   }
 }
