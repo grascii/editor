@@ -464,6 +464,18 @@
       "base": "a/nath",
       "transformation": "identity"
     },
+    "ER_NER": {
+      "base": "a/kath",
+      "transformation": "identity"
+    },
+    "SWL_NER": {
+      "base": "a/path",
+      "transformation": "identity"
+    },
+    "SWR_NER": {
+      "base": "a/fath",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",

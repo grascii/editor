@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <path d="m100.85 150.99c-0.12171-0.64289 1.4191-1.7237 3.2777-2.2992 1.4878-0.46069 1.8692-0.68815 2.3754-1.4164 0.96783-1.3924 0.97867-2.591 0.0286-3.1583-0.20224-0.12071-0.34873-0.32418-0.32555-0.45207 0.0805-0.44439 0.96727-0.0613 1.4414 0.62277 0.42641 0.61523 0.44077 0.80624 0.13552 1.8029-0.18777 0.61313-0.53578 1.2644-0.77332 1.4472-0.56282 0.43314-0.23603 0.72268 0.6331 0.56091 0.78868-0.14678 2.352 0.35721 2.2833 0.73615-0.031 0.17108-0.53643 0.17336-1.4565 7e-3 -1.7193-0.31164-2.7547-0.10653-3.5876 0.7107-1.5284 1.4996-3.8628 2.3326-4.032 1.4388zm2.8326-1.1474c0.35045-0.25945 0.5945-0.53331 0.54233-0.60858-0.12194-0.17593-2.4735 1.0214-2.521 1.2837-0.0551 0.30407 1.264-0.14598 1.9787-0.67508z" fill="#b3b3b3"/>
+ <g transform="matrix(-1 0 0 1 103.51 151.77)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <title>CharNewline</title>
+ </g>
+ <g id="model">
+  <path d="m103.67 150.17c-0.63769 0.53038-1.3496 0.75671-1.7786 0.75671-0.55204 0-0.68604-0.48794-0.22052-0.75671" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+ </g>
+ <path d="m107.17 144.11c2.018 1.246-1.61 4.422-3.5 6.062" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".425" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+ <path d="m101.67 150.17c2.0362-1.2909 4.6391-2.2943 5.5709-2.2943" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".425"/>
+</svg>
