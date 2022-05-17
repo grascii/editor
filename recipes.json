@@ -476,6 +476,14 @@
       "base": "a/fath",
       "transformation": "identity"
     },
+    "EL_NEL": {
+      "base": "a/rathl",
+      "transformation": "identity"
+    },
+    "SWR_NEL": {
+      "base": "a/fathl",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
