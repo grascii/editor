@@ -484,6 +484,22 @@
       "base": "a/fathl",
       "transformation": "identity"
     },
+    "NER_ER": {
+      "base": "a/thak",
+      "transformation": "identity"
+    },
+    "NER_E": {
+      "base": "a/than",
+      "transformation": "identity"
+    },
+    "NER_SW": {
+      "base": "a/thach",
+      "transformation": "identity"
+    },
+    "NEL_SWR": {
+      "base": "a/thlaf",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
