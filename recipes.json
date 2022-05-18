@@ -794,6 +794,18 @@
       "base": "e/keth",
       "transformation": "identity"
     },
+    "NEL_EL": {
+      "base": "e/keth",
+      "transformation": "rotate_180_reverse"
+    },
+    "NEL_E": {
+      "base": "e/neth",
+      "transformation": "rotate_180_reverse"
+    },
+    "NEL_NE": {
+      "base": "e/teth",
+      "transformation": "rotate_180_reverse"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",

@@ -252,6 +252,12 @@ GreggThL.prototype.setPaths = function() {
       return;
     }
   }
+  if (this.getNextName() == "GreggE") {
+    if (this.next.getNextHeadType() == "EL") {
+      this.setPathsFromObject(PATHS.THL.before_OP);
+      return;
+    }
+  }
   if (this.getPrevName() == "GreggE") {
     if (this.prev.getPrevTailType() == "SWR") {
       this.setPathsFromObject(PATHS.THL.before_OP);
