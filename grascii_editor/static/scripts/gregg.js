@@ -209,6 +209,7 @@ GreggTh.prototype.setPaths = function() {
   if (this.getPrevName() == "GreggE") {
     if (this.prev.getPrevTailType() == "EL" ||
         this.prev.getPrevTailType() == "SWL" ||
+        this.prev.getPrevTailType() == "ER" ||
         this.prev.getPrevTailType() == "SW") {
       this.setPathsFromObject(PATHS.TH.after_NU);
       return;
