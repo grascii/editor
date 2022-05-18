@@ -762,6 +762,18 @@
       "base": "e/feth",
       "transformation": "identity"
     },
+    "EL_NEL": {
+      "base": "e/rethl",
+      "transformation": "identity"
+    },
+    "NE_NEL": {
+      "base": "e/tethl",
+      "transformation": "identity"
+    },
+    "SWR_NEL": {
+      "base": "e/fethl",
+      "transformation": "identity"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",

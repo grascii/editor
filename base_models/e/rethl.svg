@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(83.171 128.58)">
+   <path d="m5 14.4c0.069725 2.3707 4.634 0.81718 7 0" stroke="#000" stroke-width=".4252"/>
+  </g>
+  <g transform="translate(88.304 126.28)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g id="model" transform="translate(6,14.4)">
+    <title>GreggE</title>
+    <path d="m0.8669 2.3005c0.92941-0.3323 0.44239-1.1495-0.19793-0.97791-0.69385 0.18592-0.62781 0.97791 0.19793 0.97791" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <path d="m98.447 140.68c0 1.4906-2.3448 2.2943-3.2766 2.2943" stroke-width=".425"/>
+ </g>
+</svg>
