@@ -737,6 +737,31 @@
       "base": "e/nef",
       "transformation": "rotate_180_reverse"
     },
+    "EL_NER": {
+      "base": "e/reth",
+      "transformation": "identity"
+    },
+    "E_NER": {
+      "base": "e/neth",
+      "transformation": "identity",
+      "aliases": ["NER_NER"]
+    },
+    "NE_NER": {
+      "base": "e/teth",
+      "transformation": "identity"
+    },
+    "SWL_NER": {
+      "base": "e/peth",
+      "transformation": "identity"
+    },
+    "SW_NER": {
+      "base": "e/cheth",
+      "transformation": "identity"
+    },
+    "SWR_NER": {
+      "base": "e/feth",
+      "transformation": "identity"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",

@@ -206,6 +206,18 @@ GreggTh.prototype.setPaths = function() {
       return;
     }
   }
+  if (this.getPrevName() == "GreggE") {
+    if (this.prev.getPrevTailType() == "EL" ||
+        this.prev.getPrevTailType() == "SWL" ||
+        this.prev.getPrevTailType() == "SW") {
+      this.setPathsFromObject(PATHS.TH.after_NU);
+      return;
+    }
+    if (this.prev.getPrevTailType() == "SWR") {
+      this.setPathsFromObject(PATHS.TH.after_TU);
+      return;
+    }
+  }
 
   const succedingTypes = "after_" + this.getPrevName();
   pathsObject = PATHS.TH[succedingTypes]
