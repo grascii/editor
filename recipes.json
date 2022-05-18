@@ -774,6 +774,22 @@
       "base": "e/fethl",
       "transformation": "identity"
     },
+    "NER_ER": {
+      "base": "e/rethl",
+      "transformation": "rotate_180_reverse"
+    },
+    "NER_NE": {
+      "base": "e/tethl",
+      "transformation": "rotate_180_reverse"
+    },
+    "NER_E": {
+      "base": "e/then",
+      "transformation": "identity"
+    },
+    "NER_SWR": {
+      "base": "e/thef",
+      "transformation": "identity"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
