@@ -623,6 +623,11 @@
     "after_GreggThL": {
       "base": "a/ath",
       "transformation": "rotate_180_reverse"
+    },
+    "after_GreggNg": {
+      "base": "a/na",
+      "transformation": "rotate_15",
+      "aliases": ["after_GreggNk"]
     }
   },
   "E": {
@@ -921,6 +926,11 @@
     "after_GreggThL": {
       "base": "e/eth",
       "transformation": "rotate_180_reverse"
+    },
+    "after_GreggNg": {
+      "base": "e/ne",
+      "transformation": "rotate_15",
+      "aliases": ["after_GreggNk"]
     }
   },
   "O": {
@@ -1136,6 +1146,11 @@
       "base": "u/thu",
       "transformation": "identity",
       "aliases": ["NER_ER", "NER_SWR"]
+    },
+    "after_GreggNg": {
+      "base": "u",
+      "transformation": ["rotate_90", "rotate_15"],
+      "aliases": ["after_GreggNk"]
     }
   }
 }
