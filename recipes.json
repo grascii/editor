@@ -259,6 +259,18 @@
       "transformation": "rotate_180_reverse_skew_30"
     }
   },
+  "NG": {
+    "default": {
+      "base": "n",
+      "transformation": "rotate_15"
+    }
+  },
+  "NK": {
+    "default": {
+      "base": "nk",
+      "transformation": "rotate_15"
+    }
+  },
   "A": {
     "default": {
       "base": "a",

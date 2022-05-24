@@ -70,6 +70,9 @@ class Transformations:
     def rotate_90(path):
         return path.rotated(90)
 
+    def rotate_15(path):
+        return path.rotated(15)
+
     def shift_to_origin(path):
         return path.translated(-path.start)
 

@@ -491,8 +491,7 @@ GreggNg.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["NG"] = GreggNg;
 
 GreggNg.prototype.setPaths = function() {
-  this.dp = p(4.33013, 2.5);
-  this.paths = ["m 0 0 l 4.33013 2.5"];
+  this.setPathsFromObject(PATHS.NG.default);
 };
 
 GreggNk = function() { GreggChar.call(this, "GreggNk", "nk", "SE10", "SE", "SE", "black", false, p(0.0, -2.5)); };
@@ -500,8 +499,7 @@ GreggNk.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["NK"] = GreggNk;
 
 GreggNk.prototype.setPaths = function() {
-  this.dp = p(8.66025, 5);
-  this.paths = ["m 0 0 l 8.66025 5"];
+  this.setPathsFromObject(PATHS.NK.default);
 };
 
 GreggA = function() { GreggChar.call(this, "GreggA", "a", "C4", "C", "C", "black", false, p(3.1, -1.8)); };
