@@ -540,6 +540,18 @@
       "base": "a/chang",
       "transformation": "identity"
     },
+    "SE_E": {
+      "base": "a/nang",
+      "transformation": "rotate_180_reverse"
+    },
+    "SE_NE": {
+      "base": "a/tang",
+      "transformation": "rotate_180_reverse"
+    },
+    "SE_EL": {
+      "base": "a/ngar",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",

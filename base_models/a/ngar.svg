@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 210 297"
+   version="1.1"
+   id="svg15888"
+   inkscape:version="1.1.2 (08b2f3d93c, 2022-04-05)"
+   sodipodi:docname="ngar.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview15890"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="mm"
+     showgrid="false"
+     inkscape:zoom="5.6239988"
+     inkscape:cx="351.17362"
+     inkscape:cy="528.89414"
+     inkscape:window-width="1920"
+     inkscape:window-height="1052"
+     inkscape:window-x="1366"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="g16049" />
+  <defs
+     id="defs15885" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <g
+       style="fill:none;stroke:#000000;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1"
+       id="g16049"
+       transform="translate(89.207471,127.03735)">
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(6,10)"
+         id="g1574">
+        <title
+           id="title1572">CharNewline</title>
+      </g>
+      <g
+         style="stroke:#000000;stroke-width:0.425197"
+         transform="translate(8.1,13.2)"
+         id="model">
+        <title
+           id="title1576">GreggA</title>
+        <path
+           d="m -1.3892998,6.645039 c 2.5483209,0.6828205 2.7762225,-1.572864 0.76665448,-2.1113261 -1.93640498,-0.5188582 -2.58516658,1.1200734 -0.76665448,2.1113261"
+           data-char="GreggA"
+           data-head="C"
+           data-tail="C"
+           data-kana="a"
+           data-model="C4"
+           data-key=""
+           data-speed-factor="1"
+           data-scroll-y="0"
+           data-speed="0.03"
+           id="path1578"
+           sodipodi:nodetypes="csc" />
+      </g>
+    </g>
+    <g
+       transform="rotate(15,-445.82673,397.6868)"
+       fill="none"
+       stroke="#000000"
+       stroke-linecap="round"
+       stroke-linejoin="round"
+       stroke-width="0.4252"
+       id="g16117">
+      <g
+         transform="translate(6,10)"
+         id="g16110">
+        <title
+           id="title16108">CharNewline</title>
+      </g>
+      <g
+         transform="translate(8.5457032,15.214444)"
+         id="g18115">
+        <title
+           id="title16112">GreggN</title>
+        <path
+           d="m 0,0 h 4"
+           data-char="GreggN"
+           data-head="E"
+           data-kana="n"
+           data-key=""
+           data-model="E4"
+           data-scroll-y="0"
+           data-speed="0.03"
+           data-speed-factor="1"
+           data-tail="E"
+           id="path16114" />
+      </g>
+    </g>
+    <g
+       id="tail"
+       transform="translate(-5.1218288,-10.447611)">
+      <path
+         d="m 101.04,157.33 c 1.2901,0.74485 4.5869,-0.36495 6.4609,-1.0122"
+         fill="none"
+         stroke="#000000"
+         stroke-linecap="round"
+         stroke-linejoin="round"
+         stroke-width="0.4252"
+         id="path16354" />
+    </g>
+  </g>
+</svg>

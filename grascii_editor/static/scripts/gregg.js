@@ -89,6 +89,11 @@ GreggRHead.prototype.setPaths = function() {
     this.setPathsFromObject(PATHS.R.after_GreggF);
     return;
   }
+  if (this.getPrevName() == "GreggA") {
+    if (this.prev.getPrevTailType() == "SE") {
+      return;
+    }
+  }
   if (this.getPrevName() == "GreggU") {
     if (this.prev.getPrevTailType() == "ER") {
       return;
@@ -125,6 +130,11 @@ GreggLHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.L.after_GreggF);
     return;
+  }
+  if (this.getPrevName() == "GreggA") {
+    if (this.prev.getPrevTailType() == "SE") {
+      return;
+    }
   }
   if (this.getPrevName() == "GreggU") {
     if (this.prev.getPrevTailType() == "ER") {
