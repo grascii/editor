@@ -97,15 +97,20 @@ class ModelBuilder():
 
     def create_model(self, recipe, name):
         paths = self.get_base_paths(recipe["base"], recipe.get("id", MODEL_ID))
-        transformation = Transformations.identity
-        try:
-            transformation = getattr(Transformations, recipe["transformation"])
-        except AttributeError:
-            warnings.warn(f"{name}: {recipe['transformation']} " \
-                    "is not a known transformation. " \
-                    "The identity transformation will be applied instead.")
-        new_paths = list(map(lambda p: Transformations.shift_to_origin(transformation(p)), paths))
-        return new_paths
+        if isinstance(recipe["transformation"], list):
+            transformations = recipe["transformation"]
+        else:
+            transformations = [recipe["transformation"]]
+        for t in transformations:
+            transformation = Transformations.identity
+            try:
+                transformation = getattr(Transformations, t)
+            except AttributeError:
+                warnings.warn(f"{name}: {t} " \
+                        "is not a known transformation. " \
+                        "The identity transformation will be applied instead.")
+            paths = list(map(lambda p: Transformations.shift_to_origin(transformation(p)), paths))
+        return paths
 
     def write_model(paths, filename):
         new_doc = Document()
