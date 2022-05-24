@@ -565,6 +565,11 @@
       "base": "a/tha",
       "transformation": "rotate_180_reverse"
     },
+    "before_GreggNg": {
+      "base": "a/an",
+      "transformation": "rotate_15",
+      "aliases": ["before_GreggNk"]
+    },
     "after_GreggK": {
       "base": "a/ka",
       "transformation": "identity",
@@ -864,6 +869,11 @@
     "before_GreggThL": {
       "base": "e/the",
       "transformation": "rotate_180_reverse"
+    },
+    "before_GreggNg": {
+      "base": "e/en",
+      "transformation": "rotate_15",
+      "aliases": ["before_GreggNk"]
     },
     "after_GreggK": {
       "base": "e/ke",
