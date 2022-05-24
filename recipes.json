@@ -512,6 +512,34 @@
       "base": "a/thlaf",
       "transformation": "identity"
     },
+    "ER_SE": {
+      "base": "a/kang",
+      "transformation": "identity"
+    },
+    "EL_SE": {
+      "base": "a/rang",
+      "transformation": "identity"
+    },
+    "E_SE": {
+      "base": "a/nang",
+      "transformation": "identity"
+    },
+    "NE_SE": {
+      "base": "a/tang",
+      "transformation": "identity"
+    },
+    "SWL_SE": {
+      "base": "a/pang",
+      "transformation": "identity"
+    },
+    "SWR_SE": {
+      "base": "a/fang",
+      "transformation": "identity"
+    },
+    "SW_SE": {
+      "base": "a/chang",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
