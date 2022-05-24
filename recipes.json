@@ -1012,6 +1012,11 @@
       "transformation": "rotate_180_reverse",
       "aliases": ["E_NEL", "EL_NEL", "ER_NEL"]
     },
+    "before_GreggNg": {
+      "base": "o",
+      "transformation": ["rotate_90", "rotate_15"],
+      "aliases": ["before_GreggNk"]
+    },
     "after_GreggK": {
       "base": "o/ko",
       "transformation": "identity",
@@ -1101,6 +1106,11 @@
       "base": "o/po",
       "transformation": "rotate_180_reverse",
       "aliases": ["before_GreggV", "ER_SWR", "SWL_SWR", "SW_SWR", "before_GreggS"]
+    },
+    "before_GreggNg": {
+      "base": "u",
+      "transformation": ["rotate_90", "rotate_90", "rotate_90", "rotate_15"],
+      "aliases": ["before_GreggNk"]
     },
     "after_GreggR": {
       "base": "u/ru",
