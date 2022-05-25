@@ -896,6 +896,18 @@
       "base": "e/cheng",
       "transformation": "identity"
     },
+    "SE_NE": {
+      "base": "e/teng",
+      "transformation": "rotate_180_reverse"
+    },
+    "SE_SW": {
+      "base": "e/cheng",
+      "transformation": "rotate_180_reverse"
+    },
+    "SE_SWL": {
+      "base": "e/feng",
+      "transformation": "rotate_180_reverse"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
