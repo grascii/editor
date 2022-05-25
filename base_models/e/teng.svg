@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252">
+  <g transform="rotate(180 53.92 75.345)">
+   <title>CharNewline</title>
+  </g>
+  <g id="model" transform="rotate(180 49.42 72.845)">
+   <title>GreggE</title>
+   <path d="m-0.67299-1e-5c-1.2607 0.72789-0.36859 1.3903 0.27834 1.0168 0.41192-0.23782 0.44418-0.82317-0.27835-1.0168" data-char="GreggE" data-head="C" data-kana="e" data-key="" data-model="C1" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+  </g>
+  <g transform="rotate(180 49.757 72.845)">
+   <title>GreggT</title>
+   <path d="m0 0 3.4641-2" data-char="GreggT" data-head="NE" data-kana="t" data-key="" data-model="NE4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="NE"/>
+  </g>
+  <g transform="rotate(15 -444.09 439.29)">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,15)">
+    <title>GreggN</title>
+    <path d="m0 0h4" data-char="GreggN" data-head="E" data-kana="n" data-key="" data-model="E4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="E"/>
+   </g>
+  </g>
+ </g>
+</svg>

@@ -868,6 +868,34 @@
       "base": "e/teth",
       "transformation": "rotate_180_reverse"
     },
+    "ER_SE": {
+      "base": "e/keng",
+      "transformation": "identity"
+    },
+    "EL_SE": {
+      "base": "e/reng",
+      "transformation": "identity"
+    },
+    "E_SE": {
+      "base": "e/neng",
+      "transformation": "identity"
+    },
+    "NE_SE": {
+      "base": "e/teng",
+      "transformation": "identity"
+    },
+    "SWL_SE": {
+      "base": "e/peng",
+      "transformation": "identity"
+    },
+    "SWR_SE": {
+      "base": "e/feng",
+      "transformation": "identity"
+    },
+    "SW_SE": {
+      "base": "e/cheng",
+      "transformation": "identity"
+    },
     "before_GreggN": {
       "base": "e/en",
       "transformation": "identity",
