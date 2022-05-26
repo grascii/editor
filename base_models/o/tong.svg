@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="rotate(15 -458.88 438)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,15)">
+    <title>GreggN</title>
+    <path d="m0 0h4" data-char="GreggN" data-head="E" data-kana="n" data-key="" data-model="E4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="E"/>
+   </g>
+  </g>
+  <g transform="translate(90.804 134.03)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g transform="translate(5,16)">
+    <title>GreggT</title>
+    <path d="m0 0 3.4641-2" data-char="GreggT" data-head="NE" data-kana="t" data-key="" data-model="NE4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="NE"/>
+   </g>
+  </g>
+  <g id="model" transform="rotate(90 -17.881 123.15)">
+   <path d="m7 6c0.27067 0.46882 0.72293 1.2132 1.0474 1.2132 0.19216 0 0.32772-0.3586 0.39752-0.61911" fill-opacity="0" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4252"/>
+  </g>
+ </g>
+</svg>
