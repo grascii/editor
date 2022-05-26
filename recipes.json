@@ -1091,7 +1091,7 @@
     "before_GreggT": {
       "base": "o",
       "transformation": "skewx_30_rotate_30",
-      "aliases": ["before_GreggD", "EL_NE", "E_NE", "NE_NE", "NER_NE", "NEL_NE"]
+      "aliases": ["before_GreggD", "EL_NE", "E_NE", "NE_NE", "NER_NE", "NEL_NE", "SE_NE"]
     },
     "before_GreggN": {
       "base": "o",
@@ -1101,17 +1101,17 @@
     "before_GreggP": {
       "base": "o",
       "transformation": "skewx_45",
-      "aliases": ["before_GreggB", "EL_SWL", "E_SWL", "NE_SWL", "before_GreggSL", "NEL_SWL"]
+      "aliases": ["before_GreggB", "EL_SWL", "E_SWL", "NE_SWL", "before_GreggSL", "NEL_SWL", "SE_SWL"]
     },
     "before_GreggR": {
       "base": "o/ror",
       "transformation": "identity",
-      "aliases": ["E_GreggR", "ER_GreggR", "EL_GreggR"]
+      "aliases": ["E_GreggR", "ER_GreggR", "EL_GreggR", "SE_GreggR"]
     },
     "before_GreggL": {
       "base": "o/lol",
       "transformation": "identity",
-      "aliases": ["E_GreggL", "ER_GreggL", "EL_GreggL"]
+      "aliases": ["E_GreggL", "ER_GreggL", "EL_GreggL", "SE_GreggL"]
     },
     "before_GreggThL": {
       "base": "u/thu",

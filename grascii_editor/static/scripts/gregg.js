@@ -100,7 +100,7 @@ GreggRHead.prototype.setPaths = function() {
     }
   }
   if (this.getPrevName() == "GreggO") {
-    if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
+    if (["EL", "ER", "E", "", "SE"].includes(this.prev.getPrevTailType())) {
       return;
     }
   }
@@ -142,7 +142,7 @@ GreggLHead.prototype.setPaths = function() {
     }
   }
   if (this.getPrevName() == "GreggO") {
-    if (["EL", "ER", "E", ""].includes(this.prev.getPrevTailType())) {
+    if (["EL", "ER", "E", "", "SE"].includes(this.prev.getPrevTailType())) {
       return;
     }
   }
