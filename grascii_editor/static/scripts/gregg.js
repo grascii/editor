@@ -229,6 +229,10 @@ GreggTh.prototype.setPaths = function() {
       return;
     }
   }
+  if (["SWR", "SW"].includes(this.getPrevTailType())) {
+    this.setPathsFromObject(PATHS.TH.after_NU);
+    return;
+  }
 
   const succedingTypes = "after_" + this.getPrevName();
   pathsObject = PATHS.TH[succedingTypes]
@@ -273,6 +277,10 @@ GreggThL.prototype.setPaths = function() {
       this.setPathsFromObject(PATHS.THL.before_OP);
       return;
     }
+  }
+  if (this.getNextHeadType() == "SWL") {
+    this.setPathsFromObject(PATHS.THL.before_OP);
+    return;
   }
 
   const precedingTypes = "before_" + this.getNextName();
