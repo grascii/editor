@@ -1248,5 +1248,11 @@
       "transformation": ["rotate_90", "rotate_15"],
       "aliases": ["after_GreggNk", "SE_EL", "SE_SWR"]
     }
+  },
+  "I": {
+    "default": {
+      "base": "i",
+      "transformation": "identity"
+    }
   }
 }

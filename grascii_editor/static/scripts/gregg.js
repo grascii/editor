@@ -647,6 +647,36 @@ GreggU.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.U.default);
 };
 
+GreggI = function() { GreggChar.call(this, "GreggI", "i", "C4", "C", "C", "black", false, p(3.1, -1.8)); };
+GreggI.prototype = Object.create(GreggChar.prototype);
+GreggChar.dict["I"] = GreggI;
+
+GreggI.prototype.setPaths = function() {
+
+  const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
+  let pathsObject = PATHS.I[adjacentTypes];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  const precedingTypes = "before_" + this.getNextName();
+  pathsObject = PATHS.I[precedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  const succedingTypes = "after_" + this.getPrevName();
+  pathsObject = PATHS.I[succedingTypes]
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
+
+  this.setPathsFromObject(PATHS.I.default);
+};
+
 GreggTen = function() { GreggChar.call(this, "GreggTen", "tn", "NER9", "NER", "NER", "black", false, p(0.0, 2.7)); };
 GreggTen.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["TN"] = GreggTen;
@@ -815,7 +845,6 @@ GreggChar.dict["MM"] = [GreggM, GreggN];
 GreggChar.dict["DT"] = [GreggD, GreggT];
 GreggChar.dict["TD"] = [GreggD, GreggT];
 GreggChar.dict["DD"] = [GreggD, GreggT];
-GreggChar.dict["I"] = GreggA;
 GreggChar.dict["A&'"] = GreggA;
 GreggChar.dict["A&E"] = GreggA;
 GreggChar.dict["EU"] = [GreggE, GreggU];
