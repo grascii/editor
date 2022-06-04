@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g transform="translate(90.531 133.14)" stroke-width=".4252">
+   <g transform="translate(6,10)">
+    <title>CharNewline</title>
+   </g>
+   <g id="model" transform="translate(8.1,13.2)">
+    <title>GreggA</title>
+    <path d="m0.134 0.80736c-2.3423-0.62763-3.1747 0.53052-3.3225 1.0822-0.16777 0.62612 0.89176 0.94677 1.5127 0.94677 1.2548 0 2.8708-1.7446 1.8097-2.029-0.47167-0.12638-1.179 0.32-1.7603 0.8315" data-char="GreggA" data-head="C" data-kana="a" data-key="" data-model="C4" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="C"/>
+   </g>
+  </g>
+  <g transform="translate(-14.51 -10.327)" stroke-width=".2126">
+   <g>
+    <title>CharNewline</title>
+   </g>
+   <g>
+    <title>GreggR</title>
+    <path d="m111.51 158.3c-1.89 1.64-5.518 4.816-3.5 6.062" stroke-width=".425" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>

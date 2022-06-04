@@ -1253,6 +1253,41 @@
     "default": {
       "base": "i",
       "transformation": "identity"
+    },
+    "before_GreggK": {
+      "base": "i/ik",
+      "transformation": "identity",
+      "aliases": ["before_GreggG"]
+    },
+    "before_GreggR": {
+      "base": "i/ir",
+      "transformation": "identity",
+      "aliases": ["before_GreggL"]
+    },
+    "before_GreggN": {
+      "base": "i/in",
+      "transformation": "identity",
+      "aliases": ["before_GreggM"]
+    },
+    "before_GreggT": {
+      "base": "i/it",
+      "transformation": "identity",
+      "aliases": ["before_GreggD"]
+    },
+    "before_GreggP": {
+      "base": "i/ip",
+      "transformation": "identity",
+      "aliases": ["before_GreggB", "before_GreggSL"]
+    },
+    "before_GreggF": {
+      "base": "i/if",
+      "transformation": "identity",
+      "aliases": ["before_GreggV", "before_GreggS"]
+    },
+    "before_GreggCh": {
+      "base": "i/ich",
+      "transformation": "identity",
+      "aliases": ["before_GreggSh", "before_GreggJ"]
     }
   }
 }

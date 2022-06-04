@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+<svg width="210mm" height="297mm" version="1.1" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
+ <g fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round">
+  <g stroke-width=".4252">
+   <g transform="translate(82.395 127.64)">
+    <g transform="translate(6,10)">
+     <title>CharNewline</title>
+    </g>
+    <g id="model" transform="translate(8.1,13.2)">
+     <title>GreggA</title>
+     <path d="m-1.4368-1.5012c0.25467-0.95044 1.6701-1.2516 1.9205-0.58861 0.36677 0.97119-1.8666 1.9524-2.6157 1.7517-0.65328-0.17505-0.66056-1.2307 0.58291-1.7487"/>
+    </g>
+   </g>
+   <g transform="rotate(180 48.54 79.775)">
+    <g transform="translate(6,10)">
+     <title>CharNewline</title>
+    </g>
+    <g transform="translate(5,15.7)">
+     <title>GreggK</title>
+    </g>
+   </g>
+   <g transform="translate(80.064 127.64)">
+    <g transform="translate(6,10)">
+     <title>CharNewline</title>
+    </g>
+    <g transform="translate(5,14.4)">
+     <title>GreggR</title>
+    </g>
+   </g>
+  </g>
+  <g transform="translate(53.429 117.82)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+   </g>
+  </g>
+  <g transform="translate(53.418 117.8)">
+   <g stroke="#000" stroke-width=".4252">
+    <title>GreggR</title>
+    <path d="m35.527 20.957c2.3661-0.8172 6.9303-2.3707 7 0" data-char="GreggR" data-head="EL" data-kana="r" data-key="" data-model="EL7" data-scroll-y="0" data-speed="0.03" data-speed-factor="1" data-tail="EL"/>
+   </g>
+  </g>
+ </g>
+</svg>
