@@ -26,6 +26,9 @@ GreggKTail = function() { GreggChar.call(this, "GreggK", "k", "ER7", "ER", "ER",
 GreggKTail.prototype = Object.create(GreggChar.prototype);
 
 GreggKTail.prototype.setPaths = function() {
+  if (this.getNextName() == "GreggI") {
+    return;
+  }
   if (this.getNextName() == "GreggU") {
     if (this.next.getNextHeadType() == "EL") {
       return;
@@ -57,6 +60,9 @@ GreggGTail = function() { GreggChar.call(this, "GreggG", "g", "ER14", "ER", "ER"
 GreggGTail.prototype = Object.create(GreggChar.prototype);
 
 GreggGTail.prototype.setPaths = function() {
+  if (this.getNextName() == "GreggI") {
+    return;
+  }
   if (this.getNextName() == "GreggU") {
     if (this.next.getNextHeadType() == "EL") {
       return;
@@ -312,6 +318,9 @@ GreggPTail.prototype = Object.create(GreggChar.prototype);
 
 GreggPTail.prototype.setPaths = function() {
   if (this.getNextHeadType() == "C") {
+    if (this.getNextName() == "GreggI") {
+      return;
+    }
     if (!["EL", "ER", "E", "SWR", "NER", "SE"].includes(this.next.getNextHeadType())) {
       this.setPathsFromObject(PATHS.P.default_tail);
       return;
@@ -344,6 +353,9 @@ GreggBTail.prototype = Object.create(GreggChar.prototype);
 
 GreggBTail.prototype.setPaths = function() {
   if (this.getNextHeadType() == "C") {
+    if (this.getNextName() == "GreggI") {
+      return;
+    }
     if (!["EL", "ER", "E", "SWR", "NER", "SE"].includes(this.next.getNextHeadType())) {
       this.setPathsFromObject(PATHS.B.default_tail);
       return;
@@ -488,6 +500,9 @@ GreggSLTail.prototype = Object.create(GreggChar.prototype);
 
 GreggSLTail.prototype.setPaths = function() {
   if (this.getNextHeadType() == "C") {
+    if (this.getNextName() == "GreggI") {
+      return;
+    }
     if (["EL", "ER", "E", "SWR"].includes(this.next.getNextHeadType())) {
       return;
     }

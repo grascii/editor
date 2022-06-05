@@ -1288,6 +1288,50 @@
       "base": "i/ich",
       "transformation": "identity",
       "aliases": ["before_GreggSh", "before_GreggJ"]
+    },
+    "after_GreggK": {
+      "base": "i/ki",
+      "transformation": "identity",
+      "aliases": ["after_GreggG"]
+    },
+    "after_GreggR": {
+      "base": "i/ik",
+      "transformation": "rotate_180_reverse",
+      "aliases": ["after_GreggL"]
+    },
+    "after_GreggN": {
+      "base": "i/ni",
+      "transformation": "identity",
+      "aliases": ["after_GreggM"]
+    },
+    "after_GreggT": {
+      "base": "i/ni",
+      "transformation": "n_to_t",
+      "aliases": ["after_GreggD"]
+    },
+    "after_GreggP": {
+      "base": "i/ki",
+      "transformation": ["rotate_180_reverse", "r_to_p"],
+      "aliases": ["after_GreggB", "after_GreggSL"]
+    },
+    "after_GreggF": {
+      "base": "i/ik",
+      "transformation": ["rotate_180_reverse", "r_to_f"],
+      "aliases": ["after_GreggV", "after_GreggS"]
+    },
+    "after_GreggCh": {
+      "base": "i/ni",
+      "transformation": ["rotate_90", "rotate_15", "rotate_15"],
+      "aliases": ["after_GreggSh", "after_GreggJ"]
+    },
+    "after_GreggTh": {
+      "base": "i/thi",
+      "transformation": "identity"
+    },
+    "after_GreggNg": {
+      "base": "i/ni",
+      "transformation": "rotate_15",
+      "aliases": ["after_GreggNk"]
     }
   }
 }
