@@ -1302,7 +1302,7 @@
     "after_GreggN": {
       "base": "i/ni",
       "transformation": "identity",
-      "aliases": ["after_GreggM"]
+      "aliases": ["after_GreggM", "E_ER", "E_E", "E_NE"]
     },
     "after_GreggT": {
       "base": "i/ni",
@@ -1345,6 +1345,11 @@
     "EL_ER": {
       "base": "i/rik",
       "transformation": "identity"
+    },
+    "E_EL": {
+      "base": "i/nir",
+      "transformation": "identity",
+      "aliases": ["E_SWR", "E_SWL"]
     }
   }
 }
