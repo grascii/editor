@@ -1332,6 +1332,15 @@
       "base": "i/ni",
       "transformation": "rotate_15",
       "aliases": ["after_GreggNk"]
+    },
+    "ER_E": {
+      "base": "i/kin",
+      "transformation": "identity",
+      "aliases": ["ER_NE", "ER_SWR"]
+    },
+    "ER_EL": {
+      "base": "i/kir",
+      "transformation": "identity"
     }
   }
 }
