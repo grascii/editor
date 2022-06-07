@@ -1297,7 +1297,7 @@
     "after_GreggR": {
       "base": "i/ik",
       "transformation": "rotate_180_reverse",
-      "aliases": ["after_GreggL"]
+      "aliases": ["after_GreggL", "EL_EL", "EL_E", "EL_NE", "EL_SWL", "EL_SWR", "EL_SW", "EL_NEL"]
     },
     "after_GreggN": {
       "base": "i/ni",
@@ -1340,6 +1340,10 @@
     },
     "ER_EL": {
       "base": "i/kir",
+      "transformation": "identity"
+    },
+    "EL_ER": {
+      "base": "i/rik",
       "transformation": "identity"
     }
   }
