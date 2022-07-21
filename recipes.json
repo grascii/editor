@@ -1317,7 +1317,7 @@
     "after_GreggF": {
       "base": "i/ik",
       "transformation": ["rotate_180_reverse", "r_to_f"],
-      "aliases": ["after_GreggV", "after_GreggS"]
+      "aliases": ["after_GreggV", "after_GreggS", "SWR_ER", "SWR_EL", "SWR_E", "SWR_SWR"]
     },
     "after_GreggCh": {
       "base": "i/ni",
@@ -1368,6 +1368,14 @@
     "SWL_EL": {
       "base": "i/pir",
       "transformation": "identity"
+    },
+    "SWR_NE": {
+      "base": "i/fit",
+      "transformation": "identity"
+    },
+    "SWR_SWL": {
+      "base": "i/rik",
+      "transformation": "r_to_f"
     }
   }
 }
