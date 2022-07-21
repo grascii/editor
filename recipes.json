@@ -1312,7 +1312,7 @@
     "after_GreggP": {
       "base": "i/ki",
       "transformation": ["rotate_180_reverse", "r_to_p"],
-      "aliases": ["after_GreggB", "after_GreggSL"]
+      "aliases": ["after_GreggB", "after_GreggSL", "SWL_SWL"]
     },
     "after_GreggF": {
       "base": "i/ik",
@@ -1356,8 +1356,17 @@
       "transformation": "n_to_t",
       "aliases": ["NE_E", "NE_SWR"]
     },
+    "SWL_ER": {
+      "base": "i/pik",
+      "transformation": "identity",
+      "aliases": ["SWL_E", "SWL_NE"]
+    },
     "NE_SWL": {
       "base": "i/tip",
+      "transformation": "identity"
+    },
+    "SWL_EL": {
+      "base": "i/pir",
       "transformation": "identity"
     }
   }
