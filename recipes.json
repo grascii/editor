@@ -1373,6 +1373,23 @@
       "base": "i/fit",
       "transformation": "identity"
     },
+    "SW_ER": {
+      "base": "i/chik",
+      "transformation": "identity",
+      "aliases": ["SW_E", "SW_NE"]
+    },
+    "SW_EL": {
+      "base": "i/chir",
+      "transformation": "identity"
+    },
+    "SW_SWR": {
+      "base": "i/chif",
+      "transformation": "identity"
+    },
+    "SW_SWL": {
+      "base": "i/chip",
+      "transformation": "identity"
+    },
     "SWR_SWL": {
       "base": "i/rik",
       "transformation": "r_to_f"
