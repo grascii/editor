@@ -2,7 +2,7 @@ click==8.1.2
 Flask==2.1.1
 Flask-JSONRPC==2.1.0
 grascii==0.3.0
-grascii-rpc @ git+https://github.com/grascii/rpc.git@086db160c5ee10dbe80a72849a54d5c8a52c431b
+grascii-rpc @ git+https://github.com/grascii/rpc.git@24436d09e0f0f498534a072f0f79d98525782340
 importlib-metadata==4.11.3
 itsdangerous==2.1.2
 Jinja2==3.1.1
