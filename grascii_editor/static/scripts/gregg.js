@@ -472,7 +472,7 @@ GreggSHead.prototype = Object.create(GreggChar.prototype);
 
 GreggSHead.prototype.setPaths = function() {
   if (this.getPrevName() == "GreggI") {
-    if (!["ER", "SWR", "SW"].includes(this.prev.getPrevTailType())) {
+    if (!["ER", "SWR", "SW", "NER"].includes(this.prev.getPrevTailType())) {
       return;
     }
   } else if (this.getPrevTailType() == "C") {

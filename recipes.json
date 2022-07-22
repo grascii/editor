@@ -1326,7 +1326,8 @@
     },
     "after_GreggTh": {
       "base": "i/thi",
-      "transformation": "identity"
+      "transformation": "identity",
+      "aliases": ["NER_E", "NER_SWR"]
     },
     "after_GreggNg": {
       "base": "i/ni",
@@ -1388,6 +1389,10 @@
     },
     "SW_SWL": {
       "base": "i/chip",
+      "transformation": "identity"
+    },
+    "NEL_EL": {
+      "base": "i/thir",
       "transformation": "identity"
     },
     "SWR_SWL": {
