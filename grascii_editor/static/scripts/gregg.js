@@ -584,9 +584,17 @@ GreggA.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["A"] = GreggA;
 
 GreggA.prototype.setPaths = function() {
+  let pathsObject;
+
+  const adjacentTypeName = this.getPrevName() + "_" + this.getNextHeadType();
+  pathsObject = PATHS.A[adjacentTypeName];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
 
   const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
-  let pathsObject = PATHS.A[adjacentTypes];
+  pathsObject = PATHS.A[adjacentTypes];
   if (pathsObject) {
     this.setPathsFromObject(pathsObject);
     return;

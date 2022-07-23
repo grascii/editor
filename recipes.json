@@ -552,6 +552,30 @@
       "base": "a/ngar",
       "transformation": "identity"
     },
+    "GreggU_ER": {
+      "base": "a/uak",
+      "transformation": "identity"
+    },
+    "GreggU_EL": {
+      "base": "a/uar",
+      "transformation": "identity"
+    },
+    "GreggU_E": {
+      "base": "a/uan",
+      "transformation": "identity"
+    },
+    "GreggU_NE": {
+      "base": "a/uat",
+      "transformation": "identity"
+    },
+    "GreggU_SWR": {
+      "base": "a/uaf",
+      "transformation": "identity"
+    },
+    "GreggU_SW": {
+      "base": "a/uach",
+      "transformation": "identity"
+    },
     "before_GreggK": {
       "base": "a/ak",
       "transformation": "identity",
