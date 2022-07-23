@@ -727,9 +727,17 @@ GreggI.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["I"] = GreggI;
 
 GreggI.prototype.setPaths = function() {
+  let pathsObject;
+
+  const adjacentTypeName = this.getPrevName() + "_" + this.getNextHeadType();
+  pathsObject = PATHS.I[adjacentTypeName];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
 
   const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
-  let pathsObject = PATHS.I[adjacentTypes];
+  pathsObject = PATHS.I[adjacentTypes];
   if (pathsObject) {
     this.setPathsFromObject(pathsObject);
     return;

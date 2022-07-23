@@ -1286,7 +1286,7 @@
     "before_GreggE": {
       "base": "u/u_trim",
       "transformation": "identity",
-      "aliases": ["before_GreggA"]
+      "aliases": ["before_GreggA", "before_GreggI"]
     },
     "after_GreggR": {
       "base": "u/ru",
@@ -1403,6 +1403,19 @@
       "base": "i/ni",
       "transformation": "rotate_15",
       "aliases": ["after_GreggNk"]
+    },
+    "after_GreggU": {
+      "base": "i/ui",
+      "transformation": "identity"
+    },
+    "GreggU_NE": {
+      "base": "i/uit",
+      "transformation": "identity",
+      "aliases": ["GreggU_EL", "GreggU_E", "GreggU_SWR"]
+    },
+    "GreggU_SWL": {
+      "base": "i/uip",
+      "transformation": "identity"
     },
     "ER_E": {
       "base": "i/kin",
