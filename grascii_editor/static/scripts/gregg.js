@@ -95,6 +95,11 @@ GreggRHead.prototype.setPaths = function() {
     this.setPathsFromObject(PATHS.R.after_GreggF);
     return;
   }
+  if (this.getPrevTailType() == "C") {
+    if (this.prev.getPrevName() == "GreggU") {
+      return;
+    }
+  }
   if (this.getPrevName() == "GreggA") {
     if (this.prev.getPrevTailType() == "SE") {
       return;
@@ -141,6 +146,11 @@ GreggLHead.prototype.setPaths = function() {
   if (this.getPrevTailType() == "SWR" && this.getPrevName() != "GreggU") {
     this.setPathsFromObject(PATHS.L.after_GreggF);
     return;
+  }
+  if (this.getPrevTailType() == "C") {
+    if (this.prev.getPrevName() == "GreggU") {
+      return;
+    }
   }
   if (this.getPrevName() == "GreggA") {
     if (this.prev.getPrevTailType() == "SE") {
@@ -397,6 +407,9 @@ GreggFHead.prototype.setPaths = function() {
     if (["ER", "EL", "E", "NE", "SWL", "NEL"].includes(this.prev.getPrevTailType())) {
       return;
     }
+    if (this.prev.getPrevName() == "GreggU") {
+      return;
+    }
   } else if (["ER", "EL", "E", "NE"].includes(this.getPrevTailType())) {
     return;
   }
@@ -427,6 +440,9 @@ GreggVHead.prototype.setPaths = function() {
     }
   } else if (this.getPrevTailType() == "C") {
     if (["ER", "EL", "E", "NE", "SWL", "NEL"].includes(this.prev.getPrevTailType())) {
+      return;
+    }
+    if (this.prev.getPrevName() == "GreggU") {
       return;
     }
   } else if (["ER", "EL", "E", "NE"].includes(this.getPrevTailType())) {
@@ -480,6 +496,9 @@ GreggSHead.prototype.setPaths = function() {
       return;
     }
     if (this.getPrevName() == "GreggI") {
+      return;
+    }
+    if (this.prev.getPrevName() == "GreggU") {
       return;
     }
   } else if (["EL", "E", "NE"].includes(this.getPrevTailType())) {
@@ -595,9 +614,17 @@ GreggE.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["E"] = GreggE;
 
 GreggE.prototype.setPaths = function() {
+  let pathsObject;
+
+  const adjacentTypeName = this.getPrevName() + "_" + this.getNextHeadType();
+  pathsObject = PATHS.E[adjacentTypeName];
+  if (pathsObject) {
+    this.setPathsFromObject(pathsObject);
+    return;
+  }
 
   const adjacentTypes = this.getPrevTailType() + "_" + this.getNextHeadType();
-  let pathsObject = PATHS.E[adjacentTypes];
+  pathsObject = PATHS.E[adjacentTypes];
   if (pathsObject) {
     this.setPathsFromObject(pathsObject);
     return;
@@ -658,7 +685,7 @@ GreggO.prototype.setPaths = function() {
   this.setPathsFromObject(PATHS.O.default);
 };
 
-GreggU = function() { GreggChar.call(this, "GreggU", "u", "UNER2.5", "NER", "SWR", "black", false, p(0.0, 0.5)); };
+GreggU = function() { GreggChar.call(this, "GreggU", "u", "UNER2.5", "NER", "SW", "black", false, p(0.0, 0.5)); };
 GreggU.prototype = Object.create(GreggChar.prototype);
 GreggChar.dict["U"] = GreggU;
 

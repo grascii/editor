@@ -668,6 +668,10 @@
       "base": "a/na",
       "transformation": "rotate_15",
       "aliases": ["after_GreggNk"]
+    },
+    "after_GreggU": {
+      "base": "a/ua",
+      "transformation": "identity"
     }
   },
   "E": {
@@ -818,7 +822,8 @@
     },
     "SW_NER": {
       "base": "e/cheth",
-      "transformation": "identity"
+      "transformation": "identity",
+      "aliases": ["GreggU_NER"]
     },
     "SWR_NER": {
       "base": "e/feth",
@@ -907,6 +912,38 @@
     "SE_SWL": {
       "base": "e/feng",
       "transformation": "rotate_180_reverse"
+    },
+    "GreggU_E": {
+      "base": "e/uen",
+      "transformation": "identity"
+    },
+    "GreggU_NE": {
+      "base": "e/uet",
+      "transformation": "identity"
+    },
+    "GreggU_ER": {
+      "base": "e/uek",
+      "transformation": "identity"
+    },
+    "GreggU_SE": {
+      "base": "e/ueng",
+      "transformation": "identity"
+    },
+    "GreggU_SW": {
+      "base": "e/uech",
+      "transformation": "identity"
+    },
+    "GreggU_EL": {
+      "base": "e/uer",
+      "transformation": "identity"
+    },
+    "GreggU_SWL": {
+      "base": "e/uep",
+      "transformation": "identity"
+    },
+    "GreggU_SWR": {
+      "base": "e/uef",
+      "transformation": "identity"
     },
     "before_GreggN": {
       "base": "e/en",
@@ -1011,6 +1048,10 @@
       "base": "e/ne",
       "transformation": "rotate_15",
       "aliases": ["after_GreggNk"]
+    },
+    "after_GreggU": {
+      "base": "e/ue",
+      "transformation": "identity"
     }
   },
   "O": {
@@ -1217,6 +1258,11 @@
       "base": "u",
       "transformation": ["rotate_90", "rotate_90", "rotate_90", "rotate_15"],
       "aliases": ["before_GreggNk"]
+    },
+    "before_GreggE": {
+      "base": "u/u_trim",
+      "transformation": "identity",
+      "aliases": ["before_GreggA"]
     },
     "after_GreggR": {
       "base": "u/ru",
