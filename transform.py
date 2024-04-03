@@ -2,6 +2,7 @@
 import json
 import math
 import numpy as np
+import os
 import warnings
 from pathlib import Path
 from svgpathtools import Document, SVG_GROUP_TAG, SVG_NAMESPACE
@@ -150,6 +151,8 @@ for stroke_name, stroke in recipes.items():
                     if alias in output[stroke_name]:
                         warnings.warn(f"{full_name}: {stroke_name}.{alias} already exists and is being overwritten.")
                     output[stroke_name][alias] = output[stroke_name][recipe_name]
+
+os.makedirs("grascii_editor/static/data", exist_ok=True)
 
 with open("grascii_editor/static/data/paths.js", "w") as out_file:
     out_file.write("PATHS = ")
