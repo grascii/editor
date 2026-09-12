@@ -1,5 +1,8 @@
 # Grascii Editor
 
+> [!IMPORTANT]
+> 2026-09-12 This project is deprecated. It has been superseded by [grascii/font](https://github.com/grascii/font).
+
 Grascii Editor turns Gregg Shorthand forms written in the Grascii language into
 images of Gregg outlines.
 
